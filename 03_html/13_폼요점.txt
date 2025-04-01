@@ -1,0 +1,22 @@
+필수!
+1. 검색창
+2. 회원가입
+3. 로그인창
+
+<form>: 폼(양식) 전체를 그룹핑
+<fieldset>: 폼 양식 그룹핑
+<legend>: 필드셋의 제목
+
+<input>: 한 줄 입력, 라디오버튼, 체크박스, 데이터 전송용 버튼
+<label>: 글씨를 눌러도 체크되게
+<button>: 데이터 전송용 버튼
+<textarea>: 여러 줄 입력
+<select>: 목록에서 선택만 가능
+    <optgroup>
+       <option>
+       <option>
+    <optgroup>
+       <option>
+       <option>
+
+<datalist>: 목록에서 선택과 입력도 가능
