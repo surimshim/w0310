@@ -26,16 +26,19 @@
         <br>
 
         <!-- 텍스트 박스 -->
-        검색 <input type="search"><br>
+        <label for="search_box">검색</label>
+        <input type="search" id="search_box"><br>
+        <!-- for와 id의 값이 같아야 함. -->
+
         전화번호 <input type="tel"><br>
         주소
         <!-- select의 value는 서버로 전송될 값이다. -->
         <select name="" id="">
             <option value="seoul">서울특별시</option>
-            <option value="">경기도</option>
-            <option value="">강원도</option>
-            <option value="">충청도</option>
-            <option value="">전라도</option>
+            <option value="gyeong-gi">경기도</option>
+            <option value="gangwon">강원도</option>
+            <option value="chungcheong">충청도</option>
+            <option value="jeonla">전라도</option>
         </select><br>
         이메일 <input type="email"><br>
         웹 주소 <input type="url"><br>
@@ -44,13 +47,13 @@
         파일 첨부 <input type="file"><br>
         <br>
         <!-- 다중 커서: alt+클릭 / ctrl+alt+아래방향키 -->
-        <input type="checkbox" name="chkgroup">네모1
-        <input type="checkbox" name="chkgroup">네모2
-        <input type="checkbox" name="chkgroup">네모3<br>
+        <label><input type="checkbox" name="chkgroup">네모1</label>
+        <label><input type="checkbox" name="chkgroup">네모2</label>
+        <label><input type="checkbox" name="chkgroup">네모3</label><br>
         <!-- name 속성으로 그룹핑 -->
-        <input type="radio" name="radiogroup">동그라미1
-        <input type="radio" name="radiogroup">동그라미2
-        <input type="radio" name="radiogroup">동그라미3<br>
+        <label><input type="radio" name="radiogroup">동그라미1</label>
+        <label><input type="radio" name="radiogroup">동그라미2</label>
+        <label><input type="radio" name="radiogroup">동그라미3</label><br>
         <br>
         <!-- 버튼 -->
         <input type="submit" value="전송">
