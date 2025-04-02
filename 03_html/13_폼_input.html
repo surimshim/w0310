@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <h1>폼</h1>
+
+    <form action="form.jsp">
+        입력상자 <input type="text"><br>
+        <!-- 여러줄 입력 상자 ex) 글쓰기 -->
+        글쓰기 <textarea name="user_write"></textarea><br>
+        회칙 <textarea rows="5" cols="30" style="width: 300px; height: 150px; resize: none;" readonly>회칙을 여기에 기록한다.</textarea><br>
+        <!--
+            rows: 줄(행, 가로) 수
+            cols: 칸(열, column, 세로) 수
+            width: 가로 크기
+            height: 세로 크기
+            resize: none -> 크기 수정 없음(수정 못함)
+        -->
+
+        비밀번호 <input type="password"><br>
+        숨김필드 <input type="hidden"><br>
+        <br>
+
+        <!-- 텍스트 박스 -->
+        검색 <input type="search"><br>
+        전화번호 <input type="tel"><br>
+        주소
+        <!-- select의 value는 서버로 전송될 값이다. -->
+        <select name="" id="">
+            <option value="seoul">서울특별시</option>
+            <option value="">경기도</option>
+            <option value="">강원도</option>
+            <option value="">충청도</option>
+            <option value="">전라도</option>
+        </select><br>
+        이메일 <input type="email"><br>
+        웹 주소 <input type="url"><br>
+        <br>
+        이미지 <input type="image"><br>
+        파일 첨부 <input type="file"><br>
+        <br>
+        <!-- 다중 커서: alt+클릭 / ctrl+alt+아래방향키 -->
+        <input type="checkbox" name="chkgroup">네모1
+        <input type="checkbox" name="chkgroup">네모2
+        <input type="checkbox" name="chkgroup">네모3<br>
+        <!-- name 속성으로 그룹핑 -->
+        <input type="radio" name="radiogroup">동그라미1
+        <input type="radio" name="radiogroup">동그라미2
+        <input type="radio" name="radiogroup">동그라미3<br>
+        <br>
+        <!-- 버튼 -->
+        <input type="submit" value="전송">
+        <input type="reset" value="취소">
+        <input type="button" value="버튼"> <br>
+        <button type="submit">전송</button>
+        <button type="reset">취소</button>
+        <button type="button">버튼</button><br>
+        <br>
+        <!-- 날짜/시간 -->
+        <input type="date"><br>
+        <!-- datetime-local 사용, datetime은 사용x -->
+        <input type="datetime"><br>
+        <input type="datetime-local"><br>
+        <input type="time"><br>
+        <input type="week"><br>
+        <input type="month"><br>
+        <br>
+        <!-- 색 -->
+        <input type="color"><br>
+        <br>
+        <!-- 범위 -->
+        <input type="range"><br>
+        <br>
+        <!-- 스핀 버튼 -->
+        <input type="number"><br>
+        <br>
+    </form>
+    
+</body>
+</html>
