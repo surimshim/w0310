@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <!-- style 태그는 head 사이에 기록 -->
+    <style>
+        /* 내부 스타일: <style> 태그 안에 기록하는 방식(CSS) */
+        /* 선택자 {속성: 값 값 값;} */
+        /* 본문(body)에 있는 td 태그에 테두리를 두께 1px, 선 종류 solid(실선), 선 색은 검정으로 지정한다. */
+        td {border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <h1>표(table)</h1>
+
+    <h2>1x1</h2>
+    <!-- border 속성은 style(CSS)로 설정 -->
+    <table>
+        <tr><td>1행 1열의 표</td></tr>
+    </table>
+
+    <h2>1x2</h2>
+    <table>
+        <!-- tr: 행 / td: 셀(열) -->
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+        </tr>
+    </table>
+    
+    <h2>1x2</h2>
+    <table style="border-collapse: collapse;">
+        <!-- tr: 행 / td: 셀(열) -->
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+        </tr>
+    </table>
+
+    <h2>2x1</h2>
+    <table style="border-collapse: collapse;">
+        <!-- 
+            table: 자식으로 하나 이상의 tr이 있어야 함.
+            tr: 자식으로 하나 이상의 td가 있어야 함.
+        -->
+        <!-- 인라인 스타일: HTML의 style 속성으로 기록하는 방식 -->
+        <tr><td>1행 1열</td></tr>
+        <tr><td>2행 1열</td></tr>
+    </table>
+    
+    <h2>2x2</h2>
+    <table style="border-collapse: collapse;">
+        <tr><td>1행 1열</td><td>1행 2열</td></tr>
+        <tr><td>2행 1열</td><td>2행 2열</td></tr>
+    </table>
+</body>
+</html>
