@@ -1,0 +1,11 @@
+/* 
+    선택자 {속성: 값;} 
+    태그 {속성: 값;} 
+    .class {속성: 값;} 
+*/
+
+/* p는 type(tag, element) 선택자 */
+p {color: green;}
+/* .p는 class 선택자 */
+.p {color: green;}
+.color_green {color: green;}
