@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃-응용2</title>
+    <style>
+        .header {
+            width: 100px;
+            background: #ccc;
+        }
+
+        .wrap {
+            /* 부모 요소 */
+            display: flex;
+        }
+
+        .right_contents {
+            width: 500px;
+        }
+
+        .slide {
+            height: 150px;
+            background: #3be9dd;
+        }
+
+        .banner {
+            height: 70px;
+            background: #e14444;
+        }
+
+        .contents {
+            height: 80px;
+            background: #42ebab;
+        }
+
+        .footer {
+            width: 600px;
+            height: 50px;
+            background: #6c6b6b;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 부모인 .wrap에 display:flex; -->
+    <div class="wrap">
+        <!-- 자식인 .header와 .right_contents가 가로 배치 -->
+        <div class="header">헤더</div>
+        <div class="right_contents">
+            <div class="slide">슬라이드</div>
+            <div class="banner">배너</div>
+            <div class="contents">콘텐츠</div>
+        </div>
+    </div>
+    <div class="footer">푸터</div>
+</body>
+
+</html>
