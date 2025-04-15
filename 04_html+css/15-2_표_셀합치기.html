@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        table {
+            width: 100%; /* w100p */
+            border-collapse: collapse; /* bdcl */
+            margin-bottom: 20px;
+            border-spacing: 5px;
+            caption-side: bottom;
+        }
+
+        td {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>표 - 셀 합치기</h1>
+    <p>열 합치기는 colspan, 행 합치기는 rowspan.
+    <br>값은 셀을 합친 개수만큼 숫자 쓰기. 
+    <br>또한 두 속성은 &lt;th&gt;, &lt;td&gt; 태그에서만 사용</p>
+
+    <h2>열 합치기</h2>
+    <table>
+        <tr>
+            <td colspan="3" style="background-color: #eee;">1</td> <!-- 1행 1열 -->
+            <!-- <td>2</td> --> <!-- 1행 2열 -->
+            <!-- <td>3</td> --> <!-- 1행 3열 -->
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <h2>행 합치기</h2>
+    <!-- table>tr*2>td*3>{$} -->
+    <table>
+        <tr>
+            <td rowspan="2" style="background-color: #eee;">1</td> <!-- 1행 1열 -->
+            <td>2</td> <!-- 1행 2열 -->
+            <td>3</td> <!-- 1행 3열 -->
+        </tr>
+        <tr>
+            <!-- <td>4</td> --> <!-- 1행 1열 -->
+            <td>5</td> <!-- 2행 2열 -->
+            <td>6</td> <!-- 2행 3열 -->
+        </tr>
+    </table>
+</body>
+</html>
