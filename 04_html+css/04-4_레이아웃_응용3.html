@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃-응용3</title>
+    <style>
+        div, header {
+            background: #eee;
+        }
+
+        .container, .wrap, .contents {
+            background: transparent;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .header {
+            width: 200px;
+            margin-right: 4px;
+        }
+
+        .wrap {
+            width: 1000px;
+        }
+
+        .slide {
+            height: 400px;
+        }
+
+        .banner {
+            height: 200px;
+            margin: 4px 0;
+        }
+
+        .contents {
+            display: flex;
+            height: 200px;
+        }
+
+        .notice {
+            width: 496px;
+            margin-right: 4px;
+        }
+
+        .gallery {
+            width: 500px;
+        }
+
+        /* display:flex;는 부모 요소에 적용 */
+        .footer {
+            display: flex;
+            height: 100px;
+            margin-top: 4px;
+        }
+
+        .copy {
+            width: 796px;
+            margin: 0 4px;
+        }
+
+        .blogo, .sns {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header"></header>
+        <div class="wrap">
+            <div class="slide"></div>
+            <div class="banner"></div>
+            <div class="contents">
+                <div class="notice"></div>
+                <div class="gallery"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="blogo"></div>
+        <div class="copy"></div>
+        <div class="sns"></div>
+    </footer>
+</body>
+
+</html>
