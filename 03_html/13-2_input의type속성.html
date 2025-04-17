@@ -17,12 +17,20 @@
             <p>컬러선택: <input type="color"></p>
             <p>수량: <input type="number" min="1" max="10" value="1"></p>
             <p>만족도: <input type="range" min="1" max="10" value="1"></p>
+
+            <!-- checkbox, radio의 valude는 서버로 전송할 데이터 값이다. -->
             <p>예: <input type="radio" name="receive" checked="checked"> 아니오<input type="radio" name="receive"></p>
             <p>html<input type="checkbox" checked="checked"> css<input type="checkbox"></p>
+
+            <!-- 전송: 가입하기, 로그인 -->
             <p><input type="submit" value="전송"></p>
+            <!-- 초기화: 취소, 로그아웃 -->
             <p><input type="reset" value="취소"></p>
+            <!-- 전송과 초기화가 아닌 경우: 애니메이션 -->
             <p><input type="button" value="확인"></p>
-            <p><input type="image" src="메가커피/drink1.jpg" alt="검색"></p>
+            <!-- 버튼을 이미지로 디자인하여 사용하고 싶을 때, 잘 사용x -->
+            <p><input type="image" src="./초기화버튼.png" alt="초기화"></p>
+            <p><input type="image" src="./로그인.svg" alt="로그인"></p>
             <p><input type="file"></p>
         </fieldset>
     </form>

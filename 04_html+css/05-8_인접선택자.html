@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 태그(타입, 요소) 선택자 */
+        p {color: blue;}
+
+        /* 
+            인접 형제 선택자: '+'으로 구분
+            선택자1(형) + 선택자2((바로아래)동생) 
+        */
+
+        /* h1 바로아래(인접) 동생 p 선택 */
+        h1 + p {color: red;}
+    </style>
+</head>
+<body>
+    <div class="abox">
+        <h1>p는 div의 첫 번째 자식</h1>
+        <p>p는 div의 두 번째 자식</p>
+        <p>p는 div의 세 번째 자식</p>
+        <ul>
+            <li><p>p는 첫 번째 li의 자식, div의 손자</p></li>
+            <li><p>p는 두 번째 li의 자식, div의 손자</p></li>
+        </ul>
+    </div>
+    <p class="p5">p는 body의 자식</p>
+</body>
+</html>
