@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>HTML_CSS</title>
+    <style>
+        p {
+            margin: 20px;
+            height: 50px;
+            border: 1px solid red;
+            /* text-align은 블록레벨 요소에만 지정해야하며,
+            블록레벨요소의 자식이 인라인 요소 또는 텍스트일 경우 적용됨.
+            자손이 블록레벨 요소이면 적용 안 됨. */
+            text-align: center;
+        }
+        
+        span {
+            /* span은 인라인 요소 */
+            display: inline-block;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>가로 맞춤</h1>
+    <p>글자</p>
+    <p><span></span></p>
+</body>
+
+</html>
