@@ -1,0 +1,184 @@
+@charset "utp-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 전체 */
+h1, h2, ul, p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background: #fff;
+    color: #222328;
+    font: 15px/1.5 "Noto Sans KR", sans-serif;
+    overflow-x: hidden;
+    text-decoration-line: none;
+}
+
+a {
+    color: #222328;
+    text-decoration-line: none;
+}
+
+ul {
+    /* 불릿 기호 제거 */
+    list-style: none;
+    padding: 0;
+}
+
+.wrap {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+.header {
+    display: flex;
+    height: 170px;
+}
+.logo {
+    width: 300px;
+    margin: 35px 55px;
+}
+
+/* 내비게이션 */
+.gnb {
+    display: flex;
+    justify-content: center;
+    width: 1320px;
+}
+.main {
+    width: 780px;
+    line-height: 170px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* SNS */
+.sns {
+    width: 250px;
+    line-height: 170px;
+    text-align: center;
+    font-size: 24px;
+}
+.sns li {
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.sns a {
+    color: #bb3e8b;
+}
+
+/* 슬라이드 */
+.slide {
+    height: 650px;
+}
+
+/* 바로가기 */
+.shortcut {
+    width: 1250px;
+    height: 430px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.shortcut li {
+    display: inline-block;
+}
+
+/* 콘텐츠 */
+.contents {
+    width: 1250px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px;
+}
+.notice {
+    width: 600px;
+    padding: 16px 0 0 16px;
+    line-height: 2;
+    color: #222328;
+}
+.notice h2 {
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+.notice li {
+    font-size: 12px;
+}
+.notice span {
+    display: block;
+    width: 500px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #222328;
+}
+.notice a {
+    color: #696969;
+}
+
+.video {
+    width: 600px;
+    padding: 16px 0 0 16px;
+}
+.video h2 {
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+.video iframe {
+    width: 480px;
+    height: 270px;
+    margin-top: 8px;
+}
+
+/* 푸터 */
+.footer {
+    height: 300px;
+    background: #332b36;
+}
+.bmenu {
+    height: 55px;
+    background: #4c3f50;
+    text-align: center;
+    line-height: 55px;
+}
+.bmenu li {
+    display: inline-block;
+}
+.bmenu a {
+    color: #d2c5d1;
+}
+.border {
+    border-right : 1px solid #d2c5d1;
+    margin-right: 16px;
+    padding-right: 20px;
+}
+
+.bwrap {
+    display: flex;
+    width: 1250px;
+    height: 180px;
+    margin: 0 auto;
+    color: #a196a0;
+}
+
+.blogo {
+    width: 300px;
+    padding-top: 40px;
+}
+
+.address {
+    width: 950px;
+    padding: 55px 24px;
+}
+
+.copy {
+    height: 65px;
+    color: #a196a0;
+    text-align: center;
+    line-height: 65px;
+    outline: 1px solid #484848;
+}
