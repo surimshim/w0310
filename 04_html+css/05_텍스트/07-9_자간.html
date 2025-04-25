@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* ls5, px단위는 일반적으로 정수로 */
+        /* 기본값은 normal, 0 */
+        p:nth-of-type(2) {letter-spacing: 5px;} 
+
+        /* ws2em, em단위 실수, 정수 모두 가능 */
+        /* 기본값은 normal, 0 */
+        p:last-of-type {word-spacing: 2em;} 
+    </style>
+</head>
+<body>
+    <h1>자간과 어간</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</body>
+</html>
