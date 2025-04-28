@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        p {
+            border: 1px solid #000;
+        }
+
+        /* 
+            vertical align: 수직 맞춤
+                값: top, bottom, middle
+                사용 태그: 인라인 요소(img, input, select, label), 테이블 셀(th, td), flexbox, grid
+        */
+        .vailing img {
+            vertical-align: middle; /* vam */
+        }
+    </style>
+</head>
+<body>
+    <p>
+        나는 자유다
+        <img src="./../imfree.jpg" width="150" alt="자유">
+    </p>
+    <p class="vailing">
+        나는 자유다
+        <img src="./../imfree.jpg" width="150" alt="자유">
+    </p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        p { 
+            width: 200px;
+            text-align: justify;
+            border: 1px solid #000;
+        }
+
+        .breaking1 {
+            word-break: normal;
+        }
+
+        .breaking2 {
+            word-break: break-all;
+        }
+
+        .breaking3 {
+            word-break: keep-all;
+        }
+
+        .breaking {
+            /* 글자가 넘치면 줄바꿈 */
+            word-wrap: break-word;
+            /* 양쪽 맞춤 했을 경우 글자 깨뜨리기 */
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <p class="breaking1">
+        홍길동<br>
+        한국사회역사연구회 고고학 전임교수<br>
+        hongkildong0000000000000000@hanmail.net
+    </p>
+    <p class="breaking2">
+        홍길동<br>
+        한국사회역사연구회 고고학 전임교수<br>
+        hongkildong0000000000000000@hanmail.net
+    </p>
+    <p class="breaking3">
+        홍길동<br>
+        한국사회역사연구회 고고학 전임교수<br>
+        hongkildong0000000000000000@hanmail.net
+    </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum libero ratione, illum maxime quisquam vel magni atque exercitationem consectetur harum, molestias asperiores aliquid dolor excepturi enim neque mollitia officia dolores?</p>
+
+    <p class="breaking">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum libero ratione, illum maxime quisquam vel magni atque exercitationem consectetur harum, molestias asperiores aliquid dolor excepturi enim neque mollitia officia dolores?</p>
+</body>
+</html>

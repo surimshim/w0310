@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        a {
+            text-decoration: none; /* tdn, 밑줄 없애기 용 */
+            color: gray;
+        }
+
+        a:hover {
+            text-decoration: underline; /* tdu, 마우스 올렸을 때만 밑줄 생기게 */
+            color: black;
+        }
+
+        p {
+            text-transform: capitalize; /* ttc */
+            font: bold 25px Times;
+            color: darkmagenta;
+        }
+        
+        span:first-of-type {
+            text-decoration: underline;
+        }
+
+        span:nth-of-type(2) {
+            text-decoration: overline;
+        }
+
+        span:last-of-type {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">현재 상영작</a></li>
+        <li><a href="#">상영 예정작</a></li>
+    </ul>
+    <p>Happy birthday!</p>
+    <span>밑줄</span>
+    <span>윗줄</span>
+    <span>취소선</span>
+</body>
+</html>
