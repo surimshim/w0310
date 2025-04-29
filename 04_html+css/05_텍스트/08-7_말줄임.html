@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 공통 */
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+        body {
+            font: 14px/1.6 '굴림', sans-serif;
+        }
+        ul {
+            list-style: none; /* 블릿 기호 제거 */
+        }
+
+        /* 공지사항 */
+        .notice {
+            width: 400px;
+            border: 1px solid #000;
+            padding: 16px;
+        }
+
+        .notice a {
+            display: inline-block;
+            vertical-align: middle;
+            width: 315px;
+            text-decoration: none;
+            color: #777;
+
+        }
+        .notice a h3 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            padding-right: 8px;
+        }
+
+        .notice a:hover {
+            color: #111;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>말줄임</h1>
+    <h2>공지사항: 최근글</h2>
+    <ul class="notice">
+        <!-- h3태그로 묶는 것이 SEO(검색엔진 최적화)나 접근성 측면에서 유리하다. -->
+        <li><a href="#">
+                <h3 title="시간 배분을 위하여 현명한 판단을 바랍니다.">시간 배분을 위하여 현명한 판단을 바랍니다.</h3>
+            </a><span>2025-04-29</span></li>
+        <li><a href="#">
+                <h3>욕심껏 내용을 채우는 것도 좋습니다.</h3>
+            </a><span>2025-04-28</span></li>
+        <li><a href="#">
+                <h3 title="결과물을 볼 수 있어야 하는 것이 우선입니다.">결과물을 볼 수 있어야 하는 것이 우선입니다.</h3>
+            </a><span>2025-04-27</span></li>
+        <li><a href="#">
+                <h3>모든 일에는 항상 열심히 임합니다.</h3>
+            </a><span>2025-04-26</span></li>
+</body>
+</html>
