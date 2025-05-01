@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <!-- 
+        src: 파일 경로
+        autoplay: 자동 재생
+        muted: 음소거
+        loop: 반복
+        controls: 컨트롤 표시
+        preload: 미리 로드 방식
+            auto(default): 일부 또는 전체 미리 로드
+            metadata: 오디오의 메타데이터(길이, 제목 등)만 미리 로드
+            none: 로드하지 않음
+    -->
+    <h1>오디오</h1>
+    <audio src="./assets/MasCafe-CasaRosa.mp3" controls></audio>
+    <audio controls>
+        <source src="./assets/MasCafe-CasaRosa.mp3" type="audio/mp3">
+        <source src="./assets/MasCafe-CasaRosa.ogg" type="audio/ogg">
+        <source src="./assets/MasCafe-CasaRosa.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>

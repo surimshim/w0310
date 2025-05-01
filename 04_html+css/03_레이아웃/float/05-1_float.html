@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+                    글자크기    여백(margin)
+            body    16px        8px
+            p       16px        16px(1em)
+            h3      1.17em      1em(18.72px)
+
+            여백은 글자 크기의 배수
+        */
+        body, h3, p {margin: 0;}
+
+        h3 {
+            /* 상 좌우 하 */
+            padding: 10px 70px 10px;
+            border-bottom: 1px dotted #aaa;
+        }
+        
+        .toomany {
+            /* 가로 크기가 부모 크기의 75%, 부모 크기를 늘렸을 때 최대 가로 크기는 600px */
+            width: 75%; max-width: 600px;
+            /* min-width: 800px; 반응형 만들 때 필수 */
+            margin: 20px;
+            text-align: justify;
+            word-break: break-all;
+        }
+
+        .lotus {
+            float: right;
+            border: 1px solid #000;
+            width: 150px;
+            padding: 10px;
+            font-size: 10px;
+            margin-left: 20px;
+        }
+
+        img {
+            width: 100%; /* 부모 크기의 100% */
+        }
+    </style>
+</head>
+<body>
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <div class="toomany">
+        <div class="lotus">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Nelumno_nucifera_open_flower_-_botanic_garden_adelaide2.jpg" alt="연꽃">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea perferendis eveniet quos ipsum dolorem non in quas quod officiis, asperiores modi nostrum? Sapiente recusandae perspiciatis qui corrupti? Placeat, laborum ipsam.</p>
+        </div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, natus quaerat odit adipisci neque voluptas hic! Numquam consectetur nostrum enim velit atque officiis quod itaque repudiandae rem aliquid, fuga minima?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat placeat expedita dolores doloribus a. Aperiam esse expedita architecto odio in voluptatem, voluptatibus reprehenderit nostrum, corrupti, possimus autem odit facilis qui!minima? Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, esse deleniti corrupti voluptatem sequi odit debitis natus pariatur? Officia amet autem cupiditate? Quos adipisci consequatur dolor delectus. Delectus, fugit sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi laborum, exercitationem libero repellendus aut sunt neque mollitia iusto rem voluptates iure, officia illum aperiam doloribus ab provident maiores. Adipisci, iure! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo eligendi mollitia ratione quisquam repellat laboriosam tempore expedita aperiam! Obcaecati animi dolorum fugit facilis inventore itaque molestias soluta ab voluptas totam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, possimus molestias similique commodi dolores vero reprehenderit, provident officiis assumenda tenetur culpa autem harum magni. Doloremque debitis aspernatur voluptatibus ipsum! Accusantium.</p>
+    </div>
+</body>
+</html>
