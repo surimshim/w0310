@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    background: #fff;
+    color: #333;
+    font: 16px/1.6 "굴림", sans-serif;
+}
+
+/* a 태그는 body 태그 속성이 먹히지 않으므로 따로 지정해주어야 함. */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header, .contents, footer {
+    width: 1340px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* 로고는 왼쪽, 내비게이션은 오른쪽에 붙음 */
+    align-items: center; /* 아이템을 수직 가운데 배치 */
+    height: 100px;
+}
+
+nav { 
+    width: 600px;
+    height: 60px;
+}
+
+nav li {
+    width: 120px;
+    display: inline-block;
+    line-height: 60px;
+}
+
+nav .main li>a {
+    font-size: 18px
+}
+
+.slide { 
+    height: 350px;
+    overflow: hidden;
+}
+
+.slide li+li {
+    display: none;
+}
+
+.contents {
+    height: 720px; 
+    background: #1b3b86;
+}
+
+footer {
+    height: 120px;
+    background: #ccc;
+}
