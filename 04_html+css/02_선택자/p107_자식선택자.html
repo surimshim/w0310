@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML+CSS</title>
+    <title>자식 선택자</title>
     <style>
-        /* 태그(타입, 요소) 선택자 */
-        p {color: blue;}
-
         /* 
             자식 선택자: '>'으로 구분
             선택자1(부모) > 선택자2(자식) 
@@ -19,13 +16,13 @@
 </head>
 <body>
     <div class="abox">
-        <p>p는 div의 첫 번째 자식</p>
-        <p>p는 div의 두 번째 자식</p>
+        <p>.abox의 하위(자식) 요소</p>
         <ul>
-            <li><p>p는 첫 번째 li의 자식, div의 손자</p></li>
-            <li><p>p는 두 번째 li의 자식, div의 손자</p></li>
+            <li><p>.abox의 하위(자식x) 요소</p></li>
+            <li><p>.abox의 하위(자식x) 요소</p></li>
         </ul>
+        <p>.abox의 하위(자식) 요소</p>
     </div>
-    <p class="p5">p는 body의 자식</p>
+    <p class="p5">.abox의 하위 요소가 아님</p>
 </body>
 </html>

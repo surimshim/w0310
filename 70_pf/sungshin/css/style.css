@@ -1,7 +1,14 @@
 @charset "utf-8";
 
-body {
+* {
+    /* padding과 border 크기를 박스 안쪽으로 지정한다 */
+    box-sizing: border-box;
+}
+
+body, h1, h2, ul, p {
     margin: 0;
+}
+body {
     background: #fff;
     color: #333;
     font: 16px/1.6 "굴림", sans-serif;
@@ -14,7 +21,6 @@ a {
 }
 
 ul {
-    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -46,6 +52,7 @@ nav .main li>a {
     font-size: 18px
 }
 
+
 .slide { 
     height: 350px;
     overflow: hidden;
@@ -55,12 +62,132 @@ nav .main li>a {
     display: none;
 }
 
+
 .contents {
-    height: 720px; 
+    height: 600px; 
+}
+
+.contents a {
+    color: #fff;
+}
+
+
+.link {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 120px;
     background: #1b3b86;
 }
 
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 180px;
+    background: lightblue;
+}
+
+.banner a {
+    color: #000;
+}
+
+.banner .cont {
+    display: flex;
+}
+
+.banner .cont img {
+    margin-right: 16px;
+}
+
+
+.media {
+    display: flex;
+    height: 300px;
+    padding: 30px;
+    background: #1b3b86;
+    color: #fff;
+}
+
+.media h2 {
+    margin-bottom: 16px;
+}
+
+.notice {
+    width: 670px;
+}
+
+/* .notice td {
+    border: 1px solid #000;
+} */
+
+.notice tr td:nth-child(2) {
+    padding-left: 80px;
+}
+
+.gallery {
+    width: 670px;
+}
+
+.gallery .inner {
+    display: flex;
+}
+
+.gallery a {
+    margin-right: 16px;
+    text-align: center;
+}
+
 footer {
+    display: flex;
+    /* algin items와 alightc-content를 함께 사용하면 aligth-items과 고정됨 */
+    align-items: center;
+    align-content: center;
+    background: #111;
+    color: #999;
     height: 120px;
-    background: #ccc;
+    padding: 0 30px;
+}
+
+footer a {
+    color: #999;
+}
+
+.left { 
+    width: 1000px;
+}
+
+.right {
+    width: 340px;
+}
+
+.sns {
+    height: 30px;
+}
+
+.sns li {
+    display: inline;
+    margin-right: 8px; 
+}
+
+.sns img {
+    width: 24px;
+}
+
+/* .sns li:nth_of_type(1)::after {
+    content: " |";
+}
+
+.sns li:nth_of_type(2)::after {
+    content: " |";
+} */
+
+/* .sns li:not(:last-of-type)::after {
+    content: " |";
+} */
+
+.fs {
+    height: 60px;
 }
