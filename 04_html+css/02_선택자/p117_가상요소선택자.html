@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 선택자</title>
+    <style>
+        /* 
+            ::first-letter -> 단어 첫글자
+        */
+
+        p::first-letter {font-size: 150%;}
+
+        /* 
+            ::before 시작 태그 바로 뒤에 내용 삽입
+            ::after 종료 태그 바로 앞에 내용 삽입
+         */
+        p::before {
+            content: "☆";
+        }
+        .box::after {
+            content: "항목을 선택해주세요.";
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Company</p>
+        <p>Product</p>
+        <p>Service</p>
+        <p>Community</p>
+    </div>
+</body>
+</html>
