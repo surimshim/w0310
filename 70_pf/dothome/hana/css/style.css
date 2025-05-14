@@ -8,7 +8,7 @@
 html, body {
     height: 100%;
     color: #333;
-    /* font: 16px/1.6 '굴림', sans-serif; */
+    font: 15px/1.6 '굴림', sans-serif;
 }
 
 ul {
@@ -26,16 +26,23 @@ a {
     height: calc(100% - 120px);
 }
 
+
+
+/* header */
 header {
     width: 200px;
     padding: 20px 0;
 }
 
+
+/* logo */
 .logo {
     height: 45px;
     text-align: center; /* 중앙배치 */
 }
 
+
+/* GNB */
 nav {
     padding: 20px;
     font-size: 18px;
@@ -66,43 +73,109 @@ nav a:hover {
     color: #fff;
 }
 
+
+
+/* contents */
 .contents {
     width: 400px;
-    background: lightblue;
 }
 
+/* banner */
 .banner {
+    display: flex;
     height: 160px;
-    background: lightyellow;
+    padding: 45px 0;
+    border-bottom: 1px solid #ccc;
 }
 
+.banner img {
+    margin: 0 12px;
+}
+
+.banner h2 {
+    font-size: 14px;
+}
+
+.banner p {
+    font-size: 12px;
+}
+
+
+/* notice */
 .notice {
-    height: 300px;
+    height: calc(100% - 600px);
     background: lightgreen;
 }
 
+
+/* gallery */
 .gallery {
-    height: 300px;
+    height: 320px;
     background: lightsalmon;
 }
 
+
+/* links */
 .link {
-    height: calc(100% - 760px);
+    height: 120px;
     background: lightcyan;
-    overflow: hidden;
 }
 
+
+/* slide */
 .slide {
     width: calc(100% - 600px);
     overflow: hidden;
 }
 
+
+
+/* footer */
 footer {
     display: flex;
+    align-items: center;
     height: 120px;
-    background: #ccc;
+    background: #333;
 }
 
+
+/* bottom logo */
 .blogo {
-    width: 190px;
+    width: 200px;
+}
+
+
+/* bottom menu, address, copyright */
+.center {
+    width: calc(100% - 500px);
+    padding-left: 60px;
+    color: #888;
+}
+
+
+/* bottom logo */
+.bmenu {
+    display: flex;
+    height: 30px;
+    
+}
+
+.bmenu li {
+    margin-right: 16px;
+}
+
+.bmenu li:not(:last-child):after {
+    content: '|';
+    margin-left: 16px;
+}
+
+.bmenu a {
+    color: #ccc;
+}
+
+
+/* family sites */
+.fs {
+    width: 300px;
+    margin-bottom: 50px;
 }
