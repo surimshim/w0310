@@ -1,0 +1,73 @@
+Q. CSS 선택자에 무엇이 있는가?
+A. 
+태그
+id #
+class .
+전체 *
+그룹 ,
+하위 선택자1 선택자2
+자식 선택자1>선택자2
+형제 선택자1~선택자2
+인접형제 선택자1+선택자2
+속성
+    [속성]
+    [속성=값]
+    [속성~=]
+    [속성$=값]
+    [속성*=값]
+    [속성|=값]
+    [속성^=값]
+가상요소
+    ::after
+    ::before
+가상클래스
+    :link
+    :visited
+    :hover
+    :active
+
+    :nth-of-type(n)
+    :first-of-type
+    :last-of-type
+
+    :nth-child(n)
+    :first-child
+    :last-child
+종속
+우선순위
+
+
+
+Q. CSS 속성에 무엇이 있는가?
+
+color
+
+font
+font-family
+font-size
+font-weight
+font-style
+letter-spacing
+
+line-height
+
+width
+height
+margin
+padding
+border
+
+display: flex
+justify-content
+align-items
+
+align-content
+align-self
+order
+flex
+flex-direction
+flex-wrap
+flex-flow
+flex-grow
+flex-shirink
+flex-basis

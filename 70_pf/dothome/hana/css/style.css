@@ -32,6 +32,7 @@ a {
 header {
     width: 200px;
     padding: 20px 0;
+    border-right: 1px solid #333;
 }
 
 
@@ -41,6 +42,9 @@ header {
     text-align: center; /* 중앙배치 */
 }
 
+.logo img {
+    width: 170px;
+}
 
 /* GNB */
 nav {
@@ -52,7 +56,7 @@ nav {
 nav li {
     height: 50px;
     line-height: 50px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
     text-align: center;
 }
 
@@ -83,44 +87,104 @@ nav a:hover {
 /* banner */
 .banner {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 160px;
     padding: 45px 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
 }
 
 .banner img {
-    margin: 0 12px;
+    margin: 0 16px;
 }
 
 .banner h2 {
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 4px;
 }
 
 .banner p {
     font-size: 12px;
 }
 
+.btn img {
+    width: 50px;
+}
+
 
 /* notice */
 .notice {
-    height: calc(100% - 600px);
-    background: lightgreen;
+    height: calc(100% - 640px);
+    padding: 32px 16px;
+    border-bottom: 1px solid #ddd;
 }
 
+.notice h2 {
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+.notice a {
+    font-size: 13px;
+}
+
+.notice li {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    line-height: 2;
+    border-bottom: 1px dotted #eee;
+}
+
+.notice li:hover {
+    border-bottom: 1px solid #999;
+}
+
+.notice span {
+    color: #999;
+}
 
 /* gallery */
 .gallery {
     height: 320px;
-    background: lightsalmon;
+    padding: 32px 16px;
+    border-bottom: 1px solid #ddd;
 }
 
+.gallery h2 {
+    margin-bottom: 24px;
+}
+
+.gallery a{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.gallery img {
+    padding-bottom: 8px;
+}
+
+.inner {
+    display: flex;
+    text-align: center;
+}
 
 /* links */
 .link {
-    height: 120px;
-    background: lightcyan;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 160px;
+    padding: 0 16px;
 }
 
+.link a {
+    font-size: 14px;
+}
+
+.link img {
+    padding-bottom: 8px;
+}
 
 /* slide */
 .slide {
@@ -150,8 +214,12 @@ footer {
     width: calc(100% - 500px);
     padding-left: 60px;
     color: #888;
+    font-size: 12px;
 }
 
+.center a {
+    font-size: 14px;
+}
 
 /* bottom logo */
 .bmenu {
