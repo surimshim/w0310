@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        /* 
+            position: 요소의 위치를 지정
+                값: 
+                    -static(기본값)
+                    -relative: 자기 자신 기준
+
+                    -absolute:부모(조상) 기준
+                    -fixed: 뷰 포트 기준 (반응형)
+
+                absolute와 fixed는 width가 요소 크기로 지정된다.
+
+                fixed는 상단 고정 네비 제작시 사용된다.
+        */
+
+        body{
+            margin: 0px;
+        }
+     
+        header{
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100px;
+            background: darkgreen;
+        }
+
+        section{
+            height: 900px;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+  <header>헤더</header>
+  <section>1</section>
+  <section>2</section>
+  <section>3</section>
+  <section>4</section>
+  <footer>푸터</footer>
+</html>
