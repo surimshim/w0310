@@ -71,3 +71,131 @@ flex-flow
 flex-grow
 flex-shirink
 flex-basis
+
+
+Q. html 태그
+
+<html></html>
+<head></head>
+<body></body>
+<meta>
+<title></title>
+<link>
+<style></style>
+<h1></h1>
+<p></p>
+<br>
+<hr>
+<pre></pre>
+<strong></strong>
+<em></em>
+<b></b>
+<i></i>
+<mark></mark>
+<sup></sup>
+<sub></sub>
+<ins></ins>
+<del></del>
+<small></small>
+<code></code>
+<blockquote></blockquote>
+<q></q>
+<cite></cite>
+<abbr></abbr>
+<address></address>
+<ul></ul>
+<ol></ol>
+<li></li>
+<dl></dl>
+<dt></dt>
+<dd></dd>
+<div></div>
+<span></span>
+<header></header>
+<footer></footer>
+<section></section>
+<article></article>
+<aside></aside>
+<nav></nav>
+<main></main>
+<img>
+<map></map>
+<area>
+<video></video>
+<audio></audio>
+<source>
+<iframe></iframe>
+<table></table>
+<caption></caption>
+<colgroup></colgroup>
+<col>
+<thead></thead>
+<tbody></tbody>
+<tfoot></tfoot>
+<th></th>
+<tr></tr>
+<td></td>
+<form></form>
+<fieldset></fieldset>
+<legend></legend>
+<label></label>
+<input>
+<button></button>
+<select></select>
+<optgroup></optgroup>
+<option></option>
+<datalist></datalist>
+
+
+필수 태그 -> 암기!!!
+
+<html></html>
+<head></head>
+<body></body>
+<meta>
+<title></title>
+<link> -> css 연결
+<style></style>
+
+제목과 단락은 필수
+<h1></h1>
+<p></p>
+<br> -> 가급적 줄바꿈은 박스모델 속성(css)으로
+
+스타일 -> 가급적 css로
+<b></b> -> font-weight: bold;
+<i></i> -> font-style: italic; 폰트어썸 아이콘 사용할 대
+
+목록
+<ul></ul> 
+<li></li>
+
+그룹핑
+<div></div>
+<span></span>
+<header></header>
+<footer></footer>
+<section></section>
+<nav></nav>
+
+미디어
+<img>
+<video></video>
+<audio></audio> -> 배경 음악, 버튼 효과
+<source>
+<iframe></iframe> -> 유튜브, 비메오, 네이버
+
+게시판(board) -> 콘텐츠가 표일 때 사용
+<table></table>
+<th></th>
+<tr></tr>
+<td></td>
+
+로그인, 회원가입, 검색
+<form></form>
+<input>
+<label></label>
+<button></button>
+<textarea></textarea>
+<select></select>
+<option></option>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        /* 
+            overflow: 콘텐츠 넘침 처리
+                값:
+                    visible(default)
+                    hidden
+                    auto
+                    scroll
+
+            overflow-x
+            overflow-y
+        */
+
+        p {
+            width: 550px;
+            height: 80px;
+            border: 1px solid #000;
+            /* overflow-y: scroll; */
+        }
+
+        /* 박스 크기가 콘텐츠보다 작아야 의미가 있음 */
+        .agree1 {overflow: scroll;}
+        .agree2 {overflow: auto;}
+        .agree3 {overflow: hidden;}
+        .agree4 {overflow: visible;} /* 기본값 */
+    </style>
+</head>
+<body></body>
+    <h3>서비스 이용약관</h3>
+    <p class="agree1">
+        제 17조 (서비스의 변경 및 내용 수정) <br>
+        ①Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam adipisci asperiores sed officiis harum, dolor illum qui quae suscipit beatae necessitatibus repudiandae, delectus a corrupti ducimus, voluptatum nostrum odit consequatur. <br>
+        ②Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat enim velit rerum consectetur doloribus repudiandae aperiam officia voluptatibus, tenetur, corporis eius veniam earum temporibus, est officiis eligendi id distinctio quam! <br>
+        ③Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quidem corrupti odit distinctio excepturi voluptate. Quam modi iure dignissimos perspiciatis facere? Eos optio molestiae officiis, rerum magnam voluptas ut repudiandae.
+    </p>
+    <p class="agree2">
+        제 17조 (서비스의 변경 및 내용 수정) <br>
+        ①Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam adipisci asperiores sed officiis harum, dolor illum qui quae suscipit beatae necessitatibus repudiandae, delectus a corrupti ducimus, voluptatum nostrum odit consequatur. <br>
+        ②Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat enim velit rerum consectetur doloribus repudiandae aperiam officia voluptatibus, tenetur, corporis eius veniam earum temporibus, est officiis eligendi id distinctio quam! <br>
+        ③Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quidem corrupti odit distinctio excepturi voluptate. Quam modi iure dignissimos perspiciatis facere? Eos optio molestiae officiis, rerum magnam voluptas ut repudiandae.
+    </p>
+    <p class="agree3">
+        제 17조 (서비스의 변경 및 내용 수정) <br>
+        ①Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam adipisci asperiores sed officiis harum, dolor illum qui quae suscipit beatae necessitatibus repudiandae, delectus a corrupti ducimus, voluptatum nostrum odit consequatur. <br>
+        ②Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat enim velit rerum consectetur doloribus repudiandae aperiam officia voluptatibus, tenetur, corporis eius veniam earum temporibus, est officiis eligendi id distinctio quam! <br>
+        ③Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quidem corrupti odit distinctio excepturi voluptate. Quam modi iure dignissimos perspiciatis facere? Eos optio molestiae officiis, rerum magnam voluptas ut repudiandae.
+    </p>
+    <p class="agree4">
+        제 17조 (서비스의 변경 및 내용 수정) <br>
+        ①Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam adipisci asperiores sed officiis harum, dolor illum qui quae suscipit beatae necessitatibus repudiandae, delectus a corrupti ducimus, voluptatum nostrum odit consequatur. <br>
+        ②Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat enim velit rerum consectetur doloribus repudiandae aperiam officia voluptatibus, tenetur, corporis eius veniam earum temporibus, est officiis eligendi id distinctio quam! <br>
+        ③Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quidem corrupti odit distinctio excepturi voluptate. Quam modi iure dignissimos perspiciatis facere? Eos optio molestiae officiis, rerum magnam voluptas ut repudiandae.
+    </p>
+</body>
+</html>

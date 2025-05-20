@@ -7,7 +7,7 @@
     padding: 0;
 }
 body {
-    font: 15px/1.6 "돋움", sans-serif;
+    font: 15px/1.6;
     background: #fff;
     color:#333;
 }
@@ -27,6 +27,7 @@ a {
     display: flex;
     height: 850px;
 }
+
 /* 헤더 영역 */
 header {
     width: 200px;
@@ -66,23 +67,83 @@ nav a:hover {
 /* 오른쪽 영역 */
 .container {
     width: calc(100% - 200px);
-    background: darkgoldenrod;
 }
 /* 슬라이드 이미지 */
 .slide {
     height: 400px;
 }
+
+/* 바로가기 링크 */
+.link {
+    position: absolute;
+    right:0;
+    top:0;
+    width: 120px;
+    height: 340px;
+    background: #A88140;
+    text-align: center;
+}
+.link li {
+    margin-top: 16px;
+}
+.link a {
+    color: #fff;
+}
+.link span {
+    display: block;
+}
+
 /* 배너 */
 .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 200px;
-    background: darkmagenta;
+    padding: 0 35px;
+    background: darkred;
 }
+
+.banner a {
+    color: #fff
+}
+
+.banner .cont {
+    display: flex;
+}
+
+.banner .cont img {
+    margin-right: 24px;
+}
+
+.btn img {
+    width: 60px;
+}
+
 /* 공지사항 및 갤러리 */
 .tabs {
     height: 250px;
-    background: darkolivegreen;
+    padding: 20px 35px;
+    line-height: 2;
+    color: #fff;
+    background: #000;
 }
 
+.tabs h3 {
+    display: inline-block;
+    tab-size: 14px;
+}
+
+.tabs a {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    color: #fff;
+    padding: 0 8px;
+}
+
+.tabs a:hover {
+    border-bottom: 1px solid #eee;
+}
 
 /* 푸터 영역 */
 footer {
