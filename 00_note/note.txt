@@ -199,3 +199,136 @@ Q. html 태그
 <textarea></textarea>
 <select></select>
 <option></option>
+
+
+CSS 속성
+font-family: '돋움', Dotum, Arial, Helvetica, sans-serif;
+font-size: 12px 또는 150% 또는 1.5em
+font-weight
+font-style
+font-variant
+line-height: 1.4; 부모 요소 글자 크기 기준
+font: weight|style|variant size/line-height family; -> 순서o
+@font-face {font-family: 이름; src:url('폰트');}
+color: rgba(R, G, B, alpha); -> alpha: 0~1
+letter-spacing 자간
+word-spacing 단어간격
+text-decoration: none; underline
+text-transform
+text-shadow: x위치 y위치 blur color;
+text-align -> 블록레벨 요소에 적용하여 인라인 요소를 수평 맞춤
+vertical-align -> 인라인 요소 수직 맞춤
+text-indent
+word-wrap
+word-break: break-all; -> text-align: justify(양쪽맞춤), 영문자
+white-space: nowrap'
+text-overflow: ellipsis; -> 말줄임...
+display: block|inline|inline-block|none|flex;
+visibility
+overflow:hidden;
+opacity
+background
+background-color
+background-image
+background-repeat
+background-position
+background-attachment
+background-size
+background-origin
+background-clip
+width
+max-width
+min-width
+height
+max-height
+min-height
+padding: 패딩(안쪽); 음수x
+padding-top
+padding-bottom
+padding-left
+padding-right
+margin: 여백(바깥); 음수o
+margin-top
+margin-bottom
+margin-left
+margin-right
+border: width style color; -> 순서x
+border-top
+border-bottom
+border-left
+border-right
+border-style
+border-color
+border-radius
+border-image
+outline: 1px solid red;
+box-sizing: border-box;
+box-shadow: x위치 y위치 blur [spread] color [inset]; -> 순서o
+resize: none;
+appearance
+transform: 변형;
+transition: 전환;
+animation
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+animation-iteration-count: infinite
+animation-direction
+animation-fill-mode: backwards;
+animation-play-state;
+@keyframes 이름 {}
+column-count
+column-gap
+column-rule
+column-span
+column-width
+float: left|right;
+clear: both;
+position
+leftright
+top
+bottom
+z-index
+@media
+@import url(파일명);
+flex
+flex-direction
+flex-wrap
+flex-flow
+justify-content: space-between
+align-content
+align-items
+flex-grow
+flex-shrink
+flex-basis
+order
+
+
+선택자
+tag
+id
+class
+*
+,
+공백
+>
++
+~
+:link
+:visited
+:hover
+:active
+:focus
+:root
+:selection
+:nth-child(n) -> n은 숫자, 수열(2n, 2n+1), even, odd
+:nth-of-type(n)
+:first-child
+:last-child
+:first-of-type
+:last-of-type
+::first-letter
+::first-line
+::after
+::before

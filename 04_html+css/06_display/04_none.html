@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:none</title>
+    <style>
+        .div1 {
+            opacity: 0;
+            transition: 1s;
+        }
+        .div1:hover {opacity: 1;}
+
+        /* 인터랙티브(transition) 불가능 */
+        .div2 {visibility: hidden;}
+
+        /* 없어지면서 공간도 사라짐 */
+        .div3 {display: none;}
+    </style>
+</head>
+<body>
+    <div>난 아무것도 안 함</div>
+    <div class="div1">난 opacity 처리함</div>
+    <div>난 아무것도 안 함</div>
+    <div class="div2">난 visibility: hidden; 처리함</div>
+    <div>난 아무것도 안 함</div>
+    <div class="div3">난 display: none; 처리함</div>
+    <div>난 아무것도 안 함</div>
+</body>
+</html>
