@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>똑똑한 footer</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body, h1, p, ul {margin: 0;}
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        /* 
+            글자색은 상속 개념을 갖고 있다. 
+            단, a태그는 상속받지 않는다.
+        */
+        a {
+            text-decoration: none; 
+            color: #444;
+        }
+
+        header {
+            /* 상단 헤더 고정 */
+            position: fixed; width: 100%;
+            top:0; left: 0;
+            display: flex;
+            background: cornflowerblue;
+            /* 글자 수직 중앙 -> 단, 한 줄 텍스트일 때만 가능 */
+            height: 40px; 
+            line-height: 40px;
+        }
+
+        .lnb li {display: inline;}
+
+        .lnb li a {
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        #container {
+            width: 600px;
+            margin: 0 auto;
+            /* 
+                뷰포트(창) 단위
+                vh - viewport height
+                vw - viewport width
+                vmin - viewport minimum
+                vmax - viewport maximum
+            */
+            min-height: calc(100vh - 80px);
+        }
+
+        section {height: 800px;}
+
+        #s1 {
+            background: darkcyan;
+            padding-top: 40px;
+        }
+        #s2 {
+            padding-top: 40px;
+            background: darkgoldenrod;
+        }
+        #s3 {
+            padding-top: 40px;
+            background: darkgreen;
+        }
+        #s4 {
+            padding-top: 40px;
+            background: darkorange;
+        }
+
+        footer {
+            background: lightgray;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <!-- h1은 font-size: 2em;(32px) -->
+            <!-- 
+                a태그 글자색은 기본값이 blue
+                
+                a태그의 기본값
+                
+                a {text-decoration: underline;}
+                a:link {color: blue;}
+                a:visited {color: magenta;}
+                a:
+            -->
+            <h1><a href="#s1">로고</a></h1>
+            <ul class="lnb">
+                <!-- 회사소개 클릭하면 현재페이지(#)의 id=s2인 위치로 이동 -->
+                <li><a href="#s2">회사소개</a></li>
+                <li><a href="#s3">메뉴소개</a></li>
+                <li><a href="#s4">공지사항</a></li>
+            </ul>
+        </header>
+
+        <div id="container">
+            <section id="s1">
+                <h2>캐로셀 & 풀스크린 비디오</h2>
+            </section>
+            <section id="s2">
+                <h2>회사소개</h2>
+            </section>
+            <section id="s3">
+                <h2>메뉴소개</h2>
+            </section>
+            <section id="s4">
+                <h2>공지사항</h2>
+            </section>
+        </div>
+
+        <footer>
+            <p>copyright</p>
+            <a href="#top">위로가기</a>
+        </footer>
+    </div>
+</body>
+</html>
