@@ -9,21 +9,20 @@
 <body>
     <!-- a영역 -->
     <header>
-        <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
-            <!-- 
-                .gnb>nav>ul>li*4>a[href="#"]^^div>a[href="#"]*2
-            -->
-
-            <div class="gnb">
-                <nav>
-                    <ul>
-                        <li><a href="#">PHILOSOPHY</a></li>
-                        <li><a href="#">LOCATIONS </a></li>
-                        <li><a href="#">SHOP</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="header">
+            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
+                <!--
+                    .gnb>nav>ul>li*4>a[href="#"]^^div>a[href="#"]*2
+                -->
+            <nav>
+                <ul>
+                    <li><a href="#">PHILOSOPHY</a></li>
+                    <li><a href="#">LOCATIONS </a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="container">
@@ -83,6 +82,28 @@
     </div>
         
     <!-- d영역 -->
-    <footer></footer>
+    <footer>
+        <div class="left">
+            <p>서울특별시 용산구 대사관로 35 | TEL. 070-7458-7536</p>
+            <p>COPYRIGHT 2025 % ARABICA COFFEE. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="right">
+            <div class="sns">
+                <ul>
+                    <li><a href=""><img src="images/sns1.png" alt="페이스북"></a></li>
+                    <li><a href=""><img src="images/sns2.png" alt="인스타그램"></a></li>
+                    <li><a href=""><img src="images/sns3.png" alt="유튜브"></a></li>
+                </ul>
+            </div>
+            <div class="fs">
+                <form action="#">
+                    <select name="fs" id="fs">
+                        <option value="">--- 패밀리 사이트 ---</option>
+                        <option value="fs1">% SHOKUDO</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
