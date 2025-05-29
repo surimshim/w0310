@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeof</title>
+</head>
+<body>
+    <script>
+        var num = 10,
+            str = '문자',
+            bool = true,
+            unde,
+            temp = null,
+            obj = {},
+            arr = [],
+            fn = function(){};
+        
+        document.write(typeof num + '<br>'); // 결과: number
+        document.write(typeof str + '<br>'); // 결과: string
+        document.write(typeof bool + '<br>'); // 결과: boolean
+        document.write(typeof unde + '<br>'); // 결과: undefined
+        document.write(typeof temp + '<br>'); // 결과: object
+        document.write(typeof obj + '<br>'); // 결과: object
+        document.write(typeof arr + '<br>'); // 결과: object
+        document.write(typeof fn + '<br>'); // 결과: function
+    </script>
+</body>
+</html>

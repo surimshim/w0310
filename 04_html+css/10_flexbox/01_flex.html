@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        /* 
+            개별 속성
+            flex-grow: 0
+            값: 1이면 늘어남, 0이면 늘어나지 않음
+            flex-shrink: 1
+            값: 1이면 줄어듦, 0이면 줄어들지 않음
+            flex-basis: auto
+            값: 가로 크기 초기 값
+
+            속기 속성
+            flex: grow [shrink] [basis] -> 순서o
+
+            flex: 1;
+            flex: 1 1 0%;
+        */
+        .flexbox {
+            display: flex;
+            background: lightblue;
+        }
+
+        .flexbox div {
+            flex: 200px;
+            background: darkcyan;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 블록레벨 요소는 세로배치 -->
+     <!-- 플렉스 컨테이너 -->
+    <div class="flexbox">
+        <!-- 플렉스 아이템 -->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

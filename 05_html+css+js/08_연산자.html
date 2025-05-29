@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <script>
+        var a = 5;
+        var b = 2;
+        document.write(a + b + '<br>');
+        document.write(a - b + '<br>');
+        document.write(a * b + '<br>');
+        document.write(a / b + '<br>');
+
+        // 비교 --------------------
+        /* 
+            >       초과
+            <       미만
+            >=      이상
+            <=      이하
+            ==      같다
+            ===     같다(데이터 타입 비교)
+            !=      같지 않다
+            !==     같지 않다(데이터 타입 비교)
+
+            비교 연산의 결과는 true 또는 false이다.
+            비교 연산자가 논리 연산자보다 연산 우선 순위가 높음.
+        */
+
+        document.write((a > b) + '<br>');
+        document.write((a < b) + '<br>');
+        document.write((a >= b) + '<br>');
+        document.write((a <= b) + '<br>');
+        document.write((a == b) + '<br>');
+        document.write((a === b) + '<br>');
+        document.write((a != b) + '<br>');
+        document.write((a !== b) + '<br>');
+
+        // 논리 --------------------
+        /* 
+            &&      그리고
+            ||      또는
+            !       부정
+
+            주로 논리 연산자는 비교 연산자와 함께 사용
+            논리 연산의 결과는 true 또는 false이다.
+        */
+
+        document.write(a > b && a > b);
+        document.write(a > b || a > b);
+        document.write(!a > b);
+
+        
+    </script>
+</body>
+</html>

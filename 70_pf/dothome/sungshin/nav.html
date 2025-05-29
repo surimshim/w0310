@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        :root {
+        font-size: 10px;
+        }
+        body {
+        font-family: "Noto Sans KR", sans-serif;
+        line-height: 1.5;
+        }
+        /* font의 위계 */
+        /* 1depth, mainmenu */
+        .main>li>a {
+        font-size: 1.6rem;
+        color: #333;
+        }
+        .main li:hover a {
+        color: #fff;
+        }
+        /* 2depth, submenu */
+        .sub li a {
+        font-size: 1.4rem;
+        color: #fff;
+        }
+
+        /* header */
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            /* 블록레벨요소의 가로 가운데 배치: width, margin */
+            width: 1200px;
+            margin: 0 auto;
+            height: 100px;
+            border: 1px solid;
+        }
+
+        .gnb {
+            border: 1px solid;
+        }
+
+        /* 1depth */
+        .main {
+            display: flex;
+        }
+
+        .main>li {
+            width: 160px;
+            height: 30px;
+            /* 모든 메뉴 가로 가운데 배치 */
+            text-align: center;
+            /* 메인메뉴 텍스트 세로 가운데 배치: line-height크기를 height와 같은 크기로 지정 */
+            line-height: 30px;
+        }
+
+        .main>li:hover {
+            background: #1b3b86;
+        }
+
+        /* 2depth */
+        .sub {
+            height: 0;
+            overflow:hidden;
+            visibility:hidden;
+            opacity:0;
+            padding: 10px 0 20px;
+            background: #b6c2df;
+            /* 숫자가 작을 수록 빠르다. */
+            transition: .3s;
+            line-height: 2;
+        }
+        
+        .main>li:hover .sub {
+            height: 150px;
+            visibility:visible;
+            opacity:1;
+        }
+        
+        .sub li:hover {
+            background: #1b3b86;
+        }
+
+        .sub li:hover a {
+        color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Navigation Bar(GNB, 글로벌 내비게이션바)</title>
+</head>
+<body>
+    <nav class="gnb">
+        <ul class="main">
+            <li><a href="#">성신소개</a>
+                <ul class="sub">
+                    <li><a href="#">총장소개</a></li>
+                    <li><a href="#">성신상징</a></li>
+                    <li><a href="#">성신뉴스</a></li>
+                    <li><a href="#">캠퍼스맵</a></li>
+                </ul>
+            </li>
+            <li><a href="#">학사지원</a>
+                <ul class="sub">
+                    <li><a href="#">대학일정</a></li>
+                    <li><a href="#">대학원일정</a></li>
+                    <li><a href="#">학사행정</a></li>
+                    <li><a href="#">장학제도</a></li>
+                </ul>
+            </li>
+            <li><a href="#">연구산학</a>
+                <ul class="sub">
+                    <li><a href="#">연구산학협력단</a></li>
+                    <li><a href="#">뉴스레터</a></li>
+                    <li><a href="#">연구기관</a></li>
+                    <li><a href="#">연구윤리센터</a></li>
+                </ul>
+            </li>
+            <li><a href="#">대학생활</a>
+                <ul class="sub">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">총학생회</a></li>
+                    <li><a href="#">편의시설</a></li>
+                    <li><a href="#">구내식당</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
+</body>
+</html>
