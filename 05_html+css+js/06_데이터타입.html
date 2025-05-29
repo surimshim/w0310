@@ -9,17 +9,70 @@
     <script>
         /* 
             데이터 타입
-            1. 숫자(number)
-            2.
+            1.원시
+
+                1. 숫자(number)
+                2. 문자열
+                3. Boolean
+                4. undefined
+                5. null
+
+            2.참조
+                1. 객체
+                2. 배열
+                3. 함수
+                4. 날짜
         */
         
         var num1 = 10; // 정수
-        var num1 = 10.5; // 소수 
-        var num1 = 1e+2; // 지수
+        var num2 = 10.5; // 소수 
+        var num3 = 1e+2; // 지수
 
         console.log(num1);
         console.log(num2);
         console.log(num3);
+
+        var str4 = '문자는\t "문자"';
+        var str5 = "문자는\t '문자'";
+        
+        var str6 = '문자는 \"문자\"';
+        var str7 = "문자는\n \'문자\'";
+
+        console.log(str4);
+        console.log(str5);
+        console.log(str6);
+        console.log(str7);
+        
+        document.write(str4 + '<br>');
+        document.write(str5 + '<br>');
+        document.write(str6 + '<br>');
+        document.write(str7 + '<br>');
+
+        var boo1 = 5 > 4;
+        var boo2 = (5 < 4);
+
+        document.write(boo1);
+        document.write('<br>');
+        document.write(boo2);
+        document.write('<br>');
+        
+        var boo3 = 0;
+        var boo4 = 1;
+        
+        // 0일 경우 false, 나머지 숫자는 true
+        document.write(Boolean(boo3));
+        document.write('<br>');
+        document.write(Boolean(boo4));
+        document.write('<br>');
+        
+        var temp1;
+        document.write(temp1);
+        document.write('<br>');
+
+        var obj = {};
+        obj.name = '홍길동';
+        obj.age;
+        document.write(obj);
     </script>
 </body>
 </html>

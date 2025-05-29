@@ -70,7 +70,48 @@ nav a:hover {
 }
 /* 슬라이드 이미지 */
 .slide {
+    position: relative;
     height: 400px;
+}
+
+.slide img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide li {
+    width: 100%;
+    position: absolute;
+    animation: 6s infinite;
+}
+
+.slide li:nth-of-type(1) {animation-name: fade1;}
+.slide li:nth-of-type(2) {animation-name: fade2;}
+.slide li:nth-of-type(3) {animation-name: fade3;}
+
+@keyframes fade1 {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    33% {opacity: 1;}
+    43% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes fade2 {
+    0% {opacity: 0;}
+    33% {opacity: 0;}
+    43% {opacity: 1;}
+    66% {opacity: 1;}
+    76% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+@keyframes fade3 {
+    0% {opacity: 1;}
+    10% {opacity: 0;}
+    66% {opacity: 0;}
+    76% {opacity: 1;}
+    100% {opacity: 1;}
 }
 
 /* 바로가기 링크 */

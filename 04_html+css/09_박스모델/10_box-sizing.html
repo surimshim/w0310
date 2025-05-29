@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <style>
+        div {
+            background: orange;
+            border: 1px solid #000;
+            margin: 10px;
+            padding: 40px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .none {
+            padding: 0;
+            border: none;
+        }
+
+        .div1 {
+            /* padding 바깥쪽으로 적용 */
+            box-sizing: content-box;
+        }
+
+        .div2 {
+            /* padding 안쪽으로 적용 */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="none">content-box</div>
+    <div class="div1">content-box(기본값)</div>
+    <div class="div2">border-box</div>
+</body>
+</html>
