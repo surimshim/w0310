@@ -11,7 +11,7 @@ ul {
 }
 
 body {
-    font: 15px/1.6 '돋움', sans-serif;
+    font: 15px/1.6;
     background: #fff;
     color: #333;
 }
@@ -156,7 +156,7 @@ header {
 .tabs {
     width: 448px;
     height: 200px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .tabs input {
@@ -166,7 +166,7 @@ header {
 .tabs label {
     display: inline-block;
     margin-right: -6px;
-    padding: 4px 8px;
+    padding: 8px 8px;
     color: #999;
     /* border: 1px solid #999; */
     cursor: pointer;
@@ -183,7 +183,6 @@ header {
     padding: 12px;
     border-top: 1px solid #999;
     margin-top: -1px;
-    font-size: 14px;
     width: 448px;
 }
 
@@ -199,6 +198,12 @@ input:checked+label+.tab-content{
 .tabs .tab1 li {
     display: flex;
     justify-content: space-between;
+    font-size: 13px;
+}
+
+.tabs .tab1 a {
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .tabs .tab1 a:hover {
@@ -207,6 +212,12 @@ input:checked+label+.tab-content{
 
 .tabs .tab2 img {
     margin: 0 4px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.tabs .tab2 img:hover {
+    border: 1px solid #214a76;
 }
 
 /* 배너 */
@@ -245,11 +256,14 @@ footer {
 .blogo {
     width: 200px;
     height: 40px;
+    margin: 10px;
 }
 
 /* 주소 및 저작권 */
 .copy {
     width: 800px;
+    font-size: 13px;
+    margin-left: 10px;
 }
 
 /* SNS */
@@ -263,5 +277,5 @@ footer {
 
 .sns img {
     width: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
