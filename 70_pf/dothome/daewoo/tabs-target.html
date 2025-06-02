@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>탭 메뉴:target</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body { 
+            font: 15px/1.6 "돋움", sans-serif;
+        }
+
+        a {
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+        
+        .tabs {
+            position: absolute;
+            width: 400px;
+        }
+
+        .tab-buttons a {
+            display: inline-block;
+            padding: 0 20px;
+            height: 30px;
+            line-height: 30px;
+            background: #ccc;
+            border: 1px solid #aaa;
+            text-decoration: none;
+            margin-right: -4px;
+        }
+
+        .tab-content {
+            position: absolute;
+            width: 100%;
+            height: 170px;
+            padding: 10px;
+            border: 1px solid #aaa;
+            background: #fff;
+        }
+
+        #tab1 a {
+            display: inline-block;
+            width: 280px;
+        }
+
+        #tab1 {
+            display: block;
+            z-index: 1;
+        }
+
+        .tab-content:target {
+            z-index: 1;
+        }
+
+        .tab-content:not(:target) {
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tabs">
+        <div class="tab-buttons">
+            <a href="#tab1">공지사항</a>
+            <a href="#tab2">갤러리</a>
+        </div>
+
+        <div id="tab1" class="tab-content">
+            <ul>
+                <li><a href="#">공지사항입니다.</a><span>2025.06.02</span></li>
+                <li><a href="#">공지사항입니다.</a><span>2025.06.02</span></li>
+                <li><a href="#">공지사항입니다.</a><span>2025.06.02</span></li>
+                <li><a href="#">공지사항입니다.</a><span>2025.06.02</span></li>
+            </ul>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <a href="#"><img src="images/gallery1.jpg" alt=""></a>
+            <a href="#"><img src="images/gallery2.jpg" alt=""></a>
+            <a href="#"><img src="images/gallery3.jpg" alt=""></a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
