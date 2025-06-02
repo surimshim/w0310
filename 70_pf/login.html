@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 구현</title>
+</head>
+<body>
+    <h1>메인 페이지</h1>
+    <label for="pw">비밀번호:</label>
+    <input type="password" id="pw">
+    <button type="submit" id="login_btn">로그인</button>
+
+    <script>
+        /* 
+            HTML 속성(attribute) -> attr()
+            CSS 속성(property) -> css()
+
+
+            객체(object): 
+                window
+                   |
+                document, location, ...
+                   |
+                <html>
+                   |
+                <body>
+                   |
+                    <input>[object HTMLInputElement] -> DOM 객체
+            메서드(method): getElementById()
+            속성(property): value
+
+            형식:
+                객체.속성
+                객체.메서드()
+                객체.메서드().속성
+
+            var pw = document.getElementById('pw').value;
+
+            함수의 목적: 재사용
+
+            함수 선언
+            1. 변수 = 익명 함수
+            2. 선언적 함수
+
+            함수 호출(call)
+                변수명()
+                함수명()
+                ex) alert(), 
+
+            익명 함수 형식:
+                var 변수명 = function(){};
+            선언적 함수 형식:
+                function 함수명(){}
+            함수 호출(call) 형식:
+                변수명(); 또는 함수명();
+
+
+            이벤트(event) -> 사건 발생, 상호작용(interactive)
+                - 윈도우
+                - 마우스: click, ...
+                - 키보드
+
+            이벤트 형식: 
+                이벤트가 발생하면 익명함수 실행
+                객체.on이벤트명 = 익명 함수;
+                login_btn.onclick = function(){};
+        */
+        
+        // 선언문
+        var pw = document.getElementById('pw'); // undefined
+        var login_btn = document.getElementById('login_btn');
+        var result = '비밀번호를 잘못 입력했습니다. 다시 입력하세요.'
+        
+        // 선언적 함수
+        function loginFn(){
+            // 제어문
+            if (pw.value === '1234') {
+                location.href = 'http://www.naver.com';
+            }
+            else {
+                alert(result);
+            }
+
+            // 입력 상자 초기화
+            pw.value = null;
+        }
+        
+        /* // 로그인 버튼을 클릭하면 함수가 실행된다.
+        login_btn.onclick = function() {
+            // 함수 호출
+            loginFn();            
+        }; */
+
+        login_btn.onclick = loginFn;
+    </script>
+</body>
+</html>

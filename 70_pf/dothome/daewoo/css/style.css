@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font: 15px/1.6 '돋움', sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* 기본 레이아웃 */
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+/* 로고 */
+.logo {
+    width: 200px;
+    height: 40px;
+}
+
+/* 내비게이션 */
+.gnb {
+    position: absolute;
+    right: 0;
+    width: 640px;
+    height: 30px;
+    text-align: center;
+}
+
+/* 1depth: 메인메뉴 */
+.gnb .main {
+    display: flex;
+}
+.gnb .main>li>a {
+    display: block;
+    width: 160px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.gnb .main>li>a:hover {
+    background: #214a76;
+    color: #fff;
+}
+.gnb .main>li>a:hover .sub {
+    height: 150px;
+}
+
+/* 2depth: 서브메뉴 */
+.gnb .sub {
+    height: 0;
+    transition: .3s;
+    overflow: hidden;
+}
+.gnb .sub>li>a {
+    font-size: 14px;
+    background: #ccc;
+}
+
+/* 슬라이드 */
+.slide {
+    height: 300px;
+    overflow: hidden;
+    background: lightyellow;
+}
+
+.slide ul {
+    position: relative;
+    height: 400%;
+    animation: slide 8s infinite;
+}
+
+@keyframes slide {
+    0% {top: 0;}
+    10% {top: -100%;}
+    33% {top: -100%;}
+    43% {top: -200%;}
+    66% {top: -200%;}
+    76% {top: -300%;}
+    99.99% {top: -300%;}
+    100% {top: 0;}
+}
+
+/* 콘텐츠 */
+.contents {
+    display: flex;
+    height: 200px;
+    background: lightblue;
+}
+
+/* 탭: 공지사항 & 갤러리 */
+.tabs {
+    width: 400px;
+}
+
+/* 배너 */
+.banner {
+    width: 400px;
+    background: wheat;
+}
+
+/* 바로가기 */
+.link {
+    width: 400px;
+    background: lightgreen;
+}
+
+/* 푸터 */
+footer {
+    display: flex;
+    height: 100px;
+    background: #666;
+    color: #ccc;
+}
+
+/* 하단 로고 */
+.blogo {
+    width: 200px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+/* 주소 및 저작권 */
+.copy {
+    width: 800px;
+    background: lightsalmon;
+}
+
+/* SNS */
+.sns {
+    width: 200px;
+    background: lightgray;
+}
