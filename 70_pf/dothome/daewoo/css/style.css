@@ -54,9 +54,9 @@ header {
 .gnb {
     position: absolute;
     right: 0;
-    top: 35px;
+    top: 30px;
     width: 640px;
-    height: 30px;
+    height: 40px;
     margin-right: 20px;
     text-align: center;
 }
@@ -72,7 +72,8 @@ header {
 .gnb .main>li>a {
     display: block;
     width: 160px;
-    height: 30px;
+    height: 40px;
+    line-height: 40px;
     font-size: 18px;
     font-weight: bold;
 }
