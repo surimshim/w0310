@@ -1,8 +1,8 @@
 * 내비게이션 --------------------
-TOM N TOMS
-MENU
-EVENT
-SERVICE
+PHILOSOPHY
+LOCATIONS
+SHOP
+CONTACT
 
 
 * 바로가기 링크 -----------------------

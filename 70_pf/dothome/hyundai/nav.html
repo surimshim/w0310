@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            font: 15px/1.6;
+            background: #fff;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        /* 헤더 */
+        header {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1340px;
+            height: 100px;
+            margin: 0 auto;
+            z-index: 1;
+        }
+        
+        /* 로고 */
+        .logo {
+            width: 170px;
+        }
+
+        .logo img {
+            width: 100%;
+        }
+        
+        /* 내비게이션 */
+        .gnb {
+            position: absolute;
+            right: 20px;
+            width: 640px;
+            height: 40px;
+            text-align: center;
+            align-self: flex-end;
+        }
+
+        /* 1depth: 메인메뉴 */
+        .gnb .main {
+            display: flex;
+        }
+
+        .gnb .main::before {
+            position: fixed;
+            top: 100px;
+            left: 0;
+            z-index: -1;
+            content: "";
+            width: 100%;
+            height: 0;
+            background: rgba(166, 166, 166, 0.5);
+            transition: .3s;
+        }
+        
+        .gnb .main:hover::before {
+            height: 140px;
+        }
+
+        .gnb .main>li>a {
+            display: block;
+            width: 160px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .gnb .main>li>a:hover {
+            background: #333;
+            color: #fff;
+            transition: .1s;
+        }
+        .gnb .main:hover .sub {
+            height: 140px;
+        }
+
+        /* 2depth: 서브메뉴 */
+        .gnb .sub {
+            height: 0;
+            transition: .3s;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .gnb .sub a {
+            color: #333;
+        }
+
+        .gnb .sub::before {
+            display: block;
+            content: '';
+            padding-top: 10px;
+        }
+
+        .gnb .sub>li>a {
+            display: block;
+            font-size: 14px;
+            padding: 4px;
+        }
+
+        .gnb .sub>li>a:hover {
+            background: #999;
+            color: #fff;
+            font-weight: bold;
+            transition: .1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- a영역: 헤더 -->
+    <header>
+        <!-- 로고 -->
+        <h1 class="logo"><a href="#"><img src="images/logo.jpg" alt="로고"></a></h1>
+
+        <!-- 내비게이션 -->
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">브랜드</a>
+                    <ul class="sub">
+                        <li><a href="#">브랜드스토리</a></li>
+                        <li><a href="#">모터스포츠</a></li>
+                        <li><a href="#">사업망</a></li>
+                        <li><a href="#">포레스트런</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">구매/이벤트</a>
+                    <ul class="sub">
+                        <li><a href="#">모델탐색</a></li>
+                        <li><a href="#">구매</a></li>
+                        <li><a href="#">전시/시승</a></li>
+                        <li><a href="#">이벤트</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">서비스/멤버십</a>
+                    <ul class="sub">
+                        <li><a href="#">내차</a></li>
+                        <li><a href="#">블루멤버스</a></li>
+                        <li><a href="#">서비스네트워크</a></li>
+                        <li><a href="#">전기차</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">디지털/고객지원</a>
+                    <ul class="sub">
+                        <li><a href="#">업데이트</a></li>
+                        <li><a href="#">Help Desk</a></li>
+                        <li><a href="#">공지/뉴스</a></li>
+                        <li><a href="#">종료서비스</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

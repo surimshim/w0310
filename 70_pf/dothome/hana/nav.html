@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNB - 왼쪽에서 오른쪽</title>
+    <style>
+        /* 공통 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+            font: 15px/1.6 "돋움", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .wrap {
+            display: flex;
+            width: 1000px;
+        }
+
+        /* 헤더 */
+        header {
+            width: calc(100% - 120px);
+            height: 650px;
+            background: #011053;
+        }
+
+        /* 로고 */
+        .logo {
+            height: 60px;
+            margin-top: 20px;
+        }
+
+        /* 내비게이션 */
+        .gnb {
+            width: 160px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .gnb a {
+            color: #fff;
+        }
+
+        /* 1depth: 메인메뉴 */
+        .gnb .main>li>a {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .gnb .main>li:not(:last-of-type) {
+            border-bottom: 1px solid #fff; 
+        }
+
+        .gnb .main>li>a:hover {
+            background: #fff;
+            color: #011053;
+            transition: .3s;
+        }
+        .gnb .main>li:hover .sub {
+            height: 120px;
+        }
+
+        /* 2depth: 서브메뉴 */
+        .gnb .sub {
+            height: 0;
+            transition: .3s;
+            overflow: hidden;
+            background: #eee;
+            text-align: center;
+        }
+
+        .gnb .sub a {
+            color: #333;
+        }
+
+        .gnb .sub::before {
+            display: block;
+            content: '';
+            padding-top: 15px;
+        }
+
+        .gnb .sub>li>a {
+            display: block;
+            font-size: 14px;
+            padding: 4px;
+        }
+
+        .gnb .sub>li>a:hover {
+            background: #949cbb;
+            color: #fff;
+            font-weight: bold;
+            transition: .1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- a영역: 헤더 -->
+        <header>
+            <!-- 로고 -->
+            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고 이미지"></a></h1>
+
+            <!-- 내비게이션 -->
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">이용안내</a>
+                        <ul class="sub">
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">이용시간</a></li>
+                            <li><a href="#">이용요금</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트정보</a>
+                        <ul class="sub">
+                            <li><a href="#">현장이벤트</a></li>
+                            <li><a href="#">온라인이벤트</a></li>
+                            <li><a href="#">이벤트예약</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">프로그램</a>
+                        <ul class="sub">
+                            <li><a href="#">프로그램안내</a></li>
+                            <li><a href="#">온라인예약</a></li>
+                            <li><a href="#">단체예약상담</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+</body>
+</html>

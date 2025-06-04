@@ -23,35 +23,101 @@ ul {
 
 /* a영역 헤더 */
 header {
+    position: relative;
+    z-index: 1;
     height: 100px;
 }
 
-.header {
-    width: 1200px;
+header .inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1200px;
     margin: 0 auto;
-    text-align: center;
-    padding-top: 20px;
+    height: 100%;
 }
-
 .logo {
     padding-top: 15px;
 }
 
-nav{
-    width: 600px;
+/* 내비게이션 */
+.gnb {
+    position: absolute;
+    right: 20px;
+    width: 640px;
     height: 60px;
+    text-align: center;
+    align-self: flex-end;
 }
 
-nav ul {
+/* 1depth: 메인메뉴 */
+.gnb .main {
     display: flex;
-    justify-content: space-evenly;
-    line-height: 60px;
 }
-nav a {
+
+.gnb .main::before {
+    position: absolute;
+    right: -20px;
+    top: 60px;
+    z-index: -1;
+    content: "";
+    width: 1200px;
+    height: 0;
+    background: rgba(255, 255, 255, .8);
+    transition: .3s;
+}
+
+.gnb .main:hover::before {
+    height: 140px;
+}
+
+.gnb .main>li>a {
+    display: block;
+    width: 160px;
+    height:60px;
+    line-height: 60px;
     font-size: 18px;
+    font-weight: bold;
+}
+.gnb .main>li>a:hover {
+    background: #333;
+    color: #fff;
+    transition: .1s;
+}
+.gnb .main:hover .sub {
+    height: 140px;
+}
+
+/* 2depth: 서브메뉴 */
+.gnb .sub {
+    height: 0;
+    transition: .3s;
+    overflow: hidden;
+    text-align: center;
+}
+
+.gnb .sub a {
+    color: #333;
+}
+
+.gnb .sub::before {
+    display: block;
+    content: '';
+    padding-top: 10px;
+}
+
+.gnb .sub>li>a {
+    display: block;
+    font-size: 14px;
+    padding: 4px;
+}
+
+.gnb .sub>li>a:hover {
+    background: #999;
+    color: #fff;
+    font-weight: bold;
+    transition: .1s;
 }
 
 

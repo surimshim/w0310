@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+/* 공통 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    font: 15px/1.6 "돋움", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrap {
+    display: flex;
+    width: 1000px;
+}
+
+/* 헤더 */
+header {
+    width: 200px;
+    height: 650px;
+    background: #011053;
+}
+
+/* 로고 */
+.logo {
+    height: 60px;
+    margin-top: 20px;
+}
+
+/* 내비게이션 */
+.gnb {
+    width: 160px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.gnb a {
+    color: #fff;
+}
+
+/* 1depth: 메인메뉴 */
+.gnb .main>li>a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.gnb .main>li:not(:last-of-type) {
+    border-bottom: 1px solid #fff; 
+}
+
+.gnb .main>li>a:hover {
+    background: #fff;
+    color: #011053;
+    transition: .3s;
+}
+.gnb .main>li:hover .sub {
+    height: 120px;
+}
+
+/* 2depth: 서브메뉴 */
+.gnb .sub {
+    height: 0;
+    transition: .3s;
+    overflow: hidden;
+    background: #eee;
+    text-align: center;
+}
+
+.gnb .sub a {
+    color: #333;
+}
+
+.gnb .sub::before {
+    display: block;
+    content: '';
+    padding-top: 15px;
+}
+
+.gnb .sub>li>a {
+    display: block;
+    font-size: 14px;
+    padding: 4px;
+}
+
+.gnb .sub>li>a:hover {
+    background: #949cbb;
+    color: #fff;
+    font-weight: bold;
+    transition: .1s;
+}
+
+/* 슬라이드 */
+.slide {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* 오른쪽 영역 */
+.container {
+    width: 800px;
+    background: lightblue;
+}
+
+/* 슬라이드 */
+.slide {
+    height: 350px;
+    overflow: hidden;
+}
+
+/* 콘텐츠 */
+.contents {
+    display: flex;
+    height: 200px;
+}
+
+/* 탭 메뉴 */
+.tabs {
+    width: 300px;
+    background: lightcoral;
+}
+
+.notice a {
+    font-size: 14px;
+}
+
+.notice p {
+    font-size: 12px;
+}
+
+/* 배너 */
+.banner {
+    width: 250px;
+    background: lightgoldenrodyellow;
+}
+
+/* 바로가기 */
+.link {
+    width: 250px;
+    background: lightseagreen;
+}
+
+/* 푸터 */
+footer {
+    display: flex;
+    height: 100px;
+    background: #666;
+    color: #eee;
+}
+
+/* 하단 로고 */
+.blogo {
+    width: 200px;
+    margin-top: 30px;
+}
+
+/* 하단 오른쪽 */
+.bcon {
+    width: 600px;
+}
+
+/* 하단 메뉴 */
+.bmenu {
+    height: 40px;
+    margin-top: 10px;
+}
+
+.bmenu a {
+    color: #eee;
+}
+
+.bmenu li {
+    display: inline;
+}
+
+/* 저작권 */
+.copy {
+}
