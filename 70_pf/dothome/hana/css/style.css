@@ -144,7 +144,7 @@ header {
 
 /* notice */
 .notice {
-    height: calc(100% - 640px);
+    height: calc(100% - 650px);
     padding: 32px 16px;
     border-bottom: 1px solid #ddd;
 }
@@ -175,7 +175,7 @@ header {
 
 /* gallery */
 .gallery {
-    height: 320px;
+    height: 310px;
     padding: 32px 16px;
     border-bottom: 1px solid #ddd;
 }
@@ -206,14 +206,11 @@ header {
     text-align: center;
     height: 160px;
     padding: 0 16px;
+    margin-top: 10px;
 }
 
 .link a {
     font-size: 14px;
-}
-
-.link img {
-    padding-bottom: 8px;
 }
 
 /* slide */
