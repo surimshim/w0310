@@ -244,6 +244,7 @@ input:checked+label+.tab-content{
     text-decoration: underline;
 }
 
+/* 갤러리 */
 .tabs .tab2 img {
     margin: 0 4px;
     border: 1px solid transparent;
