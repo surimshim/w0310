@@ -12,14 +12,9 @@
             box-sizing: border-box;
         }
 
-        body {
-            background: #fff;
-            color: #333;
+        body  {
             font: 15px/1.6 "돋움", sans-serif;
-        }
-
-        a {
-            text-decoration: none;
+            background: #fff;
             color: #333;
         }
 
@@ -27,87 +22,89 @@
             list-style: none;
         }
 
-        .wrap {
-            display: flex;
-            width: 1000px;
-        }
-
-        /* 헤더 */
-        header {
-            width: calc(100% - 120px);
-            height: 650px;
-            background: #011053;
-        }
-
-        /* 로고 */
-        .logo {
-            height: 60px;
-            margin-top: 20px;
-        }
-
-        /* 내비게이션 */
-        .gnb {
-            width: 160px;
-            text-align: center;
-            margin: 0 auto;
-        }
-
-        .gnb a {
-            color: #fff;
-        }
-
-        /* 1depth: 메인메뉴 */
-        .gnb .main>li>a {
-            display: block;
-            height: 50px;
-            line-height: 50px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .gnb .main>li:not(:last-of-type) {
-            border-bottom: 1px solid #fff; 
-        }
-
-        .gnb .main>li>a:hover {
-            background: #fff;
-            color: #011053;
-            transition: .3s;
-        }
-        .gnb .main>li:hover .sub {
-            height: 120px;
-        }
-
-        /* 2depth: 서브메뉴 */
-        .gnb .sub {
-            height: 0;
-            transition: .3s;
-            overflow: hidden;
-            background: #eee;
-            text-align: center;
-        }
-
-        .gnb .sub a {
+        a {
+            text-decoration: none;
             color: #333;
         }
 
-        .gnb .sub::before {
-            display: block;
-            content: '';
-            padding-top: 15px;
+        header {
+            width: 200px;
+            height: calc(100vh - 120px);
+            padding: 20px 0;
+            border-right: 1px solid #333;
         }
 
-        .gnb .sub>li>a {
-            display: block;
-            font-size: 14px;
-            padding: 4px;
+        /* logo */
+        .logo {
+            height: 45px;
+            text-align: center; /* 중앙배치 */
         }
 
-        .gnb .sub>li>a:hover {
-            background: #949cbb;
-            color: #fff;
+        .logo img {
+            width: 170px;
+        }
+
+        /* GNB */
+        .gnb {
+            margin: 20px;
+        }
+
+        .main>li {
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .main>li:not(:last-child) {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .main>li>a {
+            display: block;
+            font-size: 18px;
             font-weight: bold;
-            transition: .1s;
+            color: #333;
+        }
+
+        .main>li>a:hover {
+            color: rgb(94, 43, 184);
+        }
+
+        .main>li:hover {
+            border-bottom: 2px solid rgb(94, 43, 184);
+        }
+
+        .main li:hover .sub {
+            z-index: 1;
+            opacity: 1;
+            left: 160px;
+            visibility: visible;
+        }
+
+        .sub {
+            z-index: -1;
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            width: 130px;
+            visibility: hidden;
+            opacity: 0;
+            transition: .2s;
+            line-height: 2;
+            background: rgba(94, 43, 184, 0.8);
+        }
+        .sub li a {
+            display: block;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .sub li:hover a {
+            background: #fff;
+            color: #333;
         }
     </style>
 </head>
@@ -118,35 +115,41 @@
             <!-- 로고 -->
             <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고 이미지"></a></h1>
 
-            <!-- 내비게이션 -->
+            <!-- GNB -->
             <nav class="gnb">
                 <ul class="main">
-                    <li><a href="#">이용안내</a>
+                    <li>
+                        <a href="#">해외여행</a>
                         <ul class="sub">
-                            <li><a href="#">이용방법</a></li>
-                            <li><a href="#">이용시간</a></li>
-                            <li><a href="#">이용요금</a></li>
+                            <li><a href="#">동남아/대만</a></li>
+                            <li><a href="#">일본</a></li>
+                            <li><a href="#">유럽/아프리카</a></li>
+                            <li><a href="#">미주/하와이</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">이벤트정보</a>
+                    <li>
+                        <a href="#">국내여행</a>
                         <ul class="sub">
-                            <li><a href="#">현장이벤트</a></li>
-                            <li><a href="#">온라인이벤트</a></li>
-                            <li><a href="#">이벤트예약</a></li>
+                            <li><a href="#">제주여행</a></li>
+                            <li><a href="#">내륙여행</a></li>
+                            <li><a href="#">울릉도</a></li>
+                            <li><a href="#">섬 여행</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">프로그램</a>
+                    <li>
+                        <a href="#">테마여행</a>
                         <ul class="sub">
-                            <li><a href="#">프로그램안내</a></li>
-                            <li><a href="#">온라인예약</a></li>
-                            <li><a href="#">단체예약상담</a></li>
+                            <li><a href="#">해외골프</a></li>
+                            <li><a href="#">허니문</a></li>
+                            <li><a href="#">크루즈</a></li>
+                            <li><a href="#">트레킹/레저</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">고객센터</a>
+                    <li>
+                        <a href="#">호텔</a>
                         <ul class="sub">
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">자주묻는질문</a></li>
-                            <li><a href="#">자료실</a></li>
+                            <li><a href="#">해외호텔</a></li>
+                            <li><a href="#">국내숙박</a></li>
                         </ul>
                     </li>
                 </ul>

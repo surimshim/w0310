@@ -27,10 +27,10 @@ a {
 }
 
 
-
 /* header */
 header {
     width: 200px;
+    height: calc(100vh - 120px);
     padding: 20px 0;
     border-right: 1px solid #333;
 }
@@ -47,37 +47,67 @@ header {
 }
 
 /* GNB */
-nav {
-    padding: 20px;
-    font-size: 18px;
-    font-weight: bold;
+.gnb {
+    margin: 20px;
 }
 
-nav li {
+.main>li {
+    position: relative;
     height: 50px;
     line-height: 50px;
-    border-bottom: 1px solid #ddd;
     text-align: center;
 }
 
-nav li:last-of-type {
-    border-bottom: none;
+.main>li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
 }
 
-/* a 영역을 li 영역만큼 확대 */
-nav a {
-    display: inline-block; 
-    width: 100%;
-    height: 100%;
-    transition: .1s; /* dissolve효과 */
+.main>li>a {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
 
-nav a:hover {
-    background: rgb(94, 43, 184);
+.main>li>a:hover {
+    color: rgb(94, 43, 184);
+}
+
+.main>li:hover {
+    border-bottom: 2px solid rgb(94, 43, 184);
+}
+
+.main li:hover .sub {
+    z-index: 1;
+    opacity: 1;
+    left: 160px;
+    visibility: visible;
+}
+
+.sub {
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: 130px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+    line-height: 2;
+    background: rgba(94, 43, 184, 1);
+}
+.sub li a {
+    display: block;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
     color: #fff;
 }
 
-
+.sub li:hover a {
+    background: #fff;
+    color: #333;
+}
 
 /* contents */
 .contents {

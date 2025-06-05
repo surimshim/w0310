@@ -133,14 +133,30 @@ header {
 /* 탭 메뉴 */
 .tabs {
     width: 300px;
+    height: 200px;
     background: lightcoral;
 }
 
-.notice a {
+.tabs input {
+    display: none;
+}
+
+.tabs label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tabs .tab-content {
+    position: absolute;
+    display: none;
+    width: 300px;
+}
+
+.tab1 a {
     font-size: 14px;
 }
 
-.notice p {
+.tab1 p {
     font-size: 12px;
 }
 
