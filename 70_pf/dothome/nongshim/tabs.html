@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭 메뉴</title>
+    <style>
+        /* 초기화 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font: 15px/1.5 "굴림", sans-serif;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* 탭 */
+        .tabs {
+            height: 250px;
+            padding: 20px 35px;
+            line-height: 2;
+            background: #000;
+        }
+        
+        .tabs a {
+            color: #fff;
+        }
+        
+        .tabs .btn {
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* 탭 버튼 */
+        .tabs .btn a {
+            padding: 10px;
+            border-bottom: 2px solid #666;
+            color: #666;
+        }
+        
+        .tabs .btn a.active {
+            border-bottom: 2px solid #fff;
+            color: #fff;
+        }
+
+        .tabs .btn a:first-of-type {
+            margin-left: 5px;
+        }
+
+        /* 탭 콘텐츠 */
+        .tabs div {
+            display: none;
+        }
+        .tabs div.active {
+            display: block;
+        }
+        
+        /* 탭 - 공지사항 */
+        #tab1 h3 {
+            display: inline-block;
+            tab-size: 14px;
+        }
+        
+        #tab1 a {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #333;
+            color: #fff;
+            padding: 0 8px;
+        }
+
+        #tab1 a:hover {
+            border-bottom: 1px solid #eee;
+        }
+
+        /* 탭 - 갤러리 */
+        /* #tab2 {
+            display: none;
+        } */
+
+        #tab2 a:not(:last-of-type) {
+            margin-right: 16px;
+        }
+
+        #tab2 img {
+            width: 150px;
+            border-radius: 10px;
+        }
+
+        #tab2 img:hover {
+            border: 3px solid darkred;
+        }
+    </style>
+</head>
+<body>
+    <!-- 탭: 공지사항+갤러리 -->
+    <div class="tabs">
+        <span class="btn">
+            <a href="#tab1" class="active">공지사항</a>
+            <a href="#tab2">갤러리</a>
+        </span>
+
+        <div id="tab1" class="active">
+            <ul>
+                <li>
+                    <a href="#"><h3>농심 신라면 툼바, 일본서 초도물량 100만 개 완판</h3><span>2025.05.14</span></a>
+                </li>
+                <li>
+                    <a href="#"><h3>농심, 감자칩 스낵 ‘크레오파트라 솔트앤김’ 출시</h3><span>2025.05.08</span></a>
+                </li>
+                <li>
+                    <a href="#"><h3>농심, ‘너구리 다시마의 고장’ 완도 장보고수산물축제 참가</h3><span>2025.05.06</span></a>
+                </li>
+                <li>
+                    <a href="#"><h3>농심, 페루 마추픽추에 ‘신라면 분식’ 1호점 오픈</h3><span>2025.04.28</span></a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="tab2">
+            <a href="#"><img src="images/gallery1.jpg" alt="겔러리이미지1"></a>
+            <a href="#"><img src="images/gallery2.jpg" alt="겔러리이미지2"></a>
+            <a href="#"><img src="images/gallery3.jpg" alt="겔러리이미지3"></a>
+            <a href="#"><img src="images/gallery4.jpg" alt="겔러리이미지4"></a>
+            <a href="#"><img src="images/gallery5.jpg" alt="겔러리이미지5"></a>
+        </div>
+    </div>
+
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script>
+        /* 
+            참조 데이터타입 3가지
+                객체: {}
+                함수: function(){}
+                배열: []
+
+            객체
+                {
+                    속성: 숫자,
+                    속성: '문자열',
+                    메서드: function(){},
+                    ...
+                }
+
+                $(document)
+                $(this)
+
+                $('.tabs .btn a')
+                $('.tabs div').eq(0)
+                $('.tabs div').eq(1)
+
+            이벤트 메서드
+                ready(function(){}) -> 준비
+                click(function(){})
+
+            탐색(요소 선택) 메서드
+                eq(n) -> n = 0, 1, 2, ... -> n번째 요소 선택
+                siblings() -> 형제 선택
+                index() -> 순번 가져오기
+
+            HTML/CSS 메서드
+                addClass('클래스명') -> 클래스 추가
+                removeClass('클래스명') -> 클래스 삭제
+                css({css속성: 값, css속성: 값, ...}) -> css 적용
+        */
+
+        $(function () {
+            // 1. 탭 버튼 클릭 시 함수 실행
+            $(".btn a").click(function () {
+                // 2. 버튼에 .active 클래스 추가
+                $(this).addClass("active");
+                // 3. this 형제의 .active 클래스 제거
+                $(this).siblings().removeClass("active");
+
+                // 4. 클릭한 버튼의 순번을 가져와서 idx에 저장
+                var idx = $(this).index();
+                // 5. idx 순번에 해당하는 div 보여줌
+                $(".tabs div").eq(idx).addClass("active");
+                // 6. idx 순번에 해당하는 div 형제 숨김
+                $(".tabs div").eq(idx).siblings("div").removeClass("active");
+            });
+        });
+    </script>
+
+</body>
+</html>

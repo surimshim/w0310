@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 팝업창</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 15px/1.6 "굴림", Arial, sans-serif;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* notice */
+        .notice {
+            height: calc(100% - 650px);
+            padding: 32px 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .notice h2 {
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+        .notice a {
+            font-size: 13px;
+        }
+
+        .notice li {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 8px;
+            line-height: 2;
+            border-bottom: 1px dotted #eee;
+        }
+
+        .notice li:hover {
+            border-bottom: 1px solid #999;
+        }
+
+        .notice span {
+            color: #999;
+        }
+
+        /* 모달 팝업 창 */
+        .modal {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .popup {
+            width: 500px;
+            margin: 10% auto;
+            background: #fff;
+            padding: 20px;
+            overflow: auto;
+        }
+        .popup p {
+            margin: 16px 0;
+        }
+        .close_btn {
+            text-align: right;
+        }
+        .popup a {
+            padding: 8px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 모달 팝업 창 -->
+    <div class="modal">
+        <div class="popup">
+            <h2>[안내] 5월 휴일 항공 업무 관련 공지</h2>
+            <p>안녕하세요. 하나투어 항공을 이용해 주시는 고객님께 감사드립니다.<br>
+                5월 휴일 기간에는 국내/해외 항공 업무가 일부 제한됩니다.<br><br>
+                공휴일 기간 휴무로 인해 상담 업무가 불가하오니 양해부탁드립니다.<br>
+                해당 기간 동안 접수된 요청은 영업일인 **5월 7일(수)**부터 순차적으로 답변드리겠습니다.</p>
+            <div class="close_btn"><a href="#">&times; 닫기</a></div>
+        </div>
+    </div>
+
+    <!-- notice -->
+    <div class="notice">
+        <h2>공지사항</h2>
+        <ul>
+            <li>
+                <a href="#">[안내] 5월 휴일 항공 업무 관련 공지</a>
+                <span>2025.04.30</span>
+            </li>
+            <li>
+                <a href="#">[여행만보] 25년 5월 미션 변동 사항 안내</a>
+                <span>2025.04.29</span>
+            </li>
+            <li>
+                <a href="#">[개인정보보호] 개인정보 처리방침 변경안내</a>
+                <span>2025.04.08</span>
+            </li>
+            <li>
+                <a href="#">[여행만보] 25년 4월 미션 변동 사항 안내</a>
+                <span>2025.03.28</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 
+        제이쿼리 라이브러리
+        https://releases.jquery.com/
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+
+
+        객체
+            순수 자바스크립트(바닐라 스크립트): document
+            제이쿼리: $(document)
+            리액트
+
+        $('제이쿼리선택자') 또는 $("제이쿼리선택자")
+            $("li:first-of-type")
+            $(".modal")
+            $(".popup a")
+
+        함수 데이터: function(){}
+
+        함수
+        1. 익명 함수
+            변수 = function(){}
+        2. 선언적 함수
+            function 이름(){}
+
+        이벤트
+        1. 윈도우
+        2. 문서
+        3. 키보드
+        4. 마우스
+
+        이벤트 메소드(function(){})
+            ready()
+            click()
+
+
+        객체는 속성과 메서드()로 구성됨
+
+        method([parameter], ...) -> 객체의 함수
+
+        이벤트 메서드
+            .ready(function(){})
+            .click(function(){})
+        효과 메서드
+            .show()
+            .hide()
+
+        객체.메소드();
+        객체.속성;
+    -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
+    <script src="script/jquery-3.7.1.js"></script>
+    <script>
+        // 준비 이벤트
+        $(document).ready(function () {
+            $("li:first-of-type").click(function () {
+                $(".modal").show();
+            });
+            $(".popup a").click(function () {
+                $(".modal").hide();
+            });
+        });
+    </script>
+</body>
+</html>

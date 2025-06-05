@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션</title>
+    <style>
+        /* 공통 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body  {
+            font: 15px/1.6 "돋움", sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        header {
+            width: 200px;
+            height: calc(100vh - 120px);
+            padding: 20px 0;
+        }
+
+        /* logo */
+        .logo {
+            height: 45px;
+            text-align: center; /* 중앙배치 */
+        }
+
+        .logo img {
+            width: 170px;
+        }
+
+        /* GNB */
+        .gnb {
+            margin: 20px;
+        }
+
+        .main>li {
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .main>li:not(:last-child) {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .main>li>a {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .main>li>a:hover {
+            color: #DF0029;
+        }
+
+        .main>li:hover {
+            border-bottom: 2px solid #DF0029;
+        }
+
+        .main:hover .sub {
+            z-index: 1;
+            left: 160px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .sub {
+            display: flex;
+            z-index: -1;
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            width: calc(100vw - 180px);
+            visibility: hidden;
+            opacity: 0;
+            transition: .2s;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0 20px;
+        }
+        .sub li a {
+            display: block;
+            width: 120px;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            padding: 0 8px;
+        }
+
+        .sub li:hover a {
+            font-weight: bold;
+            color: #DF0029;
+        }
+
+        /* 스팟메뉴 */
+        .spotmenu {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .spotmenu a {
+            color: #555;
+        }
+        .spotmenu a:not(:last-child):after {
+            content: ' |';
+            margin: 8px;
+        }
+        .spotmenu a:hover {
+            text-decoration: underline;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- a영역: 헤더 -->
+        <header>
+            <!-- 로고 -->
+            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고 이미지"></a></h1>
+
+            <!-- GNB -->
+            <nav class="gnb">
+                <ul class="main">
+                    <li>
+                        <a href="#">농심소개</a>
+                        <ul class="sub">
+                            <li><a href="#">IDENTITY</a></li>
+                            <li><a href="#">CI 소개</a></li>
+                            <li><a href="#">농심그룹</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">홍보센터</a>
+                        <ul class="sub">
+                            <li><a href="#">농시미 이벤트</a></li>
+                            <li><a href="#">농심 소식</a></li>
+                            <li><a href="#">농심 TV</a></li>
+                            <li><a href="#">라면피디아</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">지속가능경영</a>
+                        <ul class="sub">
+                            <li><a href="#">PLANET</a></li>
+                            <li><a href="#">PEOPLE</a></li>
+                            <li><a href="#">PROSPERITY</a></li>
+                            <li><a href="#">GOVERNANCE</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객서비스</a>
+                        <ul class="sub">
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">공장견학</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 스팟메뉴 -->
+            <div class="spotmenu">
+                <a href="#">로그인</a>
+                <a href="#">회원가입</a>
+            </div>
+        </header>
+    </div>
+</body>
+</html>

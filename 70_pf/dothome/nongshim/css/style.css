@@ -31,26 +31,89 @@ a {
 /* 헤더 영역 */
 header {
     width: 200px;
-    background: #F6F6F6;
+    height: calc(100vh - 120px);
+    padding: 20px 0;
 }
+
+/* logo */
+.logo {
+    height: 45px;
+    text-align: center; /* 중앙배치 */
+}
+
+.logo img {
+    width: 170px;
+}
+
+/* GNB */
 .gnb {
+    margin: 20px;
+}
+
+.main>li {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
 }
-nav {
-    padding: 20px;
+
+.main>li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
 }
-nav a {
+
+.main>li>a {
     display: block;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    border: 1px solid #333;
     font-size: 18px;
-    margin-top: 4px;
+    font-weight: bold;
+    color: #333;
 }
-nav a:hover {
-    background: #E6001E;
+
+.main>li>a:hover {
+    color: #DF0029;
+}
+
+.main>li:hover {
+    border-bottom: 2px solid #DF0029;
+}
+
+.main:hover .sub {
+    z-index: 1;
+    left: 160px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub {
+    display: flex;
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    width: calc(100vw - 180px);
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0 20px;
+}
+.sub li a {
+    display: block;
+    width: 120px;
+    text-align: center;
+    font-size: 14px;
     color: #fff;
+    padding: 0 8px;
+}
+
+.sub li:hover a {
+    font-weight: bold;
+    color: #DF0029;
+}
+
+/* 스팟메뉴 */
+.spotmenu {
+    margin-top: 30px;
+    text-align: center;
 }
 .spotmenu a {
     color: #555;
@@ -160,21 +223,55 @@ nav a:hover {
     width: 60px;
 }
 
-/* 공지사항 및 갤러리 */
+/* 탭: 공지사항+갤러리 */
 .tabs {
     height: 250px;
     padding: 20px 35px;
     line-height: 2;
-    color: #fff;
     background: #000;
+    /* text-align: center; */
 }
 
-.tabs h3 {
+.tabs a {
+    color: #fff;
+}
+
+.tabs .btn {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* 탭 버튼 */
+.tabs .btn a {
+    padding: 10px;
+    border-bottom: 2px solid #666;
+    color: #666;
+}
+
+.tabs .btn a.active {
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+.tabs .btn a:first-of-type {
+    margin-left: 5px;
+}
+
+/* 탭 콘텐츠 */
+.tabs div {
+    display: none;
+}
+.tabs div.active {
+    display: block;
+}
+
+/* 탭 - 공지사항 */
+#tab1 h3 {
     display: inline-block;
     tab-size: 14px;
 }
 
-.tabs a {
+#tab1 a {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #333;
@@ -182,8 +279,30 @@ nav a:hover {
     padding: 0 8px;
 }
 
-.tabs a:hover {
+#tab1 a:hover {
     border-bottom: 1px solid #eee;
+}
+
+/* 탭 - 갤러리 */
+/* #tab2 {
+    display: none;
+} */
+
+#tab2 {
+    text-align: center;
+}
+
+#tab2 a:not(:last-of-type) {
+    margin-right: 16px;
+}
+
+#tab2 img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+#tab2 img:hover {
+    border: 3px solid darkred;
 }
 
 /* 푸터 영역 */
