@@ -26,85 +26,74 @@ a {
     height: calc(100% - 120px);
 }
 
-
-/* header */
 header {
     width: 200px;
     height: calc(100vh - 120px);
-    padding: 20px 0;
-    border-right: 1px solid #333;
+    text-align: center;
+    border-right: 1px solid #ccc;
 }
 
-
-/* logo */
 .logo {
-    height: 45px;
-    text-align: center; /* 중앙배치 */
+    height: 60px;
+    line-height: 110px;
 }
 
-.logo img {
-    width: 170px;
-}
-
-/* GNB */
 .gnb {
-    margin: 20px;
+    width: 160px;
+    margin: 30px auto;
 }
 
 .main>li {
+    z-index: 2;
     position: relative;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-}
-
-.main>li:not(:last-child) {
-    border-bottom: 1px solid #ddd;
 }
 
 .main>li>a {
     display: block;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    transition: .1s;
 }
 
 .main>li>a:hover {
-    color: rgb(94, 43, 184);
-}
-
-.main>li:hover {
     border-bottom: 2px solid rgb(94, 43, 184);
 }
 
-.main li:hover .sub {
-    z-index: 1;
-    opacity: 1;
-    left: 160px;
-    visibility: visible;
+.main>li>a {
+    border-bottom: 1px solid #ccc;
 }
 
+/* 2depth: 서브메뉴 */
 .sub {
-    z-index: -1;
+    z-index: 1;
     position: absolute;
-    top: 0px;
-    left: 100px;
-    width: 130px;
-    visibility: hidden;
+    display: none;
     opacity: 0;
-    transition: .2s;
-    line-height: 2;
-    background: rgba(94, 43, 184, 1);
+    left: 100px;
+    margin-top: -50px;
+    width: 150px;
+    background: rgba(94, 43, 184, 0.8);
+    /* transition: .3s; */
+    /* visibility: hidden; */
 }
-.sub li a {
+
+/* .sub.on {
+    visibility: visible;
+    height: 150px;
+    } */
+    
+.sub a {
     display: block;
-    text-align: center;
-    padding: 8px 0;
     font-size: 14px;
     color: #fff;
+    padding: 10px;
+    transition: .1s;
 }
 
-.sub li:hover a {
+.sub a:hover {
     background: #fff;
     color: #333;
 }

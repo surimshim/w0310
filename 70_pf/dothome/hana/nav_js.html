@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션_js</title>
+    <style>
+        /* 공통 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+            font: 15px/1.6 "돋움", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            width: 200px;
+            height: calc(100vh - 120px);
+            background: pink;
+            text-align: center;
+        }
+
+        .logo {
+            height: 60px;
+            line-height: 110px;
+        }
+
+        .gnb {
+            width: 160px;
+            margin: 30px auto;
+        }
+        
+        .main>li {
+            z-index: 2;
+            position: relative;
+        }
+        
+        .main>li>a {
+            display: block;
+            width: 160px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: .1s;
+        }
+        
+        .main>li>a:hover {
+            background: rgb(94, 43, 184);
+            color: #fff;
+        }
+
+        .main>li:not(:last-of-type) {
+            border-bottom: 1px solid #999;
+        }
+        
+        /* 2depth: 서브메뉴 */
+        .sub {
+            z-index: 1;
+            position: absolute;
+            display: none;
+            opacity: 0;
+            left: 100px;
+            margin-top: -50px;
+            width: 150px;
+            background: rgba(255, 255, 255, 0.8);
+            /* transition: .3s; */
+            /* visibility: hidden; */
+        }
+        
+        /* .sub.on {
+            visibility: visible;
+            height: 150px;
+            } */
+            
+        .sub a {
+            display: block;
+            font-size: 14px;
+            color: #333;
+            padding: 10px;
+            transition: .1s;
+        }
+        
+        .sub a:hover {
+            background: rgba(94, 43, 184, 0.8);
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- header>h1.logo>a>img^^nav.gnb>ul.main>li*4>a[href]+ul.sub>li*4>a[href] -->
+    <header>
+        <h1 class="logo"><a href=""><img src="images/logo.png" alt=""></a></h1>
+        <!-- GNB -->
+        <nav class="gnb">
+            <ul class="main">
+                <li>
+                    <a href="#">해외여행</a>
+                    <ul class="sub">
+                        <li><a href="#">동남아/대만</a></li>
+                        <li><a href="#">일본</a></li>
+                        <li><a href="#">유럽/아프리카</a></li>
+                        <li><a href="#">미주/하와이</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">국내여행</a>
+                    <ul class="sub">
+                        <li><a href="#">제주여행</a></li>
+                        <li><a href="#">내륙여행</a></li>
+                        <li><a href="#">울릉도</a></li>
+                        <li><a href="#">섬 여행</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">테마여행</a>
+                    <ul class="sub">
+                        <li><a href="#">해외골프</a></li>
+                        <li><a href="#">허니문</a></li>
+                        <li><a href="#">크루즈</a></li>
+                        <li><a href="#">트레킹/레저</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">호텔</a>
+                    <ul class="sub">
+                        <li><a href="#">해외호텔</a></li>
+                        <li><a href="#">국내숙박</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <script src="script/jquery-3.7.1.js"></script>
+    <script>
+        /* 
+            이벤트 메서드 (function(){})
+                ready(function(){})
+                mouseover(function(){})
+                mouseout(function(){})
+
+            HTML/CSS 메서드
+                css({"속성": "값"});
+                css({속성: "값"});
+
+                css({display: "none", "background-color": "red"})
+                css({display: "none", "backgroundColor": "red"})
+
+            효과 메서드
+                slideDown() -> 위에서 아래로 내린다.
+                slideUp -> 아래에서 위로 숨긴다
+                stop() -> 효과를 정지
+                
+                
+        */
+        $(document).ready(function() {
+            $(".main>li").mouseover(function() {
+                // $(".sub").css({height: 150, visibility: 'visible'});
+                $(this).find(".sub").css({display: "block"});
+                $(this).find(".sub").stop().animate({left: 160, opacity: 1}, 300);
+            });
+            $(".main>li").mouseout(function() {
+                // $(".sub").css({height: 10, visibility: 'hidden'});
+                $(this).find(".sub").css({display: "none"});
+                $(this).find(".sub").stop().animate({left: 100, opacity: 0}, 300);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션_js</title>
+    <style>
+        /* 공통 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff;
+            color: #333;
+            font: 15px/1.6 "돋움", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        header {
+            width: 200px;
+            height: 850px;
+            background: yellow;
+            text-align: center;
+        }
+
+        .logo {
+            height: 60px;
+            padding-top: 20px;
+        }
+
+        .gnb {
+            width: 160px;
+            margin: 30px auto;
+        }
+
+        /* 1depth: 메인메뉴 */
+        .main>li {
+            position: relative;
+        }
+        
+        .main>li>a {
+            display: block;
+            width: 160px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            background: #ddd;
+        }
+        
+        .main>li>a:hover {
+            background: #214a76;
+            color: #fff;
+        }
+
+        .main:hover .sub {
+        }
+        
+        /* 2depth: 서브메뉴 */
+        .sub {
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            position: absolute;
+            left: 100px;
+            visibility: hidden;
+            opacity: 0;
+            width: calc(100vw - 180px);
+            height: 50px;
+            margin-top: -50px;
+            background: rgba(0, 0, 0, 0.8);
+            /* transition: .3s; */
+            /* visibility: hidden; */
+        }
+
+        .sub a {
+            display: block;
+            font-size: 14px;
+            color: #fff;
+            padding: 5px;
+            margin-left: 20px;
+        }
+
+        .sub a:hover {
+            background: #214a76;
+        }
+
+        /* 스팟메뉴 */
+        .spotmenu {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .spotmenu a {
+            color: #555;
+        }
+        .spotmenu a:not(:last-child):after {
+            content: ' |';
+            margin: 8px;
+        }
+        .spotmenu a:hover {
+            text-decoration: underline;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- header>h1.logo>a>img^^nav.gnb>ul.main>li*4>a[href]+ul.sub>li*4>a[href] -->
+    <header>
+        <h1 class="logo"><a href=""><img src="images/logo.png" alt=""></a></h1>
+        <div class="nav_bg"></div>
+        <nav class="gnb">
+            <ul class="main">
+                <li>
+                    <a href="">회사소개</a>
+                    <ul class="sub">
+                        <li><a href="#">기업정보</a></li>
+                        <li><a href="#">지속가능경영</a></li>
+                        <li><a href="#">R&D</a></li>
+                        <li><a href="#">투자정보</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">사업분야</a>
+                    <ul class="sub">
+                        <li><a href="#">토목</a></li>
+                        <li><a href="#">플랜트</a></li>
+                        <li><a href="#">건축</a></li>
+                        <li><a href="#">주택</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">홍보센터</a>
+                    <ul class="sub">
+                        <li><a href="#">공고</a></li>
+                        <li><a href="#">회사소식</a></li>
+                        <li><a href="#">기업광고</a></li>
+                        <li><a href="#">홍보영상</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">뉴스룸</a>
+                    <ul class="sub">
+                        <li><a href="#">유튜브</a></li>
+                        <li><a href="#">인스타그램</a></li>
+                        <li><a href="#">페이스북</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 스팟메뉴 -->
+        <div class="spotmenu">
+            <a href="#">로그인</a>
+            <a href="#">회원가입</a>
+        </div>
+    </header>
+
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script>
+        /* 
+            이벤트 메서드 (function(){})
+                ready(function(){})
+                mouseover(function(){})
+                mouseout(function(){})
+
+            HTML/CSS 메서드
+                css({"속성": "값"});
+                css({속성: "값"});
+
+                css({display: "none", "background-color": "red"})
+                css({display: "none", "backgroundColor": "red"})
+
+            효과 메서드
+                slideDown() -> 위에서 아래로 내린다.
+                slideUp -> 아래에서 위로 숨긴다
+                stop() -> 효과를 정지
+                
+                
+        */
+        $(document).ready(function() {
+            $(".main>li").mouseover(function() {
+                // $(".sub").css({height: 150, visibility: 'visible'});
+                $(".sub").css({visibility: "visible"});
+                $(".sub").stop().animate({left: 160, opacity: 1});
+            });
+            $(".main>li").mouseout(function() {
+                // $(".sub").css({height: 10, visibility: 'hidden'});
+                $(".sub").css({visibility: "hidden"});
+                $(".sub").stop().animate({left: 100, opacity: 0});
+            });
+        });
+    </script>
+</body>
+</html>

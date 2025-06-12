@@ -49,4 +49,22 @@ $(function () {
         // 6. idx 순번에 해당하는 div 형제 숨김
         $(".tabs div").eq(idx).siblings("div").removeClass("active");
     });
+
+    $(".main>li").mouseover(function() {
+        // $(".sub").css({height: 150, visibility: 'visible'});
+        $(".sub").css({visibility: "visible"});
+        $(".sub").stop().animate({left: 160, opacity: 1});
+    });
+    $(".main>li").mouseout(function() {
+        // $(".sub").css({height: 10, visibility: 'hidden'});
+        $(".sub").css({visibility: "hidden"});
+        $(".sub").stop().animate({left: 100, opacity: 0});
+    });
+
+    $("#tab1 li:first-of-type").click(function() {
+        $(".modal").show();
+    })
+    $(".close_btn a").click(function() {
+        $(".modal").hide();
+    })
 });

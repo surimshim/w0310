@@ -31,48 +31,44 @@ a {
 /* 헤더 영역 */
 header {
     width: 200px;
-    height: calc(100vh - 120px);
-    padding: 20px 0;
-}
-
-/* logo */
-.logo {
-    height: 45px;
-    text-align: center; /* 중앙배치 */
-}
-
-.logo img {
-    width: 170px;
-}
-
-/* GNB */
-.gnb {
-    margin: 20px;
-}
-
-.main>li {
-    position: relative;
-    height: 50px;
-    line-height: 50px;
+    height: 850px;
     text-align: center;
 }
 
-.main>li:not(:last-child) {
-    border-bottom: 1px solid #ddd;
+.logo {
+    height: 60px;
+    padding-top: 20px;
+}
+
+.gnb {
+    width: 160px;
+    margin: 30px auto;
+}
+
+/* 1depth: 메인메뉴 */
+.main>li {
+    position: relative;
 }
 
 .main>li>a {
     display: block;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    transition: .1s;
+}
+
+.main>li>a:not(:last-child) {
+    border-bottom: 1px solid #ddd;
 }
 
 .main>li>a:hover {
     color: #DF0029;
 }
 
-.main>li:hover {
+.main>li>a:hover {
     border-bottom: 2px solid #DF0029;
 }
 
@@ -83,19 +79,23 @@ header {
     visibility: visible;
 }
 
+/* 2depth: 서브메뉴 */
 .sub {
     display: flex;
-    z-index: -1;
+    align-items: center;
+    z-index: 2;
     position: absolute;
-    top: 0px;
     left: 100px;
-    width: calc(100vw - 180px);
     visibility: hidden;
     opacity: 0;
-    transition: .2s;
+    width: calc(100vw - 180px);
+    height: 50px;
+    margin-top: -50px;
     background: rgba(0, 0, 0, 0.8);
-    padding: 0 20px;
+    transition: .1s;
+    /* visibility: hidden; */
 }
+
 .sub li a {
     display: block;
     width: 120px;
@@ -221,6 +221,42 @@ header {
 
 .btn img {
     width: 60px;
+}
+
+.modal {
+    display: none;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    width: 500px;
+    margin: 10% auto;
+    background: #fff;
+    padding: 30px;
+    overflow: auto;
+}
+
+.popup h2 {
+    font-size: 18px;
+}
+
+.popup p {
+    padding: 20px 0;
+}
+
+.close_btn a {
+    padding: 8px;
+    border: 1px solid #000;
+}
+
+.close_btn {
+    text-align: right;
 }
 
 /* 탭: 공지사항+갤러리 */
