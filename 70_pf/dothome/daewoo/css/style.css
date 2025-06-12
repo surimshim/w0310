@@ -52,8 +52,9 @@ header {
 
 /* 내비게이션 */
 .gnb {
+    z-index: 2;
     position: absolute;
-    right: 0;
+    right: 20px;
     top: 30px;
     width: 640px;
     height: 40px;
@@ -77,25 +78,22 @@ header {
     font-size: 18px;
     font-weight: bold;
 }
+
 .gnb .main>li>a:hover {
     background: #fff;
     color: #214a76;
     transition: .1s;
 }
-.gnb .main:hover .sub {
-    height: 140px;
-}
 
 /* 2depth: 서브메뉴 */
 .gnb .sub {
-    height: 0;
-    transition: .3s;
-    overflow: hidden;
+    display: none;
+    height: 150px;
     background: rgba(255, 255, 255, 80%);
-    text-align: center;
 }
 
 .gnb .sub a {
+    display: block;
     color: #333;
 }
 

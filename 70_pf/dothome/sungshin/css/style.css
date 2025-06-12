@@ -2,16 +2,15 @@
 
 * {
     /* padding과 border 크기를 박스 안쪽으로 지정한다 */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body, h1, h2, ul, p {
-    margin: 0;
-}
 body {
     background: #fff;
     color: #333;
-    font: 16px/1.6 "굴림", sans-serif;
+    font: 15px/1.6 "굴림", sans-serif;
 }
 
 /* a 태그는 body 태그 속성이 먹히지 않으므로 따로 지정해주어야 함. */
@@ -21,35 +20,74 @@ a {
 }
 
 ul {
-    padding: 0;
     list-style: none;
 }
 
-header, .contents, footer {
+.contents, footer {
     width: 1340px;
     margin: 0 auto;
 }
 
 header {
-    display: flex;
-    justify-content: space-between; /* 로고는 왼쪽, 내비게이션은 오른쪽에 붙음 */
-    align-items: center; /* 아이템을 수직 가운데 배치 */
+    position: relative;
+    width: 1340px;
     height: 100px;
+    margin: 0 auto;
 }
 
-nav { 
-    width: 600px;
+.logo {
     height: 60px;
+    line-height: 120px;
 }
 
-nav li {
-    width: 120px;
-    display: inline-block;
-    line-height: 60px;
+.gnb {
+    z-index: 2;
+    position: absolute;
+    right: 20px;
 }
 
-nav .main li>a {
-    font-size: 18px
+/* 1depth: 메인메뉴 */
+.main {
+    display: flex;
+    text-align: center;
+}
+
+.main>li>a {
+    display: block;
+    width: 160px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #ddd;
+}
+
+.main>li>a:hover {
+    background: #214a76;
+    color: #fff;
+}
+
+/* 2depth: 서브메뉴 */
+.sub {
+    display: none;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.8);
+    /* transition: .3s; */
+    /* visibility: hidden; */
+}
+
+/* .sub.on {
+    visibility: visible;
+    height: 150px;
+} */
+
+.sub a {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    padding: 4px;
+}
+
+.sub a:hover {
+    background: #214a76;
 }
 
 
