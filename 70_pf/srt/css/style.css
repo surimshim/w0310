@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    background: pink;
+    transition: .3s;
+}
+
+#header.scrolled {
+    opacity: 1;
+    background: #ccc;
+}
+
+.container section {
+    width: 100%;
+    transition: background 0.5s;
+}
+
+#section1 {
+    height: 100vh;
+    background: #eee;
+    padding-top: 140px;
+}
+
+#slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+#slider ul {
+    position: relative;
+    display: flex;
+    width: 300%;
+    left: 0;
+}
+
+#booking_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    width: 1200px;
+    height: 180px;
+    margin: 0 auto;
+    background: #4B2F48;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #fff;
+    font-size: 18px;
+    text-align: left;
+}
+
+#booking_section .inputbox {
+    width: 200px;
+    height: 120px;
+    border: 1px solid #fff;
+}
+
+#booking_section h2 {   
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#booking_section a {   
+    color: #fff;
+}
+
+#booking_section button {
+    width: 200px;
+    height: 50px;
+    margin-top: 70px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-style: none;
+}
+
+
+#section2 {
+    height: calc(100vh - 140px);
+    background: lightblue;
+}
+
+#section3 {
+    height: calc(100vh - 140px);
+    background: lightgreen;
+}
+
+#footer {
+    height: 300px;
+    color: #fff;
+    background: #000;
+    transition: background 0.5s;
+}

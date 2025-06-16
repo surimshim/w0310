@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        /* 
+            2D: 평면 x, y
+            3D: 입체 x, y, z
+
+            transform(변형)
+
+            - translate(x, y)
+            - translateX(x): x축 이동(좌우)
+            - translateY(y): y축 이동(상하)
+            - translateZ(z): z축 이동(앞뒤)
+
+            - scale(w, h): 가로 세로 확대
+            - scaleX(w): 가로 확대
+            - scaleY(h): 세로 확대
+
+            - rotate(deg): 2D 회전
+            - rotateX(deg): x축 3D 회전
+            - rotateY(deg): y축 3D 회전
+
+            - skew(deg, deg): 기울이기
+            - skewX(deg): x축 기울이기
+            - skewY(deg): y축 기울이기
+
+
+            transform: translate();
+        */
+
+        p {
+            width: 500px;
+            background: #78a;
+            padding: 15px;
+            border: 5px solid rgba(0, 0, 0, 0.5);
+            font: 21px Times;
+        }
+
+        .t1 {
+            transform: translate(30px, 20px);
+            background: #89b;
+        }
+
+        .t2 {
+            transform: rotate(50deg);
+            background: #9ac;
+        }
+
+        .t3 {
+            transform: scale(0.7, 1.3);
+            background: #abd;
+        }
+
+        .t4 {
+            transform: skew(15deg, 10deg);
+            background: #bce;
+        }
+
+        .t5 {
+            transform: matrix(1, -0.1, 0, 1, 0, 0);
+            background: #cdf;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Original</p>
+    <p class="t1">translate(30px, 20px)</p>
+    <p class="t2">rotate(50deg)</p>
+    <p class="t3">scale(0.7, 1.3)</p>
+    <p class="t4">skew(15deg, 10deg)</p>
+    <p class="t5">matrix(1, -0.1, 0, 1, 0, 0)</p>
+</body>
+</html>

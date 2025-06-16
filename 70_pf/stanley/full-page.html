@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>jQuery 풀페이지</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #header {
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            color: #333;
+            background: transparent;
+            transition: .3s;
+        }
+
+        #header.scrolled {
+            background: #fff;
+        }
+
+        .section {
+            width: 100%;
+            text-align: center;
+            font-size: 3em;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.5s;
+        }
+
+        .section {
+            height: 100vh;
+        } 
+
+        .section:nth-child(1) {
+            background: #3498db;
+        }
+
+        .section:nth-child(2) {
+            background: #e67e22;
+        }
+
+        .section:nth-child(3) {
+            background: #2ecc71;
+        }
+
+        .section:nth-child(4) {
+            background: #cc2eaa;
+        }
+
+        .footer {
+            height: 300px;
+            color: #fff;
+            background: #000;
+            transition: background 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header" class="header">Header</div>
+    <div class="contatiner">
+        <div class="section">Section 1</div>
+        <div class="section">Section 2</div>
+        <div class="section">Section 3</div>
+        <div class="section">Section 4</div>
+        <div class="footer">Footer</div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            let now = 0;
+            const speed = 500;
+            const sections =$('.section');
+            const headerHeight =$('.header').height();
+            const total = sections.length + 1;
+
+            function scrollTo(index) {
+                let pose = 0;
+                if (index < sections.length) {
+                    pos = sections.eq(index).position().top - headerHeight;
+                } else {
+                    pos = $('.footer').position().top - headerHeight;
+                }
+                $('html,body').stop().animate({ scrollTop: pos }, speed);
+                
+            }
+            $(window).on('wheel', function (e) {
+                if ($('html, body').is(':animated')) return; // 중복 스크롤 방지
+                const delta = e.originalEvent.deltaY;
+                if (delta > 0 && now < total - 1) {
+                    now++;
+                } else if (delta < 0 && now > 0) {
+                    now--;
+                }
+                scrollTo(now);
+            });
+        });
+
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop() > 50) {
+                $('#header').addClass('scrolled');
+            }
+            else {
+                $('#header').removeClass('scrolled');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

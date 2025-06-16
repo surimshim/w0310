@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이어팝업</title>
+    <style>
+        .popup {
+            display: none;
+            position: absolute;
+            top: 20%;
+            left: calc(50% - 300px);
+            width: 600px;
+            background: #fff;
+            border: 1px solid #000;
+            padding: 20px;
+            z-index: 1;
+        }
+    </style>
+    <script src="script/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="popup">
+        <h2>공지사항</h2>
+        <p>내용</p>
+        <button id="close-layer">닫기</button>
+    </div>
+
+    <div class="notice">
+        <h2>공지사항</h2>
+        <ul>
+            <li><a href="#">1st</a></li>
+            <li>2nd</li>
+        </ul>
+    </div>
+
+    <script>
+        // 익명 함수는 화살표 함수로 바꿀 수 있음
+        $('.notice li').eq(0).click(() => $('.popup').show());
+        $('.popup button').click(() => $('.popup').hide());
+    </script>
+</body>
+</html>
