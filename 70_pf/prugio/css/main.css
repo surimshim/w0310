@@ -1,0 +1,60 @@
+@charset "utf-8";
+@import url(common.css);
+
+#section4 .tit {
+    height: 288px;
+    background: #015152;
+    text-align: center;
+    padding-top: 80px;
+}
+
+#section4 h2 {
+    margin-bottom: 10px;
+}
+
+#section4 .cont {
+    display: flex;
+}
+
+#section4 .left {
+    width: 50%;
+    height: 584px;
+}
+
+#section4 .bg {
+    overflow: hidden;
+}
+
+#section4 .bg img {
+    transition: 1s ease-in-out;
+}
+
+#section4 .bg:hover img {
+    transform: scale(1.2);
+}
+
+#section4 .right {
+    width: 50%;
+    height: 584px;
+}
+
+#section4 .cont > div {
+    position: relative;
+}
+
+#section4 .description {
+    position: absolute;
+    top: 80px;
+    left: 372px;
+    width: 310px;
+}
+
+
+
+#section4 .description p {
+    margin-bottom: 20px;
+}
+
+#section4 .btn img {
+    margin-left: 8px;
+}

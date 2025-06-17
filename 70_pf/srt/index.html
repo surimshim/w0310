@@ -14,41 +14,85 @@
 </head>
 
 <body>
+    <!-- 헤더 -->
     <header id="header"><a href="#">Header</a></header>
 
     <div class="container">
+        <!-- 섹션1 -->
         <section id="section1">
+            <!-- 섹션1 - 슬라이더 -->
             <div id="slider">
                 <ul>
-                    <li><a href="#"><img src="images/slider1.jpg" alt="슬라이더 이미지1"></a></li>
-                    <li><a href="#"><img src="images/slider2.jpg" alt="슬라이더 이미지3"></a></li>
-                    <li><a href="#"><img src="images/slider3.jpg" alt="슬라이더 이미지3"></a></li>
+                    <li><a href="#"><img src="images/section1/slider1.jpg" alt="슬라이더 이미지1"></a></li>
+                    <li><a href="#"><img src="images/section1/slider2.jpg" alt="슬라이더 이미지3"></a></li>
+                    <li><a href="#"><img src="images/section1/slider3.jpg" alt="슬라이더 이미지3"></a></li>
                 </ul>
             </div>
-            <div id="booking_section">
-                <div class="inputbox">
-                    <h2>출발역</h2>
+
+            <!-- 섹션1 - 탭버튼 -->
+            <div id="booking_tabs">
+                <!-- 탭 버튼 -->
+                <span class="bookingtab_btn">
+                    <a href="#booking_section" class="active">승차권 예매</a>
+                    <a href="#search_section">예약 조회</a>
+                </span>
+                
+                <!-- 섹션1 - 승차권 예매 -->
+                <div id="booking_section" class="active">
+                    <div class="inputbox">
+                        <h2>출발역</h2>
+                        <div class="input_btn"><a href="#">서울<img src="images/section1/pin.png" alt="출발역"></a></div>
+                    </div>
+                    <div class="inputbox">
+                        <h2>도착역</h2>
+                        <div class="input_btn"><a href="#">부산<img src="images/section1/pin.png" alt="도착역"></a></div>
+                    </div>
+                    <div class="inputbox">
+                        <h2>출발일</h2>
+                        <div class="input_btn"><a href="#">2025-06-17<img src="images/section1/calendar.png" alt="출발일"></a></div>
+                    </div>
+                    <div class="inputbox">
+                        <h2>인원</h2>
+                        <div class="input_btn"><a href="#">총 1명<img src="images/section1/user.png" alt="인원"></a></div>
+                    </div>
+                    <button type="button" id="submit_btn">
+                        열차 조회
+                    </button>
                 </div>
-                <div class="inputbox">
-                    <h2>도착역</h2>
+                
+                <!-- 섹션1 - 예약 조회 -->
+                <div id="search_section">
+                    <div class="inputbox">
+                        <h2>출발역</h2>
+                        <div class="input_btn"><a href="#">서울<img src="images/section1/pin.png" alt="출발역"></a></div>
+                    </div>
+                    <div class="inputbox">
+                        <h2>도착역</h2>
+                        <div class="input_btn"><a href="#">부산<img src="images/section1/pin.png" alt="도착역"></a></div>
+                    </div>
+                    <div class="inputbox">
+                        <h2>출발일</h2>
+                        <div class="input_btn"><a href="#">2025-06-17<img src="images/section1/calendar.png" alt="출발일"></a></div>
+                    </div>
+                    <div class="inputbox">
+                        <h2>인원</h2>
+                        <div class="input_btn"><a href="#">총 1명<img src="images/section1/user.png" alt="인원"></a></div>
+                    </div>
+                    <button type="button" id="submit_btn">
+                        열차 조회
+                    </button>
                 </div>
-                <div class="inputbox">
-                    <h2>출발일</h2>
-                </div>
-                <div class="inputbox">
-                    <h2>인원</h2>
-                </div>
-                <button type="button" class="submit_btn">
-                    열차 조회
-                </button>
             </div>
         </section>
 
+        <!-- 섹션2 -->
         <section id="section2">Section 2</section>
 
+        <!-- 섹션3 -->
         <section id="section3">Section 3</section>
     </div>
 
+    <!-- 푸터 -->
     <footer id="footer">Footer</footer>
 
 </body>

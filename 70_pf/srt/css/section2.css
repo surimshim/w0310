@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/* 헤더임시고정 */
+#header {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    text-align: center;
+    line-height: 120px;
+    background: #999;
+    background: background 0.3s;
+}
+
+/* 전체 */
+#section2 {
+    position: relative;
+    top: 140px;
+    height: calc(100vh - 140px);
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s;
+    /* background: #3498db; */
+}
+
+/* 섹션타이틀 */
+.section2_title {
+    padding-top: 32px;
+}
+
+.section2_title h1 {
+    font-size: 40px;
+}
+
+.section2_title p {
+    font-size: 16px;
+}
+
+/* 탭메뉴 */
+
+.tabs {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 32px;
+}
+
+.tabs .tour_btn a {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 14px;
+    background: #eee;
+    border-radius: 30px;
+}
+
+.tabs a:not(:last-child) {
+    margin-right: 8px;
+}
+
+.tabs .tour_btn a:hover {
+    background: #4c2f48;
+    transition: 0.2s;
+    color: #fff;
+}
+
+.tabs a.active {
+    background: #4c2f48;
+    color: #fff;
+}
+
+/* 여행정보페이지 */
+.tour_carousel_container {
+    position: relative;
+    width: 1205px;
+    overflow: hidden;
+    height: 540px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.tour_best {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.tour_carousel {
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 0 auto;
+    width: calc(283px * 6 + 20px * 5);
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.tour_carousel_container div.active {
+    display: none;
+}
+
+
+
+
+.tour_carousel li {
+    margin-right: 20px;
+}
+
+.tour_carousel li:last-child {
+    margin-right: 0;
+}
+
+.tour_text {
+    text-align: left;
+    margin-top: 12px;
+}
+
+.station_name {
+    font-size: 16px;
+}
+
+.tour_title {
+    font-size: 20px;
+}
+
+.tour_won {
+    font-size: 20px;
+}
+
+.tour_way {
+    font-size: 16px;
+    color: #888;
+}
+
+/* 화살표이동 */
+.arrow_left {
+    position: absolute;
+    z-index: 1;
+    top: 42%;
+    left: 334px;
+}
+
+.arrow_right {
+    position: absolute;
+    z-index: 1;
+    top: 42%;
+    right: 345px;
+}
+
+.arrow_left img,
+.arrow_right img {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.arrow_left img:hover,
+.arrow_right img:hover {
+    background: #fff;
+}
+
+/* 탭메뉴 하단버튼 */
+.tour_button {
+    padding: 40px;
+    padding-bottom: 80px;
+}
+
+.tour_button a {
+    font-size: 26px;
+    font-weight: 500;
+    padding: 11px 30px;
+    border-radius: 30px;
+    border-style: none;
+    background: #eee;
+}
+
+.tour_button a:hover {
+    background: #4c2f48;
+    color: #fff;
+    transition: 0.3s;
+}
