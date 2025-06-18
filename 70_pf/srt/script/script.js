@@ -55,8 +55,8 @@ $(document).ready(function() {
         // 4. 클릭한 버튼의 순번을 가져와서 idx에 저장
         var idx = $(this).index();
         // 5. idx 순번에 해당하는 div 보여줌
-        $("#booking_tabs div").eq(idx).addClass("active");
+        $("#booking_tabs section").eq(idx).addClass("active");
         // 6. idx 순번에 해당하는 div 형제 숨김
-        $("#booking_tabs div").eq(idx).siblings("div").removeClass("active");
+        $("#booking_tabs section").eq(idx).siblings("section").removeClass("active");
     });
 });

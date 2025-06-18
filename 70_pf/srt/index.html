@@ -15,7 +15,70 @@
 
 <body>
     <!-- 헤더 -->
-    <header id="header"><a href="#">Header</a></header>
+    <header id="header">
+        <div class="header_inner">
+            <div class="first">
+                <div class="language">
+                    <div class="lbtn" id="lbtn">
+                        <img src="./images/nav/language.png" alt="언어설정 아이콘">
+                        <p>Language</p>
+                        <img class="language_btn" src="./images/nav/language_btn.png" alt="아래화살표">
+                    </div>
+                    <ul class="language_list" id="language_list">
+                        <li><a href="#"> <span>KR</span> 한국어 </a></li>
+                        <li><a href="#"><span>EN</span> English</a></li>
+                        <li><a href="#"><span>JP</span> 日本語
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="#"><img src="./images/nav/logo.png" alt="상단로고"></a>
+                </div>
+                <div class="icons">
+                    <a href="#"><img src="./images/nav/login.png" alt="로그인 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="./images/nav/guest.png" alt="회원가입 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="./images/nav/Search.png" alt="검색 페이지 이동 아이콘"></a>
+                    <a href="#"><img src="./images/nav/hamburger_btn.png" alt="사이트맵 아이콘"></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav_out">
+            <div class="nav">
+                <div class="nav_bg"></div>
+                <nav class="gnb">
+                    <ul class="main">
+                        <li><a href="#">승차권</a>
+                            <ul class="sub">
+                                <li><a href="#">승차권예약</a></li>
+                                <li><a href="#">승차권확인</a></li>
+                                <li><a href="#">비회원승차권</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="#">역안내</a></li>
+                                <li><a href="#">노선안내</a></li>
+                                <li><a href="#">운임안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">고객서비스</a>
+                            <ul class="sub">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">자주찾는질문</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">여행상품</a>
+                            <ul class="sub">
+                                <li><a href="#">SRT베스트 여행상품</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
     <div class="container">
         <!-- 섹션1 -->
@@ -38,7 +101,7 @@
                 </span>
                 
                 <!-- 섹션1 - 승차권 예매 -->
-                <div id="booking_section" class="active">
+                <section id="booking_section" class="active">
                     <div class="inputbox">
                         <h2>출발역</h2>
                         <div class="input_btn"><a href="#">서울<img src="images/section1/pin.png" alt="출발역"></a></div>
@@ -58,10 +121,14 @@
                     <button type="button" id="submit_btn">
                         열차 조회
                     </button>
-                </div>
+                </section>
                 
                 <!-- 섹션1 - 예약 조회 -->
-                <div id="search_section">
+                <section id="search_section">
+                    <div class="inputbox">
+                        <h2>휴대폰 번호</h2>
+                        <div class="input_btn"><a href="#">010-0000-0000<img src="images/section1/phone.png" alt="출발역"></a></div>
+                    </div>
                     <div class="inputbox">
                         <h2>출발역</h2>
                         <div class="input_btn"><a href="#">서울<img src="images/section1/pin.png" alt="출발역"></a></div>
@@ -74,22 +141,70 @@
                         <h2>출발일</h2>
                         <div class="input_btn"><a href="#">2025-06-17<img src="images/section1/calendar.png" alt="출발일"></a></div>
                     </div>
-                    <div class="inputbox">
-                        <h2>인원</h2>
-                        <div class="input_btn"><a href="#">총 1명<img src="images/section1/user.png" alt="인원"></a></div>
-                    </div>
                     <button type="button" id="submit_btn">
-                        열차 조회
+                        예약 조회
                     </button>
                 </div>
-            </div>
+            </section>
         </section>
 
         <!-- 섹션2 -->
         <section id="section2">Section 2</section>
 
         <!-- 섹션3 -->
-        <section id="section3">Section 3</section>
+        <section id="section3">
+            <h2>SRT 소식</h2>
+            
+            <div class="contents">
+                <div id="notice">
+                    <div class="contents_title">
+                        <h3>공지사항</h3>
+                        <a href="#">더보기 &plus;</a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="">예약 발매 시스템 점검 안내</a><span>2025-06-05</span>
+                        </li>
+                        <li>
+                            <a href="">SRT 367열차 운행 재개 기념 프로모션</a><span>2025-05-30</span>
+                        </li>
+                        <li>
+                            <a href="">2025 철도의 날 기념 제1회 철도를 담다 영상 공모전</a><span>2025-05-13</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="faq">
+                    <div class="contents_title">
+                        <h3>자주 찾는 질문(FAQ)</h3>
+                        <a href="#">더보기 &plus;</a>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="">[승차권] 승차권을 환불했는데 결제금액 환불은 언제되나요?</a>
+                        </li>
+                        <li>
+                            <a href="">[할인] 임산부, 다자녀 등 할인승차권을 구매했는데 할인적용이 안됩니다.</a>
+                        </li>
+                        <li>
+                            <a href="">[승차권] 승차권을 환불하고 싶어요.</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>서비스 바로가기</h2>
+            <div class="links">
+                <ul>
+                    <li><a href="#"><img src="images/section1/link1.png" alt="승차권 예매"><p>승차권 예매</p></a></li>
+                    <li><a href="#"><img src="images/section1/link2.png" alt="역 안내"><p>역 안내</p></a></li>
+                    <li><a href="#"><img src="images/section1/link3.png" alt="노선 안내"><p>노선 안내</p></a></li>
+                    <li><a href="#"><img src="images/section1/link4.png" alt="운임 안내"><p>운임 안내</p></a></li>
+                    <li><a href="#"><img src="images/section1/link5.png" alt="고객센터"><p>고객센터</p></a></li>
+                    <li><a href="#"><img src="images/section1/link6.png" alt="여행상품"><p>여행상품</p></a></li>
+                </ul>
+            </div>
+        </section>
     </div>
 
     <!-- 푸터 -->

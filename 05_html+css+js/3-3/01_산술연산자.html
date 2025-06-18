@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            연산자의 종류
+            1. 산술: = - * /
+            2. 대입: =
+            3. 비교: > < >= <= == === != !==
+            4. 논리: && || !
+            5. 비트:
+            6. 삼항: ? :
+        */
+
+        let subject = 'css';
+        let score = 100;
+
+        // 숫자 데이터가 아닌 경우 +는 연결 연산자
+        console.log(subject + '과목 성적은' + score);
+        
+        // 템플릿 문자열
+        // 백틱/백쿼드(`)
+        // 형식: ${변수}
+        console.log(`${subject}과목 성적은 ${score}`);
+
+        let dividend = prompt("숫자 입력");
+        let remainder = dividend % 3;
+        console.log(remainder);
+        if (remainder === 0) {
+            comment = '3의 배수 입니다.';
+        } 
+        else {
+            comment = '3의 배수가 아닙니다.'
+        }
+        document.write(comment);
+    </script>
+</body>
+</html>

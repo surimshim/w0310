@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+/* 섹션 컨테이너 */
+.container section {
+    width: 100%;
+    transition: background 0.5s;
+}
+
+/* 섹션1 */
+#section1 {
+    height: 100vh;
+    padding-top: 140px;
+}
+
+/* 섹션1 - 슬라이더 */
+#slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+#slider ul {
+    position: relative;
+    display: flex;
+    width: 300%;
+    left: 0;
+}
+
+/* 섹션1 - 탭 */
+#booking_tabs {
+    position: relative;
+    width: 1200px;
+    height: 160px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #4B2F48;
+    border-radius: 0 0 20px 20px;
+    /* text-align: center; */
+}
+
+.bookingtab_btn {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    z-index: 10;
+}
+
+/* 섹션1: 탭 버튼 */
+.bookingtab_btn a {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    font-size: 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.bookingtab_btn a:last-of-type {
+    margin-left: -4px;
+}
+
+.bookingtab_btn a.active {
+    background: #4B2F48; /* 활성 탭 배경색 */
+    color: #fff;
+}
+
+/* 탭 콘텐츠 */
+#booking_tabs section {
+    display: none;
+}
+#booking_tabs section.active {
+    display: flex;
+}
+
+/* 섹션1 - 승차권 예매 탭 */
+#booking_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    text-align: left;
+}
+
+#booking_section .inputbox {
+    width: 200px;
+    height: 100px;
+}
+
+#booking_section h2 {   
+    font-size: 18px;
+}
+
+#booking_section a {   
+    color: #fff;
+}
+
+#booking_section .input_btn {
+    padding-top: 25px;
+    width: 200px;
+    border-bottom: 1px solid #fff;
+}
+
+#booking_section .input_btn a {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    padding-bottom: 10px;
+}
+
+#booking_section .input_btn img {
+    width: 24px;
+    height: auto;
+    object-fit: contain;
+}
+
+#booking_section button {
+    width: 200px;
+    height: 50px;
+    margin-top: 45px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-style: none;
+}
+
+/* 섹션1 - 예약 조회 탭 */
+#search_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    text-align: left;
+}
+
+#search_section .inputbox {
+    width: 200px;
+    height: 100px;
+}
+
+#search_section h2 {   
+    font-size: 18px;
+}
+
+#search_section a {   
+    color: #fff;
+}
+
+#search_section .input_btn {
+    padding-top: 25px;
+    width: 200px;
+    border-bottom: 1px solid #fff;
+}
+
+#search_section .input_btn a {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    padding-bottom: 10px;
+}
+
+#search_section .input_btn img {
+    width: 24px;
+    height: auto;
+    object-fit: contain;
+}
+
+#search_section button {
+    width: 200px;
+    height: 50px;
+    margin-top: 45px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-style: none;
+}
+
+/* 섹션2 */
+#section2 {
+    height: calc(100vh - 140px);
+    background: lightblue;
+}
+
+/* 섹션3 */
+#section3 {
+    height: calc(100vh - 140px);
+    padding: 70px 0;
+}
+
+#section3 h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contents {
+    display: flex;
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.contents h3 {
+    font-size: 18px;
+}
+
+.contents > div {
+    width: 580px;
+}
+
+.contents_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #4c2f48;
+}
+
+#notice {
+    margin-right: 40px;
+}
+
+.contents > div li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.contents > div li a:hover {
+    text-decoration: underline;
+}
+
+.contents > div li span {
+    color: #666;
+}
+
+
+.links {
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.links ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links img {
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    outline: 1px solid transparent;
+}
+
+.links a:hover img {
+    border: 1px solid transparent;
+    outline: 2px solid #4c2f48;
+}
+
+.links p {
+    font-size: 18px;
+    font-weight: bold;
+}
