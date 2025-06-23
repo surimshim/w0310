@@ -156,12 +156,11 @@
 
 /* 탭메뉴 하단버튼 */
 .tour_button {
-    padding: 40px;
-    padding-bottom: 80px;
+    padding-top: 50px;
 }
 
 .tour_button a {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 500;
     padding: 11px 30px;
     border-radius: 30px;
