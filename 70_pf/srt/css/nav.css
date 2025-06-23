@@ -71,10 +71,13 @@
 .icons img {
     margin-right: 30px;
 }
-/* 
-.nav_out {
+
+.nav {
+    position: relative;
     border-bottom: 1px solid #B5B5B6;
-} */
+    height: 70px;
+    z-index: 999;
+}
 
 .gnb {
     width: 1200px;
@@ -126,7 +129,7 @@
     z-index: 999;
 }
 
-.main:hover .sub {
+.nav:hover .sub {
     padding-top: 20px;
     height: 170px;
 }
@@ -134,7 +137,7 @@
 .nav_bg {
     background: #fff;
     position: absolute;
-    top: 140px;
+    top: 70px;
     left: 0;
     width: 100vw;
     height: 0;

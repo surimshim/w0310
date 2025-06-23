@@ -19,6 +19,7 @@
     height: auto;
     overflow: hidden;
     text-align: center;
+    z-index: 1;
 }
 
 #slider ul {
