@@ -1,16 +1,16 @@
 $(document).ready(function() {
     // 풀페이지 구현
     let now = 0;
-    const sections =$('.container section');
+    const sections =$('.container > section');
     const headerHeight =$('#header').height();
     const total = sections.length + 1;
 
     function scrollTo(index) {
         let pos = 0;
         if (index < sections.length) {
-            pos = sections.eq(index).position().top - headerHeight;
+            pos = sections.eq(index).offset().top - headerHeight;
         } else {
-            pos = $('#footer').position().top - headerHeight;
+            pos = $('#footer').offset().top - headerHeight;
         }
         $('html,body').stop().animate({ scrollTop: pos }, 500);
     }
