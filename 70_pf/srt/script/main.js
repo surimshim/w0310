@@ -36,6 +36,17 @@ $(document).ready(function() {
         }
     });
 
+    // 헤더 - 언어 변경
+    $(".lbtn").click(function (event) {
+        //이벤트 버블링이란, 어떤 요소에서 이벤트(예: 클릭)가 발생하면 그 이벤트가 상위(부모) 요소로 계속 전파되는 현상입니다.
+        event.stopPropagation();
+        $(".language_list").toggle();
+    });
+
+    $(document).click(function(){
+        $(".language_list").hide();
+    });
+
     // 섹션1 - 가로 슬라이더
     setInterval(function () {
         $('#slider ul').animate({left: '-=100%'}, 1000, function () {

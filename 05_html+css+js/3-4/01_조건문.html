@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <script>
+        /* 
+            제어문
+            1. 조건문(선택문): if, switch
+            2. 반복문: while, do, for
+            3. continue, break
+
+            if문
+            형식1: 
+            if(조건식) {
+                실행문;
+            }
+
+        */
+
+        let age = 10;
+        let admissionfee = '';
+        if (age < 13) {
+            admissionfee = '2,000원';
+        }
+        console.log(admissionfee); // 2,000원
+
+        age = prompt('나이 입력', '');
+        if (age < 13 || age >= 65) {
+            admissionfee = '2,000원'
+        } else if (age >= 13 && age < 20) {
+            admissionfee = '4,000원'
+        } else {
+            admissionfee = '6,000원'
+        }
+        document.write(admissionfee);
+
+        let html = Number(prompt('html 점수입력', ''));
+        let css = Number(prompt('css 점수입력', ''));
+        let javascript = Number(prompt('javascript 점수입력', ''));
+
+        let avg = (html + css + javascript) / 3;
+        let comment;
+        
+        if (avg >= 60) {
+            if(html < 40) {
+                comment = 'HTML' + '40점 미만 불햡격'
+            }
+        }
+    </script>
+</body>
+</html>
