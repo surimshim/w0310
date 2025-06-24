@@ -1,12 +1,45 @@
 @charset "utf-8";
+
+/* reset */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     box-sizing: border-box;
 }
-body {
+:root {
+    --gray1: #111;
+    --gray2: #333;
+    --gray3: #555;
+}
+body,h1,h2,h3,ul,p {
     margin: 0;
 }
+body {
+    font: 15px/1.6 "Roboto", sans-serif;
+    color: var(--gray3);
+}
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    padding: 40px;
+}
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 16px;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+p {
+    padding: 10px 0 24px 0;
+}
+a {
+    text-decoration: none;
+    color: var(--gray2);
+}
 
-/* 공통 */
+/* common */
 .box_inner {
     width: 1050px;
     height: 113px;
@@ -24,14 +57,32 @@ header {
 
 /* 섹션1: PC 메인 롤링 */
 .main_rolling_pc {
-    height: 550px;
+    height: 650px;
     background: rgb(255, 36, 3);
 }
 /* 섹션2: 인기 여행지 */
 .about_area {
-    height: 678px;
-    background:darkorange;
+    height: 685px;
+    background: linear-gradient(#FFF 30%, #F4F0E9 30%);
+    text-align: center;
 }
+.about_area ul {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+.about_area li {
+    width: 340px;
+    height: 500px;
+}
+/* .about_area li:not(:first-of-type) {
+    margin-left: 2%;
+} */
+.about_area a {
+    border-top: 2px solid var(--gray2);
+    padding-top: 4px;
+}
+
 /* 섹션3 */
 .appbbs_area {
     height: 256px;

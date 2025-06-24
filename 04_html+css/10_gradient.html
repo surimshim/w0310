@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background: 그라디언트</title>
+    <style>
+        /* 
+            선형 gradient 기본형
+            background: linear-gradient(색1, 색2, ...);
+            - 방향: to bottom(기본값), to top, to left, to right
+        */
+
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        .linear1 {
+            background: linear-gradient(red, yellow);
+        }
+        .linear2 {
+            background: repeating-linear-gradient(red 10%, yellow 20%);
+        }
+        .radial1 {
+            width: 200px;
+            height: 100px;
+            background: radial-gradient(circle, red, yellow, green);
+        }
+    </style>
+</head>
+<body>
+    <div class="linear1">박스</div>
+    <div class="linear2">박스</div>
+    <div class="radial1">박스</div>
+</body>
+</html>

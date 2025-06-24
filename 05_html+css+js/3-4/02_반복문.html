@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="sum">결과 출력</div>
+    <script>
+        /* 
+            반복문
+            1. while
+            2. do~while
+            3. for
+
+            // 조건이 만족하는 동안, 실행문 실행
+            while (조건) {
+                실행문;
+                증감문;
+            }
+        */
+
+        /* let n = 1;
+        let sum = 0;
+
+        while (n < 8) {
+            sum += n;
+            n++;
+        }
+
+        $('.sum').text(`n = ${n}, sum = ${sum}`);
+        document.getElementById('sum').textContent = `n = ${n}, sum = ${sum}`;
+        console.log(`n = ${n}, sum = ${sum}`); */
+
+        /* 
+            // 무조건 1번은 코드가 실행됨.
+            do {
+                실행문;
+            } while (false);
+        */
+
+        let n = 1;
+        let sum = 0;
+        do {
+            sum += n;
+            n++;
+        } while (n < 8);
+
+        console.log('sum = ' + sum);
+
+        let x = 0;
+        let y = 0;
+        let z = 6;
+        let total1 = 0;
+        let total2 = 0;
+        
+        while (x <= 5) {
+            total1 += x;
+            x++;
+        }
+        console.log('x: ' + total1)
+
+
+    </script>
+</body>
+</html>
