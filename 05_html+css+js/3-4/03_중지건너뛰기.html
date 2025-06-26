@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+</head>
+<body>
+    <script>
+        /* 
+            기타 제어문
+            break - 중지(제어문 벗어나기)
+            continue - 건너뛰기
+
+            switch (표현식) {
+                case 값1:
+                    코드1;
+                    break;
+                case 값2:
+                    코드2;
+                    break;
+                ...
+                default:
+                    코드;
+            } // 제어문 끝에는 ;를 찍지 않음.
+             
+            do {
+                코드;
+            } while (조건식)
+            
+        */
+        
+        /* let = 1;
+        let flag = true;
+        function looping() {
+            while (true) {
+                document.write('무한루프');
+                i++;
+                if (i > 10) {
+                    flag = false;
+                }
+            }
+        }
+        setInterval(looping, 1000); */
+
+        sum = 0;
+        let num = '3의 배수 ';
+        for (let i = 1; i < 10; i++) {
+            if (i % 3 === 0) {
+                num += i + ' ';
+                continue;
+            }
+            sum += i;
+        }
+        console.log(num + '제외 총합 : ' + sum);
+    </script>
+</body>
+</html>

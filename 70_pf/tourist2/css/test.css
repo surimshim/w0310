@@ -2,30 +2,31 @@
 
 /* reset */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'GothicA1-Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
 * {
     box-sizing: border-box;
 }
 :root {
     --gray1: #111;
-    --gray2: #333;
-    --gray3: #555;
+    --gray3: #333;
+    --gray5: #555;
 }
 body,h1,h2,h3,ul,p {
     margin: 0;
 }
 body {
-    font: 15px/1.6 "Roboto", sans-serif;
-    color: var(--gray3);
+    font: 16px/1.6 "Roboto", sans-serif;
+    color: var(--gray5);
 }
 h2 {
     font-size: 40px;
     font-weight: 700;
     padding: 40px;
-}
-h3 {
-    font-size: 18px;
-    font-weight: 700;
-    padding-top: 16px;
 }
 ul {
     padding: 0;
@@ -34,17 +35,18 @@ ul {
 p {
     padding: 10px 0 24px 0;
 }
+img {
+    vertical-align: top;
+}
 a {
     text-decoration: none;
-    color: var(--gray2);
+    color: var(--gray3);
 }
 
 /* common */
 .box_inner {
     width: 1050px;
-    height: 113px;
     margin: 0 auto;
-    background: rgb(107, 127, 189);
 }
 
 /* 헤더 */
@@ -78,19 +80,75 @@ header {
 /* .about_area li:not(:first-of-type) {
     margin-left: 2%;
 } */
+.about_area h3 {
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 16px;
+}
 .about_area a {
-    border-top: 2px solid var(--gray2);
+    border-top: 2px solid var(--gray3);
     padding-top: 4px;
 }
 
 /* 섹션3 */
 .appbbs_area {
-    height: 256px;
-    padding: 60px 0;
+    padding: 56px 0 136px;
     background: white;
+}
+.appbbs_area .box_inner {
+    display: flex;
+}
+.notice {
+    margin-left: 60px;
+    line-height: 2;
+}
+.notice h3 {
+    font:26px 'GothicA1-Light',sans-serif;
+    margin-bottom: 8px;
+}
+.notice ul {
+    list-style: disc;
+}
+.link {
+    background: url("https://picsum.photos/seed/picsum/200/300") no-repeat 0 0/cover;
+    padding: 48px;
+}
+.link a {
+    display: inline-block;
+    border: 2px solid #fff;
+}
+.link a:first-of-type {
+    margin-right: 6px;
 }
 
 /* 푸터 */
 footer {
     border-top: 1px solid #ddd;
+    height: 160px;
+}
+footer .box_inner {
+    display: flex;
+    justify-content: space-between;
+}
+.foot_list {
+    display: flex;
+}
+.snslink {
+    display: flex;
+}
+.snslink a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 24px;
+    background: no-repeat 0 0/cover;
+}
+.snslink li:nth-of-type(1) a {
+    background-image: url("https://picsum.photos/id/401/50/50");
+}
+.snslink li:nth-of-type(2) a {
+    background-image: url("https://picsum.photos/id/404/50/50");
+}
+.snslink li:nth-of-type(3) a {
+    background-image: url("https://picsum.photos/id/406/50/50");
 }

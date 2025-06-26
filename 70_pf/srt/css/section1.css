@@ -92,8 +92,8 @@
     height: 100px;
 }
 
-#booking_section h2 {   
-    font-size: 18px;
+#booking_section p {
+    font-weight: bold;   
 }
 
 #booking_section a {   
@@ -146,8 +146,8 @@
     height: 100px;
 }
 
-#search_section h2 {   
-    font-size: 18px;
+#search_section p {   
+    font-weight: bold;   
 }
 
 #search_section a {   

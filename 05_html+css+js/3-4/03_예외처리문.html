@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예외처리문</title>
+</head>
+<body>
+    <script>
+        /* 
+            예외처리
+            - 코드 실행 중 발생하는 에러 처리
+            - try~catch문
+
+            형식
+            try { 
+                // 에러 발생 코드
+            } catch (err) {
+                // 에러 발생 시 실행할 코드
+            }
+        */
+
+        let subject = 'javascript';
+        let score = 90;
+        try {
+            console.log(`교과목 : ${subject / score}`)
+        }  catch (err) {
+            console.log(err.message);
+        }
+    </script>
+</body>
+</html>
