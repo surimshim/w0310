@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/ticket-1.css">
 
-    <script src="script/jquery-3.7.1.js"></script>
-    <script src="script/sub.js"></script>
+    <script src="../script/jquery-3.7.1.js"></script>
+    <script src="../script/sub.js"></script>
 </head>
 <body>
     <!-- 헤더 -->
@@ -104,51 +104,108 @@
                     <a href="#" class="station_name">부산</a>
                 </div>
             </div>
+
+            <div class="modal" id="modal_date">
+                <div class="popup">
+                    <div class="title">
+                        <h2>날짜 선택</h2>
+                        <div class="close_btn"><a href="#"><img src="../images/section1/close.png" alt="닫기"></a></div>
+                    </div>
+                        <div class="date">
+                            <label for="date">출발일: </label>
+                            <input type="date" id="date" value="2025-06-26">
+                            <label for="time">시간: </label>
+                            <input type="time" id="time" value="16:00">
+                        </div>
+                    <button type="button" class="cancel_btn">취소</button>
+                    <button type="button" class="apply_btn">적용</button>
+                </div>
+            </div>
+            
+            <div class="modal" id="modal_person">
+                <div class="popup">
+                    <div class="title">
+                        <h2>인원 선택</h2>
+                        <div class="close_btn"><a href="#"><img src="../images/section1/close.png" alt="닫기"></a></div>
+                    </div>
+                        <div class="person">
+                            <span>어른 (만 13세 이상) </span>
+                            <select name="person" id="adult">
+                                <option value="1">1명</option>
+                                <option value="1">2명</option>
+                                <option value="1">3명</option>
+                                <option value="1">4명</option>
+                                <option value="1">5명</option>
+                                <option value="1">6명</option>
+                                <option value="1">7명</option>
+                                <option value="1">8명</option>
+                                <option value="1">9명</option>
+                            </select>
+                            <span>어린이 (만 6~12세) </span>
+                            <select name="person" id="children">
+                                <option value="1">1명</option>
+                                <option value="1">2명</option>
+                                <option value="1">3명</option>
+                                <option value="1">4명</option>
+                                <option value="1">5명</option>
+                                <option value="1">6명</option>
+                                <option value="1">7명</option>
+                                <option value="1">8명</option>
+                                <option value="1">9명</option>
+                            </select>
+                        </div>
+                    <button type="button" class="cancel_btn">취소</button>
+                    <button type="button" class="apply_btn">적용</button>
+                </div>
+            </div>
+
             <div class="bottom">
                 <h3>일정 및 인원</h3>
                 <div class="tabs">
-                    <input type="radio" name="way" id="oneway" checked>편도
-                    <div class="oneway tab-content">
+                    <label for="oneway"><input type="radio" name="way" id="oneway" checked>편도</label>
+                    <label for="twoway"><input type="radio" name="way" id="twoway">왕복</label>
+
+                    <div class="tab-content oneway">
                         <div class="input">
-                            <div class="inputbox">
+                            <div class="inputbox inputbox_date">
                                 <p>출발일</p>
-                                <div class="input_btn"><a href="#">2025-06-17<img src="../images/ticket/calendar.png" alt="출발일"></a></div>
+                                <div class="input_btn">
+                                    <a href="#">
+                                        <span class="selected-datetime">2025-06-26 16:00</span>
+                                        <img src="../images/ticket/calendar.png" alt="출발일">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="inputbox">
-                                <p>시간</p>
-                                <div class="input_btn"><a href="#">총 1명<img src="../images/ticket/time.png" alt="인원"></a></div>
-                            </div>
-                        </div>
-                        <div class="inputbox">
-                            <p>인원</p>
-                            <div class="input_btn"><a href="#">총 1명<img src="../images/ticket/user.png" alt="인원"></a>
+                            <div class="inputbox inputbox_person">
+                                <p>인원</p>
+                                <div class="input_btn"><a href="#">총 1명<img src="../images/ticket/user.png" alt="인원"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <input type="radio" name="way" id="twoway">왕복
-                    <div class="twoway tab-content">
+                    <div class="tab-content twoway">
                         <div class="input">
-                            <div class="inputbox">
+                            <div class="inputbox inputbox_date">
                                 <p>출발일</p>
-                                <div class="input_btn"><a href="#">2025-06-17<img src="../images/ticket/calendar.png" alt="출발일"></a></div>
+                                <div class="input_btn">
+                                    <a href="#">
+                                        <span class="selected-datetime">2025-06-26 16:00</span>
+                                        <img src="../images/ticket/calendar.png" alt="출발일">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="inputbox">
-                                <p>시간</p>
-                                <div class="input_btn"><a href="#">총 1명<img src="../images/ticket/time.png" alt="인원"></a></div>
+                            <div class="inputbox inputbox_date">
+                                <p>출발일</p>
+                                <div class="input_btn">
+                                    <a href="#">
+                                        <span class="selected-datetime">2025-06-26 16:00</span>
+                                        <img src="../images/ticket/calendar.png" alt="출발일">
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="input">
-                            <div class="inputbox">
-                                <p>도착일</p>
-                                <div class="input_btn"><a href="#">2025-06-17<img src="../images/ticket/calendar.png" alt="출발일"></a></div>
-                            </div>
-                            <div class="inputbox">
-                                <p>시간</p>
-                                <div class="input_btn"><a href="#">총 1명<img src="../images/ticket/time.png" alt="인원"></a></div>
-                            </div>
-                        </div>
-                        <div class="inputbox">
+                        <div class="inputbox inputbox_person">
                             <p>인원</p>
                             <div class="input_btn"><a href="#">총 1명<img src="../images/ticket/user.png" alt="인원"></a>
                             </div>
@@ -156,6 +213,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         <button type="button" class="check_btn">열차 조회</button>
     </section>
 

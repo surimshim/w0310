@@ -125,13 +125,21 @@ header {
 footer {
     border-top: 1px solid #ddd;
     height: 160px;
+    font-size: 13px;
 }
 footer .box_inner {
     display: flex;
     justify-content: space-between;
+    padding: 25px 0 36px 0;
 }
-.foot_list {
+footer h3 {
+    font-size: 14px;
+}
+ul.foot_list {
     display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 25px;
 }
 .snslink {
     display: flex;

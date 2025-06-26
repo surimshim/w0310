@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1>확인란 선택 유무 체크</h1>
+    <input type="checkbox" id="chk1">
+    <label for="chk1">(필수) Lorem ipsum dolor sit amet.</label><br>
+    <input type="checkbox" id="chk2">
+    <label for="chk2">(필수) Lorem ipsum dolor sit amet.</label><br>
+    <input type="checkbox" id="chk3">
+    <label for="chk3">(선택) Lorem ipsum dolor sit amet.</label><br>
+    <input type="checkbox" id="chk4">
+    <label for="chk4">(선택) Lorem ipsum dolor sit amet.</label><br>
+    <a href="#" id="link_btn">회원가입 완료</a>
+
+    <script>
+        const chk1 = document.getElementById('chk1');
+        const chk2 = document.getElementById('chk2');
+        const link_btn = document.getElementById('link_btn');
+
+        link_btn.onclick = function (e) {
+            e.preventDefault(); // a태그 기본 이벤트 제거
+
+            if (chk1.checked && chk2.checked) {
+                location.href = 'https://www.naver.com';
+            } else {
+                alert('필수 확인란에 체크해주세요.');
+            }
+        }
+    </script>
+</body>
+</html>
