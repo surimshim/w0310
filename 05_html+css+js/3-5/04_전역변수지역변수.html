@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>전역변수와 지역변수</title>
+    </head>
+    <body>
+        <script>
+            /* 
+                변수의 scope
+                1. function level scope: fuction(){블록} 
+                -> var는 함수 블록에서만 지역 변수 선언 가능
+
+                2. block level scope: {블록}
+                -> let, const는 블록이나 제어문 블록에서도 지역 변수 선언 가능
+
+                전역변수와 지역변수
+                : 전역변수는 블록 밖에 선언 
+                    -> 안에서도 사용 가능
+                    -> 변수 이름 같은 경우 지역변수 우선 적용
+                  지역변수는 블록 안에 선언 -> 밖에서는 사용x
+
+                for (let i = 0; i < 5; i++) {
+                    console.log('블록');
+                }
+
+                const 변수1;
+                fucntion 함수() {
+                }
+                const 변수2;
+
+                function 함수() {
+                    const 변수3;
+                }
+            */
+
+            // 전역변수 선언
+            let a = 10;
+            console.log("전역변수", a); // 10
+
+            // 지역변수 선언
+            for (let i = 5; i < 6; i++) {
+                console.log("for문의 지역변수", i); // 5
+                console.log("전역변수", a); // 10
+            }
+            for (let j = 0; j < 1; j++) {
+                console.log("for문의 지역변수", j); // 0
+            }
+            console.log(a); // 10
+
+            // -------------------------------------------
+
+            let kor = 90;
+            console.log(kor); // 90
+
+            function getScorekor() {
+                kor = 100; // 전역변수
+                // let kor = 80; // 지역변수
+                console.log(kor); // 100
+            }
+            getScorekor();
+            console.log(kor); // 100
+
+            // -------------------------------------------
+
+            let eng = 90;
+            console.log(eng); // 90
+
+            function getScoreEng() {
+                let eng = 80; // 지역변수
+                let geo = 90; // 지역 변수
+                console.log(eng); // 80
+            }
+            getScoreEng();
+            console.log(eng); // 90
+            // console.log(geo); // error, 지역변수 geo는 블록 밖에서 사용 불가
+
+            // var
+            var num = 10;
+            {
+                var num = 20; // 전역변수
+                console.log(num); // 20
+            }
+            console.log(num); //20
+
+            // let
+            let num2 = 10;
+            {
+                let num2 = 20; // 지역변수
+                console.log(num2); // 20
+            }
+            console.log(num2); //10
+
+            // const = let
+            let num3 = 10;
+            {
+                let num3 = 20; // 지역변수
+                console.log(num3); // 20
+            }
+            console.log(num3); //10
+
+            // -------------------------------------------
+
+            var num = 10; // 전역변수
+            if (num === 10) {
+                var sum = 20; // 전역변수
+            }
+            console.log(sum);
+
+            let num4 = 10; // 전역변수
+            if (num4 === 10) {
+                let sum4 = 20; // 전역변수
+            }
+            // console.log(sum4); // error, if 안에서 선언한 let 지역변수는 밖에서 호출할 수 없음.
+
+            // -------------------------------------------
+
+            // 함수의 전역변수
+            var sum1 = 10; // 전역변수
+            function add1() {
+                // sum1 = undefined;
+                console.log("함수 밖의 전역" + sum1);
+                sum1 = 20; // 전역변수
+                console.log("함수 밖의 전역" + sum1);
+                var sum1 = 20; // 지역변수
+                console.log("함수 안의 지역" + sum1);
+            }
+            add1();
+            console.log("전역" + sum1);
+
+            // 함수의 지역변수
+            var sum2 = 30; // 전역변수
+            let b = 100; // 전역변수
+            function add2() {
+                var sum2 = 40; // 지역변수
+                let b = 200;
+                console.log("var지역" + sum2); // 지역40
+                console.log("let지역" + b); // 지역200
+            }
+            add2();
+            console.log("전역" + sum2); // 전역30
+
+            // 블록의 지역변수
+            var num1 = 50; // 전역변수
+            if (num1 === 50) {
+                var num1 = 60; // 전역변수 재선언
+            }
+            console.log("전역" + num1); // 전역60
+
+            let num5 = 70; // 전역변수
+            if (num5 === 70) {
+                // console.lot('전역' + num2); // Error, let은 호이스팅 안 돼서 오류!! 뒤에서 같은 이름으로 지역변수 선언하기 때문에 선언하기 전에 출력할 수 없으므로 에러 (var는 가능)
+                let num5 = 80; // 지역변수
+                console.log("지역" + num5); // 지역80
+            }
+            console.log("전역" + num5); // 전역70
+
+            let x = 10;
+            console.log("전역x =", x);
+            {
+                let z = 20;
+                console.log("지역x =", x);
+                {
+                    let y = 30;
+                    console.log("지역x =", x);
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -66,7 +66,6 @@
     height: 5.75px;
     object-fit: cover;
     margin-top: 10px;
-
 }
 
 .logo {
@@ -88,7 +87,6 @@
     width: 1200px;
     height: 70px;
     margin: 0 auto;
-
 }
 
 .main {
@@ -98,12 +96,12 @@
     text-align: center;
 }
 
-.main>li {
+.main > li {
     position: relative;
     width: 180px;
 }
 
-.main>li>a {
+.main > li > a {
     display: inline-block;
     font-size: 20px;
     font-weight: bold;
@@ -111,17 +109,17 @@
     position: relative;
 }
 
-.main>li>a::after {
-    content: '';
+.main > li > a::after {
+    content: "";
     position: absolute;
     left: 0;
     bottom: -2px;
     width: 0px;
     height: 4px;
-    background: #C8B158;
+    background: #c8b158;
 }
 
-.main>li:hover>a::after {
+.main > li:hover > a::after {
     width: 100%;
 }
 

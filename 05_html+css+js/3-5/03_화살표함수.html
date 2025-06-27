@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>화살표함수 (=>)</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            /* 
+                화살표 함수
+                : 익명 함수 function 대신 =>
+                  목적: 익명 함수의 간략화
+        
+                *익명 함수: 
+                const 변수명 = function () {
+                    return 반환값;
+                }
+
+                *화살표 함수:
+                // 단일 명령문의 경우, {], return 생략 가능
+                const 변수명 = () => 반환값;
+            */
+
+            // 익명 함수
+            const doMultiplication = function (s1, s2) {
+                return s1 * s2;
+            };
+            console.log(doMultiplication(2, 5));
+
+            // 화살표 함수
+            const doMultiplication2 = (s1, s2) => {
+                return s1 * s2;
+            };
+            console.log(doMultiplication2(2, 5));
+
+            // 화살표 함수(더 생략 ver.)
+            const doMultiplication3 = (s1, s2) => s1 * s2;
+            console.log(doMultiplication3(2, 5));
+
+            // 익명 함수
+            const doAverage = function (s1, s2) {
+                const avg = (s1 + s2) / 2;
+                return avg;
+            };
+            console.log(doAverage(2, 5));
+
+            // 화살표 함수
+            const doAverage2 = (s1, s2) => {
+                const avg = (s1 + s2) / 2;
+                return avg;
+            };
+            console.log(doAverage2(2, 5));
+
+            // 매개 변수가 1개면 () 생략 가능
+            // 익명 함수
+            const isEven = function (n) {
+                return n % 2;
+            };
+            console.log(isEven(3));
+
+            // 화살표 함수
+            const isEven2 = (n) => n % 2;
+            console.log(isEven2(3));
+        </script>
+    </body>
+</html>

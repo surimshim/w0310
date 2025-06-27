@@ -1,10 +1,11 @@
 @charset "utf-8";
 
 /* reset */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
-    font-family: 'GothicA1-Light';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+    font-family: "GothicA1-Light";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2")
+        format("woff2");
     font-weight: 300;
     font-style: normal;
 }
@@ -16,7 +17,12 @@
     --gray3: #333;
     --gray5: #555;
 }
-body,h1,h2,h3,ul,p {
+body,
+h1,
+h2,
+h3,
+ul,
+p {
     margin: 0;
 }
 body {
@@ -54,7 +60,14 @@ header {
     z-index: 9999;
     position: absolute;
     width: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+}
+
+.logo {
+    width: 270px;
+    height: 40px;
+    border: 1px solid #fff;
 }
 
 /* 섹션1: PC 메인 롤링 */
@@ -65,7 +78,7 @@ header {
 /* 섹션2: 인기 여행지 */
 .about_area {
     height: 685px;
-    background: linear-gradient(#FFF 30%, #F4F0E9 30%);
+    background: linear-gradient(#fff 30%, #f4f0e9 30%);
     text-align: center;
 }
 .about_area ul {
@@ -103,14 +116,15 @@ header {
     line-height: 2;
 }
 .notice h3 {
-    font:26px 'GothicA1-Light',sans-serif;
+    font: 26px "GothicA1-Light", sans-serif;
     margin-bottom: 8px;
 }
 .notice ul {
     list-style: disc;
 }
 .link {
-    background: url("https://picsum.photos/seed/picsum/200/300") no-repeat 0 0/cover;
+    background: url("https://picsum.photos/seed/picsum/200/300") no-repeat 0 0 /
+        cover;
     padding: 48px;
 }
 .link a {
@@ -149,7 +163,7 @@ ul.foot_list {
     width: 50px;
     height: 50px;
     margin: 24px;
-    background: no-repeat 0 0/cover;
+    background: no-repeat 0 0 / cover;
 }
 .snslink li:nth-of-type(1) a {
     background-image: url("https://picsum.photos/id/401/50/50");

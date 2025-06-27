@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url("header.css");
+@import url("footer.css");
 
 /* 서브페이지 타이틀 */
 #title {
@@ -10,7 +11,7 @@
 
 .subtitle {
     height: 100px;
-    background: #4B2F48;
+    background: #4b2f48;
     text-align: center;
     color: #fff;
     line-height: 100px;
@@ -46,7 +47,7 @@
 }
 
 .sub_inner .home::after {
-    content: '';
+    content: "";
     position: absolute;
     right: 0;
     top: 50%;
@@ -68,7 +69,7 @@
 }
 
 .sub_inner .menu::after {
-    content: '';
+    content: "";
     position: absolute;
     right: 0;
     top: 50%;
