@@ -133,12 +133,12 @@
 }
 
 .nav:hover .sub {
-    padding-top: 20px;
+    padding-top: 10px;
     height: 170px;
 }
 
 .nav_bg {
-    background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 0.9);
     position: absolute;
     top: 70px;
     left: 0;
@@ -149,7 +149,7 @@
 }
 
 .nav:hover .nav_bg {
-    height: 200px;
+    height: 170px;
 }
 
 .sub li a {

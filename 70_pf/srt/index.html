@@ -80,6 +80,130 @@
         </div>
     </header>
 
+    <div class="modal" id="modal_station">
+        <div class="popup">
+            <div class="title">
+                <h2>기차역 조회</h2>
+                <div class="close_btn">
+                    <a href="#"
+                        ><img
+                            src="images/section1/close.png"
+                            alt="닫기"
+                    /></a>
+                </div>
+            </div>
+            <div class="station">
+                <input type="text" id="search" value="역 이름 검색">
+                <button type="button" class="search_btn">검색</button>
+            </div>
+            <h3>주요 역</h3>
+            <div class="station_list">
+                <button>수서</button>
+                <button>동탄</button>
+                <button>평택지제</button>
+            </div>
+            <h3>전체 역</h3>
+            <div class="station_list">
+                <button>경주</button>
+                <button>곡성</button>
+                <button>광주송정</button>
+                <button>구례구</button>
+                <button>김천구미</button>
+                <button>나주</button>
+                <button>남원</button>
+                <button>대전</button>
+                <button>동대구</button>
+                <button>마산</button>
+                <button>목포</button>
+                <button>밀양</button>
+                <button>부산</button>
+                <button>서대구</button>
+                <button>순천</button>
+                <button>여수EXPO</button>
+                <button>여천</button>
+                <button>오송</button>
+                <button>울산(통도사)</button>
+                <button>익산</button>
+                <button>전주</button>
+                <button>정읍</button>
+                <button>진영</button>
+                <button>진주</button>
+                <button>창원</button>
+                <button>창원중앙</button>
+                <button>천안아산</button>
+                <button>포항</button>
+            </div>
+            <button type="button" class="cancel_btn">취소</button>
+            <button type="button" class="apply_btn">적용</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_date">
+        <div class="popup">
+            <div class="title">
+                <h2>날짜 선택</h2>
+                <div class="close_btn">
+                    <a href="#"
+                        ><img
+                            src="images/section1/close.png"
+                            alt="닫기"
+                    /></a>
+                </div>
+            </div>
+            <div class="date">
+                <label for="date">출발일: </label>
+                <input type="date" id="date" value="2025-06-26" />
+                <label for="time">시간: </label>
+                <input type="time" id="time" value="16:00" />
+            </div>
+            <button type="button" class="cancel_btn">취소</button>
+            <button type="button" class="apply_btn">적용</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_person">
+        <div class="popup">
+            <div class="title">
+                <h2>인원 선택</h2>
+                <div class="close_btn">
+                    <a href="#"
+                        ><img
+                            src="images/section1/close.png"
+                            alt="닫기"
+                    /></a>
+                </div>
+            </div>
+            <div class="person">
+                <span>어른 (만 13세 이상) </span>
+                <select name="person" id="adult">
+                    <option value="1">1명</option>
+                    <option value="1">2명</option>
+                    <option value="1">3명</option>
+                    <option value="1">4명</option>
+                    <option value="1">5명</option>
+                    <option value="1">6명</option>
+                    <option value="1">7명</option>
+                    <option value="1">8명</option>
+                    <option value="1">9명</option>
+                </select>
+                <span>어린이 (만 6~12세) </span>
+                <select name="person" id="children">
+                    <option value="1">1명</option>
+                    <option value="1">2명</option>
+                    <option value="1">3명</option>
+                    <option value="1">4명</option>
+                    <option value="1">5명</option>
+                    <option value="1">6명</option>
+                    <option value="1">7명</option>
+                    <option value="1">8명</option>
+                    <option value="1">9명</option>
+                </select>
+            </div>
+            <button type="button" class="cancel_btn">취소</button>
+            <button type="button" class="apply_btn">적용</button>
+        </div>
+    </div>
+
     <div class="container">
         <!-- 섹션1 -->
         <section id="section1">
@@ -102,21 +226,37 @@
                 
                 <!-- 섹션1 - 승차권 예매 -->
                 <section id="booking_section" class="active">
-                    <div class="inputbox">
+                    <div class="inputbox inputbox_staion">
                         <p>출발역</p>
                         <div class="input_btn"><a href="#">서울<img src="images/section1/pin.png" alt="출발역"></a></div>
                     </div>
-                    <div class="inputbox">
+                    <div class="inputbox inputbox_staion">
                         <p>도착역</p>
                         <div class="input_btn"><a href="#">부산<img src="images/section1/pin.png" alt="도착역"></a></div>
                     </div>
-                    <div class="inputbox">
+                    <div class="inputbox inputbox_date">
                         <p>출발일</p>
-                        <div class="input_btn"><a href="#">2025-06-17<img src="images/section1/calendar.png" alt="출발일"></a></div>
+                        <div class="input_btn">
+                            <a href="#">
+                                <span class="selected-datetime"
+                                    >2025-06-26 16:00</span
+                                >
+                                <img
+                                    src="images/section1/calendar.png"
+                                    alt="출발일"
+                                />
+                            </a>
+                        </div>
                     </div>
-                    <div class="inputbox">
+                    <div class="inputbox inputbox_person">
                         <p>인원</p>
-                        <div class="input_btn"><a href="#">총 1명<img src="images/section1/user.png" alt="인원"></a></div>
+                        <div class="input_btn">
+                            <a href="#"
+                                >총 1명<img
+                                    src="images/section1/user.png"
+                                    alt="인원"
+                            /></a>
+                        </div>
                     </div>
                     <button type="button" id="submit_btn">
                         열차 조회

@@ -73,6 +73,61 @@ $(document).ready(function () {
             .removeClass("active");
     });
 
+    function openModal() {
+        $("#modal_station").show();
+        $("body").css("overflow", "hidden");
+    }
+
+    function closeModal() {
+        $("#modal_station").hide();
+        $("body").css("overflow", "");
+    }
+
+    // 섹션1 modal_station 팝업
+    $(".inputbox_staion .input_btn a").click(function () {
+        $("#modal_station").show();
+    });
+    $(".apply_btn, .cancel_btn, .close_btn a").click(function () {
+        $("#modal_station").hide();
+    });
+    $("#modal_station .station_list button").click(function () {
+        const stationName = $(this).text();
+        // .input_btn a 텍스트만 교체 (이미지 유지)
+        $(".inputbox_staion .input_btn a").contents().filter(function() {
+            return this.nodeType === 3; // 텍스트 노드만 선택
+        }).first().replaceWith(stationName);
+    });
+
+    // 섹션1 modal_date 팝업
+    $(".inputbox_date .input_btn a").click(function () {
+        $("#modal_date").show();
+    });
+    $(".apply_btn").click(function () {
+        const selectedDate = $("#date").val(); // date input 값 가져오기
+        const selectedTime = $("#time").val(); // time input 값 가져오기
+
+        // 날짜와 시간이 모두 있는 경우만 적용
+        if (selectedDate && selectedTime) {
+            $(".selected-datetime").text(`${selectedDate} ${selectedTime}`);
+        }
+
+        $("#modal_date").hide();
+    });
+    $(".cancel_btn, .close_btn a").click(function () {
+        $("#modal_date").hide();
+    });
+
+    // modal_person 팝업
+    $(".inputbox_person .input_btn a").click(function () {
+        $("#modal_person").show();
+    });
+    $(".apply_btn").click(function () {
+        $("#modal_person").hide();
+    });
+    $(".cancel_btn, .close_btn a").click(function () {
+        $("#modal_date").hide();
+    });
+
     // 섹션2 캐로셀
     let currentSlide = 0;
     const totalSlides = 6;
