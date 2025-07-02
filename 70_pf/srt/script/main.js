@@ -73,29 +73,32 @@ $(document).ready(function () {
             .removeClass("active");
     });
 
-    function openModal() {
-        $("#modal_station").show();
-        $("body").css("overflow", "hidden");
-    }
-
-    function closeModal() {
-        $("#modal_station").hide();
-        $("body").css("overflow", "");
-    }
-
     // 섹션1 modal_station 팝업
-    $(".inputbox_staion .input_btn a").click(function () {
+    let $currentStationTarget = null; // 클릭된 a 태그 저장할 변수
+
+    // modal_station 팝업 열기
+    $(".inputbox_station .input_btn a").click(function (e) {
+        e.preventDefault();
+        $currentStationTarget = $(this); // 어떤 a 태그가 클릭됐는지 저장
         $("#modal_station").show();
+    });
+
+    // modal 안의 버튼 클릭 시 텍스트 변경
+    $("#modal_station .station_list button").click(function () {
+        const stationName = $(this).text();
+
+        if ($currentStationTarget) {
+            $currentStationTarget
+                .contents()
+                .filter(function () {
+                    return this.nodeType === 3; // 텍스트 노드
+                })
+                .first()
+                .replaceWith(stationName);
+        }
     });
     $(".apply_btn, .cancel_btn, .close_btn a").click(function () {
         $("#modal_station").hide();
-    });
-    $("#modal_station .station_list button").click(function () {
-        const stationName = $(this).text();
-        // .input_btn a 텍스트만 교체 (이미지 유지)
-        $(".inputbox_staion .input_btn a").contents().filter(function() {
-            return this.nodeType === 3; // 텍스트 노드만 선택
-        }).first().replaceWith(stationName);
     });
 
     // 섹션1 modal_date 팝업
@@ -119,12 +122,9 @@ $(document).ready(function () {
 
     // modal_person 팝업
     $(".inputbox_person .input_btn a").click(function () {
-        $("#modal_person").show();
+        $("#modal_date").show();
     });
-    $(".apply_btn").click(function () {
-        $("#modal_person").hide();
-    });
-    $(".cancel_btn, .close_btn a").click(function () {
+    $(".apply_btn, .cancel_btn, .close_btn a").click(function () {
         $("#modal_date").hide();
     });
 

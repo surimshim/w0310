@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +29,7 @@
                         <li><a href="#"> <span>KR</span> 한국어 </a></li>
                         <li><a href="#"><span>EN</span> English</a></li>
                         <li><a href="#"><span>JP</span> 日本語
-                        </a></li>
+                            </a></li>
                     </ul>
                 </div>
                 <div class="logo">
@@ -42,7 +43,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="nav_out">
             <div class="nav">
                 <div class="nav_bg"></div>
@@ -50,28 +51,28 @@
                     <ul class="main">
                         <li><a href="#">승차권</a>
                             <ul class="sub">
-                                <li><a href="sub/ticket-1.html">승차권예약</a></li>
-                                <li><a href="#">승차권확인</a></li>
-                                <li><a href="#">비회원승차권</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/ticket-1.html">승차권 예매</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/ticket_manage.html">승차권 확인</a></li>
                             </ul>
                         </li>
                         <li><a href="#">이용안내</a>
                             <ul class="sub">
-                                <li><a href="#">역안내</a></li>
-                                <li><a href="#">노선안내</a></li>
-                                <li><a href="#">운임안내</a></li>
+                                <li><a href="#">역 안내</a></li>
+                                <li><a href="#">노선 안내</a></li>
+                                <li><a href="#">운임 안내</a></li>
                             </ul>
                         </li>
                         <li><a href="#">고객서비스</a>
                             <ul class="sub">
                                 <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주 찾는 질문</a></li>
                                 <li><a href="#">고객센터</a></li>
-                                <li><a href="#">자주찾는질문</a></li>
+                                <li><a href="#">유실물 신고 안내</a></li>
                             </ul>
                         </li>
                         <li><a href="#">여행상품</a>
                             <ul class="sub">
-                                <li><a href="#">SRT베스트 여행상품</a></li>
+                                <li><a href="#">SRT 여행상품</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -85,15 +86,11 @@
             <div class="title">
                 <h2>기차역 조회</h2>
                 <div class="close_btn">
-                    <a href="#"
-                        ><img
-                            src="images/section1/close.png"
-                            alt="닫기"
-                    /></a>
+                    <a href="#"><img src="images/section1/close.png" alt="닫기" /></a>
                 </div>
             </div>
             <div class="station">
-                <input type="text" id="search" value="역 이름 검색">
+                <input type="text" id="search" placeholder="역 이름 검색">
                 <button type="button" class="search_btn">검색</button>
             </div>
             <h3>주요 역</h3>
@@ -143,11 +140,7 @@
             <div class="title">
                 <h2>날짜 선택</h2>
                 <div class="close_btn">
-                    <a href="#"
-                        ><img
-                            src="images/section1/close.png"
-                            alt="닫기"
-                    /></a>
+                    <a href="#"><img src="images/section1/close.png" alt="닫기" /></a>
                 </div>
             </div>
             <div class="date">
@@ -166,11 +159,7 @@
             <div class="title">
                 <h2>인원 선택</h2>
                 <div class="close_btn">
-                    <a href="#"
-                        ><img
-                            src="images/section1/close.png"
-                            alt="닫기"
-                    /></a>
+                    <a href="#"><img src="images/section1/close.png" alt="닫기" /></a>
                 </div>
             </div>
             <div class="person">
@@ -223,14 +212,14 @@
                     <a href="#booking_section" class="active">승차권 예매</a>
                     <a href="#search_section">예약 조회</a>
                 </span>
-                
+
                 <!-- 섹션1 - 승차권 예매 -->
                 <section id="booking_section" class="active">
-                    <div class="inputbox inputbox_staion">
+                    <div class="inputbox inputbox_station">
                         <p>출발역</p>
                         <div class="input_btn"><a href="#">서울<img src="images/section1/pin.png" alt="출발역"></a></div>
                     </div>
-                    <div class="inputbox inputbox_staion">
+                    <div class="inputbox inputbox_station">
                         <p>도착역</p>
                         <div class="input_btn"><a href="#">부산<img src="images/section1/pin.png" alt="도착역"></a></div>
                     </div>
@@ -238,36 +227,26 @@
                         <p>출발일</p>
                         <div class="input_btn">
                             <a href="#">
-                                <span class="selected-datetime"
-                                    >2025-06-26 16:00</span
-                                >
-                                <img
-                                    src="images/section1/calendar.png"
-                                    alt="출발일"
-                                />
+                                <span class="selected-datetime">2025-06-26 16:00</span>
+                                <img src="images/section1/calendar.png" alt="출발일" />
                             </a>
                         </div>
                     </div>
                     <div class="inputbox inputbox_person">
                         <p>인원</p>
                         <div class="input_btn">
-                            <a href="#"
-                                >총 1명<img
-                                    src="images/section1/user.png"
-                                    alt="인원"
-                            /></a>
+                            <a href="#">총 1명<img src="images/section1/user.png" alt="인원" /></a>
                         </div>
                     </div>
-                    <button type="button" id="submit_btn">
-                        열차 조회
-                    </button>
+                    <a href="/w0310/70_pf/srt/sub/ticket-1.html" class="check_btn">열차 조회</a>
                 </section>
-                
+
                 <!-- 섹션1 - 예약 조회 -->
                 <section id="search_section">
                     <div class="inputbox">
                         <p>휴대폰 번호</p>
-                        <div class="input_btn"><a href="#">010-0000-0000<img src="images/section1/phone.png" alt="출발역"></a></div>
+                        <div class="input_btn"><a href="#">010-0000-0000<img src="images/section1/phone.png"
+                                    alt="출발역"></a></div>
                     </div>
                     <div class="inputbox">
                         <p>출발역</p>
@@ -279,13 +258,11 @@
                     </div>
                     <div class="inputbox">
                         <p>출발일</p>
-                        <div class="input_btn"><a href="#">2025-06-17<img src="images/section1/calendar.png" alt="출발일"></a></div>
+                        <div class="input_btn"><a href="#">2025-06-17<img src="images/section1/calendar.png"
+                                    alt="출발일"></a></div>
                     </div>
-                    <button type="button" id="submit_btn">
-                        예약 조회
-                    </button>
-                </div>
-            </section>
+                    <a href="/w0310/70_pf/srt/sub/ticket-1.html" class="check_btn">예약 조회</a>
+            </div>
         </section>
 
         <!-- 섹션2 -->
@@ -879,7 +856,7 @@
         <!-- 섹션3 -->
         <section id="section3">
             <h2>SRT 소식</h2>
-            
+
             <div class="contents">
                 <div id="notice">
                     <div class="contents_title">
@@ -921,12 +898,24 @@
             <h2>서비스 바로가기</h2>
             <div class="links">
                 <ul>
-                    <li><a href="#"><img src="images/section3/link1.png" alt="승차권 예매"><p>승차권 예매</p></a></li>
-                    <li><a href="#"><img src="images/section3/link2.png" alt="역 안내"><p>역 안내</p></a></li>
-                    <li><a href="#"><img src="images/section3/link3.png" alt="노선 안내"><p>노선 안내</p></a></li>
-                    <li><a href="#"><img src="images/section3/link4.png" alt="운임 안내"><p>운임 안내</p></a></li>
-                    <li><a href="#"><img src="images/section3/link5.png" alt="고객센터"><p>고객센터</p></a></li>
-                    <li><a href="#"><img src="images/section3/link6.png" alt="여행상품"><p>여행상품</p></a></li>
+                    <li><a href="#"><img src="images/section3/link1.png" alt="승차권 예매">
+                            <p>승차권 예매</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/section3/link2.png" alt="역 안내">
+                            <p>역 안내</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/section3/link3.png" alt="노선 안내">
+                            <p>노선 안내</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/section3/link4.png" alt="운임 안내">
+                            <p>운임 안내</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/section3/link5.png" alt="고객센터">
+                            <p>고객센터</p>
+                        </a></li>
+                    <li><a href="#"><img src="images/section3/link6.png" alt="여행상품">
+                            <p>여행상품</p>
+                        </a></li>
                 </ul>
             </div>
         </section>
@@ -943,7 +932,7 @@
                         <li><a href="https://etk.srail.kr/cms/archive.do?pageId=TK0501020000">여객운송약관/부속약관</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="sns">
                     <ul>
                         <li><a href="#"><img src="images/footer/facebook.png" alt=""></a></li>
@@ -980,15 +969,23 @@
 
                     <div class="ads">
                         <ul>
-                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=76&pageId=TK0502000000"><img src="images/footer/ad1.png" alt="ad1"></a></li>
-                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=91&pageId=TK0502000000"><img src="images/footer/ad2.png" alt="ad2"></a></li>
+                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=76&pageId=TK0502000000"><img
+                                        src="images/footer/ad1.png" alt="ad1"></a></li>
+                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=91&pageId=TK0502000000"><img
+                                        src="images/footer/ad2.png" alt="ad2"></a></li>
                             <li><a href="#"><img src="images/footer/ad3.png" alt="ad3"></a></li>
-                            <li><a href="https://partners.srail.or.kr/login.do"><img src="images/footer/ad4.png" alt="ad4"></a></li>
-                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=536&pageId=TK0502000000"><img src="images/footer/ad5.png" alt="ad5"></a></li>
-                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=359&pageId=TK0502000000"><img src="images/footer/ad6.png" alt="ad6"></a></li>
-                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=358&pageId=TK0502000000"><img src="images/footer/ad7.png" alt="ad7"></a></li>
-                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=365&pageId=TK0502000000"><img src="images/footer/ad8.png" alt="ad8"></a></li>
-                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=393&pageId=TK0502000000"><img src="images/footer/ad9.png" alt="ad9"></a></li>
+                            <li><a href="https://partners.srail.or.kr/login.do"><img src="images/footer/ad4.png"
+                                        alt="ad4"></a></li>
+                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=536&pageId=TK0502000000"><img
+                                        src="images/footer/ad5.png" alt="ad5"></a></li>
+                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=359&pageId=TK0502000000"><img
+                                        src="images/footer/ad6.png" alt="ad6"></a></li>
+                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=358&pageId=TK0502000000"><img
+                                        src="images/footer/ad7.png" alt="ad7"></a></li>
+                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=365&pageId=TK0502000000"><img
+                                        src="images/footer/ad8.png" alt="ad8"></a></li>
+                            <li><a href="https://etk.srail.kr/cms/article/view.do?postNo=393&pageId=TK0502000000"><img
+                                        src="images/footer/ad9.png" alt="ad9"></a></li>
                         </ul>
                     </div><!-- end .ads -->
                 </div><!-- end of right -->
@@ -997,4 +994,5 @@
     </footer>
 
 </body>
+
 </html>

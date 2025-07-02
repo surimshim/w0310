@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>서브페이지</title>
+    <title>승차권 확인</title>
 
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/sub.css" />
@@ -12,7 +12,7 @@
 
     <script src="../script/jquery-3.7.1.js"></script>
     <script src="../script/sub.js"></script>
-    <script src="../script/ticket.js"></script>
+    <script src="../script/ticket_manage.js"></script>
 </head>
 
 <body>
@@ -94,7 +94,7 @@
     <!-- 서브 헤더 -->
     <section id="subtitle">
         <div class="subtitle">
-            <h2>서브페이지 타이틀</h2>
+            <h2>승차권 확인</h2>
         </div>
         <div class="submenu_bar">
             <div class="sub_inner">
@@ -103,15 +103,58 @@
                     <a href="#">승차권<img src="../images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
                 <div class="menu">
-                    <a href="#">승차권 예매<img src="../images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">승차권 확인<img src="../images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 서브페이지 내용 -->
-    <section>
-
+    <section id="ticket_manage">
+        <div class="container">
+            <div id="date"></div>
+            <div id="station">
+                <div class="left">
+                    <h3>수서</h3>
+                    <p>12:28</p>
+                </div>
+                <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="화살표">
+                <div class="right">
+                    <h3>부산</h3>
+                    <p>14:56</p>
+                </div>
+            </div>
+            <div id="ticket_info">
+                <div class="top">
+                    <h4>SRT 331</h4>
+                    <p>어른 | 일반실</p>
+                </div>
+                <div class="info">
+                    <div>
+                        <p>타는곳</p>
+                        <h4>3번</h4>
+                    </div>
+                    <div>
+                        <p>호차번호</p>
+                        <h4>1호차</h4>
+                    </div>
+                    <div>
+                        <p>좌석번호</p>
+                        <h4>3A</h4>
+                    </div>
+                    <div>
+                        <p>운임영수증</p>
+                        <h4><img src="/w0310/70_pf/srt/images/ticket/qr.png" alt=""></h4>
+                    </div>
+                </div>
+                <p>출발 15분 전 표출</p>
+                <div id="buttons">
+                    <button class="ticket_gift">승차권 선물</button>
+                    <button class="ticket_refund">승차권 환불</button>
+                    <button class="ticket_print">승차권 인쇄</button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- 푸터 -->

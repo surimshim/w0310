@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자정의객체</title>
+</head>
+
+<body>
+    <script>
+        /*
+            객체(Object)
+            : 데이터 값을 필요한 대로 만들어 사용
+              데이터는 '이름: 값'의 쌍으로 이루어져 있음 -> 이걸 속성(properties)이라고 함.
+            
+            변수
+              : 데이터 값을 하나 밖에 저장 못한다.
+                변수1 = 값1;              
+                변수2 = 값2;              
+              
+            1. 사용자 정의 객체
+                객체 리터럴
+                객체 생성자 함수
+                클래스(ES6) - > 객체 지향 프로그래밍 언어
+            2. 내장 객체: Number, String, Array, Math, Date, RegExp, ...
+
+            사용자 정의 객체 형식:
+            객체 리터럴로 객체 생성
+            const 변수 = {
+                속성: 값, 
+                메서드: function(){}
+                ...
+            }
+
+            // 객체 생성
+            const person = {
+                name: '홍길동',
+                age: 20,
+                nationality: '한국',
+                aboutme: function() {alert('Hello')}
+                ...
+            }
+
+            객체 사용
+                console.log(person.name);
+                console.log(person.aboutme());
+
+        */
+
+        // 객체 생성
+        const person = {
+            name: '홍길동',
+            age: 20,
+            nationality: '한국',
+            subject: 'css',
+            credit: 1,
+            aboutme: function () {
+                alert(`나는 ${person.age}살 ${person.name}입니다.`);
+            },
+            printOut: function () {
+                return this.subject + ',' + this.credit + '학점'; // this: 객체 자신
+            }
+        }
+
+        // 객체 사용
+        console.log(person.name);
+        person.aboutme();
+        console.log(person.subject);
+        console.log(person.credit);
+        console.log(person.printOut());
+    </script>
+</body>
+
+</html>

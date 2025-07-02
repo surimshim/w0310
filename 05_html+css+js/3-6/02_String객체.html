@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String객체</title>
+</head>
+
+<body>
+    <script>
+        /*
+            String 객체
+                const 객체 = new String('문자열');
+
+            객체.속성
+            속성
+                length -> 문자열 개수
+
+            메서드()
+                charAt(index) -> index에 해당하는 문자 출력 
+
+                indexOf('문자') -> 문자와 일치하는 index 반환, 없으면 -1
+                lastindexOf('문자열') ->  오른쪽 문자부터 검색하여 일치하는 index 반환
+                includes('문자열') -> 문자열 포함하면 true, 아니면 false
+
+                substring(a, [b]) -> a만 지정한 경우 index a부터 끝까지 문자열 반환
+                                  -> a, b 둘다 지정한 경우 index a부터 b-1까지 문자열 반환
+                substr(idx, [idx2]) -> idx1만 지정한 경우 idx1부터 끝까지 문자열 반환
+                                    -> idx1, idx2 둘다 지정한 경우 idx1부터 idx2-1까지 문자열 반환
+                substr(idx, length) -> idx부터 length만큼 문자열 반환
+
+                split()  
+                
+                replace()
+                concat()
+                trim()
+                toLowerCase()
+                toUpperCase()
+        */
+
+        const str1 = new String('javascript'); // 객체
+        const str2 = 'script'; // 변수
+
+        console.log(str1);
+        console.log(str2);
+
+        // 문자수
+        console.log(str1.length); // 10
+        console.log(str2.length); // 6
+
+        // charAt() - character 위치
+        console.log(str2.charAt(0)); // s
+        // indexOf - 문자와 일치하는 index 반환
+        console.log(str2.indexOf('s')
+        ); // 0
+
+
+    </script>
+</body>
+
+</html>

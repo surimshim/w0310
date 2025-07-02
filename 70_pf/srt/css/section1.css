@@ -50,16 +50,18 @@
     height: 40px;
     text-align: center;
     font-size: 16px;
-    color: #b5b5b6;
+    line-height: 40px;
 }
 
 #modal_station .search_btn {
     width: 100px;
     height: 40px;
+    line-height: 40px;
     background: #4b2f48;
     border-style: none;
     font-size: 16px;
     color: #fff;
+    cursor: pointer;
 }
 
 #modal_station h3 {
@@ -71,7 +73,8 @@
     width: 800px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 한 줄에 5개 */
+    grid-template-columns: repeat(5, 1fr);
+    /* 한 줄에 5개 */
     gap: 10px;
     margin-bottom: 30px;
 }
@@ -79,6 +82,7 @@
 #modal_station .station_list button {
     width: 150px;
     height: 40px;
+    line-height: 20px;
     padding: 10px 0;
     font-size: 14px;
     background: #fff;
@@ -125,6 +129,7 @@
     border: 1px solid #b5b5b6;
     margin-right: 10px;
 }
+
 .apply_btn {
     width: 150px;
     height: 45px;
@@ -197,7 +202,8 @@
 }
 
 .bookingtab_btn a.active {
-    background: #4b2f48; /* 활성 탭 배경색 */
+    background: #4b2f48;
+    /* 활성 탭 배경색 */
     color: #fff;
 }
 
@@ -205,6 +211,7 @@
 #booking_tabs section {
     display: none;
 }
+
 #booking_tabs section.active {
     display: flex;
 }
@@ -251,7 +258,7 @@
     object-fit: contain;
 }
 
-#booking_section button {
+#booking_section .check_btn {
     width: 200px;
     height: 50px;
     margin-top: 45px;
@@ -259,8 +266,10 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    border-style: none;
     background: #fff;
+    text-align: center;
+    color: #4b2f48;
+    line-height: 50px;
 }
 
 /* 섹션1 - 예약 조회 탭 */
@@ -305,7 +314,7 @@
     object-fit: contain;
 }
 
-#search_section button {
+#search_section .check_btn {
     width: 200px;
     height: 50px;
     margin-top: 45px;
@@ -315,6 +324,9 @@
     font-weight: bold;
     border-style: none;
     background: #fff;
+    text-align: center;
+    color: #4b2f48;
+    line-height: 50px;
 }
 
 /* 섹션3 */
@@ -340,7 +352,7 @@
     font-size: 18px;
 }
 
-.contents > div {
+.contents>div {
     width: 580px;
 }
 
@@ -357,18 +369,18 @@
     margin-right: 40px;
 }
 
-.contents > div li {
+.contents>div li {
     display: flex;
     justify-content: space-between;
     padding: 8px 0;
     border-bottom: 1px solid #ccc;
 }
 
-.contents > div li a:hover {
+.contents>div li a:hover {
     text-decoration: underline;
 }
 
-.contents > div li span {
+.contents>div li span {
     color: #666;
 }
 

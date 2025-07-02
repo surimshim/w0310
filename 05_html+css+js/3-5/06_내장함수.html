@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장함수</title>
+</head>
+
+<body>
+    <script>
+        /*
+            전역 함수
+            alert()
+            prompt()
+            confirm()
+            setInterval()
+
+            내장 함수
+            : 자바스크립트에서 기본적으로 내장되어 있는 함수
+
+            encodeURIComponent() -> URI 인코딩(인터넷에서 자원의 위치를 식별하는 고유한 문자열)
+                                    영문, 숫자, (), -, _, ., ~, *, !를 제외한 문자열 인코등
+            decodeURIComponent() -> URI 디코딩
+
+            isNaN() -> NaN: Not a Number, 숫자인지 아닌지 판별
+            isFinite() -> 유한한지 아닌지
+
+            Number() -> 숫자로 변환
+            parseInt() -> 숫자와 문자가 포함되어 있을 경우 정수(Int) 부분만 숫자로 변환
+            parseFloat() -> 숫자와 문자가 포함되어 있을 경우 소수 부분까지 숫자로 변환
+            String()
+
+            eval() -> 문자를 자바스크립트 코드로 변경
+        */
+
+        // 인코딩, 디코딩 함수
+        const encodeStr = '자바스크립트';
+        console.log(encodeURIComponent(encodeStr));
+        const decodeStr = encodeURIComponent(encodeStr);
+        console.log(decodeURIComponent(decodeStr));
+
+        // 숫자, 유한 무한 값 판별 함수
+        const num1 = '숫자';
+        if (!isNaN(num1)) {
+            console.log(`숫자 ${num1}입니다.`);
+        }
+        else {
+            console.log('숫자가 아닙니다.');
+        }
+
+        const num2 = 1 / 0;
+        if (isFinite(num2)) {
+            console.log('유한값');
+        }
+        else {
+            console.log('무한값');
+        }
+
+        // 숫자, 문자 변환 함수
+        const num3 = '10'; // 문자
+        console.log(Number(num3)); // 10
+        console.log(parseInt(num3)); // 10
+        const num4 = '100px'
+        console.log(Number(num4)); // NaN
+        console.log(parseInt(num4)); // 100
+        const num5 = '33.3%';
+        console.log(parseInt(num5)); // 33
+        console.log(parseFloat(num5)); // 33.3
+        const num6 = 10;
+        console.log(typeof num6); // number
+        console.log(typeof String(num6)); // string
+
+        // 자바스크립트 코드 변경 함수
+        const str1 = 'var num7 = 10';
+        const str2 = 'var num8 = 20';
+        eval(str1);
+        eval(str2);
+        console.log(num7 + num8);
+
+    </script>
+</body>
+
+</html>

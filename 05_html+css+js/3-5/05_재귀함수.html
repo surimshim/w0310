@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재귀함수</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            재귀함수
+            : 함수 안에서 자신의 함수를 다시 호출하는 함수
+            ex) 팩토리얼
+        */
+
+        function factorial(n) {
+            if (n === 0) {
+                return 1;
+            }
+            else {
+                console.log(n);
+                return n * factorial(n - 1);
+            }
+        }
+
+        console.log(factorial(4));
+    </script>
+</body>
+
+</html>

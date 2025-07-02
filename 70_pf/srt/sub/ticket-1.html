@@ -1,515 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>서브페이지</title>
 
-        <link rel="stylesheet" href="../css/reset.css" />
-        <link rel="stylesheet" href="../css/ticket-1.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>승차권 예매</title>
 
-        <script src="../script/jquery-3.7.1.js"></script>
-        <script src="../script/sub.js"></script>
-        <script src="../script/ticket.js"></script>
-    </head>
-    <body>
-        <!-- 헤더 -->
-        <header id="header">
-            <div class="header_inner">
-                <div class="first">
-                    <div class="language">
-                        <div class="lbtn" id="lbtn">
-                            <img
-                                src="../images/nav/language.png"
-                                alt="언어설정 아이콘"
-                            />
-                            <p>Language</p>
-                            <img
-                                class="language_btn"
-                                src="../images/nav/language_btn.png"
-                                alt="아래화살표"
-                            />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/sub.css" />
+    <link rel="stylesheet" href="../css/ticket-1.css" />
+
+    <script src="../script/jquery-3.7.1.js"></script>
+    <script src="../script/sub.js"></script>
+    <script src="../script/ticket.js"></script>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header id="header">
+        <div class="header_inner">
+            <div class="first">
+                <div class="language">
+                    <div class="lbtn" id="lbtn">
+                        <img src="../images/nav/language.png" alt="언어설정 아이콘" />
+                        <p>Language</p>
+                        <img class="language_btn" src="../images/nav/language_btn.png" alt="아래화살표" />
+                    </div>
+                    <ul class="language_list" id="language_list">
+                        <li>
+                            <a href="#"> <span>KR</span> 한국어 </a>
+                        </li>
+                        <li>
+                            <a href="#"><span>EN</span> English</a>
+                        </li>
+                        <li>
+                            <a href="#"><span>JP</span> 日本語 </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="../index.html"><img src="../images/nav/logo.png" alt="상단로고" /></a>
+                </div>
+                <div class="icons">
+                    <a href="#"><img src="../images/nav/login.png" alt="로그인 페이지 이동 아이콘" /></a>
+                    <a href="#"><img src="../images/nav/guest.png" alt="회원가입 페이지 이동 아이콘" /></a>
+                    <a href="#"><img src="../images/nav/Search.png" alt="검색 페이지 이동 아이콘" /></a>
+                    <a href="#"><img src="../images/nav/hamburger_btn.png" alt="사이트맵 아이콘" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_out">
+            <div class="nav">
+                <div class="nav_bg"></div>
+                <nav class="gnb">
+                    <ul class="main">
+                        <li><a href="#">승차권</a>
+                            <ul class="sub">
+                                <li><a href="/w0310/70_pf/srt/sub/ticket-1.html">승차권 예매</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/ticket_manage.html">승차권 확인</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="#">역 안내</a></li>
+                                <li><a href="#">노선 안내</a></li>
+                                <li><a href="#">운임 안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">고객서비스</a>
+                            <ul class="sub">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">자주 찾는 질문</a></li>
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">유실물 신고 안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">여행상품</a>
+                            <ul class="sub">
+                                <li><a href="#">SRT 여행상품</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 서브 헤더 -->
+    <section id="subtitle">
+        <div class="subtitle">
+            <h2>승차권 예매</h2>
+        </div>
+        <div class="submenu_bar">
+            <div class="sub_inner">
+                <a href="#" class="home"><img src="../images/sub/home.png" alt="" />홈</a>
+                <div class="menu">
+                    <a href="#">승차권<img src="../images/sub/arrow-down.png" alt="화살표" /></a>
+                </div>
+                <div class="menu">
+                    <a href="#">승차권 예매<img src="../images/sub/arrow-down.png" alt="화살표" /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 서브페이지 내용 -->
+    <section id="ticket1">
+        <div class="container">
+            <div class="top">
+                <div class="station">
+                    <img src="../images/ticket/pin.png" alt="" /><span>출발역</span>
+                    <img src="../images/ticket/pin.png" alt="" /><span>도착역</span>
+                </div>
+                <div class="station_btn">
+                    <a href="#" class="station_name inputbox_station">수서</a>
+                    <a href="#"><img src="../images/ticket/toway.png" alt="반대 방향" /></a>
+                    <a href="#" class="station_name inputbox_station">부산</a>
+                </div>
+            </div>
+
+            <div class="modal" id="modal_station">
+                <div class="popup">
+                    <div class="title">
+                        <h2>기차역 조회</h2>
+                        <div class="close_btn">
+                            <a href="#"><img src="../images/section1/close.png" alt="닫기" /></a>
                         </div>
-                        <ul class="language_list" id="language_list">
-                            <li>
-                                <a href="#"> <span>KR</span> 한국어 </a>
-                            </li>
-                            <li>
-                                <a href="#"><span>EN</span> English</a>
-                            </li>
-                            <li>
-                                <a href="#"><span>JP</span> 日本語 </a>
-                            </li>
-                        </ul>
                     </div>
-                    <div class="logo">
-                        <a href="../index.html"
-                            ><img src="../images/nav/logo.png" alt="상단로고"
-                        /></a>
-                    </div>
-                    <div class="icons">
-                        <a href="#"
-                            ><img
-                                src="../images/nav/login.png"
-                                alt="로그인 페이지 이동 아이콘"
-                        /></a>
-                        <a href="#"
-                            ><img
-                                src="../images/nav/guest.png"
-                                alt="회원가입 페이지 이동 아이콘"
-                        /></a>
-                        <a href="#"
-                            ><img
-                                src="../images/nav/Search.png"
-                                alt="검색 페이지 이동 아이콘"
-                        /></a>
-                        <a href="#"
-                            ><img
-                                src="../images/nav/hamburger_btn.png"
-                                alt="사이트맵 아이콘"
-                        /></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="nav_out">
-                <div class="nav">
-                    <div class="nav_bg"></div>
-                    <nav class="gnb">
-                        <ul class="main">
-                            <li>
-                                <a href="#">승차권</a>
-                                <ul class="sub">
-                                    <li><a href="#">승차권예약</a></li>
-                                    <li><a href="#">승차권확인</a></li>
-                                    <li><a href="#">비회원승차권</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">이용안내</a>
-                                <ul class="sub">
-                                    <li><a href="#">역안내</a></li>
-                                    <li><a href="#">노선안내</a></li>
-                                    <li><a href="#">운임안내</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">고객서비스</a>
-                                <ul class="sub">
-                                    <li><a href="#">공지사항</a></li>
-                                    <li><a href="#">고객센터</a></li>
-                                    <li><a href="#">자주찾는질문</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">여행상품</a>
-                                <ul class="sub">
-                                    <li><a href="#">SRT베스트 여행상품</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-
-        <section id="title">
-            <div class="subtitle">
-                <h2>승차권 예매</h2>
-            </div>
-            <div class="submenu_bar">
-                <div class="sub_inner">
-                    <a href="#" class="home"
-                        ><img src="../images/sub/home.png" alt="" />홈</a
-                    >
-                    <div class="menu">
-                        <a href="#"
-                            >승차권<img
-                                src="../images/sub/arrow-down.png"
-                                alt="화살표"
-                        /></a>
-                    </div>
-                    <div class="menu">
-                        <a href="#"
-                            >승차권 예매<img
-                                src="../images/sub/arrow-down.png"
-                                alt="화살표"
-                        /></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contents">
-            <div class="container">
-                <div class="top">
                     <div class="station">
-                        <img src="../images/ticket/pin.png" alt="" /><span
-                            >출발역</span
-                        >
-                        <img src="../images/ticket/pin.png" alt="" /><span
-                            >도착역</span
-                        >
+                        <input type="text" id="search" placeholder="역 이름 검색">
+                        <button type="button" class="search_btn">검색</button>
                     </div>
-                    <div class="station_btn">
-                        <a href="#" class="station_name">수서</a>
-                        <a href="#"
-                            ><img
-                                src="../images/ticket/toway.png"
-                                alt="반대 방향"
-                        /></a>
-                        <a href="#" class="station_name">부산</a>
+                    <h3>주요 역</h3>
+                    <div class="station_list">
+                        <button>수서</button>
+                        <button>동탄</button>
+                        <button>평택지제</button>
                     </div>
+                    <h3>전체 역</h3>
+                    <div class="station_list">
+                        <button>경주</button>
+                        <button>곡성</button>
+                        <button>광주송정</button>
+                        <button>구례구</button>
+                        <button>김천구미</button>
+                        <button>나주</button>
+                        <button>남원</button>
+                        <button>대전</button>
+                        <button>동대구</button>
+                        <button>마산</button>
+                        <button>목포</button>
+                        <button>밀양</button>
+                        <button>부산</button>
+                        <button>서대구</button>
+                        <button>순천</button>
+                        <button>여수EXPO</button>
+                        <button>여천</button>
+                        <button>오송</button>
+                        <button>울산(통도사)</button>
+                        <button>익산</button>
+                        <button>전주</button>
+                        <button>정읍</button>
+                        <button>진영</button>
+                        <button>진주</button>
+                        <button>창원</button>
+                        <button>창원중앙</button>
+                        <button>천안아산</button>
+                        <button>포항</button>
+                    </div>
+                    <button type="button" class="cancel_btn">취소</button>
+                    <button type="button" class="apply_btn">적용</button>
                 </div>
+            </div>
 
-                <div class="modal" id="modal_date">
-                    <div class="popup">
-                        <div class="title">
-                            <h2>날짜 선택</h2>
-                            <div class="close_btn">
-                                <a href="#"
-                                    ><img
-                                        src="../images/section1/close.png"
-                                        alt="닫기"
-                                /></a>
-                            </div>
+            <div class="modal" id="modal_date">
+                <div class="popup">
+                    <div class="title">
+                        <h2>날짜 선택</h2>
+                        <div class="close_btn">
+                            <a href="#"><img src="../images/section1/close.png" alt="닫기" /></a>
                         </div>
-                        <div class="date">
-                            <label for="date">출발일: </label>
-                            <input type="date" id="date" value="2025-06-26" />
-                            <label for="time">시간: </label>
-                            <input type="time" id="time" value="16:00" />
-                        </div>
-                        <button type="button" class="cancel_btn">취소</button>
-                        <button type="button" class="apply_btn">적용</button>
                     </div>
-                </div>
-
-                <div class="modal" id="modal_person">
-                    <div class="popup">
-                        <div class="title">
-                            <h2>인원 선택</h2>
-                            <div class="close_btn">
-                                <a href="#"
-                                    ><img
-                                        src="../images/section1/close.png"
-                                        alt="닫기"
-                                /></a>
-                            </div>
-                        </div>
-                        <div class="person">
-                            <span>어른 (만 13세 이상) </span>
-                            <select name="person" id="adult">
-                                <option value="1">1명</option>
-                                <option value="1">2명</option>
-                                <option value="1">3명</option>
-                                <option value="1">4명</option>
-                                <option value="1">5명</option>
-                                <option value="1">6명</option>
-                                <option value="1">7명</option>
-                                <option value="1">8명</option>
-                                <option value="1">9명</option>
-                            </select>
-                            <span>어린이 (만 6~12세) </span>
-                            <select name="person" id="children">
-                                <option value="1">1명</option>
-                                <option value="1">2명</option>
-                                <option value="1">3명</option>
-                                <option value="1">4명</option>
-                                <option value="1">5명</option>
-                                <option value="1">6명</option>
-                                <option value="1">7명</option>
-                                <option value="1">8명</option>
-                                <option value="1">9명</option>
-                            </select>
-                        </div>
-                        <button type="button" class="cancel_btn">취소</button>
-                        <button type="button" class="apply_btn">적용</button>
+                    <div class="date">
+                        <label for="date">출발일: </label>
+                        <input type="date" id="date" value="2025-06-26" />
+                        <label for="time">시간: </label>
+                        <input type="time" id="time" value="16:00" />
                     </div>
+                    <button type="button" class="cancel_btn">취소</button>
+                    <button type="button" class="apply_btn">적용</button>
                 </div>
+            </div>
 
-                <div class="bottom">
-                    <h3>일정 및 인원</h3>
-                    <div class="tabs">
-                        <label for="oneway"
-                            ><input
-                                type="radio"
-                                name="way"
-                                id="oneway"
-                                checked
-                            />편도</label
-                        >
-                        <label for="twoway"
-                            ><input
-                                type="radio"
-                                name="way"
-                                id="twoway"
-                            />왕복</label
-                        >
-
-                        <div class="tab-content oneway">
-                            <div class="input">
-                                <div class="inputbox inputbox_date">
-                                    <p>출발일</p>
-                                    <div class="input_btn">
-                                        <a href="#">
-                                            <span class="selected-datetime"
-                                                >2025-06-26 16:00</span
-                                            >
-                                            <img
-                                                src="../images/ticket/calendar.png"
-                                                alt="출발일"
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="inputbox inputbox_person">
-                                    <p>인원</p>
-                                    <div class="input_btn">
-                                        <a href="#"
-                                            >총 1명
-                                            <img
-                                                src="../images/ticket/user.png"
-                                                alt="인원"
-                                        /></a>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="modal" id="modal_person">
+                <div class="popup">
+                    <div class="title">
+                        <h2>인원 선택</h2>
+                        <div class="close_btn">
+                            <a href="#"><img src="../images/section1/close.png" alt="닫기" /></a>
                         </div>
+                    </div>
+                    <div class="person">
+                        <span>어른 (만 13세 이상) </span>
+                        <select name="person" id="adult">
+                            <option value="1">1명</option>
+                            <option value="1">2명</option>
+                            <option value="1">3명</option>
+                            <option value="1">4명</option>
+                            <option value="1">5명</option>
+                            <option value="1">6명</option>
+                            <option value="1">7명</option>
+                            <option value="1">8명</option>
+                            <option value="1">9명</option>
+                        </select>
+                        <span>어린이 (만 6~12세) </span>
+                        <select name="person" id="children">
+                            <option value="1">1명</option>
+                            <option value="1">2명</option>
+                            <option value="1">3명</option>
+                            <option value="1">4명</option>
+                            <option value="1">5명</option>
+                            <option value="1">6명</option>
+                            <option value="1">7명</option>
+                            <option value="1">8명</option>
+                            <option value="1">9명</option>
+                        </select>
+                    </div>
+                    <button type="button" class="cancel_btn">취소</button>
+                    <button type="button" class="apply_btn">적용</button>
+                </div>
+            </div>
 
-                        <div class="tab-content twoway">
-                            <div class="input">
-                                <div class="inputbox inputbox_date">
-                                    <p>출발일</p>
-                                    <div class="input_btn">
-                                        <a href="#">
-                                            <span class="selected-datetime"
-                                                >2025-06-26 16:00</span
-                                            >
-                                            <img
-                                                src="../images/ticket/calendar.png"
-                                                alt="출발일"
-                                            />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="inputbox inputbox_date">
-                                    <p>출발일</p>
-                                    <div class="input_btn">
-                                        <a href="#">
-                                            <span class="selected-datetime"
-                                                >2025-06-26 16:00</span
-                                            >
-                                            <img
-                                                src="../images/ticket/calendar.png"
-                                                alt="출발일"
-                                            />
-                                        </a>
-                                    </div>
+            <div class="bottom">
+                <h3>일정 및 인원</h3>
+                <div class="tabs">
+                    <label for="oneway"><input type="radio" name="way" id="oneway" checked />편도</label>
+                    <label for="twoway"><input type="radio" name="way" id="twoway" />왕복</label>
+
+                    <div class="tab-content oneway">
+                        <div class="input">
+                            <div class="inputbox inputbox_date">
+                                <p>출발일</p>
+                                <div class="input_btn">
+                                    <a href="#">
+                                        <span class="selected-datetime">2025-06-26 16:00</span>
+                                        <img src="../images/ticket/calendar.png" alt="출발일" />
+                                    </a>
                                 </div>
                             </div>
                             <div class="inputbox inputbox_person">
                                 <p>인원</p>
                                 <div class="input_btn">
-                                    <a href="#"
-                                        >총 1명<img
-                                            src="../images/ticket/user.png"
-                                            alt="인원"
-                                    /></a>
+                                    <a href="#">총 1명
+                                        <img src="../images/ticket/user.png" alt="인원" /></a>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content twoway">
+                        <div class="input">
+                            <div class="inputbox inputbox_date">
+                                <p>출발일</p>
+                                <div class="input_btn">
+                                    <a href="#">
+                                        <span class="selected-datetime">2025-06-26 16:00</span>
+                                        <img src="../images/ticket/calendar.png" alt="출발일" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="inputbox inputbox_date">
+                                <p>출발일</p>
+                                <div class="input_btn">
+                                    <a href="#">
+                                        <span class="selected-datetime">2025-06-26 16:00</span>
+                                        <img src="../images/ticket/calendar.png" alt="출발일" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inputbox inputbox_person">
+                            <p>인원</p>
+                            <div class="input_btn">
+                                <a href="#">총 1명<img src="../images/ticket/user.png" alt="인원" /></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <button type="button" class="check_btn">열차 조회</button>
-        </section>
+        </div>
+        <button type="button" class="check_btn">열차 조회</button>
+    </section>
 
-        <!-- 푸터 -->
-        <footer id="footer">
-            <div class="fupper">
-                <!-- footer 윗부분 -->
-                <div class="inner">
-                    <div class="rule">
+    <!-- 푸터 -->
+    <footer id="footer">
+        <div class="fupper">
+            <!-- footer 윗부분 -->
+            <div class="inner">
+                <div class="rule">
+                    <ul>
+                        <li>
+                            <a href="https://www.srail.or.kr/cms/archive.do?pageId=KR9903000000">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="https://etk.srail.kr/cms/archive.do?pageId=TK0501010000">고객서비스헌장</a>
+                        </li>
+                        <li>
+                            <a href="https://etk.srail.kr/cms/archive.do?pageId=TK0501020000">여객운송약관/부속약관</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sns">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="../images/footer/facebook.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../images/footer/instagram.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../images/footer/line.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../images/footer/kakao_channel.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../images/footer/band.png" alt="" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of .sns -->
+            </div>
+            <!-- end of .fupper .inner -->
+        </div>
+        <!-- end of .fupper -->
+
+        <div class="flower">
+            <div class="inner">
+                <div class="left">
+                    <div class="blogo">
+                        <img src="../images/footer/blogo.png" alt="blogo" />
+                    </div>
+                    <!-- end of .blogo -->
+                    <p>
+                        대표자 : 이종국 ㅣ 상호: 주식회사 에스알 ㅣ
+                        사업자등록: 305-86-31590 ㅣ 통신판매업신고:
+                        2016-서울강남-03705호<br />
+                        (우: 06367) 서울특별시 강남구 광평로 56길 12
+                        희림빌딩 | TEL. 1800-1472 l FAX. 6484-4093<br />
+                        Copyright 2018. SR Inc. All rights reserved.
+                    </p>
+                </div>
+                <!-- end of left -->
+
+                <div class="right">
+                    <div class="fs">
+                        <form action="#">
+                            <select name="fs" id="fs">
+                                <option value="">유관기관 바로가기</option>
+                                <option value="">코레일</option>
+                                <option value="">국토교통부</option>
+                            </select>
+                        </form>
+                    </div>
+                    <!-- end of .fs -->
+
+                    <div class="ads">
                         <ul>
                             <li>
-                                <a
-                                    href="https://www.srail.or.kr/cms/archive.do?pageId=KR9903000000"
-                                    >개인정보처리방침</a
-                                >
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=76&pageId=TK0502000000"><img
+                                        src="../images/footer/ad1.png" alt="ad1" /></a>
                             </li>
                             <li>
-                                <a
-                                    href="https://etk.srail.kr/cms/archive.do?pageId=TK0501010000"
-                                    >고객서비스헌장</a
-                                >
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=91&pageId=TK0502000000"><img
+                                        src="../images/footer/ad2.png" alt="ad2" /></a>
                             </li>
                             <li>
-                                <a
-                                    href="https://etk.srail.kr/cms/archive.do?pageId=TK0501020000"
-                                    >여객운송약관/부속약관</a
-                                >
+                                <a href="#"><img src="../images/footer/ad3.png" alt="ad3" /></a>
+                            </li>
+                            <li>
+                                <a href="https://partners.srail.or.kr/login.do"><img src="../images/footer/ad4.png"
+                                        alt="ad4" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=536&pageId=TK0502000000"><img
+                                        src="../images/footer/ad5.png" alt="ad5" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=359&pageId=TK0502000000"><img
+                                        src="../images/footer/ad6.png" alt="ad6" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=358&pageId=TK0502000000"><img
+                                        src="../images/footer/ad7.png" alt="ad7" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=365&pageId=TK0502000000"><img
+                                        src="../images/footer/ad8.png" alt="ad8" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=393&pageId=TK0502000000"><img
+                                        src="../images/footer/ad9.png" alt="ad9" /></a>
                             </li>
                         </ul>
                     </div>
-
-                    <div class="sns">
-                        <ul>
-                            <li>
-                                <a href="#"
-                                    ><img
-                                        src="../images/footer/facebook.png"
-                                        alt=""
-                                /></a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><img
-                                        src="../images/footer/instagram.png"
-                                        alt=""
-                                /></a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><img
-                                        src="../images/footer/line.png"
-                                        alt=""
-                                /></a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><img
-                                        src="../images/footer/kakao_channel.png"
-                                        alt=""
-                                /></a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><img
-                                        src="../images/footer/band.png"
-                                        alt=""
-                                /></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end of .sns -->
+                    <!-- end .ads -->
                 </div>
-                <!-- end of .fupper .inner -->
+                <!-- end of right -->
             </div>
-            <!-- end of .fupper -->
+            <!-- end of .flower .inner -->
+        </div>
+        <!-- end of .flower -->
+    </footer>
+</body>
 
-            <div class="flower">
-                <div class="inner">
-                    <div class="left">
-                        <div class="blogo">
-                            <img src="../images/footer/blogo.png" alt="blogo" />
-                        </div>
-                        <!-- end of .blogo -->
-                        <p>
-                            대표자 : 이종국 ㅣ 상호: 주식회사 에스알 ㅣ
-                            사업자등록: 305-86-31590 ㅣ 통신판매업신고:
-                            2016-서울강남-03705호<br />
-                            (우: 06367) 서울특별시 강남구 광평로 56길 12
-                            희림빌딩 | TEL. 1800-1472 l FAX. 6484-4093<br />
-                            Copyright 2018. SR Inc. All rights reserved.
-                        </p>
-                    </div>
-                    <!-- end of left -->
-
-                    <div class="right">
-                        <div class="fs">
-                            <form action="#">
-                                <select name="fs" id="fs">
-                                    <option value="">유관기관 바로가기</option>
-                                    <option value="">코레일</option>
-                                    <option value="">국토교통부</option>
-                                </select>
-                            </form>
-                        </div>
-                        <!-- end of .fs -->
-
-                        <div class="ads">
-                            <ul>
-                                <li>
-                                    <a
-                                        href="https://etk.srail.kr/cms/article/view.do?postNo=76&pageId=TK0502000000"
-                                        ><img
-                                            src="../images/footer/ad1.png"
-                                            alt="ad1"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://etk.srail.kr/cms/article/view.do?postNo=91&pageId=TK0502000000"
-                                        ><img
-                                            src="../images/footer/ad2.png"
-                                            alt="ad2"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        ><img
-                                            src="../images/footer/ad3.png"
-                                            alt="ad3"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://partners.srail.or.kr/login.do"
-                                        ><img
-                                            src="../images/footer/ad4.png"
-                                            alt="ad4"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://etk.srail.kr/cms/article/view.do?postNo=536&pageId=TK0502000000"
-                                        ><img
-                                            src="../images/footer/ad5.png"
-                                            alt="ad5"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://etk.srail.kr/cms/article/view.do?postNo=359&pageId=TK0502000000"
-                                        ><img
-                                            src="../images/footer/ad6.png"
-                                            alt="ad6"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://etk.srail.kr/cms/article/view.do?postNo=358&pageId=TK0502000000"
-                                        ><img
-                                            src="../images/footer/ad7.png"
-                                            alt="ad7"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://etk.srail.kr/cms/article/view.do?postNo=365&pageId=TK0502000000"
-                                        ><img
-                                            src="../images/footer/ad8.png"
-                                            alt="ad8"
-                                    /></a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://etk.srail.kr/cms/article/view.do?postNo=393&pageId=TK0502000000"
-                                        ><img
-                                            src="../images/footer/ad9.png"
-                                            alt="ad9"
-                                    /></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- end .ads -->
-                    </div>
-                    <!-- end of right -->
-                </div>
-                <!-- end of .flower .inner -->
-            </div>
-            <!-- end of .flower -->
-        </footer>
-    </body>
 </html>
