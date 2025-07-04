@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 순회</title>
+</head>
+
+<body>
+    <script>
+        /*
+            배열 순회
+            
+            반복문
+                for ~ in
+                for ~ of
+
+                형식:
+                for (let idx in iterable) {
+                    // 배열 요소만큼 반복
+                }
+                for (let idx of arr) {
+                    // 배열 요소만큼 반복
+                }
+
+            메서드
+                forEach(함수)
+                map()
+                filter()
+            
+            iterable
+            : 반복 가능 객체
+                -> 배열, 문자열, 컬렉션(Set, Map)
+
+        */
+
+        const city = ['서울', '대전', '대구', '부산'];
+
+        for (let i in city) {
+            console.log(i);
+            console.log(city[i]);
+        }
+        for (let val of city) {
+            console.log(val);
+        }
+
+        const nums = [4, 5, 6];
+        nums.forEach(function (value, index, array) {
+            console.log(value); // 4, 5, 6
+            console.log(index); // 0, 1, 2
+            console.log(array);
+        });
+
+        let sum = 0;
+
+        nums.forEach(function (value, index) {
+            return sum += index;
+        });
+        console.log(sum); // 3
+    </script>
+</body>
+
+</html>

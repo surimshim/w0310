@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map 컬렉션 객체</title>
+</head>
+
+<body>
+    <script>
+        // myMap을 Set 컬렉션 개체로 선언
+        const myMap = new Map();
+
+        /* 
+            const obj = {
+                'name': 값,
+                1: 값,
+                true: 값,
+                ...
+            }
+        */
+        // myMap객체.set(키, 값); -> myMap 객체에 값 추가
+        myMap.set('name', 'Alice');
+        myMap.set(1, 'one');
+        myMap.set(true, 'yes');
+        console.log(myMap); // Map(3) {'name' => 'Alice', 1 => 'one', true => 'yes'}
+
+        // 객체.get(key); -> 값 가져오기
+        console.log(myMap.get('name')); // Alice
+
+        // size -> 요소 개수 확인
+        console.log(myMap.size); // 3
+
+        // 객체.has(key) -> 값 존재 유무 확인 -> 갖고 있으면 true, 아니면 false
+        if (myMap.has(1)) {
+            console.log(`있습니다.`);
+        }
+        else {
+            console.log(`없습니다.`);
+        }
+
+        // 객체.delete(key) -> 특정 값 삭제
+        myMap.delete('name');
+        console.log(myMap); // Map(2) {1 => 'one', true => 'yes'}
+
+        // 객체.clear() -> 모든 값 삭제
+        myMap.clear();
+        console.log(myMap); // Map(0) {size: 0}
+    </script>
+</body>
+
+</html>

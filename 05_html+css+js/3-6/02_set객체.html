@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set 컬렉션 객체</title>
+</head>
+
+<body>
+    <script>
+        // mySet을 Set 컬렉션 개체로 선언
+        const mySet = new Set();
+
+        // 객체.add(값); -> mySet 객체에 값 추가
+        mySet.add(1);
+        mySet.add(2);
+        mySet.add(2); // 중복 추가 무시됨
+        mySet.add(1); // 중복 추가 무시됨
+        mySet.add(2); // 중복 추가 무시됨
+        mySet.add(3);
+        console.log(mySet); // Set(3) {1, 2, 3}
+
+        // size -> 요소 개수 확인
+        console.log(mySet.size); // 3
+        // 객체.has(값) -> 값 존재 유무 확인 -> 갖고 있으면 true, 아니면 false
+        if (mySet.has(1)) {
+            console.log(`있습니다.`);
+        }
+        else {
+            console.log(`없습니다.`);
+        }
+
+        // 객체.delete(값) -> 특정 값 삭제
+        mySet.delete(1);
+        console.log(mySet); // Set(2) {2, 3}
+
+        // 객체.clear() -> 모든 값 삭제
+        mySet.clear();
+        console.log(mySet); // Set(0) {size: 0}
+    </script>
+</body>
+
+</html>

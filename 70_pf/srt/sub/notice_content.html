@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>서브페이지</title>
+    <title>공지사항</title>
 
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/reset.css" />
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/sub.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/notice_content.css" />
 
     <script src="/w0310/70_pf/srt/script/jquery-3.7.1.js"></script>
     <script src="/w0310/70_pf/srt/script/sub.js"></script>
@@ -56,7 +57,7 @@
                         <li>
                             <a href="#">승차권</a>
                             <ul class="sub">
-                                <li><a href="/w0310/70_pf/srt/sub/ticket-search.html">승차권 예매</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/ticket_search.html">승차권 예매</a></li>
                                 <li><a href="/w0310/70_pf/srt/sub/ticket_manage.html">승차권 확인</a></li>
                             </ul>
                         </li>
@@ -71,7 +72,7 @@
                         <li>
                             <a href="#">고객서비스</a>
                             <ul class="sub">
-                                <li><a href="#">공지사항</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/notice_list.html">공지사항</a></li>
                                 <li><a href="#">자주찾는질문</a></li>
                                 <li><a href="#">고객센터</a></li>
                                 <li><a href="#">유실물신고안내</a></li>
@@ -92,16 +93,16 @@
     <!-- 서브 헤더 -->
     <section id="subtitle">
         <div class="subtitle">
-            <h2>서브페이지 타이틀</h2>
+            <h2>공지사항</h2>
         </div>
         <div class="submenu_bar">
             <div class="sub_inner">
                 <a href="#" class="home"><img src="/w0310/70_pf/srt/images/sub/home.png" alt="" />홈</a>
                 <div class="menu">
-                    <a href="#">승차권<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">고객서비스<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
                 <div class="menu">
-                    <a href="#">승차권 예매<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">공지사항<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
             </div>
         </div>
@@ -109,7 +110,27 @@
 
     <!-- 서브페이지 내용 -->
     <section id="container">
-        <div></div>
+        <div class="title">
+            <h2>SR 여객운송약관 주요 개정사항 안내(개정일 2025.4.28.부터)</h2>
+            <p>작성일<span>2025-05-13</span></p>
+        </div>
+        <div class="content">
+            <p>첨부파일<img src="/w0310/70_pf/srt/images/notice/link.png" alt=""><a href="#">붙임 3. SR 여객운송약관 주요 개정사항
+                    안내(포스터)(0416수정).hwp</a></p>
+            <div class="content_img">
+                <img src="/w0310/70_pf/srt/images/notice/notice1.jpg" alt="공지사항1">
+            </div>
+        </div>
+        <div class="list_btn"><a href="/w0310/70_pf/srt/sub/notice_list.html">목록</a></div>
+        <div class="search">
+            <select name="search" id="search">
+                <option value="">전체</option>
+                <option value="title">제목</option>
+                <option value="contents">내용</option>
+            </select>
+            <input type="text" id="search_input">
+            <button class="search_btn">검색</button>
+        </div>
     </section>
 
     <!-- 푸터 -->

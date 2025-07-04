@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>서브페이지</title>
+    <title>공지사항</title>
 
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/reset.css" />
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/sub.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/notice_list.css" />
 
     <script src="/w0310/70_pf/srt/script/jquery-3.7.1.js"></script>
     <script src="/w0310/70_pf/srt/script/sub.js"></script>
@@ -56,7 +57,7 @@
                         <li>
                             <a href="#">승차권</a>
                             <ul class="sub">
-                                <li><a href="/w0310/70_pf/srt/sub/ticket-search.html">승차권 예매</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/ticket_search.html">승차권 예매</a></li>
                                 <li><a href="/w0310/70_pf/srt/sub/ticket_manage.html">승차권 확인</a></li>
                             </ul>
                         </li>
@@ -71,7 +72,7 @@
                         <li>
                             <a href="#">고객서비스</a>
                             <ul class="sub">
-                                <li><a href="#">공지사항</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/notice_list.html">공지사항</a></li>
                                 <li><a href="#">자주찾는질문</a></li>
                                 <li><a href="#">고객센터</a></li>
                                 <li><a href="#">유실물신고안내</a></li>
@@ -92,16 +93,16 @@
     <!-- 서브 헤더 -->
     <section id="subtitle">
         <div class="subtitle">
-            <h2>서브페이지 타이틀</h2>
+            <h2>공지사항</h2>
         </div>
         <div class="submenu_bar">
             <div class="sub_inner">
                 <a href="#" class="home"><img src="/w0310/70_pf/srt/images/sub/home.png" alt="" />홈</a>
                 <div class="menu">
-                    <a href="#">승차권<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">고객서비스<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
                 <div class="menu">
-                    <a href="#">승차권 예매<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">공지사항<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
             </div>
         </div>
@@ -109,7 +110,81 @@
 
     <!-- 서브페이지 내용 -->
     <section id="container">
-        <div></div>
+        <div class="top">
+            <p>총 2564건</p>
+            <div class="search">
+                <select name="search" id="search">
+                    <option value="">전체</option>
+                    <option value="title">제목</option>
+                    <option value="contents">내용</option>
+                </select>
+                <input type="text" id="search_input">
+                <button class="search_btn">검색</button>
+            </div>
+        </div>
+        <table class="notice-table">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>등록일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="notice">
+                    <td>공지</td>
+                    <td><a href="/w0310/70_pf/srt/sub/notice_content.html">SR 여객운송약관 주요 개정사항 안내(개정일 2025.4.28.부터)</a>
+                    </td>
+                    <td>2025-04-18</td>
+                </tr>
+                <tr class="notice">
+                    <td>공지</td>
+                    <td><a href="#">SRT 열차운행 조정 알림</a></td>
+                    <td>2025-03-27</td>
+                </tr>
+                <tr class="notice">
+                    <td>공지</td>
+                    <td><a href="#">산불 특별재난지역 자원봉사자 지원 알림</a></td>
+                    <td>2025-03-27</td>
+                </tr>
+                <tr class="notice">
+                    <td>공지</td>
+                    <td><a href="#">승차권 다량구매 및 환불 관련 이용 제한 알림</a></td>
+                    <td>2025-03-27</td>
+                </tr>
+                <tr>
+                    <td>488</td>
+                    <td><a href="#">2025 철도의 날 기념 제1회 철도를 담다 영상 공모전</a></td>
+                    <td>2025-04-18</td>
+                </tr>
+                <tr>
+                    <td>487</td>
+                    <td><a href="#">25년 산불 발생 관련 특별재난지역 자원봉사자 지원 안내</a></td>
+                    <td>2025-03-27</td>
+                </tr>
+                <tr>
+                    <td>486</td>
+                    <td><a href="#">네이버페이 5월 프로모션</a></td>
+                    <td>2025-03-27</td>
+                </tr>
+                <tr>
+                    <td>485</td>
+                    <td><a href="#">2025년 1분기 SR 회원 등급조회 및 혜택 안내</a></td>
+                    <td>2025-03-27</td>
+                </tr>
+                <tr>
+                    <td>484</td>
+                    <td><a href="#">4월 네이버페이 프로모션</a></td>
+                    <td>2025-03-27</td>
+                </tr>
+                <tr>
+                    <td>483</td>
+                    <td><a href="#">SR협력 인사이더 외부위원 모집</a></td>
+                    <td>2025-03-27</td>
+                </tr>
+            </tbody>
+        </table>
+
     </section>
 
     <!-- 푸터 -->

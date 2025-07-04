@@ -41,6 +41,12 @@
     margin-right: 10px;
 }
 
+.sub_inner .menu img {
+    margin-top: 4px;
+    width: 14px;
+    height: 16px;
+}
+
 .sub_inner .home {
     position: relative;
     padding-right: 15px;
@@ -79,7 +85,7 @@
 }
 
 /* 서브페이지 내용 */
-#contents {
+#container {
     width: 1200px;
-    margin: 0 auto;
+    margin: 30px auto 100px;
 }

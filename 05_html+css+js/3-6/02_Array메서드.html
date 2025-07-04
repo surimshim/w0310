@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 메서드</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            Array 객체
+                객체 리터럴처럼 변수에 데이터 값 필요한대로 저장할 수 있다.
+                저장된 값에 자동으로 index를 부여한다.
+
+            배열 생성
+                const 변수 = [값1, 값2, ...]
+            배열 참조
+                변수[index] -> index: 0, 1, 2, ...
+            
+            속성
+                length
+            
+            메서드
+                concat()
+                toString()
+
+                slice()
+                join()
+                shift()
+                unshift()
+                pop()
+                push()
+                sort()
+        */
+
+        const alphabet = ['a', 'b', 'c', 'd', 'e'];
+        const alphabet2 = ['f', 'g'];
+
+        // 배열.join('연결자') -> 배열 값을 하나의 문자열로 반환
+        console.log(alphabet.join('-')); // a-b-c-d-e
+
+        // 배열1.concat(배열2) -> 배열을 연결
+        console.log(alphabet.concat(alphabet2)); // ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+        // 배열.toString(); -> 배열을 문자열로 반환
+        console.log(alphabet.toString()); // a,b,c,d,e
+        console.log(alphabet); // ['a', 'b', 'c', 'd', 'e']
+
+        // 배열[idx] -> 배열의 값 가져오기
+        console.log(alphabet[2]); // c
+
+        // 배열 값 대입/변경
+        alphabet[2] = 's'
+        console.log(alphabet); // ['a', 'b', 's', 'd', 'e']
+
+        // 배열 값 추가 -> push()랑 동일
+        alphabet[5] = 'z';
+        console.log(alphabet); // ['a', 'b', 's', 'd', 'e', 'z']
+
+        // 배열의 값 삽입(추가) -> unshift(값): 맨 앞 삽입, push(값): 맨 뒤 삽입
+        alphabet.unshift('가');
+        console.log(alphabet); // ['가', 'a', 'b', 'c', 'd', 'e']
+        alphabet.push('나');
+        console.log(alphabet); // ['가', 'a', 'b', 'c', 'd', 'e', '나']
+
+        // 배열의 값 삭제 -> shift(): 맨 앞 삭제, pop(): 맨 뒤 삭제 
+        alphabet.shift();
+        console.log(alphabet); // ['a', 'b', 'c', 'd', 'e', '나']
+        alphabet.pop();
+        console.log(alphabet); // ['a', 'b', 'c', 'd', 'e']
+
+        // 배열.splice(삭제할 위치의 idx, 삭제할 값 개수, 삽입할 값) -> 
+        alphabet.splice(1, 2, 'f');
+        console.log(alphabet); // ['a', 'f', 'd', 'e', 'z']
+
+        // 배열.slice(idx1, [idx2]);
+        // arr.slice(idx1, idx2) -> idx1부터 idx2 전까지 반환, idx2 생략하면 idx1부터 끝까지 반환
+        console.log(alphabet.slice(0, 3)); // ['a', 'b', 'c']
+        console.log(alphabet.slice(2)); // ['c', 'd', 'e']
+
+        const alphabet3 = [2, 41, 11];
+
+        // 배열 순서 거꾸로
+        console.log(alphabet3.reverse()); // [11, 41, 2]
+
+        // 배열 오름차순 정렬
+        // 제대로하려면 -> 배열.sort((a, b) => {return a- b});
+        console.log(alphabet3.sort()); // [11, 2, 41] -> 숫자 앞 자리만 보고 비교해서 틀리게 정렬됨. 문자는 ㄱㅊ
+
+        // 배열 내림차순 정렬
+        console.log(alphabet3.reverse()); // [41, 2, 11]
+
+
+
+    </script>
+</body>
+
+</html>
