@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>디지털 시계</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h1>디지털 시계</h1>
+    <p id="currentDate"></p>
+    <p id="currentTime"></p>
+
+    <script>
+        const currentDate = $('#currentDate');
+        const currentTime = $('#currentTime');
+
+        function updateClock() {
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+            let week = date.getDay();
+            let hour = date.getHours();
+            let minute = date.getMinutes();
+            let second = date.getSeconds();
+
+            switch (week) {
+                case 0: week = '일'; break;
+                case 1: week = '월'; break;
+                case 2: week = '화'; break;
+                case 3: week = '수'; break;
+                case 4: week = '목'; break;
+                case 5: week = '금'; break;
+                default: week = '토'; break;
+            }
+
+            // 한자리일때 두자리로 표시하기
+            hour = hour < 10 ? '0' + hour : hour;
+            minute = minute < 10 ? '0' + minute : minute;
+            second = second < 10 ? '0' + second : second;
+
+            currentDate.text(`${year}-${month}-${day} (${week})`);
+            currentTime.text(`${hour}:${minute}:${second}`);
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+
+</html>

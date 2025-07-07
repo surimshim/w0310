@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.top {
+    height: 180px;
+    background: rgba(181, 181, 181, 0.2);
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}

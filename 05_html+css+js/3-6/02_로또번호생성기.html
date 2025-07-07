@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또번호생성기</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h1>로또 번호 생성하기</h1>
+    <button id="btn">번호 생성하기</button>
+    <p id="result"></p>
+    <script>
+        /* 
+            1. Math.random()으로 1~45 사이 숫자 무작위 생성
+            2. 중복되지 않게 includes()로 체크
+            3. 6개가 모이면 sort()로 오름차순 정렬
+            4. 버튼 클릭하면 결과 화면에 출력
+        */
+
+        /* 
+            // 1. Math.random()으로 1~45 사이 숫자 무작위 생성
+            let num = Math.floor(Math.random() * 45) + 1; // 1~45
+            console.log(num); 
+        */
+
+        // 버튼 클릭하면 결과 출력
+        const btn = $('#btn');
+        const result = $('#result');
+
+        btn.click(function () {
+            LottoGenerator();
+        });
+
+        function LottoGenerator() {
+            const numbers = [];
+            while (numbers.length < 6) {
+                // 1 이상 45 이하 난수를 num에 할당
+                const num = Math.floor(Math.random() * 45) + 1;
+                // 중복되지 않게 includes()로 체크
+                // numbers 배열에 num이 포함되어 있지 않으면 true, 포함되어 있으면 false
+                if (!numbers.includes(num)) {
+                    numbers.push(num);
+                }
+            }
+            const sortNum = numbers.sort((a, b) => a - b);
+
+            result.text('당첨번호는 ' + sortNum + ' 입니다.');
+        }
+
+
+    </script>
+</body>
+
+</html>

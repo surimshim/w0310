@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체</title>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <script>
+        /* 
+
+        */
+
+        const dateObj = new Date();
+        const dateInfo = {
+            year: dateObj.getFullYear(),
+            month: dateObj.getMonth() + 1, // 반드시 뒤에 +1 
+            date: dateObj.getDate(),
+            day: dateObj.getDay(),
+            hour: dateObj.getHours(),
+            minute: dateObj.getMinutes(),
+            locale: dateObj.toLocaleString(), // 2025. 7. 7. 오후 12:03:41
+            localedate: dateObj.toLocaleDateString(),
+            localetime: dateObj.toLocaleTimeString(),
+        }
+        for (let i in dateInfo) {
+            console.log(i + ' : ' + dateInfo[i]);
+        }
+    </script>
+</body>
+
+</html>

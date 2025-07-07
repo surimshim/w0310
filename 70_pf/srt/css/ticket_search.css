@@ -255,8 +255,11 @@
 }
 
 .check_btn {
+    display: block;
+    margin: 0 auto;
     width: 150px;
     height: 45px;
+    line-height: 45px;
     padding-bottom: 3px;
     border-radius: 30px;
     cursor: pointer;

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자주찾는질문(FAQ)</title>
+
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/reset.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/sub.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/faq_list.css" />
+
+    <script src="/w0310/70_pf/srt/script/jquery-3.7.1.js"></script>
+    <script src="/w0310/70_pf/srt/script/sub.js"></script>
+    <script src="/w0310/70_pf/srt/script/faq.js"></script>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header id="header">
+        <div class="header_inner">
+            <div class="first">
+                <div class="language">
+                    <div class="lbtn" id="lbtn">
+                        <img src="/w0310/70_pf/srt/images/nav/language.png" alt="언어설정 아이콘" />
+                        <p>Language</p>
+                        <img class="language_btn" src="/w0310/70_pf/srt/images/nav/language_btn.png" alt="아래화살표" />
+                    </div>
+                    <ul class="language_list" id="language_list">
+                        <li>
+                            <a href="#"> <span>KR</span> 한국어 </a>
+                        </li>
+                        <li>
+                            <a href="#"><span>EN</span> English</a>
+                        </li>
+                        <li>
+                            <a href="#"><span>JP</span> 日本語 </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="../index.html"><img src="/w0310/70_pf/srt/images/nav/logo.png" alt="상단로고" /></a>
+                </div>
+                <div class="icons">
+                    <a href="#"><img src="/w0310/70_pf/srt/images/nav/login.png" alt="로그인 페이지 이동 아이콘" /></a>
+                    <a href="#"><img src="/w0310/70_pf/srt/images/nav/guest.png" alt="회원가입 페이지 이동 아이콘" /></a>
+                    <a href="#"><img src="/w0310/70_pf/srt/images/nav/Search.png" alt="검색 페이지 이동 아이콘" /></a>
+                    <a href="#"><img src="/w0310/70_pf/srt/images/nav/hamburger_btn.png" alt="사이트맵 아이콘" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_out">
+            <div class="nav">
+                <div class="nav_bg"></div>
+                <nav class="gnb">
+                    <ul class="main">
+                        <li>
+                            <a href="#">승차권</a>
+                            <ul class="sub">
+                                <li><a href="/w0310/70_pf/srt/sub/ticket-search.html">승차권 예매</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/ticket_manage.html">승차권 확인</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="#">역안내</a></li>
+                                <li><a href="#">노선안내</a></li>
+                                <li><a href="#">운임안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">고객서비스</a>
+                            <ul class="sub">
+                                <li><a href="/w0310/70_pf/srt/sub/notice_list.html">공지사항</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/faq_list.html">자주찾는질문</a></li>
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">유실물신고안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">여행상품</a>
+                            <ul class="sub">
+                                <li><a href="#">SRT베스트 여행상품</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 서브 헤더 -->
+    <section id="subtitle">
+        <div class="subtitle">
+            <h2>자주찾는질문(FAQ)</h2>
+        </div>
+        <div class="submenu_bar">
+            <div class="sub_inner">
+                <a href="#" class="home"><img src="/w0310/70_pf/srt/images/sub/home.png" alt="" />홈</a>
+                <div class="menu">
+                    <a href="#">고객서비스<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                </div>
+                <div class="menu">
+                    <a href="#">자주찾는질문(FAQ)<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 서브페이지 내용 -->
+    <section id="container">
+        <!-- faq 탭 메뉴 -->
+        <ul class="tabs">
+            <li><a href="#" class="active">승차권</a></li>
+            <li><a href="#">제도</a></li>
+            <li><a href="#">열차 이용</a></li>
+            <li><a href="#">역사 이용</a></li>
+            <li><a href="#">앱 이용</a></li>
+            <li><a href="#">기타</a></li>
+        </ul>
+
+        <!-- 승차권 FAQ -->
+        <div class="faq_content">
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>승차권을 환불했는데 결제금액 환불은 언제되나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>당일 결제, 당일 환불하신 경우 당일 취소 처리됩니다.(부분취소 제외) <br>
+                        그 외의 경우는 결제하신 수단에 따라 환불소요기간이 다르며, 카드결제건의 경우 카드사마다 환불방식과 기간이 상이할 수 있음을 알려드립니다. ...</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>승차권 영수증을 발급 받고 싶어요.</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>[SRT앱] 좌측 상단 메뉴-예매내역-승차권 구매이력-조회 후 승차권 선택 <br>
+                        [홈페이지] 상단 메뉴 ‘승차권’-이용내역/영수증-조회 후 승차권 선택-‘현금영수증 발급’ 또는 ‘영수증 인쇄’ <br>
+                        [역 방문] 매표창구(또는 고객안내센터) 방문, 자동발매기 이용</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>승차권을 변경하고 싶어요.</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>승차권을 발권 받은 뒤, 열차시각, 구간, 좌석 등을 변경하는 방법은 다음과 같습니다. <br>
+                        - SRT앱 또는 홈페이지에서 발권 받은 승차권 : 승차권 환불 후 다시 구입 <br>
+                        - 역 창구에서 발권 받은 승차권 : 매표창구에 방문하여 변경 요청...</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+        </div>
+
+        <!-- 제도 FAQ -->
+        <div class="faq_content">
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>할인쿠폰은 어떻게 사용하나요?(사용 및 복구방법)</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>[SRT앱] 로그인 > 승차권 예매 > 여정 선택 > 출발일, 인원 선택> 예약하기 > 할인적용 > 할인쿠폰 클릭 > 적용 후 결제 <br>
+                        [홈페이지] 로그인> 승차권 예매 > 예약하기, 운임추가할인선택(회원쿠폰) 조회 > 쿠폰선택 후 적용하기 > 결제하기 <br>
+                        *승차권 예매시 할인쿠폰 적용 후 예약내역이 생서되어있는 동안 해당 할인쿠폰은 사용이 불가능합니다. ...</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>선물하기란 무엇인가요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>1. 서비스 소개 <br>
+                        - SR회원이 승차권을 구입하여 회원 또는 비회원에게 선물 할 수 있는 서비스입니다. <br>
+                        2. 발권 승차권 선물하기 <br>
+                        - 승차권 결제 및 발권 > 발권승차권 > 승차권선물 > 승차권선물 or 카카오선물...</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>반려동물과 함께 탑승할 수 있나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>고객님과 함께 탑승 가능한 반려동물은 다음과 같습니다. <br>
+                        1. 강아지, 고양이 등 작은 반려동물로 길이 60cm이내에서 반려동물 이동장에 넣은 것 <br>
+                        2. 이동장과 동물을 합친 무게가 10kg 이내여야 함 <br>
+                        3. 단, 장애인 보조견의 경우 탑승 허용</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+        </div>
+
+        <!-- 열차이용 FAQ -->
+        <div class="faq_content">
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>열차 타는 곳은 어떻게 확인하나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>SRT 어플을 통해 승차권을 구매하신 경우, 출발시간 15분 전부터 스마트티켓에 열차 타는 곳이 표기됩니다. <br>
+                        이외에 역 창구 등을 통해 승차권을 구매하신 경우, 열차 출발 약 15분 전에 역사 내 전광판을 통해 확인하신 뒤 승차해주시기 바랍니다. <br>
+                        타는 곳 확인 시, 승차권에 표기된 좌석의 호차번호와 승차홈 번호를 착각하지 않도록 유의 부탁 드립니다.</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>SRT 내에 콘센트가 배치되어 있나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>각 좌석 바로 밑에 콘센트가 배치 되어 있습니다.</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>SRT 내에 캐리어를 보관 할 수 있는 곳이 있나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>각 열차 호선 사이에 짐칸이 배치 되어 있으며 상단에 선반에도 캐리어를 보관 하실 수 있습니다.</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+        </div>
+
+        <!-- 역사이용 FAQ -->
+        <div class="faq_content">
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>유실물 문의는 어디로 해야하나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>1. 역에서 분실했거나 하차 직후 분실한 사실을 아셨다면, 해당 역 직원에게 즉시 문의 부탁드립니다. <br>
+                        2. 열차 탑승 후 분실한 사실을 아셨다면, 승무원에게 즉시 문의 부탁드립니다. (SRT앱 승무원 호출메시지 이용 가능) <br>
+                        3. 하차 후 분실한 사실을 아셨다면, 유실물센터 또는 고객센터 신고 부탁드립니다.</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>역에 수유실이 있나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>- 수서역 : 지하1층 매표소 오른쪽 <br>
+                        - 동탄역 : 지하4층 매표소 왼쪽 <br>
+                        - 지제역 : 지상2층 화장실 오른쪽 <br>
+                        - 열차내 : 5-6호차 사이</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>물품보관함은 어디 있나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>- 수서역 : 지하1층 고객건강라운지에서 환승통로로 내려가는 길목 <br>
+                        - 동탄역 : 지하4층 엔젤리너스 맞은 편 <br>
+                        - 지제역 : 지상2층 역무실 왼쪽</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+        </div>
+
+        <!-- 앱이용 FAQ -->
+        <div class="faq_content">
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>SRT앱 이용 시 궁금한 사항은 어디에 문의할 수 있나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>SRT앱 이용 시 궁금한 사항 또는 개선이 필요한 사항에 대한 문의는 고객의소리 또는 SR고객센터(☎1800-1472)로 연락주시면, 친절하게 안내 도와드리겠습니다.</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>정기(회수)승차권 예약과 확인은 어디서 할 수 있나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>정기승차권 구매는 앱 하단 [정기/회수권] 또는 좌측 상단 메뉴바 [정기/회수 승차권]에서 구매하실 수 있습니다. <br>
+                        또한, 정기승차권 및 회수승차권의 확인은 앱 하단 [승차권 확인] → [정기(회수)승차권] 메뉴에서 승차권을 확인하실 수 있습니다.</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>홈페이지에서 구입한 승차권을 SRT앱에서도 확인할 수 있나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>홈페이지에서 구입한 승차권(이하 ‘홈티켓’)은 PC와 연결된 인쇄장치를 통해 출력하여 이용하셔야 합니다. <br>
+                        홈페이지에서 예약하고, 승차권을 스마트폰 SRT앱으로 발권받고자 하시는 경우에는 결제단계에서 ‘프린터로 인쇄’가 아닌, ‘스마트폰 발권’을 선택해주시기 바라며, 해당 기능은
+                        SRT앱을 설치한 SR회원에 한하여 이용가능합니다.</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+        </div>
+
+        <!-- 기타 FAQ -->
+        <div class="faq_content">
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>장애인 도우미 서비스를 신청할 수 있나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>휠체어 대여, 휠체어리프트 사용, 시각장애인 동행 서비스 이용을 희망하시는 고객님께선 출발역에 열차 출발시각보다 약 30분 일찍 도착하셔서 역사 내 안내센터를 방문하여
+                        직원에게 말씀해주세요. 친절하게 도와드리겠습니다. <br>
+                        출발하는 역 직원에게 서비스를 신청해주시면 승무원과 도착역의 직원에게도 공유하여 도움을 이어받으실 수 있습니다.</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>즐겨찾는 구간을 설정할 수 있나요?</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>(홈페이지) <br>
+                        - 등록 : 로그인> 마이페이지 정보수정-> 추가수정-> 이용구간(한구간) 등록 가능 <br>
+                        - 삭제 : 로그인 > 마이페이지 정보수정-> 추가수정에서 이용구간 “삭제”버튼 선택</p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+            <div class="faq">
+                <div class="title">
+                    <img src="/w0310/70_pf/srt/images/faq/question.png" alt="">
+                    <a href="/w0310/70_pf/srt/sub/faq_content.html">
+                        <h3>SR 회원 혜택이 궁금해요</h3>
+                    </a>
+                </div>
+                <div class="content">
+                    <img src="/w0310/70_pf/srt/images/faq/metro.png" alt="">
+                    <p>SR 회원으로 가입하시면 분기별(1년에 4분기)로 이용실적에 따라 할인쿠폰도 받을 수 있고, 회원 전용 할인상품도 예약은 물론, 다양한 이벤트에도 참여할 수 있습니다.
+                        <br>
+                        (마일리지 적립은 따로 없습니다.)
+                    </p>
+                </div>
+                <a href="/w0310/70_pf/srt/sub/faq_content.html">내용 더 보기</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 푸터 -->
+    <footer id="footer">
+        <div class="fupper">
+            <!-- footer 윗부분 -->
+            <div class="inner">
+                <div class="rule">
+                    <ul>
+                        <li>
+                            <a href="https://www.srail.or.kr/cms/archive.do?pageId=KR9903000000">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="https://etk.srail.kr/cms/archive.do?pageId=TK0501010000">고객서비스헌장</a>
+                        </li>
+                        <li>
+                            <a href="https://etk.srail.kr/cms/archive.do?pageId=TK0501020000">여객운송약관/부속약관</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sns">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="/w0310/70_pf/srt/images/footer/facebook.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/w0310/70_pf/srt/images/footer/instagram.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/w0310/70_pf/srt/images/footer/line.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/w0310/70_pf/srt/images/footer/kakao_channel.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/w0310/70_pf/srt/images/footer/band.png" alt="" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of .sns -->
+            </div>
+            <!-- end of .fupper .inner -->
+        </div>
+        <!-- end of .fupper -->
+
+        <div class="flower">
+            <div class="inner">
+                <div class="left">
+                    <div class="blogo">
+                        <img src="/w0310/70_pf/srt/images/footer/blogo.png" alt="blogo" />
+                    </div>
+                    <!-- end of .blogo -->
+                    <p>
+                        대표자 : 이종국 ㅣ 상호: 주식회사 에스알 ㅣ
+                        사업자등록: 305-86-31590 ㅣ 통신판매업신고:
+                        2016-서울강남-03705호<br />
+                        (우: 06367) 서울특별시 강남구 광평로 56길 12
+                        희림빌딩 | TEL. 1800-1472 l FAX. 6484-4093<br />
+                        Copyright 2018. SR Inc. All rights reserved.
+                    </p>
+                </div>
+                <!-- end of left -->
+
+                <div class="right">
+                    <div class="fs">
+                        <form action="#">
+                            <select name="fs" id="fs">
+                                <option value="">유관기관 바로가기</option>
+                                <option value="">코레일</option>
+                                <option value="">국토교통부</option>
+                            </select>
+                        </form>
+                    </div>
+                    <!-- end of .fs -->
+
+                    <div class="ads">
+                        <ul>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=76&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad1.png" alt="ad1" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=91&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad2.png" alt="ad2" /></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/w0310/70_pf/srt/images/footer/ad3.png" alt="ad3" /></a>
+                            </li>
+                            <li>
+                                <a href="https://partners.srail.or.kr/login.do"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad4.png" alt="ad4" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=536&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad5.png" alt="ad5" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=359&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad6.png" alt="ad6" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=358&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad7.png" alt="ad7" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=365&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad8.png" alt="ad8" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=393&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad9.png" alt="ad9" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end .ads -->
+                </div>
+                <!-- end of right -->
+            </div>
+            <!-- end of .flower .inner -->
+        </div>
+        <!-- end of .flower -->
+    </footer>
+</body>
+
+</html>

@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>공지사항</title>
+    <title>승차권 예매</title>
 
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/reset.css" />
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/sub.css" />
-    <link rel="stylesheet" href="/w0310/70_pf/srt/css/notice_list.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/ticket_list.css" />
 
     <script src="/w0310/70_pf/srt/script/jquery-3.7.1.js"></script>
     <script src="/w0310/70_pf/srt/script/sub.js"></script>
+    <script src="/w0310/70_pf/srt/script/ticket.js"></script>
 </head>
 
 <body>
@@ -54,34 +55,30 @@
                 <div class="nav_bg"></div>
                 <nav class="gnb">
                     <ul class="main">
-                        <li>
-                            <a href="#">승차권</a>
+                        <li><a href="#">승차권</a>
                             <ul class="sub">
                                 <li><a href="/w0310/70_pf/srt/sub/ticket_search.html">승차권 예매</a></li>
                                 <li><a href="/w0310/70_pf/srt/sub/ticket_manage.html">승차권 확인</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#">이용안내</a>
+                        <li><a href="#">이용안내</a>
                             <ul class="sub">
-                                <li><a href="#">역안내</a></li>
-                                <li><a href="#">노선안내</a></li>
-                                <li><a href="#">운임안내</a></li>
+                                <li><a href="#">역 안내</a></li>
+                                <li><a href="#">노선 안내</a></li>
+                                <li><a href="#">운임 안내</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#">고객서비스</a>
+                        <li><a href="#">고객서비스</a>
                             <ul class="sub">
                                 <li><a href="/w0310/70_pf/srt/sub/notice_list.html">공지사항</a></li>
-                                <li><a href="/w0310/70_pf/srt/sub/faq_list.html">자주찾는질문</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/faq_list.html">자주 찾는 질문</a></li>
                                 <li><a href="#">고객센터</a></li>
-                                <li><a href="#">유실물신고안내</a></li>
+                                <li><a href="#">유실물 신고 안내</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#">여행상품</a>
+                        <li><a href="#">여행상품</a>
                             <ul class="sub">
-                                <li><a href="#">SRT베스트 여행상품</a></li>
+                                <li><a href="#">SRT 여행상품</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -93,16 +90,16 @@
     <!-- 서브 헤더 -->
     <section id="subtitle">
         <div class="subtitle">
-            <h2>공지사항</h2>
+            <h2>승차권 예매</h2>
         </div>
         <div class="submenu_bar">
             <div class="sub_inner">
                 <a href="#" class="home"><img src="/w0310/70_pf/srt/images/sub/home.png" alt="" />홈</a>
                 <div class="menu">
-                    <a href="#">고객서비스<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">승차권<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
                 <div class="menu">
-                    <a href="#">공지사항<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">승차권 예매<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
             </div>
         </div>
@@ -110,81 +107,63 @@
 
     <!-- 서브페이지 내용 -->
     <section id="container">
+        <!-- 경로 파트 -->
         <div class="top">
-            <p>총 2564건</p>
-            <div class="search">
-                <select name="search" id="search">
-                    <option value="">전체</option>
-                    <option value="title">제목</option>
-                    <option value="contents">내용</option>
-                </select>
-                <input type="text" id="search_input">
-                <button class="search_btn">검색</button>
+            <div class="date">
+                <img src="" alt="">
+                <p>2025-07-07(월) <img src="/w0310/70_pf/srt/images/ticket/calendar.png" alt=""></p>
+                <img src="" alt="">
+            </div>
+            <div class="route">
+                <a href="#" class="station_name inputbox_station"><img src="/w0310/70_pf/srt/images/ticket/pin.png"
+                        alt="">수서</a>
+                <a href="#"><img src="/w0310/70_pf/srt/images/ticket/toway.png" alt="반대 방향" /></a>
+                <a href="#" class="station_name inputbox_station"><img src="/w0310/70_pf/srt/images/ticket/pin.png"
+                        alt="">부산</a>
+                <a href="#"><img src="/w0310/70_pf/srt/images/ticket/user.png" alt="">총 1명</a>
             </div>
         </div>
-        <table class="notice-table">
+
+        <!-- 열차 시간표 -->
+        <table class="timetable">
             <thead>
                 <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>등록일</th>
+                    <th>열차</th>
+                    <th>출발</th>
+                    <th>도착</th>
+                    <th>특실</th>
+                    <th>일반실</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="notice">
-                    <td>공지</td>
-                    <td><a href="/w0310/70_pf/srt/sub/notice_content.html">SR 여객운송약관 주요 개정사항 안내(개정일 2025.4.28.부터)</a>
+                <tr>
+                    <td>
+                        <h3>SRT</h3>
+                        <p>331</p>
                     </td>
-                    <td>2025-04-18</td>
-                </tr>
-                <tr class="notice">
-                    <td>공지</td>
-                    <td><a href="#">SRT 열차운행 조정 알림</a></td>
-                    <td>2025-03-27</td>
-                </tr>
-                <tr class="notice">
-                    <td>공지</td>
-                    <td><a href="#">산불 특별재난지역 자원봉사자 지원 알림</a></td>
-                    <td>2025-03-27</td>
-                </tr>
-                <tr class="notice">
-                    <td>공지</td>
-                    <td><a href="#">승차권 다량구매 및 환불 관련 이용 제한 알림</a></td>
-                    <td>2025-03-27</td>
-                </tr>
-                <tr>
-                    <td>488</td>
-                    <td><a href="#">2025 철도의 날 기념 제1회 철도를 담다 영상 공모전</a></td>
-                    <td>2025-04-18</td>
-                </tr>
-                <tr>
-                    <td>487</td>
-                    <td><a href="#">25년 산불 발생 관련 특별재난지역 자원봉사자 지원 안내</a></td>
-                    <td>2025-03-27</td>
-                </tr>
-                <tr>
-                    <td>486</td>
-                    <td><a href="#">네이버페이 5월 프로모션</a></td>
-                    <td>2025-03-27</td>
-                </tr>
-                <tr>
-                    <td>485</td>
-                    <td><a href="#">2025년 1분기 SR 회원 등급조회 및 혜택 안내</a></td>
-                    <td>2025-03-27</td>
-                </tr>
-                <tr>
-                    <td>484</td>
-                    <td><a href="#">4월 네이버페이 프로모션</a></td>
-                    <td>2025-03-27</td>
-                </tr>
-                <tr>
-                    <td>483</td>
-                    <td><a href="#">SR협력 인사이더 외부위원 모집</a></td>
-                    <td>2025-03-27</td>
+                    <td>
+                        <h3>12:28</h3>
+                        <p>수서</p>
+                    </td>
+                    <td>
+                        <h3>14:56</h3>
+                        <p>부산</p>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <h3>75,600원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <h3>51,800원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
                 </tr>
             </tbody>
         </table>
-
     </section>
 
     <!-- 푸터 -->
