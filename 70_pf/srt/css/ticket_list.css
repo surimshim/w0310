@@ -5,4 +5,164 @@
     background: rgba(181, 181, 181, 0.2);
     border: 1px solid #ddd;
     border-radius: 20px;
+    text-align: center;
+}
+
+.top .date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.top .date>img {
+    margin: 0 10px;
+}
+
+.top .date a {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    margin: 0 10px;
+}
+
+.top .date a>img {
+    margin-left: 5px;
+}
+
+.top .route {
+    display: flex;
+    justify-content: center;
+}
+
+.top .route a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 2px;
+}
+
+.top .route .station_name,
+.top .route .person {
+    width: 250px;
+}
+
+.top .route a:not(.opp_btn)>img {
+    position: absolute;
+    left: 15px;
+}
+
+/* 열차 시간표 */
+.timetable {
+    width: 1200px;
+    margin-top: 30px;
+    text-align: center;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.col-srt {
+    width: 8%;
+}
+
+.col-departure {
+    width: 20%;
+}
+
+.col-arrival {
+    width: 20%;
+}
+
+.col-time {
+    width: 12%;
+}
+
+.col-regular {
+    width: 20%;
+}
+
+.col-discount {
+    width: 20%;
+}
+
+.timetable th {
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid #b5b5b6;
+}
+
+.timetable td {
+    padding: 16px 0;
+    border-bottom: 1px solid #b5b5b6;
+}
+
+.timetable h3 {
+    font-size: 18px;
+}
+
+.timetable .col-time p {
+    color: #999;
+}
+
+.timetable img {
+    width: 16px;
+}
+
+.timetable td a {
+    display: inline-block;
+    width: 150px;
+    padding: 10px;
+    color: #fff;
+    background: #2B9898;
+}
+
+.timetable .col-regular a {
+    background: #651E38;
+}
+
+.more_btn {
+    text-align: center;
+}
+
+.more_btn a {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #b5b5b6;
+    border-radius: 20px;
+    color: #4b2f48;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.next_btn {
+    text-align: center;
+}
+
+.next_btn a {
+    display: inline-block;
+    width: 270px;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #b5b5b6;
+    border-radius: 20px;
+    color: #4b2f48;
+    cursor: pointer;
+    margin-top: 30px;
 }

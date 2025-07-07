@@ -110,26 +110,37 @@
         <!-- 경로 파트 -->
         <div class="top">
             <div class="date">
-                <img src="" alt="">
-                <p>2025-07-07(월) <img src="/w0310/70_pf/srt/images/ticket/calendar.png" alt=""></p>
-                <img src="" alt="">
+                <img src="/w0310/70_pf/srt/images/ticket/left.png" alt="">
+                <a href="#">2025-07-07(월) 00:00 <img src="/w0310/70_pf/srt/images/ticket/calendar.png" alt=""></a>
+                <img src="/w0310/70_pf/srt/images/ticket/right.png" alt="">
             </div>
             <div class="route">
-                <a href="#" class="station_name inputbox_station"><img src="/w0310/70_pf/srt/images/ticket/pin.png"
-                        alt="">수서</a>
-                <a href="#"><img src="/w0310/70_pf/srt/images/ticket/toway.png" alt="반대 방향" /></a>
-                <a href="#" class="station_name inputbox_station"><img src="/w0310/70_pf/srt/images/ticket/pin.png"
-                        alt="">부산</a>
-                <a href="#"><img src="/w0310/70_pf/srt/images/ticket/user.png" alt="">총 1명</a>
+                <a href="#" class="station_name inputbox_station">
+                    <img src="/w0310/70_pf/srt/images/ticket/pin.png" alt="">
+                    수서</a>
+                <a href="#" class="opp_btn"><img src="/w0310/70_pf/srt/images/ticket/toway.png" alt="반대 방향"></a>
+                <a href="#" class="station_name inputbox_station">
+                    <img src="/w0310/70_pf/srt/images/ticket/pin.png" alt="">
+                    부산</a>
+                <a href="#" class="person"><img src="/w0310/70_pf/srt/images/ticket/user.png" alt="">총 1명</a>
             </div>
         </div>
 
         <!-- 열차 시간표 -->
         <table class="timetable">
+            <colgroup>
+                <col class="col-srt">
+                <col class="col-departure">
+                <col class="col-arrival">
+                <col class="col-time">
+                <col class="col-regular">
+                <col class="col-discount">
+            </colgroup>
             <thead>
                 <tr>
                     <th>열차</th>
                     <th>출발</th>
+                    <th></th>
                     <th>도착</th>
                     <th>특실</th>
                     <th>일반실</th>
@@ -138,18 +149,292 @@
             <tbody>
                 <tr>
                     <td>
-                        <h3>SRT</h3>
-                        <p>331</p>
+                        <h4>SRT</h4>
+                        <p>301</p>
                     </td>
                     <td>
-                        <h3>12:28</h3>
+                        <h3>05:30</h3>
                         <p>수서</p>
                     </td>
-                    <td>
-                        <h3>14:56</h3>
-                        <p>부산</p>
+                    <td class="col-time">
+                        <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="">
+                        <p>2시간 24분 예상</p>
                     </td>
                     <td>
+                        <h3>08:06</h3>
+                        <p>부산</p>
+                    </td>
+                    <td class="col-regular">
+                        <a href="#">
+                            <h3>75,600원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <h3>51,800원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>SRT</h4>
+                        <p>303</p>
+                    </td>
+                    <td>
+                        <h3>06:00</h3>
+                        <p>수서</p>
+                    </td>
+                    <td class="col-time">
+                        <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="">
+                        <p>2시간 26분 예상</p>
+                    </td>
+                    <td>
+                        <h3>08:30</h3>
+                        <p>부산</p>
+                    </td>
+                    <td class="col-regular">
+                        <a href="#">
+                            <h3>75,600원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <h3>51,800원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>SRT</h4>
+                        <p>307</p>
+                    </td>
+                    <td>
+                        <h3>06:54</h3>
+                        <p>수서</p>
+                    </td>
+                    <td class="col-time">
+                        <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="">
+                        <p>2시간 26분 예상</p>
+                    </td>
+                    <td>
+                        <h3>09:30</h3>
+                        <p>부산</p>
+                    </td>
+                    <td class="col-regular">
+                        <a href="#">
+                            <h3>75,600원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <h3>51,800원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>SRT</h4>
+                        <p>309</p>
+                    </td>
+                    <td>
+                        <h3>07:05</h3>
+                        <p>수서</p>
+                    </td>
+                    <td class="col-time">
+                        <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="">
+                        <p>2시간 41분 예상</p>
+                    </td>
+                    <td>
+                        <h3>09:46</h3>
+                        <p>부산</p>
+                    </td>
+                    <td class="col-regular">
+                        <a href="#">
+                            <h3>75,600원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <h3>51,800원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>SRT</h4>
+                        <p>311</p>
+                    </td>
+                    <td>
+                        <h3>07:25</h3>
+                        <p>수서</p>
+                    </td>
+                    <td class="col-time">
+                        <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="">
+                        <p>2시간 31분 예상</p>
+                    </td>
+                    <td>
+                        <h3>09:56</h3>
+                        <p>부산</p>
+                    </td>
+                    <td class="col-regular">
+                        <a href="#">
+                            <h3>75,600원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <h3>51,800원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>SRT</h4>
+                        <p>313</p>
+                    </td>
+                    <td>
+                        <h3>08:00</h3>
+                        <p>수서</p>
+                    </td>
+                    <td class="col-time">
+                        <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="">
+                        <p>2시간 26분 예상</p>
+                    </td>
+                    <td>
+                        <h3>10:34</h3>
+                        <p>부산</p>
+                    </td>
+                    <td class="col-regular">
+                        <a href="#">
+                            <h3>75,600원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <h3>51,800원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>SRT</h4>
+                        <p>315</p>
+                    </td>
+                    <td>
+                        <h3>08:05</h3>
+                        <p>수서</p>
+                    </td>
+                    <td class="col-time">
+                        <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="">
+                        <p>2시간 47분 예상</p>
+                    </td>
+                    <td>
+                        <h3>10:52</h3>
+                        <p>부산</p>
+                    </td>
+                    <td class="col-regular">
+                        <a href="#">
+                            <h3>75,600원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <h3>51,800원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>SRT</h4>
+                        <p>317</p>
+                    </td>
+                    <td>
+                        <h3>09:00</h3>
+                        <p>수서</p>
+                    </td>
+                    <td class="col-time">
+                        <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="">
+                        <p>2시간 11분 예상</p>
+                    </td>
+                    <td>
+                        <h3>11:11</h3>
+                        <p>부산</p>
+                    </td>
+                    <td class="col-regular">
+                        <a href="#">
+                            <h3>75,600원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <h3>51,800원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>SRT</h4>
+                        <p>319</p>
+                    </td>
+                    <td>
+                        <h3>09:05</h3>
+                        <p>수서</p>
+                    </td>
+                    <td class="col-time">
+                        <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="">
+                        <p>2시간 47분 예상</p>
+                    </td>
+                    <td>
+                        <h3>11:52</h3>
+                        <p>부산</p>
+                    </td>
+                    <td class="col-regular">
+                        <a href="#">
+                            <h3>75,600원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <h3>51,800원</h3>
+                            <p>예약하기</p>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>SRT</h4>
+                        <p>321</p>
+                    </td>
+                    <td>
+                        <h3>09:20</h3>
+                        <p>수서</p>
+                    </td>
+                    <td class="col-time">
+                        <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="">
+                        <p>2시간 41분 예상</p>
+                    </td>
+                    <td>
+                        <h3>12:01</h3>
+                        <p>부산</p>
+                    </td>
+                    <td class="col-regular">
                         <a href="#">
                             <h3>75,600원</h3>
                             <p>예약하기</p>
@@ -164,6 +449,10 @@
                 </tr>
             </tbody>
         </table>
+
+        <!-- 버튼 -->
+        <div class="more_btn"><a href="#">더 보기</a></div>
+        <div class="next_btn"><a href="#">다음날(2025-07-08) 조회</a></div>
     </section>
 
     <!-- 푸터 -->
