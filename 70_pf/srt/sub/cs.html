@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>승차권 예매</title>
+    <title>고객센터</title>
 
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/reset.css" />
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/sub.css" />
-    <link rel="stylesheet" href="/w0310/70_pf/srt/css/ticket_search.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/cs.css">
 
     <script src="/w0310/70_pf/srt/script/jquery-3.7.1.js"></script>
     <script src="/w0310/70_pf/srt/script/sub.js"></script>
-    <script src="/w0310/70_pf/srt/script/ticket.js"></script>
 </head>
 
 <body>
@@ -90,16 +89,16 @@
     <!-- 서브 헤더 -->
     <section id="subtitle">
         <div class="subtitle">
-            <h2>승차권 예매</h2>
+            <h2>고객센터</h2>
         </div>
         <div class="submenu_bar">
             <div class="sub_inner">
                 <a href="#" class="home"><img src="/w0310/70_pf/srt/images/sub/home.png" alt="" />홈</a>
                 <div class="menu">
-                    <a href="#">승차권<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">고객서비스<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
                 <div class="menu">
-                    <a href="#">승차권 예매<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">고객센터<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
             </div>
         </div>
@@ -107,190 +106,194 @@
 
     <!-- 서브페이지 내용 -->
     <section id="container">
-        <div class="container">
-            <div class="top">
-                <div class="station">
-                    <img src="/w0310/70_pf/srt/images/ticket/pin.png" alt="" /><span>출발역</span>
-                    <img src="/w0310/70_pf/srt/images/ticket/pin.png" alt="" /><span>도착역</span>
-                </div>
-                <div class="station_btn">
-                    <a href="#" class="station_name inputbox_station">수서</a>
-                    <a href="#"><img src="/w0310/70_pf/srt/images/ticket/toway.png" alt="반대 방향" /></a>
-                    <a href="#" class="station_name inputbox_station">부산</a>
-                </div>
-            </div>
-
-            <div class="modal" id="modal_station">
-                <div class="popup">
-                    <div class="title">
-                        <h2>기차역 조회</h2>
-                        <div class="close_btn">
-                            <a href="#"><img src="/w0310/70_pf/srt/images/section1/close.png" alt="닫기" /></a>
-                        </div>
+        <div class="cs_container">
+            <ul class="cs_left">
+                <li class="cs_call">
+                    <div class="call_1">
+                        <h3>SR 고객센터</h3>
                     </div>
-                    <div class="station">
-                        <input type="text" id="search" placeholder="역 이름 검색">
-                        <button type="button" class="search_btn">검색</button>
+                    <div class="call_2">
+                        <p>1800-1412</p>
+                        <p>ARS(자동응답)서비스 / 상담원 연결 지원</p>
                     </div>
-                    <h3>주요 역</h3>
-                    <div class="station_list">
-                        <button>수서</button>
-                        <button>동탄</button>
-                        <button>평택지제</button>
+                </li>
+                <li class="cs_time">
+                    <div class="time_1">
+                        <h3>운영시간</h3>
                     </div>
-                    <h3>전체 역</h3>
-                    <div class="station_list">
-                        <button>경주</button>
-                        <button>곡성</button>
-                        <button>광주송정</button>
-                        <button>구례구</button>
-                        <button>김천구미</button>
-                        <button>나주</button>
-                        <button>남원</button>
-                        <button>대전</button>
-                        <button>동대구</button>
-                        <button>마산</button>
-                        <button>목포</button>
-                        <button>밀양</button>
-                        <button>부산</button>
-                        <button>서대구</button>
-                        <button>순천</button>
-                        <button>여수EXPO</button>
-                        <button>여천</button>
-                        <button>오송</button>
-                        <button>울산(통도사)</button>
-                        <button>익산</button>
-                        <button>전주</button>
-                        <button>정읍</button>
-                        <button>진영</button>
-                        <button>진주</button>
-                        <button>창원</button>
-                        <button>창원중앙</button>
-                        <button>천안아산</button>
-                        <button>포항</button>
+                    <div class="time_2">
+                        <p>365일 연중무휴</p>
+                        <p>상담원 연결: 오전 9시 ~ 오후 9시</p>
                     </div>
-                    <button type="button" class="cancel_btn">취소</button>
-                    <button type="button" class="apply_btn">적용</button>
-                </div>
-            </div>
-
-            <div class="modal" id="modal_date">
-                <div class="popup">
-                    <div class="title">
-                        <h2>날짜 선택</h2>
-                        <div class="close_btn">
-                            <a href="#"><img src="/w0310/70_pf/srt/images/section1/close.png" alt="닫기" /></a>
-                        </div>
+                </li>
+                <li class="cs_menu">
+                    <div class="menu_1">
+                        <h3>메뉴구성</h3>
                     </div>
-                    <div class="date">
-                        <label for="date">출발일: </label>
-                        <input type="date" id="date" value="2025-06-26" />
-                        <label for="time">시간: </label>
-                        <input type="time" id="time" value="16:00" />
-                    </div>
-                    <button type="button" class="cancel_btn">취소</button>
-                    <button type="button" class="apply_btn">적용</button>
-                </div>
-            </div>
-
-            <div class="modal" id="modal_person">
-                <div class="popup">
-                    <div class="title">
-                        <h2>인원 선택</h2>
-                        <div class="close_btn">
-                            <a href="#"><img src="/w0310/70_pf/srt/images/section1/close.png" alt="닫기" /></a>
-                        </div>
-                    </div>
-                    <div class="person">
-                        <span>어른 (만 13세 이상) </span>
-                        <select name="person" id="adult">
-                            <option value="1">1명</option>
-                            <option value="1">2명</option>
-                            <option value="1">3명</option>
-                            <option value="1">4명</option>
-                            <option value="1">5명</option>
-                            <option value="1">6명</option>
-                            <option value="1">7명</option>
-                            <option value="1">8명</option>
-                            <option value="1">9명</option>
-                        </select>
-                        <span>어린이 (만 6~12세) </span>
-                        <select name="person" id="children">
-                            <option value="1">1명</option>
-                            <option value="1">2명</option>
-                            <option value="1">3명</option>
-                            <option value="1">4명</option>
-                            <option value="1">5명</option>
-                            <option value="1">6명</option>
-                            <option value="1">7명</option>
-                            <option value="1">8명</option>
-                            <option value="1">9명</option>
-                        </select>
-                    </div>
-                    <button type="button" class="cancel_btn">취소</button>
-                    <button type="button" class="apply_btn">적용</button>
-                </div>
-            </div>
-
-            <div class="bottom">
-                <h3>일정 및 인원</h3>
-                <div class="tabs">
-                    <label for="oneway"><input type="radio" name="way" id="oneway" checked />편도</label>
-                    <label for="twoway"><input type="radio" name="way" id="twoway" />왕복</label>
-
-                    <div class="tab-content oneway">
-                        <div class="input">
-                            <div class="inputbox inputbox_date">
-                                <p>출발일</p>
-                                <div class="input_btn">
-                                    <a href="#">
-                                        <span class="selected-datetime">2025-06-26 16:00</span>
-                                        <img src="/w0310/70_pf/srt/images/ticket/calendar.png" alt="출발일" />
-                                    </a>
-                                </div>
+                    <div class="menu_2">
+                        <div class="ars">
+                            <p>ARS 안내</p>
+                            <div>
+                                <div class="n1">1</div>
+                                <p>승차권 환불 안내 : 승차권 구입 방법에 따른 환불 방법 안내</p>
                             </div>
-                            <div class="inputbox inputbox_person">
-                                <p>인원</p>
-                                <div class="input_btn">
-                                    <a href="#">총 1명
-                                        <img src="/w0310/70_pf/srt/images/ticket/user.png" alt="인원" /></a>
-                                </div>
+                            <div>
+                                <div class="n1">2</div>
+                                <p>SRT 이용 안내 : 고객 센터로 자주 문의하는 내용 안내</p>
+                            </div>
+                        </div>
+                        <div class="counter">
+                            <p>상담원 안내</p>
+                            <div>
+                                <div class="n1">7</div>
+                                <p>외국어(영어) 상담 / For English Service</p>
+                            </div>
+                            <div>
+                                <div class="n1">0</div>
+                                <p>상담원 연결</p>
                             </div>
                         </div>
                     </div>
-
-                    <div class="tab-content twoway">
-                        <div class="input">
-                            <div class="inputbox inputbox_date">
-                                <p>출발일</p>
-                                <div class="input_btn">
-                                    <a href="#">
-                                        <span class="selected-datetime">2025-06-26 16:00</span>
-                                        <img src="/w0310/70_pf/srt/images/ticket/calendar.png" alt="출발일" />
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="inputbox inputbox_date">
-                                <p>출발일</p>
-                                <div class="input_btn">
-                                    <a href="#">
-                                        <span class="selected-datetime">2025-06-26 16:00</span>
-                                        <img src="/w0310/70_pf/srt/images/ticket/calendar.png" alt="출발일" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="inputbox inputbox_person">
-                            <p>인원</p>
-                            <div class="input_btn">
-                                <a href="#">총 1명<img src="/w0310/70_pf/srt/images/ticket/user.png" alt="인원" /></a>
-                            </div>
-                        </div>
+                </li>
+                <li class="cs_men">
+                    <div class="men_1">
+                        <h3>실무담당자</h3>
+                    </div>
+                    <div class="men_2">
+                        <p>고객홍보처 주임 김현은</p>
+                    </div>
+                </li>
+            </ul><!-- cs_left -->
+            <div class="cs_right">
+                <div class="cs_number">
+                    <h3>주요 연락처</h3>
+                    <div class="number_line"></div>
+                    <div class="number_container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>노선</th>
+                                    <th>역 명</th>
+                                    <th>연락처</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="8">경부선</td>
+                                    <td>수서역</td>
+                                    <td>02-6177-8245</td>
+                                </tr>
+                                <tr>
+                                    <td>동탄역</td>
+                                    <td>031-328-9502</td>
+                                </tr>
+                                <tr>
+                                    <td>평택지제역</td>
+                                    <td>031-646-8805</td>
+                                </tr>
+                                <tr>
+                                    <td>천안아산역</td>
+                                    <td>041-549-6788</td>
+                                </tr>
+                                <tr>
+                                    <td>오송역</td>
+                                    <td>043-231-4542</td>
+                                </tr>
+                                <tr>
+                                    <td>대전역</td>
+                                    <td>042-259-2416</td>
+                                </tr>
+                                <tr>
+                                    <td>동대구역</td>
+                                    <td>053-940-2222</td>
+                                </tr>
+                                <tr>
+                                    <td>부산역</td>
+                                    <td>051-440-2288</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">호남선</td>
+                                    <td>익산역</td>
+                                    <td>063-850-2314</td>
+                                </tr>
+                                <tr>
+                                    <td>광주송정역</td>
+                                    <td>062-601-3289</td>
+                                </tr>
+                                <tr>
+                                    <td>목포역</td>
+                                    <td>061-240-4289</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="6">경전선</td>
+                                    <td>밀양역</td>
+                                    <td>055-359-4278</td>
+                                </tr>
+                                <tr>
+                                    <td>진영역</td>
+                                    <td>055-345-7788</td>
+                                </tr>
+                                <tr>
+                                    <td>창원중앙역</td>
+                                    <td>055-287-6388</td>
+                                </tr>
+                                <tr>
+                                    <td>창원역</td>
+                                    <td>055-292-7788</td>
+                                </tr>
+                                <tr>
+                                    <td>마산역</td>
+                                    <td>055-293-7788</td>
+                                </tr>
+                                <tr>
+                                    <td>진주역</td>
+                                    <td>055-753-7788</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="7">경전선</td>
+                                    <td>전주역</td>
+                                    <td>063-249-7019</td>
+                                </tr>
+                                <td>남원역</td>
+                                <td>063-249-7216</td>
+                                </tr>
+                                </tr>
+                                <td>곡성역</td>
+                                <td>061-362-7788</td>
+                                </tr>
+                                </tr>
+                                <td>구례구역</td>
+                                <td>061-782-7788</td>
+                                </tr>
+                                </tr>
+                                <td>순천역</td>
+                                <td>061-749-2288</td>
+                                </tr>
+                                </tr>
+                                <td>여천역</td>
+                                <td>061-684-7785</td>
+                                </tr>
+                                </tr>
+                                <td>여수Expo역</td>
+                                <td>061-749-2604</td>
+                                </tr>
+                                </tr>
+                                <td class="td1">동해선</td>
+                                <td class="td1">포항역</td>
+                                <td class="td1">054-722-7607</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- number_container -->
+                </div><!-- cd_number -->
+                <div class="cs_parking">
+                    <h3>주차장(수서/동탄/평택지제)</h3>
+                    <div class="parking_box">
+                        <p>1522-1841</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <a href="/w0310/70_pf/srt/sub/ticket_list.html" class="check_btn">열차 조회</a>
+            </div><!-- cs_right -->
+        </div><!-- cs_container -->
     </section>
 
     <!-- 푸터 -->

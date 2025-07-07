@@ -1,0 +1,217 @@
+@charset "utf-8";
+@import url("/w0310/70_pf/srt/css/reset.css");
+
+.wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* container */
+.cs_container {
+    width: 1200px;
+    height: 623px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 왼쪽 */
+.cs_left {
+    width: 550px;
+}
+
+.cs_left h3 {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.cs_left > li {
+    display: flex;
+}
+
+.cs_left li:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.cs_left li > div:first-child {
+    width: 106px;
+    margin-right: 40px;
+}
+
+/* SR고객센터 */
+.cs_call {
+    display: flex;
+    height: 96px;
+}
+
+.call_2 {
+    width: 326px;
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.call_2 > p:nth-of-type(1) {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1;
+    color: #4c2f48;
+}
+
+.call_2 > p:nth-of-type(2) {
+    font-size: 16px;
+    line-height: 2;
+    padding-left: 4px;
+}
+
+/* 운영시간 */
+.cs_time {
+    display: flex;
+    height: 50px;
+}
+
+.time_2 {
+    padding-top: 6px;
+}
+
+/* 메뉴구성 */
+.cs_menu {
+    display: flex;
+    height: 253px;
+}
+
+.menu_2 {
+    padding-top: 8px;
+}
+
+.menu_2 > div > p {
+    font-weight: bold;
+}
+
+.ars {
+    margin-bottom: 32px;
+}
+
+.ars > div,
+.counter > div {
+    margin-top: 8px;
+    line-height: 2;
+}
+
+.ars div,
+.counter div {
+    display: flex;
+}
+
+.n1 {
+    font-size: 18px;
+    background: #C8B158;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    align-items: center;
+    padding-left: 12px;
+    padding-bottom: 3px;
+    margin-right: 8px;
+}
+
+/* 실무담당자 */
+.cs_men {
+    display: flex;
+    height: 30px;
+}
+
+.men_2 {
+    padding-top: 8px;
+}
+
+/* 오른쪽 */
+.cs_right {
+    width: 570px;
+}
+
+/* 주요연락처 */
+.number_container {
+    width: 570px;
+    height: 470px;
+    overflow-y: auto;
+}
+
+.cs_right h3 {
+    font-size: 20px;
+    line-height: 2;
+}
+
+.number_line {
+    width: 555px;
+    border-top: 3px solid #4c2f48;
+}
+
+.number_container table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.number_container th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 30px;
+    background: #fff;
+
+}
+
+.number_container th:not(:last-of-type) {
+    border-right: 1px solid #D9D9D9;
+}
+
+.number_container th:nth-of-type(1) {
+    width: 175px;
+}
+.number_container th:nth-of-type(2) {
+    width: 140px;
+}
+.number_container th:nth-of-type(3) {
+    width: 235px;
+}
+
+.number_container td {
+    height: 30px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.number_container .td1 {
+    border: none;
+}
+
+.number_container td:not(:last-of-type) {
+    border-right: 1px solid #D9D9D9;
+}
+
+/* 주차장 */
+.cs_parking {
+    height: 75px;
+    margin-top: 38px;
+}
+
+.parking_box {
+    width: 550px;
+    height: 35px;
+    border: 1px solid #D9D9D9;
+    padding: 6px 0 0 16px;
+}
+
+/* 푸터 */
+.footer {
+    width: 100%;
+    height: 300px;
+    background: #555;
+}
