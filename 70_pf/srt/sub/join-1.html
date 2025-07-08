@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>서브페이지</title>
+    <title>회원가입</title>
 
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/reset.css" />
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/sub.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/join-1.css" />
 
     <script src="/w0310/70_pf/srt/script/jquery-3.7.1.js"></script>
-    <script src="/w0310/70_pf/srt/script/sub.js"></script>
 </head>
 
 <body>
@@ -37,8 +37,7 @@
                     </ul>
                 </div>
                 <div class="logo">
-                    <a href="/w0310/70_pf/srt/index.html"><img src="/w0310/70_pf/srt/images/nav/logo.png"
-                            alt="상단로고" /></a>
+                    <a href="../index.html"><img src="/w0310/70_pf/srt/images/nav/logo.png" alt="상단로고" /></a>
                 </div>
                 <div class="icons">
                     <a href="/w0310/70_pf/srt/sub/login.html"><img src="/w0310/70_pf/srt/images/nav/login.png"
@@ -62,10 +61,10 @@
                                 <li><a href="/w0310/70_pf/srt/sub/ticket_manage.html">승차권 확인</a></li>
                             </ul>
                         </li>
-                        <li><a href="/w0310/70_pf/srt/sub/station_suseo.html">이용안내</a>
+                        <li><a href="#">이용안내</a>
                             <ul class="sub">
-                                <li><a href="/w0310/70_pf/srt/sub/station_suseo.html">역 안내</a></li>
-                                <li><a href="/w0310/70_pf/srt/sub/route.html">노선 안내</a></li>
+                                <li><a href="#">역 안내</a></li>
+                                <li><a href="#">노선 안내</a></li>
                                 <li><a href="/w0310/70_pf/srt/sub/cost.html">운임 안내</a></li>
                             </ul>
                         </li>
@@ -91,16 +90,16 @@
     <!-- 서브 헤더 -->
     <section id="subtitle">
         <div class="subtitle">
-            <h2>서브페이지 타이틀</h2>
+            <h2>회원가입</h2>
         </div>
         <div class="submenu_bar">
             <div class="sub_inner">
                 <a href="#" class="home"><img src="/w0310/70_pf/srt/images/sub/home.png" alt="" />홈</a>
                 <div class="menu">
-                    <a href="#">승차권<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">SR회원<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
                 <div class="menu">
-                    <a href="#">승차권 예매<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">회원가입<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
             </div>
         </div>
@@ -108,7 +107,88 @@
 
     <!-- 서브페이지 내용 -->
     <section id="container">
-        <div></div>
+        <div class="step">
+            <div class="step1">
+                <img src="/w0310/70_pf/srt/images/join/step1.png" alt="회원가입 동의/ 정보입력 아이콘">
+                <div class="write">
+                    <h3>STEP 1</h3>
+                    <P>회원약관 동의/정보입력</P>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="/w0310/70_pf/srt/images/join/right.png" alt="오른쪽 화살표">
+            </div>
+
+            <div class="step2">
+                <img src="/w0310/70_pf/srt/images/join/step2.png" alt="회원가입 동의/ 정보입력 아이콘">
+                <div class="write">
+                    <h3>STEP 2</h3>
+                    <P>기본정보입력</P>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="/w0310/70_pf/srt/images/join/right.png" alt="오른쪽 화살표">
+            </div>
+
+            <div class="step3">
+                <img src="/w0310/70_pf/srt/images/join/step3.png" alt="회원가입 동의/ 정보입력 아이콘">
+                <div class="write">
+                    <h3>STEP 3</h3>
+                    <P>가입완료</P>
+                </div>
+            </div>
+        </div>
+
+        <div class="agree_out">
+            <div class="gueset_agree">
+                <h3>회원약관 동의</h3>
+            </div>
+
+            <div class="agree_all">
+                <div class="agree" id="terms content">
+                    <h4>약관동의</h4>
+                    <div class="agree1">
+                        <h5>[필수] SRT 이용약관</h5>
+                        <a href="#">약관보기</a>
+                    </div>
+                    <div class="agree2">
+                        <h5>[필수] 개인정보 수집 및 이용 동의</h5>
+                        <a href="#">약관보기</a>
+                    </div>
+
+                    <div class="agree3">
+                        <label>
+                            <input type="checkbox" id="agree-all"> [선택] 개인정보 수집 및 이용 (광고성 정보 수신)
+                            <span><a href="#">약관보기</a></span>
+                        </label>
+                    </div>
+
+                </div>
+                <div class="checkbox1">
+                    <label>
+                        <input type="checkbox" id="agree-all"> [선택] 광고성 정보 이메일 수신
+                    </label>
+                </div>
+
+                <div class="checkbox2">
+                    <label>
+                        <input type="checkbox" class="agree-all"> [선택] 광고성 정보 SMS 수신
+                    </label>
+                </div>
+
+                <div class="agree_write">
+                    <p>※ 선택항목에 대해서 동의를 거부하실 수 있으며, 동의하지 않으셔도 정상적인 서비스 이용이 가능합니다. <br>회원정보 수정에서 언제든지 해당 정보를 변경하실 수 있습니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="agree_btn">
+                <a href="#">취소</a>
+                <a href="/w0310/70_pf/srt/sub/join-2.html">다음</a>
+            </div>
+        </div>
     </section>
 
     <!-- 푸터 -->

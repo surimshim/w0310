@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // 풀페이지 구현
     let now = 0;
-    const sections = $(".container > section");
+    const sections = $(".container>section");
     const headerHeight = $("#header").height();
     const total = sections.length + 1;
 
@@ -128,6 +128,7 @@ $(document).ready(function () {
         $("#modal_date").hide();
     });
 
+
     // 섹션2 캐로셀
     let currentSlide = 0;
     const totalSlides = 6;
@@ -138,8 +139,8 @@ $(document).ready(function () {
         containerWidth / (slideWidth + slideMargin)
     );
     const maxSlide = totalSlides - visibleSlides;
-    const $track = $("#section2 .tour_carousel");
-    const $indicators = $("#section2 .indicator");
+    const $track = $(".tour_carousel");
+    const $indicators = $(".indicator");
 
     // 슬라이드 이동 함수
     function moveToSlide(index) {
@@ -164,8 +165,8 @@ $(document).ready(function () {
 
     // 버튼 상태 업데이트 함수
     function updateButtonStates() {
-        const $prevBtn = $("#section2 .arrow_left");
-        const $nextBtn = $("#section2 .arrow_right");
+        const $prevBtn = $(".arrow_left");
+        const $nextBtn = $(".arrow_right");
 
         // 첫 번째 슬라이드에서 이전 버튼 비활성화
         if (currentSlide === 0) {
@@ -183,12 +184,12 @@ $(document).ready(function () {
     }
 
     // 이전 버튼 클릭
-    $("#section2 .arrow_left").click(function () {
+    $(".arrow_left").click(function () {
         moveToSlide(currentSlide - 1);
     });
 
     // 다음 버튼 클릭
-    $("#section2 .arrow_right").click(function () {
+    $(".arrow_right").click(function () {
         moveToSlide(currentSlide + 1);
     });
 
@@ -206,28 +207,44 @@ $(document).ready(function () {
     // 초기 버튼 상태 설정
     updateButtonStates();
 
-    // 섹션2 탭메뉴
-    $("#section2 .tab_btn").click(function (event) {
-        event.preventDefault();
+    $(".tab_btn").click(function () {
         var index = $(this).index();
 
         // 모든 탭 버튼에서 active 클래스 제거
-        $("#section2 .tab_btn").removeClass("active");
+        $(".tab_btn").removeClass("active");
 
         // 클릭된 탭 버튼에 active 클래스 추가
         $(this).addClass("active");
 
         // 모든 탭 컨텐츠 숨기기
-        $("#section2 .tour_carousel_container").removeClass("active");
+        $(".tour_carousel_container").removeClass("active");
 
-        const activeTabContent = $("#section2 .tour_carousel_container").eq(
-            index
-        );
+        const activeTabContent = $(".tour_carousel_container").eq(index);
         // 해당 인덱스의 컨텐츠 보이기
         activeTabContent.addClass("active");
 
         setTimeout(function () {
             initSlide(activeTabContent);
         }, 100);
+
+        //슬라이드 초기화
+        function initSlide(tabContent) {
+            currentTabContent = tabContent;
+            const slideWrapper = tabContent.find("tour_area");
+            const slides = slideWrapper.find(".tour_carousel_contents");
+            slideCount = slides.length;
+            currentSlide = 0; // 첫 번째 슬라이드로 리셋
+
+            // 슬라이드 위치 리셋
+            slideWrapper.css("transform", "none");
+
+            // 슬라이드 위치 리셋
+            slideWrapper.css("transform", "translateX(0%)");
+
+            // 애니메이션 다시 활성화
+            setTimeout(function () {
+                slideWrapper.css('transition', 'transform 0.4s ease-in-out');
+            }, 50);
+        }
     });
 });

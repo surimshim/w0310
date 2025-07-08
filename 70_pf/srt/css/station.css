@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+.station_container h1 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.station_tab>ul {
+  display: flex;
+}
+
+.station_tab li {
+  width: 25%;
+  height: 50px;
+  line-height: 40px;
+  border: 1px solid #d5d5d5;
+  text-align: center;
+  background: #f4f4f4;
+  font-size: 18px;
+}
+
+.station_tab a {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.station_tab li.on {
+  background: #572b4c;
+}
+
+.station_tab .on a {
+  color: #fff;
+}
+
+/* 역 전경 슬라이드 */
+.station_slide {
+  width: 100%;
+}
+
+.slide-container {
+  border: 1px solid #ccc;
+  position: relative;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.slide_inner {
+  width: 850px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 850px;
+  height: 500px;
+  border-right: 1px solid #ccc;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 75px;
+  height: 95px;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
+
+/* 오시는 길 */
+
+.come2us li {
+  display: flex;
+  height: 180px;
+  border: 1px solid #999;
+  margin-bottom: 8px;
+}
+
+.come2us img {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+
+.come2us .tbox {
+  color: #fff;
+  padding-top: 20px;
+  text-align: center;
+  width: 180px;
+  color: #fff;
+}
+
+.come2us .box1 {
+  background: #6d3767;
+}
+
+.come2us .box2 {
+  background: #3e92bd;
+}
+
+.come2us .box3 {
+  background: #2e5292;
+}
+
+.come2us .tcontext {
+  width: 1020px;
+  padding: 40px 20px;
+}
+
+.come2us .tcontext p {
+  color: red;
+}
+
+/* 주차장 이용 안내 */
+.park_info {
+  margin-top: 40px;
+}
+
+/* 주차요금 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  width: 16.66%;
+  border: 1px solid #333;
+  text-align: center;
+  padding: 4px;
+}
+
+.c1,
+th {
+  background: #e0e0e0;
+  font-weight: 600;
+}
+
+.park_info p {
+  font-size: 12px;
+  color: #c7187d;
+}
+
+/* 주차장 혼잡시간 안내 */
+.park_heavy h2 {
+  margin-top: 30px;
+}
+
+.park_heavy img {
+  margin: 0;
+  /* height: 300px; */
+}
+
+/* 푸터 */

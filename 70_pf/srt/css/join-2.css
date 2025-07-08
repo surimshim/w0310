@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+.step {
+  display: flex;
+  width: 830px;
+  margin: 0 auto;
+  text-align: center;
+  height: 50px;
+}
+
+.step1,
+.step2,
+.step3 {
+  display: flex;
+  margin: 0 20px;
+}
+
+.right {
+  margin: 10px 40px 0;
+}
+
+.write {
+  margin-left: 15px;
+}
+
+.step h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #666;
+}
+
+.step3 h3 {
+  color: #651E38;
+}
+
+.step p {
+  font-size: 14px;
+  color: #666666;
+  margin-left: 10px;
+}
+
+.step3 p {
+  margin-left: -5px;
+}
+
+.gueset_agree {
+  border-bottom: 2px solid #4B2F48;
+  margin-bottom: 30px;
+}
+
+.agree_out {
+  width: 1200px;
+  height: 1000px;
+  margin: 30px auto 0;
+}
+
+.agree_out h3 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.information {
+  width: 600px;
+  height: 1200px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.check-btn {
+  display: block;
+  background-color: #C8B158;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* 휴대전화번호 가로 배치 */
+.phone-inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.phone-inputs select,
+.phone-inputs input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.phone-send-btn {
+  display: block;
+  background-color: #C8B158;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* 생년월일 가로 배치 */
+.birth-selects {
+  display: flex;
+  gap: 10px;
+}
+
+.birth-selects select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.agree_btn a {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 10px 60px;
+  background: #C8B158;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.agree_btn {
+  text-align: center;
+  padding-top: 30px;
+}

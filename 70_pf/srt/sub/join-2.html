@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>서브페이지</title>
+    <title>회원가입</title>
 
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/reset.css" />
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/sub.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/join-2.css" />
 
     <script src="/w0310/70_pf/srt/script/jquery-3.7.1.js"></script>
-    <script src="/w0310/70_pf/srt/script/sub.js"></script>
 </head>
 
 <body>
@@ -37,8 +37,7 @@
                     </ul>
                 </div>
                 <div class="logo">
-                    <a href="/w0310/70_pf/srt/index.html"><img src="/w0310/70_pf/srt/images/nav/logo.png"
-                            alt="상단로고" /></a>
+                    <a href="../index.html"><img src="/w0310/70_pf/srt/images/nav/logo.png" alt="상단로고" /></a>
                 </div>
                 <div class="icons">
                     <a href="/w0310/70_pf/srt/sub/login.html"><img src="/w0310/70_pf/srt/images/nav/login.png"
@@ -62,10 +61,10 @@
                                 <li><a href="/w0310/70_pf/srt/sub/ticket_manage.html">승차권 확인</a></li>
                             </ul>
                         </li>
-                        <li><a href="/w0310/70_pf/srt/sub/station_suseo.html">이용안내</a>
+                        <li><a href="#">이용안내</a>
                             <ul class="sub">
-                                <li><a href="/w0310/70_pf/srt/sub/station_suseo.html">역 안내</a></li>
-                                <li><a href="/w0310/70_pf/srt/sub/route.html">노선 안내</a></li>
+                                <li><a href="#">역 안내</a></li>
+                                <li><a href="#">노선 안내</a></li>
                                 <li><a href="/w0310/70_pf/srt/sub/cost.html">운임 안내</a></li>
                             </ul>
                         </li>
@@ -91,16 +90,16 @@
     <!-- 서브 헤더 -->
     <section id="subtitle">
         <div class="subtitle">
-            <h2>서브페이지 타이틀</h2>
+            <h2>회원가입</h2>
         </div>
         <div class="submenu_bar">
             <div class="sub_inner">
                 <a href="#" class="home"><img src="/w0310/70_pf/srt/images/sub/home.png" alt="" />홈</a>
                 <div class="menu">
-                    <a href="#">승차권<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">SR회원<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
                 <div class="menu">
-                    <a href="#">승차권 예매<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">회원가입<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
             </div>
         </div>
@@ -108,7 +107,193 @@
 
     <!-- 서브페이지 내용 -->
     <section id="container">
-        <div></div>
+        <div class="step">
+            <div class="step1">
+                <img src="/w0310/70_pf/srt/images/join/step1_gray.png" alt="회원가입 동의/ 정보입력 아이콘">
+                <div class="write">
+                    <h3>STEP 1</h3>
+                    <P>회원약관 동의/정보입력</P>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="/w0310/70_pf/srt/images/join/right.png" alt="오른쪽 화살표">
+            </div>
+
+            <div class="step2">
+                <img src="/w0310/70_pf/srt/images/join/step2_red.png" alt="회원가입 동의/ 정보입력 아이콘">
+                <div class="write">
+                    <h3>STEP 2</h3>
+                    <P>기본정보입력</P>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="/w0310/70_pf/srt/images/join/right.png" alt="오른쪽 화살표">
+            </div>
+
+            <div class="step3">
+                <img src="/w0310/70_pf/srt/images/join/step3.png" alt="회원가입 동의/ 정보입력 아이콘">
+                <div class="write">
+                    <h3>STEP 3</h3>
+                    <P>가입완료</P>
+                </div>
+            </div>
+        </div>
+
+        <div class="agree_out">
+            <div class="gueset_agree">
+                <h3>기본정보입력</h3>
+            </div>
+
+            <div class="information">
+                <form action="#" , method="post">
+                    <div class="form-group">
+                        <label for="username">이름</label>
+                        <input type="text" id="username" placeholder="실명을 정확히 입력해주세요.">
+                    </div>
+                    <div class="form-group">
+                        <label for="userid">아이디</label>
+                        <input type="text" id="userid" placeholder="6자 이상의 영문 혹은 숫자를 조합하여 입력해주세요.">
+                        <button class="check-btn" type="button">중복확인</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">비밀번호</label>
+                        <input type="password" id="password" placeholder="영문, 숫자, 특수문자 포함 8자 이상 입력">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">비밀번호 확인</label>
+                        <input type="password" id="confirm-password" placeholder="비밀번호를 다시 한 번 입력해주세요.">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">이메일</label>
+                        <input type="email" id="email" placeholder="이메일 입력">
+                        <button class="check-btn" type="button">중복확인</button>
+                    </div>
+                    <div class="form-group">
+                        <label>휴대전화번호</label>
+                        <div class="phone-inputs">
+                            <select>
+                                <option>SKT</option>
+                                <option>KT</option>
+                                <option>LGU+</option>
+                            </select>
+                            <input type="text" placeholder="010">
+                            <input type="text" placeholder="숫자 입력">
+                            <input type="text" placeholder="숫자 입력">
+                        </div>
+                        <button class="phone-send-btn" type="button">인증번호 전송</button>
+                    </div>
+                    <div class="form-group">
+                        <label>생년월일</label>
+                        <div class="birth-selects">
+                            <select>
+                                <option>년</option>
+                                <option>1980</option>
+                                <option>1981</option>
+                                <option>1982</option>
+                                <option>1983</option>
+                                <option>1984</option>
+                                <option>1985</option>
+                                <option>1986</option>
+                                <option>1987</option>
+                                <option>1988</option>
+                                <option>1989</option>
+                                <option>1990</option>
+                                <option>1991</option>
+                                <option>1992</option>
+                                <option>1993</option>
+                                <option>1994</option>
+                                <option>1995</option>
+                                <option>1996</option>
+                                <option>1997</option>
+                                <option>1998</option>
+                                <option>1999</option>
+                                <option>2000</option>
+                                <option>2001</option>
+                                <option>2002</option>
+                                <option>2003</option>
+                                <option>2004</option>
+                                <option>2005</option>
+                                <option>2006</option>
+                                <option>2007</option>
+                                <option>2008</option>
+                                <option>2009</option>
+                                <option>2010</option>
+                                <option>2011</option>
+                                <option>2012</option>
+                                <option>2013</option>
+                                <option>2014</option>
+                                <option>2015</option>
+                                <option>2016</option>
+                                <option>2017</option>
+                                <option>2018</option>
+                                <option>2019</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                                <option>2024</option>
+                                <option>2025</option>
+                            </select>
+                            <select>
+                                <option>월</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                            </select>
+                            <select>
+                                <option>일</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="agree_btn">
+                        <a href="/w0310/70_pf/srt/join/join-1.html">취소</a>
+                        <a href="/w0310/70_pf/srt/join/join-3.html">다음</a>
+                    </div>
+                </form>
+            </div>
+        </div>
     </section>
 
     <!-- 푸터 -->

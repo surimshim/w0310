@@ -136,18 +136,42 @@ $(document).ready(function () {
         setTimeout(function () {
             initSlide(activeTabContent);
         }, 100);
+
+        //슬라이드 초기화
+        function initSlide(tabContent) {
+            currentTabContent = tabContent;
+            const slideWrapper = tabContent.find("tour_area");
+            const slides = slideWrapper.find(".tour_carousel_contents");
+            slideCount = slides.length;
+            currentSlide = 0; // 첫 번째 슬라이드로 리셋
+
+            // 슬라이드 위치 리셋
+            slideWrapper.css("transform", "none");
+
+            // 슬라이드 위치 리셋
+            slideWrapper.css("transform", "translateX(0%)");
+
+            // 애니메이션 다시 활성화
+            setTimeout(function () {
+                slideWrapper.css('transition', 'transform 0.4s ease-in-out');
+            }, 50);
+        }
     });
 });
 
-/* //슬라이드 초기화
-function initSlide(tabContent) {
-    currentTabContent = tabContent;
-    const slideWrapper = tabContent.find(".tour_carousel");
-    const slides = slideWrapper.find(".tour_carousel_contents");
-    slideCount = slides.length;
-    currentSlide = 0; // 첫 번째 슬라이드로 리셋
+/* 
+$(function(){
+bx슬라이더써보기
 
-    // 슬라이드 위치 리셋
-    slideWrapper.css("transform", "translateX(0%)");
-} */
-/* 기능구현 잘 안됌.. */
+// 자동슬라이드
+auto: true;
+stopAutoOnclick: true;
+//일시정지/실행버튼
+autoControls: true;
+//중앙의 동그라미: pagination 또는 indicator
+pager: false,
+//멀티슬라이드의 하나의 슬라이드 크기
+slideWidth:
+})
+
+*/

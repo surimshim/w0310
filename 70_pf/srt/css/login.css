@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+.login {
+    width: 700px;
+    height: 460px;
+    background: #F0F0F0;
+    margin: 0 auto;
+    margin-top: 70px;
+    border-radius: 35px;
+}
+
+.login h3 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    width: 600px;
+    margin: 0 auto;
+    border-bottom: 2px solid #000;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    color: #888;
+    position: relative;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.tab-btn.active::before {
+    content: "✔";
+    margin-right: 5px;
+    color: #333;
+}
+
+.tab-content {
+    display: none;
+    margin: 0 auto;
+    width: 600px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    width: 90px;
+    background: #ccc;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px 0 0 3px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 0 3px 3px 0;
+}
+
+.login-btn {
+    text-align: center;
+    width: 600px;
+    display: block;
+    padding: 12px;
+    background: #c3a849;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.option-row {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #777;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.option-row input {
+    margin-right: 5px;
+}
+
+.links {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #777;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.policy {
+    width: 1200px;
+    height: 180px;
+    border: 1px solid #d2d0d0;
+    border-radius: 20px;
+    margin-top: 50px;
+    line-height: 2;
+}
+
+.policy_inner {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.policy h4 {
+    font-size: 15px;
+}
+
+.policy li {
+    list-style: disc;
+    margin-left: 30px;
+    font-size: 13px;
+}

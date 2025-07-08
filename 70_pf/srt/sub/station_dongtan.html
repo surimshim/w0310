@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>서브페이지</title>
+    <title>역 안내</title>
 
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/reset.css" />
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/sub.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/station.css" />
 
     <script src="/w0310/70_pf/srt/script/jquery-3.7.1.js"></script>
-    <script src="/w0310/70_pf/srt/script/sub.js"></script>
+    <script src="/w0310/70_pf/srt/script/station.js"></script>
 </head>
 
 <body>
@@ -91,16 +92,16 @@
     <!-- 서브 헤더 -->
     <section id="subtitle">
         <div class="subtitle">
-            <h2>서브페이지 타이틀</h2>
+            <h2>역 안내</h2>
         </div>
         <div class="submenu_bar">
             <div class="sub_inner">
                 <a href="#" class="home"><img src="/w0310/70_pf/srt/images/sub/home.png" alt="" />홈</a>
                 <div class="menu">
-                    <a href="#">승차권<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">이용안내<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
                 <div class="menu">
-                    <a href="#">승차권 예매<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">역안내<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
             </div>
         </div>
@@ -108,7 +109,156 @@
 
     <!-- 서브페이지 내용 -->
     <section id="container">
-        <div></div>
+        <!-- 정차역 안내 서브 페이지 -->
+        <div class="station_container">
+            <h1>동탄역</h1>
+            <div class="station_tab">
+                <ul>
+                    <li><a href="/w0310/70_pf/srt/sub/station_suseo.html">수서역</a></li>
+                    <li class="on"><a href="/w0310/70_pf/srt/sub/station_dongtan.html">동탄역</a></li>
+                    <li><a href="/w0310/70_pf/srt/sub/station_jije.html">평택지제역</a></li>
+                    <li><a
+                            href="https://www.korail.com/ticket/train/stationGuide/station?pageId=TK0403010400">공용역</a>(KTX바로가기)
+                    </li>
+                </ul>
+            </div>
+            <!-- end of station_tab -->
+
+            <!-- slide division -->
+            <div class="slide-container">
+                <div class="nav-btn prev">
+                    <img src="/w0310/70_pf/srt/images/station/arrow2left.png" />
+                </div>
+                <!-- end of prev nav-btn -->
+                <div class="slide_inner">
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide">
+                            <img src="/w0310/70_pf/srt/images/station/DongtanStn_slide1.png" alt="slide1" />
+                        </div>
+                        <div class="slide">
+                            <img src="/w0310/70_pf/srt/images/station/DongtanStn_slide2.png" alt="slide2" />
+                        </div>
+                        <!-- <div class="slide">
+              <img
+                src="../images/station/suseo_stn/suseostn_slide3.png"
+                alt="slide3"
+              />
+            </div> -->
+                    </div>
+                    <!-- end of .slider-track -->
+                </div>
+                <!-- end of .slide_inner -->
+                <div class="nav-btn next">
+                    <img src="/w0310/70_pf/srt/images/station/arrow2right.png" />
+                </div>
+                <!-- end of next nav-btn -->
+            </div>
+            <!-- end of .slide-container -->
+
+            <div class="come2us">
+                <h2>오시는 길</h2>
+                <ul>
+                    <li>
+                        <div class="tbox box1">
+                            <p>버스이용시</p>
+                            <img src="/w0310/70_pf/srt/images/station/vaadin_buss.png" alt="bus" />
+                        </div>
+                        <div class="tcontext">
+                            [일반] 80, 99, 200, 701, 708-1 , [마을] 19-1, 9A, 9B , [직행] 6001 , [광역] M4130
+                            <p>※탑승 후 ‘동탄역 포스코’ 정류장 하차</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tbox box2">
+                            <p>지하철이용시</p>
+                            <img src="/w0310/70_pf/srt/images/station/tram.png" alt="train" />
+                        </div>
+                        <div class="tcontext">
+                            1호선 서동탄역 하차→’서동탄역신일해피트리’ 정류장에서 701번 버스 탑승→’우남퍼스트빌’ 정류장 하차→도보 5분<br>
+                            708번 버스 탑승→’우남퍼스트빌.자이’ 정류장 하차→도보 9분<br>
+                            1호선 병점역 하차→’병점역’ 정류장에서 708-1번 버스 탑승→’우남퍼스트빌’ 정류장 하차→도보 5분
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tbox box3">
+                            <p>자가용이용시</p>
+                            <img src="/w0310/70_pf/srt/images/station/car.png" alt="car" />
+                        </div>
+                        <div class="tcontext">
+                            오산IC에서 경부고속도로(7.4km) <약 6분 소요><br>
+                                기흥IC에서 경부고속도로(5.4km)→봉담동탄고속도로(5.0km)→봉담동탄고속도로(4.3km)→ 경부고속도로(3.4km) <약 19분 소요><br>
+                                    송파IC에서 서울외곽순환도로(5.7km)→서울외곽순환도로(5.4km)→탄천동로(1.3km) <약 25분 소요><br>
+                                        북오산IC에서 봉담동탄고속도로(5.4km)→봉담동탄고속도로(9.2km)→경부고속도로(3.4km) <약 13분 소요>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- end of .come2us -->
+
+            <div class="park_info">
+                <h2 class="parkn">주차장 이용안내</h2>
+                <div class="parkingFEE">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>주차공간</th>
+                                <th>주소</th>
+                                <th colspan="3">주차요금</th>
+                                <th>공공할인(50% 할인)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="4">419면</td>
+                                <td rowspan="4">경기도 화성시 동탄역로 151</td>
+                                <th>구분</th>
+                                <th>원 요금</th>
+                                <th>SRT 이용고객 할인요금</th>
+                                <td rowspan="4">
+                                    경차, 장애인, 국가유공자, 다둥이 2자녀 이상, 저공해 차량
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th>일 주차 요금</th>
+                                <td>25,000원</td>
+                                <td>22,500원</td>
+                            </tr>
+                            <tr>
+                                <th>기본 30분</th>
+                                <td>1,500원</td>
+                                <td>1,050원</td>
+                            </tr>
+                            <tr>
+                                <th>추가 10분당</th>
+                                <td>500원</td>
+                                <td>350원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>
+                        * 요금 결제 : 신용카드, 모바일 페이, 주차요금 모바일 자동
+                        결제(카카오 T, 티맵 시스템 연동)<br />
+                        * 공공할인 : 행정안전부 시스템 연계를 통해 출차 정산 시 자동 할인
+                        적용 가능(2024. 12. 20.(금)부터 정식 도입 전까지 출차 정산 시 대상
+                        여부 확인 후 할인 적용)
+                    </p>
+                </div>
+
+                <div class="park_heavy">
+                    <h2>주차장 혼잡시간안내</h2>
+                    <img src="/w0310/70_pf/srt/images/station/Dongtan_parking1.png" alt="suseo_P" />
+                    <p>
+                        * 주차장 혼잡시간에는 가급적 대중교통 이용을 권해드립니다.(공휴일,
+                        명절, 휴가철은 상시 혼잡)<br />
+                        * 인근 주차장 안내 : 지하철 수서역 1번 출구 앞 공영주차장
+                    </p>
+                </div>
+            </div>
+            <!-- end of .park_info -->
+        </div>
+        <!-- end of .station_container -->
     </section>
 
     <!-- 푸터 -->

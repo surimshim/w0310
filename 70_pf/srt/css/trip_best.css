@@ -1,0 +1,659 @@
+@charset "utf-8";
+@import url("sub.css");
+
+/* 본문 */
+.best_container {
+    width: 1200px;
+    /* height: 1615px; */
+    margin: 30px auto 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 왼쪽 컨텐츠 + 리모콘 */
+.sidebar {
+    width: 320px;
+    /* height: 1520px; */
+    padding-bottom: 20px;
+    /* transform: translateY(-20%); */
+}
+
+/* 리모콘 내부 */
+.sidebar_contents {
+    position: relative;
+    width: 320px;
+    height: 730px;
+    background: #ffffff;
+    border: 1px solid #b5b5b6;
+    border-radius: 15px;
+}
+
+/* 필터 */
+.sidebar_title {
+    position: relative;
+    top: 28px;
+    left: 25px;
+    width: 256px;
+    height: 34px;
+    display: flex;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.sidebar_title h1 {
+    font-size: 16px;
+}
+
+.sidebar_title button {
+    cursor: pointer;
+    width: 60px;
+    height: 26px;
+    font-size: 12px;
+    background: #eee;
+    border: none;
+    line-height: 26px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.sidebar_title button:hover {
+    background: #4c2f48;
+    color: #ffffff;
+}
+
+.sidebar_contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar_contents_area {
+    position: relative;
+    top: 60px;
+    left: 25px;
+    width: 291px;
+    height: 540px;
+    overflow: auto;
+}
+
+.sidebar_contents_area h2 {
+    font-size: 14px;
+}
+
+/* 종합검색 */
+.search_container {
+    position: relative;
+    width: 256px;
+    height: 90px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.search_container .search_box {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 12px;
+    outline: none;
+    padding: 0 20px;
+    background: #eee;
+    margin-top: 8px;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+    /* transition: all 0.3s ease; */
+}
+
+.search_container .search_btn {
+    position: absolute;
+    right: 25px;
+    top: 50px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 리모콘 내부 버튼 */
+.sidebar_contents_area button {
+    background: #eee;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 10px;
+    border-radius: 30px;
+    margin-top: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.sidebar_contents_area button>img {
+    display: none;
+    margin-top: 3px;
+    margin-left: 4px;
+}
+
+.sidebar_contents_area button.active img {
+    display: inline-block;
+}
+
+/* .sidebar_contents_area button:hover span:nth-of-type(2) {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+} */
+
+.sidebar_contents_area>div {
+    margin: 16px 0;
+}
+
+.sidebar_contents_area div>ul {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.all_btn {
+    width: 60px;
+}
+
+/* 상품상태 */
+.item_container {
+    width: 256px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.item_container_box {
+    display: flex;
+}
+
+/* 운행구간 */
+.train_container {
+    width: 256px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.train_container_box {
+    display: flex;
+}
+
+.train_container_box button {
+    z-index: 2;
+    background: #eee;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    /* padding: 7px 16px 7px 6px; */
+    border-radius: 30px;
+    margin-top: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.tour_main {
+    /* width: 200px; */
+    position: relative;
+}
+
+.tour_main span {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* 운행구간 서브 */
+.tour_sub {
+    position: absolute;
+    z-index: 1;
+    width: 74px;
+    display: none;
+    background: #4c2f48;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    padding: 7px 10px 10px 8px;
+    border-radius: 0 0 15px 15px;
+    top: 25px;
+}
+
+.tour_sub li {
+    cursor: pointer;
+    padding-top: 16px;
+}
+
+.train_arrow {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(135deg);
+    transition: none;
+}
+
+/* .train_arrow.down {
+    transform: rotate(135deg);
+} */
+
+/* 여행기간 */
+.during_container {
+    width: 256px;
+    height: 75px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.during_container_box {
+    display: flex;
+}
+
+/* 출발요일 */
+.day_container {
+    width: 256px;
+    height: 112px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.day_container_box {
+    display: flex;
+}
+
+.day_container_box>ul:nth-of-type(2) {
+    width: 200px;
+}
+
+/* 키워드 */
+.key_container {
+    width: 256px;
+    height: 150px;
+    padding-bottom: 16px;
+}
+
+.key_container_box {
+    display: flex;
+}
+
+.key_container_box>ul:nth-of-type(2) {
+    width: 200px;
+}
+
+
+/* button active */
+.filter_btn.active.duration {
+    background: #4c2f48;
+    color: #fff;
+}
+
+.filter_btn.active.train {
+    background: #4c2f48;
+    color: #fff;
+}
+
+.train_arrow.active.train {
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+.filter_btn.active.type {
+    background: #4c2f48;
+    color: #fff;
+}
+
+.filter_btn.active.reserved {
+    background: #4c2f48;
+    color: #fff;
+}
+
+.filter_btn.active.tour_subway {
+    background: #4c2f48;
+    color: #fff;
+}
+
+.filter_btn.active.tour_day {
+    background: #4c2f48;
+    color: #fff;
+}
+
+/* 필터적용 */
+.submit_btn {
+    margin: 90px auto 0;
+}
+
+.submit_btn button {
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.submit_btn button:hover {
+    background: #c8b158;
+    color: #fff;
+}
+
+/* 스크롤 효과 */
+.sidebar_contents.sticky {
+    position: fixed;
+    top: 20px;
+    width: 320px;
+}
+
+.sidebar_contents.bottom {
+    position: absolute;
+    bottom: 320px;
+}
+
+/* 오른쪽 컨텐츠 ------------------------------ */
+.best_right {
+    width: 856px;
+    /* height: 1460px; */
+    /* background: yellow; */
+}
+
+/* 오른쪽 토글 */
+.best_sub {
+    position: relative;
+    width: 100%;
+    border-bottom: 3px solid #4c2f48;
+}
+
+.best_sub_title {
+    padding-top: 4px;
+    padding-bottom: 8px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    gap: 8px;
+    color: #4c2f48;
+    background: none;
+}
+
+/* 토글 화살표 */
+.arrow {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #4c2f48;
+    border-right: 2px solid #4c2f48;
+    transform: rotate(135deg);
+    transition: none;
+}
+
+.arrow.down {
+    transform: rotate(-45deg);
+}
+
+/* 토글 서브 */
+.best_down {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    /* border-radius: 10px; */
+    background: #4c2f48;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    line-height: 80px;
+}
+
+/* 토글 여닫음 */
+#best_sub_nav {
+    display: none;
+}
+
+#best_sub_nav.show {
+    display: block;
+    transition: 0.3s;
+}
+
+.best_down>li>a {
+    display: block;
+    color: #ffffff;
+}
+
+.best_down>li>a:hover {
+    font-weight: bold;
+}
+
+/* 검색정보 */
+.best_sub_2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20px;
+    padding: 25px 0 40px;
+    align-items: center;
+}
+
+.search_left p {
+    color: #b5b5b6;
+}
+
+.search_right ul {
+    display: flex;
+}
+
+.search_right a {
+    color: #b5b5b6;
+}
+
+.search_right li:not(:last-child)::after {
+    content: "|";
+    margin: 0 16px;
+    color: #b5b5b6;
+}
+
+.search_right a:hover {
+    font-weight: bold;
+    color: #333333;
+}
+
+.search_right a.active {
+    font-weight: bold;
+    color: #333333;
+}
+
+.tour_suggest.active {
+    font-weight: bold;
+    color: #333333;
+}
+
+/* 오른쪽컨텐츠 여행정보 */
+.best_contents {
+    width: 100%;
+    height: 100%;
+}
+
+.best_tour_contents {
+    width: 100%;
+    /* height: 1278px; */
+}
+
+.best_tour_contents_box {
+    width: 100%;
+    height: 230px;
+    border: 1px solid #b5b5b6;
+    border-radius: 15px;
+    margin-bottom: 32px;
+}
+
+.best_tour_contents_box.hidden {
+    display: none;
+}
+
+.best_tour_contents_box.activeBox {
+    display: block;
+}
+
+/* 여행컨텐츠 내용 */
+.best_tour_contents_box>div {
+    display: flex;
+    position: relative;
+}
+
+.contents_note {
+    display: flex;
+    padding: 25px 28px 28px 18px;
+}
+
+.contents_flex {
+    width: 370px;
+}
+
+/* 여행필터 */
+.contents_filter {
+    display: flex;
+}
+
+/* 여행필터 버튼 */
+.contents_filter div {
+    padding: 3px 10px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    border: 1px solid #333;
+    border-radius: 15px;
+}
+
+.contents_img {
+    width: 256px;
+    height: 230px;
+    border-radius: 15px 0 0 15px;
+    overflow: hidden;
+}
+
+.contents_img img {
+    position: relative;
+    overflow: hidden;
+}
+
+.contents_info h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.subway {
+    color: #777777;
+    margin-bottom: 5px;
+}
+
+.contents_info_1 img,
+.contents_info_2 img {
+    margin-top: 8px;
+}
+
+.contents_info_1>span:nth-of-type(1),
+.contents_info_2>span:nth-of-type(1) {
+    font-weight: bold;
+}
+
+.tour_logo {
+    margin-top: 25px;
+}
+
+.contents_pay {
+    width: 186px;
+    margin-top: 16px;
+}
+
+.contents_pay p {
+    text-align: right;
+    line-height: 1.2;
+}
+
+.contents_pay>p:nth-of-type(1) {
+    font-size: 10px;
+}
+
+.contents_pay span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contents_note>a {
+    position: absolute;
+    display: block;
+    right: 28px;
+    bottom: 28px;
+    font-size: 16px;
+    padding: 10px 56px;
+    background: #4c2f48;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+}
+
+/* 검색결과없음 */
+.no_result {
+    text-align: center;
+    padding: 200px 20px;
+    display: none;
+    height: 700px;
+}
+
+/* 오른쪽 하단 페이지넘김 */
+/* .best_btn_area {
+    width: 100%;
+    height: 20px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.best_btn_page {
+    display: flex;
+    justify-content: center;
+}
+
+.best_btn_area button {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+    margin-right: 10px;
+}
+
+.best_btn_area button:hover {
+    background: #c8b158;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.best_btn_area .page_num.btnClick {
+    background: #c8b158;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.arrow_pagebtnL {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #4c2f48;
+    border-right: 2px solid #4c2f48;
+    transform: rotate(-135deg);
+    transition: none;
+}
+
+.arrow_pagebtnR {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #4c2f48;
+    border-right: 2px solid #4c2f48;
+    transform: rotate(45deg);
+    transition: none;
+} */

@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+.tabs {
+    width: 1200px;
+    position: relative;
+    display: block;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    padding: 2px 40px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(142, 142, 142);
+}
+
+.tabs input:checked+label {
+    color: #4B2F48;
+}
+
+.tab-con {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.tabs input:checked+label+.tab-con {
+    display: block;
+}
+
+.back {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 230px;
+    background: rgba(181, 181, 182, 0.2);
+    border-radius: 0 0 20px 20px;
+}
+
+.back p {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 45px;
+}
+
+.fare-search-bar {
+    display: flex;
+    gap: 24px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.fare-search-item {
+    display: flex;
+}
+
+.fare-search-item label {
+    font-size: 18px;
+    color: #333;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.fare-search-item input[type="text"],
+.fare-search-item input[type="date"] {
+    padding: 10px 12px;
+    border: 1.5px solid #b5b5b6;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+.fare-search-btn {
+    padding: 10px 32px;
+    background: #4B2F48;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 12px;
+    height: 44px;
+}
+
+.fare-search-btn:hover {
+    background: #6a3a67;
+}
+
+
+h3 {
+    font-size: 23px;
+    padding: 20px 0;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    line-height: 6;
+}
+
+.box {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #8E8E8E;
+    box-shadow: #8E8E8E;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.station {
+    line-height: 5;
+    margin: 0 auto;
+    width: 350px;
+    height: 116.6px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #4B2F48;
+    border-bottom: 2px solid #4B2F48;
+
+}
+
+.station_inner {
+    width: 270px;
+    margin: 0 auto;
+}
+
+.station img {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.station-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.station-modal-content {
+    background: #fff;
+    width: 400px;
+    margin: 120px auto 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+    padding: 32px 24px 24px 24px;
+    position: relative;
+}
+
+.station-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.station-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.station-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.station-list li:hover {
+    background: #f3eaf5;
+    color: #4B2F48;
+}
+
+.cost {
+    margin-top: 30px;
+}
+
+.cost1 {
+    margin: 0 auto;
+    width: 350px;
+    height: 116.6px;
+    border-bottom: 1px solid #8E8E8E;
+}
+
+.cost2 {
+    margin: 0 auto;
+    width: 350px;
+    height: 116.6px;
+}
+
+.box1 .seat {
+    font-size: 18px;
+    font-weight: bold;
+    color: #848484;
+    margin-right: 100px;
+}
+
+.box1 .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1d1d1d;
+    margin-left: 30px;
+}
+
+.box1 .price2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1d1d1d;
+    margin-left: 15px;
+}
+
+.notice {
+    width: 1200px;
+}
+
+.ticket {
+    margin-top: 10px;
+}
+
+.ticket p {
+    font-size: 15px;
+    line-height: 200%;
+}
+
+.ticket li {
+    list-style: disc;
+    margin-left: 60px;
+}
+
+.ticket span {
+    text-decoration: underline;
+}
+
+.refund li {
+    list-style: disc;
+    margin-left: 60px;
+}
+
+.refund p {
+    font-size: 15px;
+    line-height: 200%;
+}
+
+.table-container {
+    width: 1150px;
+    /* height: 1300px; */
+}
+
+.custom-table th,
+.custom-table td {
+    border-collapse: separate;
+    padding: 18px 6px;
+    text-align: center;
+    vertical-align: middle;
+    background: #fff;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+
+.custom-table {
+    border: 1px solid #bababa;
+    border-radius: 12px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px;
+    overflow: hidden;
+    margin-left: 40px;
+}
+
+/* 표 네 모서리 둥글게 */
+.custom-table tr:first-of-type th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.custom-table tr:first-of-type th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.custom-table tr:last-of-type td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.custom-table tr:last-of-type td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+/* 표 내부 세로/가로 테두리 */
+.custom-table th,
+.custom-table td {
+    border-right: 1px solid #bababa;
+    border-bottom: 1px solid #bababa;
+}
+
+/* 마지막 열은 오른쪽 테두리 제거 */
+.custom-table th:last-child,
+.custom-table td:last-child {
+    border-right: none;
+}
+
+/* 마지막 행은 아래쪽 테두리 제거 */
+.custom-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* 첫 번째 행(th) 아래쪽만 테두리 */
+.custom-table tr:first-of-type th {
+    border-top: none;
+}
+
+/* 첫 번째 열은 왼쪽 테두리 추가(필요시) */
+.custom-table th:first-child,
+.custom-table td:first-child {
+    border-left: none;
+}
+
+
+.money {
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+
+.fare-box {
+    margin-top: 20px;
+}
+
+.fzbig th,
+td {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.custom-table td.fzbig2 {
+    font-size: 17px;
+    font-weight: bold;
+}

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>운임안내</title>
+
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/reset.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/sub.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/cost.css" />
+
+    <script src="/w0310/70_pf/srt/script/jquery-3.7.1.js"></script>
+    <script src="/w0310/70_pf/srt/script/cost.js"></script>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header id="header">
+        <div class="header_inner">
+            <div class="first">
+                <div class="language">
+                    <div class="lbtn" id="lbtn">
+                        <img src="/w0310/70_pf/srt/images/nav/language.png" alt="언어설정 아이콘" />
+                        <p>Language</p>
+                        <img class="language_btn" src="/w0310/70_pf/srt/images/nav/language_btn.png" alt="아래화살표" />
+                    </div>
+                    <ul class="language_list" id="language_list">
+                        <li>
+                            <a href="#"> <span>KR</span> 한국어 </a>
+                        </li>
+                        <li>
+                            <a href="#"><span>EN</span> English</a>
+                        </li>
+                        <li>
+                            <a href="#"><span>JP</span> 日本語 </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    <a href="../index.html"><img src="/w0310/70_pf/srt/images/nav/logo.png" alt="상단로고" /></a>
+                </div>
+                <div class="icons">
+                    <a href="#"><img src="/w0310/70_pf/srt/images/nav/login.png" alt="로그인 페이지 이동 아이콘" /></a>
+                    <a href="#"><img src="/w0310/70_pf/srt/images/nav/guest.png" alt="회원가입 페이지 이동 아이콘" /></a>
+                    <a href="#"><img src="/w0310/70_pf/srt/images/nav/Search.png" alt="검색 페이지 이동 아이콘" /></a>
+                    <a href="#"><img src="/w0310/70_pf/srt/images/nav/hamburger_btn.png" alt="사이트맵 아이콘" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav_out">
+            <div class="nav">
+                <div class="nav_bg"></div>
+                <nav class="gnb">
+                    <ul class="main">
+                        <li><a href="/w0310/70_pf/srt/sub/ticket_search.html">승차권</a>
+                            <ul class="sub">
+                                <li><a href="/w0310/70_pf/srt/sub/ticket_search.html">승차권 예매</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/ticket_manage.html">승차권 확인</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용안내</a>
+                            <ul class="sub">
+                                <li><a href="#">역 안내</a></li>
+                                <li><a href="#">노선 안내</a></li>
+                                <li><a href="#">운임 안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/w0310/70_pf/srt/sub/notice_list.html">고객서비스</a>
+                            <ul class="sub">
+                                <li><a href="/w0310/70_pf/srt/sub/notice_list.html">공지사항</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/faq_list.html">자주 찾는 질문</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/cs.html">고객센터</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/lostfound.html">유실물 신고 안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/w0310/70_pf/srt/sub/trip_best.html">여행상품</a>
+                            <ul class="sub">
+                                <li><a href="/w0310/70_pf/srt/sub/trip_best.html">SRT 여행상품</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 서브 헤더 -->
+    <section id="subtitle">
+        <div class="subtitle">
+            <h2>운임 안내</h2>
+        </div>
+        <div class="submenu_bar">
+            <div class="sub_inner">
+                <a href="#" class="home"><img src="/w0310/70_pf/srt/images/sub/home.png" alt="" />홈</a>
+                <div class="menu">
+                    <a href="#">이용안내<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                </div>
+                <div class="menu">
+                    <a href="#">운임안내<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 서브페이지 내용 -->
+    <section id="container">
+        <div class="tabs">
+            <input type="radio" name="tab" id="tab1" checked>
+            <label for="tab1">운임안내</label>
+            <div class="tab1 tab-con">
+                <div class="back">
+                    <p>여행 경로를 선택하시면 운임을 확인하실 수 있습니다.</p>
+
+                    <div class="fare-search-bar">
+                        <div class="fare-search-item">
+                            <label for="departure">출발역</label>
+                            <input type="text" id="departure" placeholder="출발역 선택" readonly>
+                        </div>
+                        <div class="fare-search-item">
+                            <label for="arrival">도착역</label>
+                            <input type="text" id="arrival" placeholder="도착역 선택">
+                        </div>
+                        <div class="fare-search-item">
+                            <label for="date">일정</label>
+                            <input type="date" id="date">
+                        </div>
+                        <button class="fare-search-btn">조회</button>
+                    </div>
+
+                    <!-- 출발역 선택 모달 -->
+                    <div id="station-modal" class="station-modal">
+                        <div class="station-modal-content">
+                            <div class="station-modal-header">
+                                <span>출발역을 선택하세요.</span>
+                                <button id="close-modal" class="close-btn">&times;</button>
+                            </div>
+                            <ul class="station-list">
+                                <li>수서</li>
+                                <li>동탄</li>
+                                <li>지제</li>
+                                <li>천안아산</li>
+                                <li>오송</li>
+                                <li>대전</li>
+                                <li>김천(구미)</li>
+                                <li>동대구</li>
+                                <li>신경주</li>
+                                <li>울산</li>
+                                <li>부산</li>
+                                <li>광주송정</li>
+                                <li>여수EXPO</li>
+                                <li>창원</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cost">
+                    <h3>주요 노선 안내</h3>
+                    <div class="box1">
+                        <div class="box">
+                            <div class="station">
+                                <div class="station_inner">
+                                    <span>수서</span>
+                                    <img src="/w0310/70_pf/srt/images/cost/Group.png" alt="왕복 노선 아이콘">
+                                    <span>부산</span>
+                                </div>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">76,500원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">76,500원</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="station">
+                                <div class="station_inner">
+                                    <span>수서</span>
+                                    <img src="/w0310/70_pf/srt/images/cost/Group.png" alt="왕복 노선 아이콘">
+                                    <span>동대구</span>
+                                </div>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">54,200원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">37,400원</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="station">
+                                <div class="station_inner">
+                                    <span>수서</span>
+                                    <img src="/w0310/70_pf/srt/images/cost/Group.png" alt="왕복 노선 아이콘">
+                                    <span>광주송정</span>
+                                </div>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">59,000원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">40,700원</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <div class="box">
+                            <div class="station">
+                                <span>수서</span>
+                                <img src="/w0310/70_pf/srt/images/cost/Group.png" alt="왕복 노선 아이콘">
+                                <span>여수EXPO</span>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">63,500원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">43,800원</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="station">
+                                <span>수서</span>
+                                <img src="/w0310/70_pf/srt/images/cost/Group.png" alt="왕복 노선 아이콘">
+                                <span>울산</span>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">67,900원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">46,800원</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="station">
+                                <span>수서</span>
+                                <img src="/w0310/70_pf/srt/images/cost/Group.png" alt="왕복 노선 아이콘">
+                                <span>창원</span>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">67,400원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">46,500원</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box1">
+                        <div class="box">
+                            <div class="station">
+                                <span>동탄</span>
+                                <img src="/w0310/70_pf/srt/images/cost/Group.png" alt="왕복 노선 아이콘">
+                                <span>부산</span>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">69,700원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">48,100원</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="station">
+                                <span>수서</span>
+                                <img src="/w0310/70_pf/srt/images/cost/Group.png" alt="왕복 노선 아이콘">
+                                <span>대전</span>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">29,100원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">20,100원</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="station">
+                                <span>천안아산</span>
+                                <img src="/w0310/70_pf/srt/images/cost/Group.png" alt="왕복 노선 아이콘">
+                                <span>여수EXPO</span>
+                            </div>
+                            <div class="cost1">
+                                <span class="seat">특실</span>
+                                <span class="price">47,700원</span>
+                            </div>
+                            <div class="cost2">
+                                <span class="seat">일반실</span>
+                                <span class="price2">32,900원</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="radio" name="tab" id="tab2">
+            <label for="tab2">변경/취소 수수료</label>
+            <div class="tab2 tab-con">
+                <div class="notice">
+                    <div class="ticket">
+                        <h3>구입처</h3>
+                        <ul>
+                            <li>
+                                <p>홈페이지 <span class="link"><a href="http://www.srail.or.kr">www.srail.or.kr</a></span>
+                                    또는 <span class="link"><a href="https://etk.srail.kr/main.do">etk.srail.kr</a></span>
+                                </p>
+                            </li>
+                            <li>
+                                <p>SRT앱</p>
+                            </li>
+                            <li>
+                                <p>승차권 자동발매기</p>
+                            </li>
+                            <li>
+                                <p>역 (전용역, 공용역 포함)</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="refund">
+                        <h3>환불</h3>
+                        <ul>
+                            <li>
+                                <p>
+                                    인터넷(SR홈페이지), 모바일(SRT앱, SRTPlay)에서 발행 받은 승차권의 운임·요금 환불은 승차권에 기재된 출발역 출발 전까지 인터넷과
+                                    모바일로 직접 환불하실
+                                    수 있습니다.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    승차권에 표기된 열차 출발시각 이후에는 역 창구에서만 환불이 가능합니다. (단, SRT앱에서 구매한 승차권의 경우 열차 출발 후 10분까지
+                                    SRT앱에서 환불
+                                    가능합니다.)
+                                </p>
+                            </li>
+                            <li>
+                                <p>승차권에 표기된 도착역 도착시각 이후에는 환불 하실 수 없습니다.</p>
+                            </li>
+                            <li>
+                                <p>구입한 승차권을 환불하는 경우 환불시점에 따른 위약금이 발생합니다.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="table-container">
+                        <!-- 일반 승차권 -->
+                        <div class="fare-box">
+                            <table class="custom-table">
+                                <h3>일반 승차권</h3>
+                                <tr class="fzbig">
+                                    <th rowspan="2">구분</th>
+                                    <th colspan="4">출발 전</th>
+                                    <th colspan="3">출발 후</th>
+                                </tr>
+                                <tr>
+                                    <th>1개월~ <br>출발 2일 전까지</th>
+                                    <th>출발 1시간 전까지</th>
+                                    <th>출발 당일<br>~ 3시간 전까지</th>
+                                    <th>출발 3시간 전<br>~ 출발시간 전까지</th>
+                                    <th>20분 경과</th>
+                                    <th>20분 경과<br>~ 60분까지</th>
+                                    <th>60분 경과<br>~ 도착시각 까지</th>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="fzbig2">주중 <br> ( 월 ~ 목 )</td>
+                                    <td colspan="3">무료</td>
+                                    <td>5%</td>
+                                    <td>15%</td>
+                                    <td>40%</td>
+                                    <td>70%</td>
+                                </tr>
+                                <tr>
+                                    <td class="fzbig2">주말<br>( 금 ~ 일, 공휴일 )</td>
+                                    <td colspan="2">최저위약금 <br>( 구매일 포함 7일 이내 환불 시 감면 )</td>
+                                    <td>5%</td>
+                                    <td>20%</td>
+                                    <td>30%</td>
+                                    <td>40%</td>
+                                    <td>70%</td>
+                                </tr>
+
+                            </table>
+                            <p class="money">*최저위약금: 400원</p>
+                        </div>
+                        <!-- 명절 승차권 -->
+                        <div class="fare-box">
+                            <h3>명절 승차권</h3>
+                            <table class="custom-table">
+                                <tr class="fzbig">
+                                    <th rowspan="2">구분</th>
+                                    <th colspan="4">출발 전</th>
+                                    <th colspan="3">출발 후</th>
+                                </tr>
+                                <tr>
+                                    <th>1개월 ~ <br>
+                                        출발 2일 전까지
+                                    </th>
+                                    <th>출발 1일 전까지</th>
+                                    <th>출발 당일 <br> ~ 3시간 전까지</th>
+                                    <th>출발 3시간 전 <br> ~ 출발시간 전까지</th>
+                                    <th>20분까지</th>
+                                    <th>20분 경과 <br> ~60분까지</th>
+                                    <th>60분 경과 <br> ~도착시간까지</th>
+                                </tr>
+
+                                <tr>
+                                    <td class="fzbig2">명절(설, 추석)</td>
+                                    <td>400원 <br>
+                                        (구매일 포함 7일 <br> 이내 환불 시 감면)
+                                    </td>
+                                    <td>5% <br>
+                                        (구매일 포함 7일 <br> 이내 환불 시 감면)
+                                    </td>
+                                    <td>10%</td>
+                                    <td>20%</td>
+                                    <td>30%</td>
+                                    <td>40%</td>
+                                    <td>70%</td>
+                                </tr>
+
+                            </table>
+                        </div>
+
+                        <div class="fare-box">
+                            <h3>단체 승차권</h3>
+                            <table class="custom-table">
+                                <tr class="fzbig">
+                                    <th rowspan="2">구분</th>
+                                    <th colspan="2">출발 전</th>
+                                    <th colspan="3">출발 후</th>
+                                </tr>
+                                <tr>
+                                    <th>출발 2일 전까지</th>
+                                    <th>출발 1일 전부터 <br>~ 출발시각 전까지</th>
+                                    <th>20분까지</th>
+                                    <th>20분 경과 <br>~ 60분까지</th>
+                                    <th>60분 경과 <br>~ 도착시간까지</th>
+                                </tr>
+
+                                <tr>
+                                    <td class="fzbig2">월 ~ 일(전요일)</td>
+                                    <td>400원X인원수</td>
+                                    <td>10%</td>
+                                    <td>15%</td>
+                                    <td>40%</td>
+                                    <td>70%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer id="footer">
+        <div class="fupper">
+            <!-- footer 윗부분 -->
+            <div class="inner">
+                <div class="rule">
+                    <ul>
+                        <li>
+                            <a href="https://www.srail.or.kr/cms/archive.do?pageId=KR9903000000">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="https://etk.srail.kr/cms/archive.do?pageId=TK0501010000">고객서비스헌장</a>
+                        </li>
+                        <li>
+                            <a href="https://etk.srail.kr/cms/archive.do?pageId=TK0501020000">여객운송약관/부속약관</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sns">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="/w0310/70_pf/srt/images/footer/facebook.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/w0310/70_pf/srt/images/footer/instagram.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/w0310/70_pf/srt/images/footer/line.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/w0310/70_pf/srt/images/footer/kakao_channel.png" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="/w0310/70_pf/srt/images/footer/band.png" alt="" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of .sns -->
+            </div>
+            <!-- end of .fupper .inner -->
+        </div>
+        <!-- end of .fupper -->
+
+        <div class="flower">
+            <div class="inner">
+                <div class="left">
+                    <div class="blogo">
+                        <img src="/w0310/70_pf/srt/images/footer/blogo.png" alt="blogo" />
+                    </div>
+                    <!-- end of .blogo -->
+                    <p>
+                        대표자 : 이종국 ㅣ 상호: 주식회사 에스알 ㅣ
+                        사업자등록: 305-86-31590 ㅣ 통신판매업신고:
+                        2016-서울강남-03705호<br />
+                        (우: 06367) 서울특별시 강남구 광평로 56길 12
+                        희림빌딩 | TEL. 1800-1472 l FAX. 6484-4093<br />
+                        Copyright 2018. SR Inc. All rights reserved.
+                    </p>
+                </div>
+                <!-- end of left -->
+
+                <div class="right">
+                    <div class="fs">
+                        <form action="#">
+                            <select name="fs" id="fs">
+                                <option value="">유관기관 바로가기</option>
+                                <option value="">코레일</option>
+                                <option value="">국토교통부</option>
+                            </select>
+                        </form>
+                    </div>
+                    <!-- end of .fs -->
+
+                    <div class="ads">
+                        <ul>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=76&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad1.png" alt="ad1" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=91&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad2.png" alt="ad2" /></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/w0310/70_pf/srt/images/footer/ad3.png" alt="ad3" /></a>
+                            </li>
+                            <li>
+                                <a href="https://partners.srail.or.kr/login.do"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad4.png" alt="ad4" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=536&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad5.png" alt="ad5" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=359&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad6.png" alt="ad6" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=358&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad7.png" alt="ad7" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=365&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad8.png" alt="ad8" /></a>
+                            </li>
+                            <li>
+                                <a href="https://etk.srail.kr/cms/article/view.do?postNo=393&pageId=TK0502000000"><img
+                                        src="/w0310/70_pf/srt/images/footer/ad9.png" alt="ad9" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end .ads -->
+                </div>
+                <!-- end of right -->
+            </div>
+            <!-- end of .flower .inner -->
+        </div>
+        <!-- end of .flower -->
+    </footer>
+</body>
+
+</html>
