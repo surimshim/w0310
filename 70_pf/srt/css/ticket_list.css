@@ -1,5 +1,152 @@
 @charset "utf-8";
 
+.modal {
+    z-index: 9999;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    width: 1200px;
+    margin: 5% auto;
+    background: #fff;
+    overflow: auto;
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 70px;
+    background: #fff;
+    border-bottom: 1px solid #b5b5b6;
+}
+
+.modal h2 {
+    text-align: left;
+}
+
+#modal_station .station {
+    margin: 40px;
+    font-size: 16px;
+}
+
+#modal_station #search {
+    width: 690px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#modal_station .search_btn {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    background: #4b2f48;
+    border-style: none;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#modal_station h3 {
+    text-align-last: left;
+    margin: 40px 200px 10px;
+}
+
+#modal_station .station_list {
+    width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 한 줄에 5개 */
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#modal_station .station_list button {
+    width: 150px;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px 0;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #b5b5b6;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#modal_station .station_list button:hover {
+    border: 1px solid transparent;
+    outline: 1px solid #4b2f48;
+}
+
+#modal_date .date {
+    margin: 40px;
+    font-size: 16px;
+}
+
+#modal_date .date input {
+    margin-right: 10px;
+}
+
+#modal_person .person {
+    margin: 40px;
+    font-size: 16px;
+}
+
+#modal_person select {
+    margin-right: 20px;
+}
+
+#modal_seat .train_num {
+    margin: 30px 0;
+}
+
+#modal_seat img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.cancel_btn {
+    width: 150px;
+    height: 45px;
+    padding-bottom: 3px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-style: none;
+    background: #fff;
+    color: #4b2f48;
+    border: 1px solid #b5b5b6;
+    margin-right: 10px;
+}
+
+.apply_btn {
+    width: 150px;
+    height: 45px;
+    padding-bottom: 3px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-style: none;
+    background: #4b2f48;
+    color: #fff;
+}
+
 .top {
     height: 180px;
     background: rgba(181, 181, 181, 0.2);

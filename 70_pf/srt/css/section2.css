@@ -2,7 +2,7 @@
 
 #section2 {
     position: relative;
-    top: 150px;
+    top: 140px;
     height: 100vh;
     width: 100%;
     text-align: center;
@@ -11,6 +11,7 @@
     transition: background 0.5s;
     /* background: #3498db; */
 }
+
 
 /* 섹션타이틀 */
 .section2_title {
@@ -62,14 +63,14 @@
 .arrow_left {
     position: absolute;
     z-index: 1;
-    top: 360px;
+    top: 380px;
     left: 334px;
 }
 
 .arrow_right {
     position: absolute;
     z-index: 1;
-    top: 360px;
+    top: 380px;
     right: 345px;
 }
 
@@ -93,7 +94,8 @@
     position: relative;
     width: 1205px;
     overflow: hidden;
-    height: 540px;
+    height: 600px;
+    padding-top: 20px;
     margin: 0 auto;
     margin-top: 50px;
     background: #fff;
@@ -150,6 +152,17 @@
 .tour_way {
     font-size: 16px;
     color: #888;
+}
+
+.tour_carousel_contents {
+    position: relative;
+    z-index: 999;
+    transition: .3s;
+
+}
+
+.tour_carousel_contents:hover {
+    transform: translateY(-10px);
 }
 
 

@@ -12,7 +12,7 @@
 
     <script src="/w0310/70_pf/srt/script/jquery-3.7.1.js"></script>
     <script src="/w0310/70_pf/srt/script/sub.js"></script>
-    <script src="/w0310/70_pf/srt/script/ticket.js"></script>
+    <script src="/w0310/70_pf/srt/script/ticket_list.js"></script>
 </head>
 
 <body>
@@ -130,6 +130,191 @@
             </div>
         </div>
 
+        <div class="modal" id="modal_station">
+            <div class="popup">
+                <div class="title">
+                    <h2>기차역 조회</h2>
+                    <div class="close_btn">
+                        <a href="#"><img src="/w0310/70_pf/srt/images/section1/close.png" alt="닫기" /></a>
+                    </div>
+                </div>
+                <div class="station">
+                    <input type="text" id="search" placeholder="역 이름 검색">
+                    <button type="button" class="search_btn">검색</button>
+                </div>
+                <h3>주요 역</h3>
+                <div class="station_list">
+                    <button>수서</button>
+                    <button>동탄</button>
+                    <button>평택지제</button>
+                </div>
+                <h3>전체 역</h3>
+                <div class="station_list">
+                    <button>경주</button>
+                    <button>곡성</button>
+                    <button>광주송정</button>
+                    <button>구례구</button>
+                    <button>김천구미</button>
+                    <button>나주</button>
+                    <button>남원</button>
+                    <button>대전</button>
+                    <button>동대구</button>
+                    <button>마산</button>
+                    <button>목포</button>
+                    <button>밀양</button>
+                    <button>부산</button>
+                    <button>서대구</button>
+                    <button>순천</button>
+                    <button>여수EXPO</button>
+                    <button>여천</button>
+                    <button>오송</button>
+                    <button>울산(통도사)</button>
+                    <button>익산</button>
+                    <button>전주</button>
+                    <button>정읍</button>
+                    <button>진영</button>
+                    <button>진주</button>
+                    <button>창원</button>
+                    <button>창원중앙</button>
+                    <button>천안아산</button>
+                    <button>포항</button>
+                </div>
+                <button type="button" class="cancel_btn">취소</button>
+                <button type="button" class="apply_btn">적용</button>
+            </div>
+        </div>
+
+        <div class="modal" id="modal_date">
+            <div class="popup">
+                <div class="title">
+                    <h2>날짜 선택</h2>
+                    <div class="close_btn">
+                        <a href="#"><img src="/w0310/70_pf/srt/images/section1/close.png" alt="닫기" /></a>
+                    </div>
+                </div>
+                <div class="date">
+                    <label for="date">출발일: </label>
+                    <input type="date" id="date" value="2025-06-26" />
+                    <label for="time">시간: </label>
+                    <input type="time" id="time" value="16:00" />
+                </div>
+                <button type="button" class="cancel_btn">취소</button>
+                <button type="button" class="apply_btn">적용</button>
+            </div>
+        </div>
+
+        <div class="modal" id="modal_person">
+            <div class="popup">
+                <div class="title">
+                    <h2>인원 선택</h2>
+                    <div class="close_btn">
+                        <a href="#"><img src="/w0310/70_pf/srt/images/section1/close.png" alt="닫기" /></a>
+                    </div>
+                </div>
+                <div class="person">
+                    <span>어른 (만 13세 이상) </span>
+                    <select name="person" id="adult">
+                        <option value="1">1명</option>
+                        <option value="1">2명</option>
+                        <option value="1">3명</option>
+                        <option value="1">4명</option>
+                        <option value="1">5명</option>
+                        <option value="1">6명</option>
+                        <option value="1">7명</option>
+                        <option value="1">8명</option>
+                        <option value="1">9명</option>
+                    </select>
+                    <span>어린이 (만 6~12세) </span>
+                    <select name="person" id="children">
+                        <option value="1">1명</option>
+                        <option value="1">2명</option>
+                        <option value="1">3명</option>
+                        <option value="1">4명</option>
+                        <option value="1">5명</option>
+                        <option value="1">6명</option>
+                        <option value="1">7명</option>
+                        <option value="1">8명</option>
+                        <option value="1">9명</option>
+                    </select>
+                </div>
+                <button type="button" class="cancel_btn">취소</button>
+                <button type="button" class="apply_btn">적용</button>
+            </div>
+        </div>
+
+        <div class="modal" id="modal_seat">
+            <div class="popup">
+                <div class="title">
+                    <h2>좌석 선택</h2>
+                    <div class="close_btn">
+                        <a href="#"><img src="/w0310/70_pf/srt/images/section1/close.png" alt="닫기" /></a>
+                    </div>
+                </div>
+                <div class="train_num">
+                    <select name="train" id="number">
+                        <option value="1">1호차(일반실)</option>
+                        <option value="1">2호차(일반실)</option>
+                        <option value="1">3호차(특실)</option>
+                        <option value="1">4호차(일반실)</option>
+                        <option value="1">5호차(일반실)</option>
+                        <option value="1">6호차(일반실)</option>
+                        <option value="1">7호차(일반실)</option>
+                        <option value="1">8호차(일반실)</option>
+                    </select>
+                </div>
+                <img src="/w0310/70_pf/srt/images/ticket/seats.jpg" alt="">
+                <div class="next_btn"><a href="">선택좌석 예약하기</a></div>
+            </div>
+        </div>
+
+        <div class="modal" id="modal_pay">
+            <div class="popup">
+                <div class="title">
+                    <h2>결제하기</h2>
+                    <div class="close_btn">
+                        <a href="#"><img src="/w0310/70_pf/srt/images/section1/close.png" alt="닫기" /></a>
+                    </div>
+                </div>
+                <div class="top">
+                    <p>2025-07-07(월)</p>
+                    <div id="station">
+                        <div class="left">
+                            <h3>수서</h3>
+                            <p>12:28</p>
+                        </div>
+                        <img src="/w0310/70_pf/srt/images/ticket/arrow.png" alt="화살표">
+                        <div class="right">
+                            <h3>부산</h3>
+                            <p>14:56</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div>
+                        <p>열차번호</p>
+                        <h4>SRT 331</h4>
+                    </div>
+                    <div>
+                        <p>인원</p>
+                        <h4>어른 1</h4>
+                    </div>
+                    <div>
+                        <p>좌석등급</p>
+                        <h4>일반실</h4>
+                    </div>
+                    <div>
+                        <p>좌석번호</p>
+                        <h4>1호차 3A</h4>
+                    </div>
+                </div>
+                <h3><span>최종 결제금액</span>51,800원</h3>
+            </div>
+
+            <button type="button" class="apply_btn">결제하기</button>
+            <button type="button" class="cancel_btn">좌석 변경하기</button>
+        </div>
+        </div>
+
         <!-- 열차 시간표 -->
         <table class="timetable">
             <colgroup>
@@ -174,7 +359,7 @@
                             <p>예약하기</p>
                         </a>
                     </td>
-                    <td>
+                    <td class="col-discount">
                         <a href="#">
                             <h3>51,800원</h3>
                             <p>예약하기</p>
@@ -204,7 +389,7 @@
                             <p>예약하기</p>
                         </a>
                     </td>
-                    <td>
+                    <td class="col-discount">
                         <a href="#">
                             <h3>51,800원</h3>
                             <p>예약하기</p>
@@ -234,7 +419,7 @@
                             <p>예약하기</p>
                         </a>
                     </td>
-                    <td>
+                    <td class="col-discount">
                         <a href="#">
                             <h3>51,800원</h3>
                             <p>예약하기</p>
@@ -264,7 +449,7 @@
                             <p>예약하기</p>
                         </a>
                     </td>
-                    <td>
+                    <td class="col-discount">
                         <a href="#">
                             <h3>51,800원</h3>
                             <p>예약하기</p>
@@ -294,7 +479,7 @@
                             <p>예약하기</p>
                         </a>
                     </td>
-                    <td>
+                    <td class="col-discount">
                         <a href="#">
                             <h3>51,800원</h3>
                             <p>예약하기</p>
@@ -324,7 +509,7 @@
                             <p>예약하기</p>
                         </a>
                     </td>
-                    <td>
+                    <td class="col-discount">
                         <a href="#">
                             <h3>51,800원</h3>
                             <p>예약하기</p>
@@ -354,7 +539,7 @@
                             <p>예약하기</p>
                         </a>
                     </td>
-                    <td>
+                    <td class="col-discount">
                         <a href="#">
                             <h3>51,800원</h3>
                             <p>예약하기</p>
@@ -384,7 +569,7 @@
                             <p>예약하기</p>
                         </a>
                     </td>
-                    <td>
+                    <td class="col-discount">
                         <a href="#">
                             <h3>51,800원</h3>
                             <p>예약하기</p>
@@ -414,7 +599,7 @@
                             <p>예약하기</p>
                         </a>
                     </td>
-                    <td>
+                    <td class="col-discount">
                         <a href="#">
                             <h3>51,800원</h3>
                             <p>예약하기</p>
@@ -444,7 +629,7 @@
                             <p>예약하기</p>
                         </a>
                     </td>
-                    <td>
+                    <td class="col-discount">
                         <a href="#">
                             <h3>51,800원</h3>
                             <p>예약하기</p>

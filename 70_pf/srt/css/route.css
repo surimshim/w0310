@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+.route_container {
+  position: relative;
+  /* height: 1500px;  */
+  margin: 0 auto;
+  border: 1px solid #b5b5b6;
+}
+
+.route_tabs {
+  display: flex;
+  margin: 20px;
+}
+
+.route_tabs .tab {
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #d5d5d5;
+  text-align: center;
+  /* background: #f4f4f4; */
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.route_tabs .active {
+  background: #572b4c;
+}
+
+.route_tabs .active a {
+  color: #fff;
+}
+
+.map_container img {
+  background: cyan;
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  display: none;
+  /* margin-left: 80px; */
+}
+
+.map_container img.active {
+  display: block;
+}
+
+.map_legend {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  margin-top: 20px;
+}
+
+.map_legend li {
+  display: block;
+  width: 150px;
+  height: 40px;
+  line-height: 18px;
+  text-indent: 10px;
+  border: 1px solid #d5d5d5;
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.map_legend img {
+  margin-right: 18px;
+}
+
+
+
+/* 푸터 */
