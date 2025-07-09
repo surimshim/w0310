@@ -2,7 +2,7 @@
 
 #header {
     width: 100%;
-    height: 140px;
+    height: 70px;
     background: #fff;
     z-index: 999;
 }
@@ -74,90 +74,43 @@
     margin-right: 30px;
 }
 
-.nav {
-    position: relative;
-    border-bottom: 1px solid #ddd;
+.title {
+    width: 100%;
     height: 70px;
-    z-index: 999;
+    text-align: center;
+    line-height: 70px;
+    color: #fff;
+    background: #4b2f48;
+    font-size: 20px;
 }
 
-.gnb {
+.menu {
     width: 1200px;
-    height: 70px;
     margin: 0 auto;
 }
 
-.main {
+.menu .main {
     display: flex;
     justify-content: center;
-    gap: 120px;
     text-align: center;
 }
 
-.main>li {
-    position: relative;
-    width: 180px;
-}
-
-.main>li>a {
-    display: inline-block;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 18px 10px;
-    position: relative;
-}
-
-.main>li>a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0px;
-    height: 4px;
-    background: #c8b158;
-}
-
-.main>li:hover>a::after {
-    width: 100%;
-}
-
-.sub {
-    position: absolute;
-    width: 180px;
-    height: 0;
-    overflow: hidden;
-    transition: 0.3s;
-    z-index: 999;
-}
-
-.nav:hover .sub {
-    padding-top: 10px;
-    height: 220px;
-}
-
-.nav_bg {
-    background: rgba(255, 255, 255, 0.9);
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    height: 0;
-    z-index: 998;
-    transition: 0.3s;
-}
-
-.nav:hover .nav_bg {
-    height: 220px;
-}
-
-.sub li a {
+.main>li>span {
     display: block;
-    margin-top: 10px;
-    text-align: center;
-    font-size: 16px;
-    line-height: 2.4;
+    width: 300px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #b5b5b6;
+    margin-bottom: 10px;
 }
 
-.sub li a:hover {
+.sub a {
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.sub a:hover {
     text-decoration: underline;
 }

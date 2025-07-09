@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단 로그인 시스템</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        span {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="user_pw">
+    <button id="login_btn">로그인</button>
+    <a href="#">임시 링크, 현재 페이지 위로 이동</a>
+    <a href="https://fs-class.github.io/w0310">나의 사이트로 이동하기</a>
+
+    <script>
+        const user_pw = $('#user_pw');
+        const login_btn = $('#login_btn');
+        console.log(user_pw);
+
+        login_btn.click(() => {
+            const pw_val = user_pw.val();
+            console.log(user_pw.val());
+
+            if (pw_val === "1234") {
+                location.replace("https://surimshim.github.io/w0310");
+            }
+            else {
+                alert("잘못 입력하셨습니다. 다시 입력해주세요.")
+            }
+        })
+
+    </script>
+</body>
+
+</html>

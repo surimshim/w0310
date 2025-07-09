@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #outer {
+            background: #ff0000;
+            padding: 20px;
+        }
+        #inner {
+            background: #008000;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <p id="inner">클릭</p>
+    </div>
+    <script>
+        /* 
+            메서드
+                event.stopPropagation();
+                    -> Propagation 뜻? 번식, 전파
+                    -> 이벤트 전파 방지
+                    -> 이벤트 버블(bubble)링? 자식->부모로 이벤트 전파
+                    -> 자식 요소의 이벤트를 실행하였을 때 부모 요소의 이벤트도 같이 실행되는 현상
+                    -> 이벤트 캡처링? 부모->자식로 이벤트 전파  
+        */
+
+        // 객체 찾기
+        const outer = document.getElementById('outer');
+        const inner = document.getElementById('inner');
+
+        // 이벤트
+        outer.onclick = function(){
+            alert('부모를 클릭하였습니다.');
+        };
+        inner.onclick = function(){
+            alert('자식를 클릭하였습니다.');
+            event.stopPropagation();
+        };
+
+    </script>
+</body>
+
+</html>

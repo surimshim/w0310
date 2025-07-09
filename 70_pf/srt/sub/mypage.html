@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>회원가입</title>
+    <title>서브페이지</title>
 
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/reset.css" />
     <link rel="stylesheet" href="/w0310/70_pf/srt/css/sub.css" />
-    <link rel="stylesheet" href="/w0310/70_pf/srt/css/join-3.css" />
+    <link rel="stylesheet" href="/w0310/70_pf/srt/css/mypage.css" />
 
     <script src="/w0310/70_pf/srt/script/jquery-3.7.1.js"></script>
+    <script src="/w0310/70_pf/srt/script/sub.js"></script>
 </head>
 
 <body>
@@ -37,15 +38,18 @@
                     </ul>
                 </div>
                 <div class="logo">
-                    <a href="../index.html"><img src="/w0310/70_pf/srt/images/nav/logo.png" alt="상단로고" /></a>
+                    <a href="/w0310/70_pf/srt/index.html"><img src="/w0310/70_pf/srt/images/nav/logo.png"
+                            alt="상단로고" /></a>
                 </div>
                 <div class="icons">
                     <a href="/w0310/70_pf/srt/sub/login.html"><img src="/w0310/70_pf/srt/images/nav/login.png"
                             alt="로그인 페이지 이동 아이콘" /></a>
                     <a href="/w0310/70_pf/srt/sub/join-1.html"><img src="/w0310/70_pf/srt/images/nav/guest.png"
                             alt="회원가입 페이지 이동 아이콘" /></a>
-                    <a href="#"><img src="/w0310/70_pf/srt/images/nav/Search.png" alt="검색 페이지 이동 아이콘" /></a>
-                    <a href="#"><img src="/w0310/70_pf/srt/images/nav/hamburger_btn.png" alt="사이트맵 아이콘" /></a>
+                    <a href="/w0310/70_pf/srt/sub/mypage.html"><img src="/w0310/70_pf/srt/images/nav/mypage.png"
+                            alt="마이페이지 이동 아이콘" /></a>
+                    <a href="/w0310/70_pf/srt/sub/sitemap.html"><img src="/w0310/70_pf/srt/images/nav/hamburger_btn.png"
+                            alt="사이트맵 아이콘" /></a>
                 </div>
             </div>
         </div>
@@ -61,10 +65,10 @@
                                 <li><a href="/w0310/70_pf/srt/sub/ticket_manage.html">승차권 확인</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">이용안내</a>
+                        <li><a href="/w0310/70_pf/srt/sub/station_suseo.html">이용안내</a>
                             <ul class="sub">
-                                <li><a href="#">역 안내</a></li>
-                                <li><a href="#">노선 안내</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/station_suseo.html">역 안내</a></li>
+                                <li><a href="/w0310/70_pf/srt/sub/route.html">노선 안내</a></li>
                                 <li><a href="/w0310/70_pf/srt/sub/cost.html">운임 안내</a></li>
                             </ul>
                         </li>
@@ -90,16 +94,16 @@
     <!-- 서브 헤더 -->
     <section id="subtitle">
         <div class="subtitle">
-            <h2>회원가입</h2>
+            <h2>서브페이지 타이틀</h2>
         </div>
         <div class="submenu_bar">
             <div class="sub_inner">
                 <a href="#" class="home"><img src="/w0310/70_pf/srt/images/sub/home.png" alt="" />홈</a>
                 <div class="menu">
-                    <a href="#">SR회원<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">승차권<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
                 <div class="menu">
-                    <a href="#">회원가입<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
+                    <a href="#">승차권 예매<img src="/w0310/70_pf/srt/images/sub/arrow-down.png" alt="화살표" /></a>
                 </div>
             </div>
         </div>
@@ -107,57 +111,188 @@
 
     <!-- 서브페이지 내용 -->
     <section id="container">
-        <div class="step">
-            <div class="step1">
-                <img src="/w0310/70_pf/srt/images/join/step1_gray.png" alt="회원가입 동의/ 정보입력 아이콘">
-                <div class="write">
-                    <h3>STEP 1</h3>
-                    <P>회원약관 동의/정보입력</P>
+        <div class="contents">
+            <h3>개인정보수정</h3>
+            <form action="#" , method="post">
+                <div class="container">
+                    <div class="form-row">
+                        <div class="name">
+                            <div class="label">이름</div>
+                        </div>
+                        <div class="content">홍길동</div>
+                    </div>
+                    <div class="form-row">
+                        <div class="label">아이디</div>
+                        <div class="content">gildong123</div>
+                    </div>
+                    <div class="form-row">
+                        <div class="label">비밀번호</div>
+                        <div class="content">
+                            <button class="gray-btn" type="button">비밀번호 변경</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="right">
-                <img src="/w0310/70_pf/srt/images/join/right.png" alt="오른쪽 화살표">
-            </div>
-
-            <div class="step2">
-                <img src="/w0310/70_pf/srt/images/join/step2.png" alt="회원가입 동의/ 정보입력 아이콘">
-                <div class="write">
-                    <h3>STEP 2</h3>
-                    <P>기본정보입력</P>
+                <div class="form-row">
+                    <div class="label">이메일</div>
+                    <div class="content">
+                        <div class="flex-row">
+                            <input type="text" value="gildong123@gmail.com" readonly>
+                            <button class="gray-btn" type="button">이메일 변경</button>
+                        </div>
+                        <div class="radio-group">
+                            <label>이메일 수신여부</label>
+                            <label><input type="radio" name="emailAgree"> 예</label>
+                            <label><input type="radio" name="emailAgree" checked> 아니오</label>
+                        </div>
+                        <ul class="desc">
+                            <li> 이메일 미 등록시 승차권 예약완매 내역 메일 서비스에 제한 될 수 있습니다.</li>
+                            <li> 이메일 미 등록시 휴면고객 사전 알림 서비스에 제한 될 수 있습니다.</li>
+                            <li> 이메일 인증을 받으시면 SR 홈페이지 및 앱에서 이메일로 로그인하실 수 있습니다.</li>
+                            <li> 이메일 변경 시 인증을 통해서만 변경이 가능합니다.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            <div class="right">
-                <img src="/w0310/70_pf/srt/images/join/right.png" alt="오른쪽 화살표">
-            </div>
-
-            <div class="step3">
-                <img src="/w0310/70_pf/srt/images/join/step3_red.png" alt="회원가입 동의/ 정보입력 아이콘">
-                <div class="write">
-                    <h3>STEP 3</h3>
-                    <P>가입완료</P>
+                <div class="form-row">
+                    <div class="label">휴대전화번호</div>
+                    <div class="content">
+                        <div class="flex-row">
+                            <input type="text" value="010-1234-5678" readonly>
+                            <button class="gray-btn" type="button">휴대전화 인증</button>
+                        </div>
+                        <ul class="desc">
+                            <li> 휴대전화번호를 등록하시면 SR 홈페이지 및 앱에서 휴대전화번호로 로그인할 수 있습니다.</li>
+                            <li> 휴대전화번호 변경 시 인증을 통해서만 변경이 가능합니다.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="welcome">
-            <h2 class="complete">가입완료</h2>
-            <div class="welcome_img"><a href="#"><img src="/w0310/70_pf/srt/images/join/welcome.png"
-                        alt="회원가입 환영 사진"></a>
-            </div>
-
-            <div class="welcome_write">
-                <h2>환영합니다. <br>
-                    회원가입이 <span>완료</span>되었습니다.
-                </h2>
-                <p>SRT에서 제공되는 모든 서비스를 정상적으로 이용하실 수 있습니다.</p>
-            </div>
-
-            <div class="agree_btn">
-                <a href="/w0310/70_pf/srt/index.html">메인으로 돌아가기</a>
-                <a href="/w0310/70_pf/srt/login/login.html">로그인하기</a>
-            </div>
+                <div class="form-row">
+                    <div class="label">생년월일</div>
+                    <div class="content">
+                        <select>
+                            <option>년도</option>
+                            <option>1970</option>
+                            <option>1971</option>
+                            <option>1972</option>
+                            <option>1973</option>
+                            <option>1974</option>
+                            <option>1975</option>
+                            <option>1976</option>
+                            <option>1977</option>
+                            <option>1978</option>
+                            <option>1979</option>
+                            <option>1980</option>
+                            <option>1981</option>
+                            <option>1982</option>
+                            <option>1983</option>
+                            <option>1984</option>
+                            <option>1985</option>
+                            <option>1986</option>
+                            <option>1987</option>
+                            <option>1988</option>
+                            <option>1989</option>
+                            <option>1990</option>
+                            <option>1991</option>
+                            <option>1992</option>
+                            <option>1993</option>
+                            <option>1994</option>
+                            <option>1995</option>
+                            <option>1996</option>
+                            <option>1997</option>
+                            <option>1998</option>
+                            <option>1999</option>
+                            <option>2000</option>
+                            <option>2001</option>
+                            <option>2002</option>
+                            <option>2003</option>
+                            <option>2004</option>
+                            <option>2005</option>
+                            <option>2006</option>
+                            <option>2007</option>
+                            <option>2008</option>
+                            <option>2009</option>
+                            <option>2010</option>
+                            <option>2011</option>
+                            <option>2012</option>
+                            <option>2013</option>
+                            <option>2014</option>
+                            <option>2015</option>
+                            <option>2016</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                        </select>
+                        <select>
+                            <option>월</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
+                        <select>
+                            <option>일</option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="label">자택주소</div>
+                    <div class="content">
+                        <div class="flex-row">
+                            <input type="text">
+                            <button class="gray-btn">주소 검색</button>
+                        </div>
+                        <input type="text" class="full-input">
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="#">확인</a>
+                    <a href="#">취소</a>
+                </div>
+            </form>
         </div>
     </section>
 

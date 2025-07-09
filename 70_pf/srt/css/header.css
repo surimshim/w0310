@@ -70,9 +70,10 @@
 
 .logo {
     width: 140px;
+    margin-left: 60px;
 }
 
-.icons img {
+.icons a:not(:last-child) img {
     margin-right: 30px;
 }
 
