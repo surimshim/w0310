@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History객체</title>
+</head>
+
+<body>
+    <h1>홈</h1>
+    <button type="button" id="page1_go_btn">page1로 이동</button>
+    <button type="button" onclick="javascript:history.back()">back</button>
+    <button type="button" onclick="javascript:history.forward()">forward()</button>
+    <button type="button" onclick="javascript:history.go(2)">go(2)</button>
+    <button type="button" onclick="javascript:history.go(-2)">go(-2)</button>
+
+    <script>
+        /*
+            history 객체
+            : 페이지가 이동한 정보 관리하는 객체
+
+            메서드
+                back(): 이전 페이지로 이동
+                forward(): 이후 페이지로 이동
+                go(n): n이 양수면 이후 페이지, 음수면 이전 페이지로 이동
+        */
+
+        const page1_go_btn = document.getElementById('page1_go_btn');
+
+        page1_go_btn.onclick = () => location.href = "page1.html";
+    </script>
+</body>
+
+</html>
