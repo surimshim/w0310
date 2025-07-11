@@ -73,3 +73,33 @@
     color: #651E38;
     font-weight: bold;
 }
+
+/* 페이지 번호 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.page-btn {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.page-btn.active {
+    background-color: #4b2f48;
+    color: white;
+    border-color: #4b2f48;
+}
+
+.page-btn:hover {
+    background-color: #eee;
+}
+
+.page-btn.arrow {
+    font-weight: bold;
+}
