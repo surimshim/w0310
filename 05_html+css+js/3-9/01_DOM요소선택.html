@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 요소 선택</title>
+</head>
+
+<body>
+    <div id="box1">
+        <ul>
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+        </ul>
+    </div>
+    <div id="box2">
+        <ul>
+            <li>내용4</li>
+            <li>내용5</li>
+            <li>내용6</li>
+        </ul>
+    </div>
+
+    <script>
+        /*
+            DOM(Document Object Model, 문서 객체 모델)?
+            브라우저가 텍스트를 읽고, 각 태그를 객체로 만들어 트리처럼 구조화한 결과
+
+            <태그명 속성=값 class="값">내용</태그명>
+
+            어디에 사용?
+            1. HTML 동적 변경 - 태그, 속성, 값, 내용
+            2. CSS 변경 - DOM객체.style.속성 = 값
+            3. 이벤트 처리
+
+            document 객체 요소 선택 메서드
+                getElementById('아이디')
+                getElementsByClassName('클래스')
+                getElementsByTagName('태그이름')
+                getElementsByName('네임값')
+                querySelector('선택자'): 첫번째 요소만 선택
+                querySelectorAll('선택자')[idx]
+                querySelectorAll('선택자').item(idx)
+        */
+
+        const list1 = document.querySelector('#box1 > ul > li');
+        const list2 = document.querySelectorAll('#box2 > ul > li');
+        console.log(list1);
+        console.log(list2);
+
+        list1.style.background = "orange";
+        list2[0].style.background = "#ccc";
+        list2.item(1).style.background = "#ddd";
+    </script>
+</body>
+
+</html>

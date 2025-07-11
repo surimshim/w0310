@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 요소 삭제</title>
+    <style>
+        div {
+            position: fixed;
+            left: 100px;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <button>요소 생성</button>
+    <script>
+        /*
+            DOM 요소 제거
+            
+            메서드
+            부모요소.removeChild(자식요소) - 자식 요소를 제거
+        */
+
+        // 요소 생성
+        const btn = document.createElement('button');
+        const btn_name = document.createTextNode('요소 생성');
+
+        document.body.appendChild(btn);
+        btn.appendChild(btn_name);
+
+        // 요소 제거
+        document.body.removeChild(btn);
+
+        // 요소 찾아서 제거
+        const btn2 = document.querySelector('button');
+        document.body.removeChild(btn2);
+    </script>
+</body>
+
+</html>

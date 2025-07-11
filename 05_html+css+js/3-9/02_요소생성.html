@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 요소 생성</title>
+    <style>
+        div {
+            position: fixed;
+            left: 100px;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        /*
+            DOM 요소 생성
+            
+            메서드
+            createElement(요소) - 요소 노드 생성
+            createTextNode("텍스트") - 텍스트 노드 생성
+            부모요소.appendChild(자식요소) - 부모 요소에 자식 요소를 연결
+        */
+
+        // 요소 생성
+        const btn = document.createElement('button');
+        const btn_name = document.createTextNode('요소 생성');
+
+        document.body.appendChild(btn);
+        btn.appendChild(btn_name);
+    </script>
+</body>
+
+</html>

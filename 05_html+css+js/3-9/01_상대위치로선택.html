@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav id="gnb">
+        <ul>
+            <li class="first">내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+        </ul>
+    </nav>
+
+    <script>
+        /* 
+            DOM의 탐색
+            부모, 자식, 형제 관계 -> 상대 위치로 선택
+                요소.parentNode - 요소 부모 노드 선택
+                요소.childNode - 요소 자식 노드들(요소 노드, 텍스트 노드) 선택
+                요소.children - 요소 자식 노드들(요소 노드만) 선택
+        */
+        const gnb = document.getElementById('gnb');
+        console.log(gnb.parentNode); // body
+        console.log(gnb.children); // HTMLCollection [ul]
+        console.log(gnb.children[0]); // ul
+        console.log(gnb.children[0].children[0]); // <li class="first">
+        console.log(gnb.children[0].firstChild); // #text
+        console.log(gnb.children[0].lastChild); // #text
+        console.log(gnb.children[0].tagName); // ul
+
+        console.log(gnb.children[0].children[0].nextElementSibling); // 두번째 li
+        console.log(gnb.children[0].children[0].nodeType); // 1
+        console.log(gnb.children[0].children[0].firstChild); // 내용1
+        console.log(gnb.children[0].children[0].firstChild.nodeValue); // 내용1
+        console.log(gnb.children[0].children[1]); // 두번째 li
+        console.log(gnb.children[0].children[2].previousElementSibling); // 두번째 li
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <!-- 576이하 -->
+    <link rel="stylesheet" media="(max-width: 576px)" href="phone.css">
+    <!-- 576이상 992 이하 -->
+    <link rel="stylesheet" media="(min-width: 576px) and (max-width: 992px)" href="tablet.css">
+    <!-- 992이상 -->
+    <link rel="stylesheet" media="(min-width: 992px)" href="desktop.css">
+    <style>
+        /* 모바일 우선 */
+        /* 공통 -> 폰(767이하) */
+        body {
+            color: red;
+        }
+
+        @media (orientation: portrait) {
+            body {
+                background: skyblue;
+            }
+        }
+
+        @media (min-width: 768px) {
+
+            /* 768이상 -> tablet */
+            body {
+                color: blue;
+            }
+        }
+
+        @media (min-width: 1200px) {
+
+            /* 1200이상 -> desktop */
+            body {
+                color: green;
+            }
+        }
+
+        /* 데스크탑 우선 */
+        /* 공통 -> 데스크탑(1200이상) */
+        /* body {color: red;}
+
+        @media (max-width: 1199px) {
+            body {color: blue;}
+        }
+
+        @media (max-width: 767px) {
+            body {color: green;}
+        } */
+
+
+        /* 
+            반응형 웹 사이트 제작
+                1. 미디어쿼리(Medida Query)
+                    <link rel='stylesheet' media="all and (min-width: 992px)" href="desktop.css">
+
+                    중단점(breakpoint)
+                        부트스트랩 프레임워크: 576, 768, 992, 1200, 1400
+                        크롬 개발자: 320, 375, 425, 768, 1024, 1440, 2560
+                        https://gs.statcounter.com/screen-resolution-stats
+                        -> 3개의 장치: phone 576 <= tablet PC < 992 desktop PC
+
+                        1. 화면 너비에 따라
+                            min-width
+                            max-width
+                        2. 화면 방향에 따라
+                            orientation: landscape(기본값-가로)|portrait(세로);
+
+                2. 뷰포트(viewport)   
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        */
+    </style>
+</head>
+
+<body>
+    <h1>반응형 웹</h1>
+    <p>반응형 웹에는 미디어쿼리와 뷰포트 설정이 필요하다.</p>
+</body>
+
+</html>
