@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가시성 필터 선택자</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        #vis {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="vis">1</div>
+    <div>2</div>
+
+    <script>
+        /*
+            가시성 필터 선택자
+                :hidden -> display:none;으로 숨긴 요소 선택
+                :visible -> 보이는 요소 선택
+        */
+
+        $(() => {
+            console.log($('div:hidden').text());
+            $('div:visible').css({ background: 'orange' });
+        })
+    </script>
+</body>
+
+</html>

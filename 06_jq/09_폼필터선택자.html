@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: 폼 필터 선택자</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div><input type="text"></div>
+    <div><input type="text" disabled></div>
+    <div><input type="password"></div>
+
+    <div><input type="button" value="button"></div>
+    <div><input type="submit" value="submit"></div>
+
+    <div><button>submit버튼</button></div>
+    <div><button type="submit">submit버튼</button></div>
+
+    <div>
+        <input type="checkbox" id="css" checked>
+        <label for="css">css</label>
+    </div>
+    <div>
+        <label><input type="checkbox" id="html">html</label>
+    </div>
+
+    <div>
+        <select name="" id="">
+            <option value="">과목전체</option>
+            <option value="">JavaScript</option>
+            <option value="" selected>jQuery</option>
+        </select>
+        <textarea name="" id="" cols="20" rows="5" disabled>JavaScript</textarea>
+        <textarea name="" id="" cols="20" rows="5">JavaScript</textarea>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            :text
+                <input type="text"> 요소 선택
+            :password
+                <input type="password"> 요소 선택
+            :checkbox
+                <input type="checkbox"> 요소 선택
+            :radio
+                <input type="radio"> 요소 선택
+            :image
+                <input type="image"> 요소 선택
+            :file
+                <input type="file"> 요소 선택
+
+            :button
+                <input type="button">
+                <button>
+                <button type="submit">
+                <button type="button">
+                <button type="reset"> 요소 선택
+
+            :submit
+                <input type="submit"> 요소 선택
+            :reset
+                <input type="reset"> 요소 선택
+
+            :input
+                input 요소 선택
+
+            :focus
+                포커스를 가진 요소 선택
+            :checked
+                체크된 요소 선택
+            :selected
+                선택된 요소 선택
+            :disabled
+                사용할 수 없는 요소 선택
+            :enabled
+                사용할 수 있는 요소 선택
+
+        */
+        $(() => {
+
+            $(':text').css({background: 'red'});
+            $(':password').css({background: 'orange'});
+            $(':submit').css({background: 'lightblue'});
+            $(':button').css({background: 'yellow'});
+            $(':checked + label').css({background: 'green'});
+            $('option:selected').css({background: 'blue'});
+            $('textarea:disabled').css({background: 'pink'});
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

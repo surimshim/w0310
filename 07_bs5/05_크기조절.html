@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>크기조절</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- 
+        크기 조절
+            너비(width)
+                w-*
+                    *: 25, 50, 75, 100, auto
+            높이(height)
+                w-*
+                    *: 25, 50, 75, 100, auto
+
+    -->
+
+    <!-- 너비 -->
+    <div class="w-25 p-3 bg-primary">Width 25%</div>
+    <div class="w-50 p-3 bg-primary">Width 50%</div>
+    <div class="w-75 p-3 bg-primary">Width 75%</div>
+    <div class="w-100 p-3 bg-primary">Width 100%</div>
+    <div class="w-auto p-3 bg-primary">Width auto</div>
+
+    <br>
+
+    <!-- 높이 -->
+    <div style="height: 100px;">
+        <div class="h-25 d-inline-block bg-primary" style="width: 120px;">Height 25%</div>
+        <div class="h-50 d-inline-block bg-primary" style="width: 120px;">Height 50%</div>
+        <div class="h-75 d-inline-block bg-primary" style="width: 120px;">Height 75%</div>
+        <div class="h-100 d-inline-block bg-primary" style="width: 120px;">Height 100%</div>
+        <div class="h-auto d-inline-block bg-primary" style="width: 120px;">Height auto</div>
+    </div>
+</body>
+
+</html>

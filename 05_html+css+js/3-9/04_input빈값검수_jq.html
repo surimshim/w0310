@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 빈값 검수(제이쿼리)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form action="#" method="post" name="login">
+        <div>
+            <label for="id">아이디</label>
+            <input type="text" name="id" id="id">
+        </div>
+        <div>
+            <label for="pw">비밀번호</label>
+            <input type="password" name="pw" id="pw">
+        </div>
+        <div>
+            <input type="submit" value="확인">
+        </div>
+    </form>
+    <script>
+        /*
+            폼 객체 선택
+                $('선택자')
+            
+            메서드
+                val()
+                focus()
+        */
+
+        const login = $('form');
+        const user_id = $('#id');
+        const user_pw = $('#pw');
+
+        login.submit(function () {
+            if (!user_id.val()) {
+                // 아이디 입력 안 했을 때
+                alert('아이디를 입력해주세요.');
+                user_id.focus();
+                return false;
+            }
+            if (!user_pw.val()) {
+                alert('비밀번호를 입력해주세요.');
+                user_pw.focus();
+                return false;
+            }
+        });
+    </script>
+</body>
+
+</html>

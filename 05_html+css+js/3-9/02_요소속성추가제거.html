@@ -7,18 +7,32 @@
     <title>요소 속성 추가/제거</title>
     <style>
         .div {
-            position: fixed;
-            left: 100px;
-            top: 10px;
-            width: 100px;
-            height: 100px;
+            position: absolute;
+            top: 100px;
+            left: -180px;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
             background: green;
+            transition: .3s;
         }
+
+        .active {
+            left: 0;
+        }
+
+        /* .div:hover {
+            left: 0;
+        } */
     </style>
 </head>
 
 <body>
-    <div>요소 속성 추가</div>
+    <button>HTML 속성 set</button>
+    <button>HTML 속성 get</button>
+    <button>HTML 속성 remove</button>
+    <div class="div"><a>웹사이트</a></div>
+
     <script>
         /*
             DOM 요소 속성 생성/제거
@@ -29,7 +43,27 @@
             removeAttribute() - 요소 속성 제거
         */
 
+        // DOM 객체 선택
+        const bt0 = document.querySelectorAll('button')[0];
+        const bt1 = document.querySelectorAll('button')[1];
+        const bt2 = document.querySelectorAll('button')[2];
+        const div = document.querySelector('div');
+        const a = document.querySelector('a');
 
+        // 이벤트
+        bt0.onclick = () => {
+            div.setAttribute('class', 'div active');
+            a.setAttribute('href', 'https://surimshim.github.io/w0310');
+            a.setAttribute('target', '_blank');
+            a.setAttribute('title', '포트폴리오');
+        };
+        bt1.onclick = () => {
+            const result = div.getAttribute('class');
+            console.log(result);
+        };
+        bt2.onclick = () => {
+            div.setAttribute('class', 'div');
+        };
 
     </script>
 

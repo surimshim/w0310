@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex2</title>
+    <style>
+        /* 공통 스타일 */
+        .container {
+            display: flex;
+            /* 
+                flex-direction
+                    row:
+                        주축-가로
+                        교차축-세로
+                    column:
+                        주축-세로
+                        교차축-가로
+            */
+
+            /* flex-direction: column; */
+            /* justify-content: space-evenly; */
+
+            /* 한줄 아이템 */
+            /* align-items: stretch; */
+
+            /* 줄바꿈x */
+            /* flex-wrap: nowrap; */
+
+            /* 전체 아이템 */
+            align-content: space-between;
+            border: 2px solid red;
+            height: 200px;
+            font-size: 30px;
+        }
+
+        .item {
+            width: 200px;
+            background: lightseagreen;
+            padding: 20px;
+        }
+
+        .item:nth-child(2) {
+            background: orange;
+        }
+
+        /* flex-grow */
+        /* .item:nth-child(1) {
+            flex-grow: 1;
+        }
+
+        .item:nth-child(2) {
+            flex-grow: 2;
+        }
+
+        .item:nth-child(3) {
+            flex-grow: 1;
+        } */
+
+        /* flex-shrink */
+        .item {
+            flex-shrink: 1;
+            /* 기본값 */
+        }
+
+        .item:nth-child(2) {
+            flex-shrink: 5;
+            /* 더 많이 줄어듦 */
+        }
+
+        /* flex-basis */
+        .item:nth-child(1) {
+            flex-basis: 100px;
+        }
+
+        .item:nth-child(2) {
+            flex-basis: 200px;
+        }
+
+        .item:nth-child(3) {
+            flex-basis: 100px;
+        }
+
+        /* flex 축약형 */
+        .item {
+            /* flex: grow shirink basis; */
+            flex: 1 1 100px;
+        }
+
+        /* 또는 */
+        .item:nth-child(2) {
+            /* 뒤에 단위 붙으면 basis */
+            flex: 2;
+        }
+
+        /* align-self */
+        /* #container {
+            align-items: center;
+        } */
+
+        .item:nth-child(1) {
+            /* align-items: center; 있어도 자식에 우선권! */
+            align-self: flex-start;
+        }
+
+        .item:nth-child(2) {
+            align-self: center;
+        }
+
+        .item:nth-child(3) {
+            align-self: flex-end;
+        }
+
+        /* 
+            속성명
+                flex: grow shirink basis;
+                flex: 0 1 auto;
+
+                flex-grow: 1; // 늘어남
+                flex-grow: 0; // 고정
+                flex-shrink: 1; // 줄어듦
+                flex-shrink: 0; // 고정
+                flex-basis: 숫자px;
+        */
+        /* 
+            flex-direction: row;
+                주축 정렬 -> 가로
+                    justify-content
+                교차축 정렬 -> 세로
+                    align-items
+                    align-content
+                    align-self
+
+            flex-direction: column;
+                주축 정렬 -> 세로
+                    justify-content
+                교차축 정렬 -> 가로
+                    align-items
+                    align-content
+                    align-self
+        */
+    </style>
+</head>
+
+<body>
+    <!-- 
+        display: block;
+            위에서 아래로 세로 배치된다.
+            width: auto;
+    -->
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+
+</html>

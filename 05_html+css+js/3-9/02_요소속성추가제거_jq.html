@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 속성 추가/제거(제이쿼리)</title>
+    <style>
+        .div {
+            position: absolute;
+            top: 100px;
+            left: -180px;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background: green;
+            transition: .3s;
+        }
+
+        .active {
+            left: 0;
+        }
+
+        /* .div:hover {
+            left: 0;
+        } */
+    </style>
+    <script src="../jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <button>HTML 속성 set</button>
+    <button>HTML 속성 get</button>
+    <button>HTML 속성 remove</button>
+    <div class="div"><a>웹사이트</a></div>
+
+    <script>
+        /*
+            DOM 요소 속성 생성/제거
+            
+            메서드
+            attr('속성') - 요소 속성 값 가져오기
+            attr('속성', '값') - 요소 속성 값 설정하기
+            attr({
+                속성: 값,
+                속성: 값,
+                속성: 값
+            }) -> 속성에 '' 생략 가능
+            removeattr('속성') - 요소 속성 제거
+
+            $('선택자').eq(idx)
+        */
+
+        // DOM 객체 선택
+        const bt0 = $('button').eq(0);
+        const bt1 = $('button').eq(1);
+        const bt2 = $('button').eq(2);
+        const div = $('div');
+        const a = $('a');
+
+        // 이벤트
+        bt0.click(() => {
+            div.attr('class', 'div active');
+            a.attr({
+                href: 'https://surimshim.github.io/w0310',
+                target: '_blank',
+                title: '웹사이트 이동'
+            })
+        });
+        bt1.click(() => {
+            const result = div.attr('class');
+            console.log(result);
+        });
+        bt2.click(() => {
+            div.removeattr('class');
+            div.attr('class', 'div');
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탐색 메소드</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="m1">
+        <a href="#">내용1_1</a>
+        <span>내용1_2</span>
+    </div>
+    <div id="m2">
+        <div>
+            <a href="#">내용2_1</a>
+            <span>내용2_2</span>
+        </div>
+    </div>
+    <div id="m3">
+        <div>
+            <span>내용3_1</span>
+        </div>
+    </div>
+    <div id="m4">
+        <span class="m">내용4_1</span>
+        <span>내용4_2</span>
+        <span>내용4_3</span>
+        <em>내용4_4</em>
+    </div>
+    <div id="m5">
+        <span class="m">내용5_1</span>
+        <span>내용5_2</span>
+        <span>내용5_3</span>
+    </div>
+    <div id="m6">
+        <div><span>내용6_1</span></div>
+        <div>내용6_2</div>
+    </div>
+
+    <script>
+        /*
+            탐색 메서드
+                children()
+                    모든 자식 요소 선택
+                children('선택자')
+                    선택자에 해당하는 자식 요소 선택
+                parent()
+                    부모(조상x)
+                parents()
+                    모든 부모(조상)
+                closest()
+                next()
+                nextAll()
+                nextUntil()
+                prev()
+                prevAll()
+                prevUntil()
+                siblings()
+                find()
+                filter()
+                not()
+                has()
+                eq()
+                gt()
+                lt()
+
+            메서드
+            1. 탐색
+            2. HTML/CSS
+                text()
+                html()
+                addClass()
+                removeClass()
+                toggleeClass()
+                hasClass()
+                attr()
+                prop()
+                css()
+            3. 이벤트
+            4. 효과
+                show()
+                hide()
+                toggle()
+                slideDown()
+                slideUp()
+                slideToggle()
+                fadeIn()
+                fadeOut()
+                fadeTo()
+                fadeToggle()
+                animate()
+        */
+
+        $(() => {
+            $("#m1").children().css({ border: '2px solid red' });
+            $("#m2").children().children("span").css({ border: '2px solid orange' });
+            $("#m3 span").closest("div").css({ border: '2px solid yellow' });
+            $("#m4 > span.m").nextUntil("em").css({ border: '2px solid green' });
+            $("#m5 > span").filter(".m").css({ border: '2px solid blue' });
+            $("#m6 > div").has("span").css({ border: '2px solid navy' });
+        })
+
+    </script>
+</body>
+
+</html>

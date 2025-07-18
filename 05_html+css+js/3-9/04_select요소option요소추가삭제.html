@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>option요소 추가/삭제</title>
+</head>
+
+<body>
+    <form action="#" name="frm">
+        <select name="y">
+            <option value="#">년도 선택</option>
+        </select>
+        <select name="m">
+            <option value="#">월 선택</option>
+        </select>
+        <select name="sub">
+            <option value="#">과목선택</option>
+            <option value="#">html</option>
+            <option value="#">css</option>
+            <option value="#">javascript</option>
+        </select>
+    </form>
+
+    <script>
+        /* 
+            폼의 select 요소의 option 추가/삭제
+
+            추가
+                document.form요소.select요소.add(new Option("option 내용", "option 속성값"))
+            삭제
+                document.form요소.select요소.length = option 요소의 개수;
+        */
+
+        const frm = document.frm;
+        const date = new Date();
+        const year = date.getFullYear();
+
+        // i 1970부터 현재 날짜 년도까지
+        for (let i = 1970; i <= year; i++) {
+            frm.y.add(new Option(i, i)); // option 요소 추가
+        }
+        for (let i = 1; i <= 12; i++) {
+            frm.m.add(new Option(i, i)); // option 요소 추가
+        }
+        frm.sub.length = 4;
+    </script>
+</body>
+
+</html>

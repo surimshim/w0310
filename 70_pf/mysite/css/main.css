@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import url(reset.css);
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p,
+footer a {
+    font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+}
+
+nav a {
+    vertical-align: middle;
+}
+
+nav a:hover {
+    color: #333 !important;
+}
+
+nav li:first-of-type a::after {
+    content: '•';
+    color: #999;
+    vertical-align: middle;
+    margin: 0 8px;
+}
+
+/* Background Image Parallex Scrolling */
+header {
+    background: url(/imgs/bg-light.png) no-repeat 50% 50%/cover fixed;
+}
+
+@media (min-width: 768px) {
+    footer li:first-of-type a::after {
+        content: '｜';
+        color: #999;
+        vertical-align: middle;
+        margin: 0 8px;
+    }
+}
