@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>width, height</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        div {
+            margin: 20px;
+            padding: 20px;
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>박스</div>
+
+    <script>
+        /* 
+            크기
+                width()
+                    : 콘텐츠 가로 크기
+                height()
+                    : 콘텐츠 세로 크기 
+                innerWidth()
+                    : padding 포함 가로
+                innerHeight()
+                    : padding 포함 세로
+                outerWidth()
+                    : padding+border 포함 가로
+                outerHeight()
+                    : padding+border 포함 가로
+
+                // 읽기(가져오기) 전용, 지정 못함!
+                
+                outerWidth(true)
+                    : padding+border+margin 포함 가로
+                outerHeight(ture)
+                    : padding+border+margin 포함 가로
+        */
+
+        $(() => {
+            $('div')
+                .width(300)
+                .height(200)
+                .html(`
+                    width: ${$('div').width()}<br>
+                    height: ${$('div').height()}<br>
+                    innerWidth: ${$('div').innerWidth()}<br>
+                    innerHeight: ${$('div').innerHeight()}<br>
+                    outerWidth: ${$('div').outerWidth()}<br>
+                    outerHeight: ${$('div').outerHeight()}<br>
+                    outerWidth(true): ${$('div').outerWidth(true)}<br>
+                    outerHeight(true): ${$('div').outerHeight(true)}<br>
+                `);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS 관련 메서드</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="m1">jQuery</div>
+    <div id="m2">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>Javascript</div>
+    </div>
+
+    <script>
+        /* 
+            .abc {...}
+            <태그 class="abc">
+
+            HTML/CSS 메서드
+                1. 콘텐츠 조작 메서드
+                    text([값])
+                        -> 값을 가져오거나 지정
+                        -> HTML 문자열로 처리
+                    html()
+                        -> 값을 가져오거나 지정
+                        -> HTML 태그로 인식
+                    val()
+
+                2. 속성 조작 메서드
+                    attr()
+                    prop()
+
+                3. 스타일 조작 메서드
+                    css()
+                    offset()
+                    position()
+                    scrollTop()
+                    scrollLeft()
+
+                4. 클래스 조작 메서드
+                    addClass()
+                    removeClass()
+                    toggleClass()
+                    hasClass()
+        */
+
+        $(()=> {
+            // get(가져오기)
+            const txt = $('#m1').text();
+            console.log(txt);
+
+            // set(지정하기)
+            // text()는 HTML태그도 문자열로 처리
+            $('#m1').text('<p>jQuery</p>');
+            // html()은 HTML태그를 태그로 처리
+            console.log($('#m1').html());
+            $('#m1').html('<h1>jQuery</h1>');
+
+            // $('#m1').text("responsive web");
+            $('#m2 > div').text(function(index, text) {
+                // return "div 요소의 텍스트는 " + text + ", index는 " + index;
+                return `div 요소의 텍스트는 ${text}, index는 ${index}`;
+            });
+        });
+    </script>
+    
+</body>
+</html>

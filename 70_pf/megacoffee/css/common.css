@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* color system */
+:root {
+    font-size: 10px;
+    --gray1: #111;
+    --gray2: #555;
+    --main: rgb(255,222,0);
+    --white: #fff;
+}
+/* typo system */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font: 16px/1.5 "Noto Sans KR", sans-serif;
+    color: var(--gray1);
+}

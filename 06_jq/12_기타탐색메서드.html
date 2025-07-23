@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타탐색메서드</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="m1">
+        <div>내용1_1</div>
+        <p>내용1_2</p>
+    </div>
+    <div id="m2">
+        <p>내용2</p>
+    </div>
+    <div id="m3">
+        <span>내용3_1</span>
+        <em>내용3_2</em>
+    </div>
+    <div id="m4">
+        <p>내용4</p>
+    </div>
+
+    <script>
+        /* 
+            탐색 메서드
+                add()
+                    추가
+                    ex) $('div').add('p')
+                    -> div요소와 p요소 선택
+                addBack()
+                    ex) $('div').children('p').addBack('p')
+                    -> p요소와 이전 선택 요소 div를 선택
+                end()
+                    ex) $('div').find('span').css(...).end().find('em').css(...)
+                    -> $('div').find('span').css(...) 실행이 끝나면, 처음 선택자 $('div')로 돌아와 end().find('em').css(...)를 실행
+            
+            필터 메서드
+                is()
+                    ex) if(('div').children().is('p')) {...}
+                    -> div 
+        */
+
+        $(()=>{
+            $('#m1 > div').add('#m1 > p').css({border: '2px solid red'});
+            $('#m2').children('p').addBack().css({border: '2px solid orange'});
+            $('#m3').find('span').css({border: '2px solid yellow'}).end().find('em').css({border: '2px solid green'});
+            if($('#m4').children().is('p')) {
+                console.log('p요소가 존재합니다.')
+            }
+        })
+    </script>
+    
+</body>
+</html>

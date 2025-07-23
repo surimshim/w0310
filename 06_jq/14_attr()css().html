@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attr()css()</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0;
+        }
+        div:nth-child(1) {
+            background: red;
+        }
+        div:nth-child(2) {
+            background: green;
+        }
+        div:nth-child(3) {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>내용1</div>
+    <div>내용2</div>
+    <div>내용3</div>
+
+    <div id="site">
+        <a href="http://daum.net" target="_blank">다음</a>
+        <a href="http://naver.com" target="_blank">네이버</a>
+        <a href="http://nate.com" target="_blank">네이트</a>
+    </div>
+
+    <script>
+        $(() => {
+            console.log($('#site > a:eq(0)').attr('href'));
+            $('#site > a:eq(1)').attr('href',"http://m.naver.com").text("네이버 모바일");
+            $('#site a').attr('title', function() {
+                return "새창";
+            });
+
+            const bg = $('div').eq(0).css('background');
+            console.log(bg);
+
+            $('div').eq(0).css({padding: 10, 'text-align':'center'});
+            $('div').css('width', function(index) {
+                return index * 100 + 100;
+            });
+        });
+    </script>
+</body>
+</html>

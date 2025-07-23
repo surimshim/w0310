@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollTop, scrollLeft</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #outer {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            overflow: auto;
+        }
+        .inner {
+            width: 1000px;
+            height: 1000px;
+            background: #f60;
+        }
+        #info {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            width: 300px;
+            margin-left: -550px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div class="inner"></div>
+    </div>
+    <div id="info">
+        <span></span>
+        <button type="button">클릭</button>
+    </div>
+
+    <script>
+        /* 
+            스크롤 모션(Scroll Motion)
+
+            위치
+                scrollTop()
+                scrollLeft()
+
+            이벤트
+                click()
+                scroll()
+        */
+        $(() => {
+            let top = $('#outer').scrollTop();
+            let left = $('#outer').scrollLeft();
+
+            $('#info span').text(`scrollTop: ${top} / scrollLeft: ${left}`);
+
+            $('#outer').scroll(function() {
+                top = $('#outer').scrollTop();
+                left = $('#outer').scrollLeft();
+                $('#info span').text(`scrollTop: ${top} / scrollLeft: ${left}`);
+            });
+            $('button').click(function() {
+                $('#outer').scrollTop(250).scrollLeft(250);
+            })
+        });
+    </script>
+</body>
+</html>
