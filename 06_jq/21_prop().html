@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prop</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <button type="button">toggle</button>
+    <!-- <button type="button">체크</button> -->
+    <!-- <button type="button">체크 해제</button> -->
+    <input type="checkbox" id="html"><label for="html">html</label>
+    <input type="checkbox" id="css"><label for="css">css</label>
+    <script>
+        /*
+            HTML 속성 가져오기/지정하기
+                attr('속성')
+                : HTML 속성 가져오기
+                attr('속성', 값)
+                attr({속성: 값, 속성: 값, ...})
+                : HTML 속성 지정하기
+
+                prop()
+                : 자바스크립트 property
+
+                css()
+                : CSS 속성
+                
+                animate({속성: 값}, 시간)
+
+            삭제
+                removeAttr()
+                removeClass()
+                empty()
+                remove()
+                detach()
+        */
+
+        $(() => {
+            const chk = $('input:checkbox');
+            const chk0 = $('input:checkbox').eq(0);
+            const chk1 = $('input:checkbox').eq(1);
+
+            console.log(chk0.attr('checked'));
+            console.log(chk1.attr('checked'));
+
+            let flag = true;
+
+            $('button').click(() => {
+                if (flag === true) {
+                    chk0.attr({ checked: 'checked' });
+                    chk1.attr({ checked: true });
+
+                    console.log(chk0.attr('checked'));
+                    console.log(chk1.attr('checked'));
+                    flag = false;
+                }
+                else {
+                    chk0.attr({ checked: null });
+                    chk1.attr({ checked: false });
+
+                    console.log(chk0.attr('checked'));
+                    console.log(chk1.attr('checked'));
+                    flag = true;
+                }
+            });
+
+            // $('button').eq(0).click(() => {
+            //     chk0.attr({ checked: 'checked' });
+            //     chk1.attr({ checked: true });
+
+            //     console.log(chk0.attr('checked'));
+            //     console.log(chk1.attr('checked'));
+            // });
+
+            // $('button').eq(1).click(() => {
+            //     chk0.attr({ checked: null });
+            //     chk1.attr({ checked: false });
+
+            //     console.log(chk0.attr('checked'));
+            //     console.log(chk1.attr('checked'));
+            // });
+
+        });
+    </script>
+</body>
+
+</html>

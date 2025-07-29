@@ -3,7 +3,9 @@
 :root {
     font-size: 10px;
     --gray1: #111;
-    --gray2: #555;
+    --gray2: #333;
+    --gray3: #666;
+    --gray4: #ccc;
     --main: rgb(255,222,0);
     --white: #fff;
 }

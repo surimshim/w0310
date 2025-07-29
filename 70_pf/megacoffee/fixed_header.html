@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메가커피: 헤더</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        #header {
+            z-index: 9999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            color: #fff;
+            background: transparent;
+            transition: .3s;
+        }
+
+        /* 스크롤 시 적용할 클래스 */
+        #header.scrolled {
+            background: #555;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header id="header">
+        <h1>상단 고정 헤더</h1>
+    </header>
+
+    <script>
+        /* 
+            객체
+                $(window)
+            윈도우 이벤트
+                scroll - 스크롤 바가 움직일 때
+            메서드
+                scrollTop() - 스크롤된 세로 위치(px)
+                scrollLeft() - 스크롤된 가로 위치(px)
+
+        */
+        $(window).on('scroll', function(){
+            let windowScrollTop = $(window).scrollTop();
+            if (windowScrollTop > 50) {
+                $('#header').addClass('scrolled');
+            } else {
+                $('#header').removeClass('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

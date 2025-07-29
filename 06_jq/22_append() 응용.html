@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prop</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="m1">
+        <strong>내용1</strong>
+    </div>
+    <div id="m2">
+        <strong>내용2</strong>
+    </div>
+
+    <script>
+        /*
+            DOM 조작 메서드
+            1) 삽입
+            2) 삭제
+            3) 복제
+
+
+            before<태그>prepend내용append</태그>after
+
+            삽입 관련 메서드
+                부모.append(자식)
+                prepend() = ::before
+                append() = ::after
+                before()
+                after()
+                
+                자식.appendTo(부모)
+                prependTo()
+                appendTo()
+                insertBefore()
+                insertAfter()
+
+                
+                
+
+                ::before -> :before
+                ::after -> :after
+        */
+
+        $(() => {
+            $('#m1').prepend('<p>prepend</p>');
+            $('#m1').append('<p>append</p>');
+            $('#m1').before('<p>before</p>');
+            $('#m1').after('<p>after</p>');
+            $('<p>prependTo</p>').prependTo('#m2');
+            $('<p>appendTo</p>').appendTo('#m2');
+            $('<p>insertAfter</p>').insertAfter('#m2');
+            $('<p>insertBefore</p>').insertBefore('#m2');
+        })
+    </script>
+</body>
+
+</html>
