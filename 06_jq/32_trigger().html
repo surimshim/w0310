@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 강제 실행</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #con1 {
+            height: 100px;
+            background: #718c00;
+            transform: translateX(-98%);
+            transition: all 0.5s ease;
+        }
+        
+        #con2 {
+            height: 100px;
+            background: #c30;
+            transform: translateX(-98%);
+            transition: all 0.5s ease;
+        }
+
+        #con1.on, #con2.on {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <div id="con1"></div>
+    <div id="con2"></div>
+    <button>클릭1</button>
+    <button>클릭2</button>
+    <button>all</button>
+
+    <script>
+        $(()=>{
+            $('button:eq(0)').on('click', function() {
+                $('#con1').toggleClass('on');
+            }).trigger('click');
+
+            $('button:eq(1)').on('click', function() {
+                $('#con2').toggleClass('on');
+            }).trigger('click');
+
+            $('button:eq(2)').on('click', function() {
+                $('button:eq(0)').trigger('click');
+                $('button:eq(1)').trigger('click');
+            });
+        });
+    </script>
+</body>
+</html>

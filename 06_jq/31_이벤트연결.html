@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: 이벤트 연결</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+
+        .on {
+            background: #f60;
+            color: #fff;
+        }
+        #m7 {
+            background: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="m1">
+        <button>클릭1</button>
+    </div>
+    <div id="m2">
+        <button>클릭2</button>
+        <button>클릭3</button>
+    </div>
+    <div id="m3">
+        <button>클릭4</button>
+    </div>
+    <div id="m4">
+        <button>클릭5</button>
+    </div>
+    <div id="m5">
+        <button>클릭6</button>
+    </div>
+    <div id="m6">
+        <button>클릭7</button>
+    </div>
+    <div id="m7">
+        <p>클릭8</p>
+    </div>
+    <p>클릭9</p>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            이벤트 연결 방식
+                1) 직접 연결
+                2) 이벤트 메서드
+                    on(): 이벤트 연결
+                    off(): 이벤트 제거
+                    one(): 이벤트를 한 번만 연결
+
+                    
+            $(선택자).이벤트(함수);
+            $('button').click(function(){});
+
+            // 형식1
+            $(선택자).on('이벤트1 이벤트2 ...', 함수);
+            $('button').on('click', function(){});
+            $(선택자).on('이벤트', 선언적함수)
+                -> 선언적함수 호출 시 ()는 없이 지정한다.
+
+            // 형식2
+            $(선택자).on({
+                이벤트1: function(){}, 
+                이벤트2: function(){},
+                ...
+            });
+
+
+            이벤트
+                1) 마우스: click, mouseenter, mouseleave, mousemove, mousedown, mouseup, ...
+                2) 키보드: keydown, keyup
+                3) 폼: focus, blur, focusin, focusout, change, submit, select, ...
+                4) 윈도우: scroll, resize
+
+            
+        */
+        // $(document).on('ready', function() { (x)
+        $(() => {
+
+            // $('#m1 button').click(()=>
+            //     alert('이벤트 연결1')
+            // );
+            $('#m1 button').on('click', () =>
+                alert('이벤트 연결1')
+            );
+
+            $('#m2').on('click', 'button', () =>
+                alert('이벤트 연결2')
+            );
+            // $('#m3 button').on('mouseenter mouseleave', function () {
+            //     $(this).toggleClass('on');
+            // });
+            $('#m3 button').on({
+                mouseenter: function(){
+                    $(this).addClass('on');
+                },
+                mouseleave: function(){
+                    $(this).removeClass('on');
+                }
+            });
+
+            function showEvent(){
+                alert('이벤트 연결3');
+            }
+
+            // 함수 이름에 괄호()를 사용하면
+            // 함수가 바로 호출된다.
+            $('#m4 button').on('click', showEvent);
+
+            $('#m5 button').on('click', function(){
+                alert('이벤트 제거');
+            }).off();
+
+            $('#m6 button').one('click', function(){
+                alert('이벤트 한번만 연결');
+            });
+
+            $('#m7').on('click', function(){
+                // $('p', this).css({background: '#f00'});
+                $(this).find('p').css({background: '#f00'});
+            });
+
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

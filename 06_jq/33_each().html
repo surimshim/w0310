@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 관련 메서드</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="m1">내용1</div>
+    <div class="m2">내용2</div>
+    <div class="m3">내용3</div>
+    <script>
+        /* 
+            배열(->객체) 관련 메서드
+            $.each(배열명|객체명, function(index, value){
+                실행문;
+            });
+        */
+
+        // $(()=>{
+        //     const city = ['서울', '대구', '대전', '부산'];
+        //     $.each(city, function(index, value) {
+        //         console.log(index + ': ' + value);
+        //     })
+
+        //     const subjectInfo = {
+        //         subject: 'html',
+        //         grade: 1,
+        //         days: 20
+        //     };
+        //     $.each(subjectInfo, function(key, value) {
+        //         console.log(key + ': ' + value);
+        //     })
+        // });
+
+        $(()=> {
+            $('div').each(function(index, element) {
+                console.log(index);
+                console.log(element);
+                console.log($(this).attr('class'));
+            })
+
+        })
+    </script>
+</body>
+</html>

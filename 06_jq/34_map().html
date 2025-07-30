@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map() 메서드</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        /* 
+            배열(->객체) 관련 메서드
+            $.map(배열명|객체명, function(value, index){
+                실행문;
+            });
+        */
+
+        $(()=> {
+            const city = ['서울', '대구', '대전', '부산'];
+            const newCity = $.map(city, function(value, index) {
+                if(index < 2) {
+                    return value;
+                }
+            })
+            console.log(newCity.toString());
+        })
+    </script>
+</body>
+</html>

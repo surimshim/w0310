@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: 윈도우 이벤트</title>
+    <style>
+        #navbar {
+            display: flex;
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        #navbar a {
+            color: #f2f2f2;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #quick {
+            position: sticky;
+            /* 뜻? 달라붙는 */
+            top: 150px;
+            width: 200px;
+            height: 200px;
+            background: #ff6600;
+            left: 100%;
+            margin-left: -100px;
+        }
+
+        @media (max-width:960px) {
+            #navbar {
+                background: rgb(113, 182, 252);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2>Scroll Down</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia maxime quam nulla repudiandae asperiores illo rem harum incidunt sapiente laborum eos earum cumque velit ex, unde veritatis libero tempora amet.</p>
+    </div>
+
+    <div id="navbar">
+        <a class="active" href="#">Home</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+    </div>
+    <div id="quick">QUICK</div>
+
+    <div class="content">
+        <h3>Sticky Navigation Example</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere eum neque doloremque culpa aut sint pariatur blanditiis mollitia officiis error quas repellat, aspernatur aliquam veniam itaque dolor ipsa, nobis unde soluta omnis dolorum porro laboriosam eos. Dolorum dolor sequi at modi quod repellat distinctio nemo porro facilis laudantium odit facere quisquam ex non saepe, dicta iure quo est aperiam explicabo mollitia. Dicta ullam commodi reprehenderit accusantium aliquid, nostrum vero. Laborum assumenda, veniam dolore in repellat saepe hic commodi voluptatem voluptatum quam ullam architecto nostrum corrupti fuga sit, quod sequi labore fugiat expedita quas placeat, cumque mollitia! Consectetur mollitia dolorum quis, vitae id non facere cum excepturi voluptas laboriosam repellat, veniam corrupti exercitationem quia quae soluta necessitatibus molestiae amet a, magni eius doloribus officiis? Illum voluptatem consequatur sed enim quaerat fugit non delectus distinctio quasi. Porro, deleniti, dolores numquam sit commodi laudantium culpa qui magnam blanditiis eum harum quaerat ratione consequatur id in atque optio dolor? Perferendis eius maxime illum deserunt ipsa sequi sed sit cumque odio nihil quas ad voluptatem dolorum commodi dicta, culpa vero itaque praesentium natus sapiente reprehenderit architecto similique. Consequatur, praesentium modi sequi nobis beatae quo nihil voluptatibus obcaecati laudantium vitae odit molestiae distinctio ab dolore cumque soluta incidunt itaque rem aut exercitationem optio. Rem dolorem et, natus voluptatem temporibus deleniti animi accusamus aliquid atque, amet totam veniam ipsum tenetur cum a possimus. Quos fugit autem blanditiis officiis atque nam facere, modi unde obcaecati maxime soluta dolorem nobis ea vel. Asperiores aliquid nulla sunt laborum pariatur harum optio eos necessitatibus saepe, nemo voluptate porro cupiditate dolorem minus, corporis modi officia unde aliquam eum fugit distinctio atque accusamus. Ipsa tenetur perferendis adipisci? Enim quam blanditiis modi itaque cum consequatur error, perferendis animi, suscipit non labore sit ipsam unde aspernatur dicta aperiam, porro tempora ab ad nulla amet odio?</p>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+
+        $(() => {
+
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

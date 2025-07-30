@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: 윈도우 이벤트</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+
+        input[type=text].on {
+            background: #ff6600;
+            color: #fff;
+        }
+
+        p {
+            color: #ff0000;
+            display: none;
+        }
+
+        #m2 {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="m1">
+        <label for="m_1">m1</label>
+        <input id="m_1" type="text" placeholder="값을 입력하세요.">
+    </div>
+    <div id="m2">
+        <label for="m_2">m2</label>
+        <input id="m_2" type="text" placeholder="값을 입력하세요.">
+    </div>
+    <div id="m3">
+        <label for="m_3">m3</label>
+        <input id="m_3" type="text" value="50" title="값을 수정한 후 다음 입력요소로 이동하세요.">
+    </div>
+    <div id="m4">
+        <label for="m_4">m4</label>
+        <input id="m_4" type="text" value="텍스트를 드래하세요.">
+    </div>
+
+    <form action="#" class="frm">
+        <fieldset>
+            <legend>로그인</legend>
+            <div>
+                <label for="id">아이디</label>
+                <input type="text" id="id">
+            </div>
+            <p class="msg1">아이디를 입력하세요!</p>
+            <div>
+                <label for="pw">비밀번호</label><input type="password" id="pw">
+            </div>
+            <p class="msg2">비밀번호를 입력하세요!</p>
+            <button>전송</button>
+        </fieldset>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            폼 관련 이벤트
+                focus()
+                    요소에 포커스가 들어오면, 버블링x
+                blur()
+                    요소에 포커스가 떠나면, 버블링x
+                focusin()
+                    요소나 자식 요소에 포커스가 들어오면, 버블링o
+                focusout()
+                    요소나 자식 요소에 포커스가 떠나면, 버블링o
+                change()
+                    요소에 값이 변경되었을 때
+                    -> 값을 입력 후 포커스가 떠났을 때
+                select()
+                    요소에 값을 선택하였을 때
+                    -> 입력 상자의 텍스트를 드래그했을 때
+                submit()
+                    폼 데이터가 서버로 전송될 때
+                    -> 전송 버튼 눌렀을 때
+
+            메서드
+                val()
+                    요소의 값을 가져온다.
+                val(값)
+                    요소에 값을 지정한다.
+            
+            속성
+                length
+                    요소나 요소 값의 개수
+                    -> 문자열의 문자 수
+
+        */
+        $(() => {
+
+            $('#m1 input').focus(function () {
+                $(this).addClass('on');
+            }).blur(function () {
+                $(this).removeClass('on');
+            });
+
+            $('#m2').focusin(function () {
+                $(this).children().addClass('on');
+            }).focusout(function () {
+                $(this).children().removeClass('on');
+            });
+
+            // $('#m3 input')에 입력된 값을 가져온다.
+            const m3_input_value = $('#m3 input').val();
+            console.log(m3_input_value);
+            $('#m3 input').change(function () {
+                // 확인창
+                const c = confirm('값을 바꾸시겠습니까?');
+                if (!c) {
+                    // this에 값을 10으로 지정한다.
+                    $(this).val(10);
+                }
+            });
+
+            $('#m4 input').select(() => {
+                console.log($(event.target));
+                const v = $(event.target).val();
+                const size = v.length;
+                alert(`${v} 총 ${size} 문자를 선택하셨습니다.`);
+            });
+
+            // 폼의 유효성 검사
+            $('.frm').submit(function () {
+                // 아이디를 입력하지 않으면
+                if (!$('#id').val()) {
+                    $('.msg1').css({ display: 'block' });
+                    $('#id').focus();
+                    // 폼 데이터가 서버로 전송되지 않고, 
+                    // 상위 요소로 이벤트가 전달되지 않는다.
+                    return false;
+                } else {
+                    $('.msg1').css({ display: 'none' });
+                }
+                // 비밀번호를 입력하지 않으면
+                if (!$('#pw').val()) {
+                    $('.msg2').css({ display: 'block' });
+                    $('#pw').focus();
+                    return false;
+                } else {
+                    $('.msg2').css({ display: 'none' });
+                }
+            });
+
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>
