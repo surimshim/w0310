@@ -1,27 +1,58 @@
 @charset "utf-8";
 @import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
 
 :root {
-    font-size: 12px;
     scroll-behavior: smooth;
     /* color */
-    --gray1: #111;
-    --gray2: #333;
-    --gray3: #aaa;
-    --gray4: #ccc;
-    --gray5: #f1f1f1;
+    --main: #111;
+    --gray1: #333;
+    --gray2: #999;
+    --gray3: #eee;
+    --point: #4670c3;
     --white: #fff;
 }
 
 /* typo */
 body, a {
-    font: 1.5rem/1.5 verdana, sans-serif;
+    font: 16px/1.6 'Pretendard-Regular', sans-serif;
     color: var(--gray1);
 }
 
-h2, h3 {
-    font-family: 'Segoe UI', sans-serif;
-    font-weight: normal;
+h1, h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* top button */
+#tothetop {
+    z-index: 9999;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--main);
+    opacity: .5;
+    cursor: pointer;
+}
+
+#tothetop a {
+    font-size: 32px;
+    margin: 0 auto;
+    color: var(--white);
+    padding: 5px;
 }
 
 /* common: with phone */
@@ -32,17 +63,18 @@ h2, h3 {
     z-index: 9999;
     position: fixed;
     width: 100%;
-    padding: 18px 32px;
+    padding: 20px 20px;
     background: var(--white);
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 5px 0 rgba(0, 0, 0, 0.16);
-    letter-spacing: 4px;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* logo */
-#logo {
-    font-size: 1.6rem;
-    font-weight: normal;
-    line-height: 1;
+#header h1 {
+    line-height: 0;
+}
+
+#header a {
+    font: 20px 'Outfit', sans-serif;
+    letter-spacing: 4px;
 }
 
 #logo b {
@@ -54,159 +86,195 @@ h2, h3 {
     display: none;
 }
 
+#gnb ul {
+    display: flex;
+}
+
+#gnb ul a {
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+#gnb li:not(:last-child) {
+    margin-right: 35px;
+}
+
+#gnb a {
+    transition: .3s ease;
+}
+
+#gnb a:hover {
+    color: var(--point);
+    font-weight: bold;
+}
+
 /* sec1 */
 #sec1 {
     position: relative;
-    letter-spacing: 4px;
+    max-height: 100vh;
 }
 
-#sec1 h2 {
+#sec1 .main_banner {
+    height: 100vh;
+    background-image: url('../images/background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#profile {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3.6rem;
-    color: rgba(255, 255, 255, .9);
+    color: var(--white);
+    text-align: center;
+    letter-spacing: 4px;
 }
 
-#sec1 h2 span:first-child {
-    background: rgba(0, 0, 0, .8);
-    font-weight: 700;
-    padding: 9px 15px;
+#profile .thumb {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
-#sec1 h2 span:last-child {
-    display: none;
+#profile .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* sec2~4 common */
+#profile h2:last-child {
+    font-weight: normal;
+}
+
+#profile p {
+    font: 18px/1.6 'Outfit', sans-serif;
+    white-space: nowrap;
+}
+
+#profile .name {
+    margin: 20px 0;
+}
+
+#profile .icon {
+    margin-top: 20px;
+}
+
+#profile a {
+    font-size: 25px;
+    color: var(--white);
+    margin: 4px;
+    transition: .3s ease;
+}
+
+#profile a:hover {
+    color: var(--point);
+}
+
+#contact span {
+    font-weight: bold;
+}
+
+/* sec4~6 common */
 .sec {
-    padding: 68px 32px 0;
+    margin: 0 30px;
+    padding: 70px 0 30px;
+    border-bottom: 1px solid var(--gray3);
+}
+
+.sec .contents>div {
+    margin-bottom: 50px;
 }
 
 .sec h2 {
-    font-size: 2.4rem;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--gray5);
+    margin-bottom: 30px;
+    color: var(--main);
+    transition: 1s;
 }
 
-/* sec2 */
-#sec2 h2 {
-    margin-bottom: 40px;
+.sec h2:hover {
+    color: var(--point);
 }
 
-#sec2 li {
-    position: relative;
-    margin-bottom: 16px;
-}
-
-#sec2 h3 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--white);
-    background: var(--gray1);
-    font-family: Verdana;
-    font-size: 15px;
-    font-style: normal;
-    line-height: normal;
-    padding: 10px 15px;
-}
-
-/* sec3 */
-#sec3>p {
-    margin-bottom: 40px;
-}
-
-#sec3 li {
-    margin-bottom: 32px;
-}
-
-#sec3 li h3 {
-    color: var(--gray1);
-    font-size: 2.4rem;
-}
-
-#sec3 li p:first-of-type {
-    color: var(--gray3);
-    margin: 18px 0;
-}
-
-#sec3 li a {
-    display: block;
-    color: var(--gray2);
-    background: var(--gray5);
-    padding: 7px 0 8px 0;
-    text-align: center;
-    margin-top: 14px;
-}
-
-#sec3 li a:hover {
-    color: var(--gray1);
-    background: var(--gray4);
-}
-
-/* image filter */
-/* blur()
-brightness()
-contrast()
-drop-shadow()
-grayscale()
-hue-rotate()
-invert()
-opacity()
-saturate()
-sepia() */
-#sec3 li img {
-    filter: saturate(30%);
-}
-
-/* sec4 */
-#sec4>p {
-    margin-bottom: 16px;
-}
-
-#sec4 input {
-    display: block;
-    width: 100%;
-    border: 1px solid var(--gray3);
-    padding: 8px;
-    margin-bottom: 16px;
-}
-
-#sec4 ::placeholder {
-    color: var(--gray3);
-    font-size: 1.5em;
-}
-
-#sec4 #map {
+.sec h3 {
+    color: var(--main);
     margin-bottom: 8px;
 }
 
-#sec4 button {
-    color: #FFF;
-    font-size: 1.5rem;
-    background: var(--gray1);
-    padding: 8px 16px;
-    margin: 16px 0 48px 0;
+.sec p {
+    margin-bottom: 8px;
+}
+
+.sec .image {
+    width: 315px;
+    height: 170px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s ease;
+}
+
+.sec .image:hover img {
+    transform: scale(1.05);
+}
+
+/* sec3 */
+#sec3 h3 {
+    font-size: 18px;
+}
+
+#sec3 div {
+    margin-bottom: 16px;
+}
+
+#sec4>div, #sec5>div, #sec6>div {
+    margin-bottom: 50px;
 }
 
 /* footer */
 #footer {
     text-align: center;
-    background: var(--gray1);
-    color: var(--white);
+    height: 160px;
+    background: var(--main);
+    color: var(--gray2);
     padding: 30px 0;
+}
+
+#footer h1 {
+    line-height: 0;
+}
+
+#footer a {
+    font: 20px "Outfit", sans-serif;
+    letter-spacing: 4px;
+    color: var(--white);
+    transition: .3s ease;
+}
+
+#footer a:hover {
+    color: var(--point);
+}
+
+#footer .icon {
+    margin: 16px 0;
+}
+
+#footer .icon a {
+    margin: 0 4px;
 }
 
 #footer span:first-child {
     display: none;
-}
-
-#footer span:last-child {
-    display: block;
-    font-size: 1.3rem;
 }
 
 /* tablet */
@@ -215,57 +283,57 @@ sepia() */
         display: block;
     }
 
-    #gnb ul {
-        display: flex;
-    }
-
-    #gnb li:not(:last-child) {
-        margin-right: 35px;
-    }
-
-    #sec1 h2 span:last-child {
-        display: inline-block;
+    #header>a {
+        display: none;
     }
     
-    /* sec2~3 common */
-    #sec2 ul, #sec3 ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0 16px;
+    .sec {
+        margin: 0 30px;
+        padding: 70px 0 30px;
     }
 
-    #sec2 li, #sec3 li {
-        flex: 0 0 calc(50% - 8px); /* flex-basis */  
+    .sec .contents {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 30px;
+    }
+
+    #footer {
+        height: 140px;
+        padding: 30px 40px;
+    }
+
+    #footer>div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #footer .icon {
+        margin: 0 4px 16px;
+    }
+
+    #footer p {
+        text-align: left;
     }
 }
 
 /* desktop */
 @media (min-width: 1200px) {
-    #sec1 {
-        max-width: 1510px;
-        margin: 0 auto;
-    }
-
     /* sec2~4 common */
     .sec {
-        max-width: 1510px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
-    /* sec2~3 common */
-    #sec2 li, #sec3 li {
-        flex: 0 0 calc(25% - 12px);
+    #footer {
+        padding: 30px 200px;
     }
 
     #footer span:first-child {
         display: inline;
     }
 
-    #footer span:nth-child(2) {
-        display: none;
-    }
-
     #footer span:last-child {
-        display: inline;
+        display: none;
     }
 }

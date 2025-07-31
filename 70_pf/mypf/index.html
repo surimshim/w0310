@@ -4,124 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI테스트_심수림</title>
+
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="script/jquery-3.7.1.js"></script>
+    <script src="script/main.js"></script>
 </head>
 <body>
+    <div id="tothetop">
+        <a href="#top"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+
     <!-- header -->
     <header id="header">
-        <h1 id="logo"><a href="#sec1"><b>HT</b>Hanatour</a></h1>
+        <h1 id="logo"><a href="#sec1"><b>SS</b>Surim's Portfolio</a></h1>
         <nav id="gnb">
             <ul>
-                <li><a href="#sec2">Product</a></li>
-                <li><a href="#sec3">Event</a></li>
-                <li><a href="#sec4">Service</a></li>
+                <li><a href="#sec1">Contact</a></li>
+                <li><a href="#sec2">Profile</a></li>
+                <li><a href="#sec4">Projects</a></li>
             </ul>
         </nav>
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
     </header>
+
     <!-- section1: main banner -->
     <section id="sec1">
-        <div class="main_banner">
-            <img src="assets/architect.jpg" alt="main banner">
+        <div class="main_banner"></div>
+        <div id="profile">
+            <div class="thumb">
+                <img src="images/profile.jpg" alt="프로필 사진">
+            </div>
+            <div class="name">
+                <h2>심수림</h2>
+                <h2>Surim Shim</h2>
+            </div>
+            <div>
+                <p>UX Designer</p>
+                <p>Front-End Developer</p>
+            </div>
+            <div class="icon">
+                <a target="_blank" href="https://github.com/surimshim/w0310"><i class="fa-brands fa-github"></i></a>
+                <a target="_blank" href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
         </div>
-        <h2>
-            <span>HT</span>
-            <span>Hanatour</span>
-        </h2>
-    </section><!-- //.sec -->
+    </section>
 
-    <!-- section2: product -->
+    <div class="sec" id="contact">
+        <h2>Contact</h2>
+        <p><span>Tel. </span>010-8422-3347</p>
+        <p><span>Email. </span>surim0115@gmail.com</p>
+    </div>
+
+    <!-- section2: my profile -->
     <section class="sec" id="sec2">
-        <h2>Product</h2>
-        <ul>
-            <li>
-                <h3>Summer House</h3>
-                <img src="assets/house2.jpg" alt="product1">
-            </li>
-            <li>
-                <h3>Brick House</h3>
-                <img src="assets/house3.jpg" alt="product2">
-            </li>
-            <li>
-                <h3>Renovated</h3>
-                <img src="assets/house4.jpg" alt="product3">
-            </li>
-            <li>
-                <h3>Barn House</h3>
-                <img src="assets/house5.jpg" alt="product4">
-            </li>
-            <li>
-                <h3>Summer House</h3>
-                <img src="assets/house5.jpg" alt="product5">
-            </li>
-            <li>
-                <h3>Brick House</h3>
-                <img src="assets/house4.jpg" alt="product6">
-            </li>
-            <li>
-                <h3>Renovated</h3>
-                <img src="assets/house3.jpg" alt="product7">
-            </li>
-            <li>
-                <h3>Barn House</h3>
-                <img src="assets/house2.jpg" alt="product8">
-            </li>
-        </ul>
-    </section><!-- //#product -->
+        <h2>My Profile</h2>
+        <p>성신여자대학교 AI융합학부 졸업 (2025.08)</p>
+        <p>Northbridge International School Cambodia 졸업 (2019.05)</p>
+        <p>숩디자인기획 디자인, 영상 보조 프리랜서 (2021.07~)</p>
+    </section>
 
-    <!-- section3: event -->
+    <!-- section3: my skills -->
     <section class="sec" id="sec3">
-        <h2>Event</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <ul>
-            <li>
-                <img src="assets/team2.jpg" alt="event1">
-                <h3>John Doe</h3>
-                <p>CEO & Founder</p>
-                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                <a href="#">Contact</a>
-            </li>
-            <li>
-                <img src="assets/team1.jpg" alt="event2">
-                <h3>Jane Doe</h3>
-                <p>Architect</p>
-                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                <a href="#">Contact</a>
-            </li>
-            <li>
-                <img src="assets/team3.jpg" alt="event3">
-                <h3>Mike Ross</h3>
-                <p>Architect</p>
-                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                <a href="#">Contact</a>
-            </li>
-            <li>
-                <img src="assets/team4.jpg" alt="event4">
-                <h3>Dan Star</h3>
-                <p>Architect</p>
-                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-    </section><!-- //#event -->
-
-    <!-- section4: service -->
-    <section class="sec" id="sec4">
-        <h2>Service</h2>
-        <p>Lets get in touch and talk about your next project.</p>
-        <form action="#">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Subject">
-            <input type="text" placeholder="Comment">
-            <button>SEND MESSAGE</button>
-        </form>
-        <div id="map">
-            <img src="assets/map.jpg" alt="오시는길">
+        <h2>My Skills</h2>
+        <div>
+            <h3>Programming</h3>
+            <p>HTML/CSS • JavaScript • jQuery</p>
         </div>
-    </section><!-- //#contact -->
+        <div>
+            <h3>Design</h3>
+            <p>Photoshop • Illustrator • Figma</p>
+        </div>
+        <div>
+            <h3>Video Editing</h3>
+            <p>After Effects • Premiere Pro</p>
+        </div>
+        <div>
+            <h3>보유 자격증</h3>
+            <p>GTQ, GTQi, 웹디자인개발기능사</p>
+        </div>
+    </section>
+
+    <!-- section4: team project -->
+    <section class="sec" id="sec4">
+        <h2>Team Project</h2>
+        <div class="contents">
+            <div>
+                <div class="image"><a target="_blank" href="https://surimshim.github.io/w0310/70_pf/srt/"><img src="images/srt.jpg" alt="SRT 리뉴얼 페이지"></a></div>
+                <h3>SRT</h3>
+                <p>적응형 웹사이트 리뉴얼</p>
+            </div>
+            <div>
+                <div class="image"><a target="_blank" href="#"><img src="https://placehold.co/315x170" alt="타이레놀 리뉴얼 페이지"></a></div>
+                <h3>타이레놀</h3>
+                <p>반응형 웹사이트 리뉴얼</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- section4: personal project -->
+    <section class="sec" id="sec5">
+        <h2>Personal Project</h2>
+        <div class="contents">
+            <div>
+                <div class="image"><a target="_blank" href="https://surimshim.github.io/w0310/70_pf/stanley/"><img src="images/stanley.jpg" alt="스탠리코리아 리뉴얼 페이지"></a></div>
+                <h3>스탠리</h3>
+                <p>적응형 웹사이트 리뉴얼</p>
+            </div>
+            <div>
+                <div class="image"><a target="_blank" href="#"><img src="https://placehold.co/315x170" alt="타이레놀 리뉴얼 페이지"></a></div>
+                <h3>미정</h3>
+                <p>반응형 웹사이트 리뉴얼</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- section4: web-design practice -->
+    <section class="sec" id="sec6">
+        <h2>웹디자인개발기능사 연습</h2>
+        <div class="contents">
+            <div>
+                <div class="image"><a target="_blank" href="https://surimshim.github.io/w0310/70_pf/dothome/arabica"><img src="images/arabica.jpg" alt="ARABICA 리뉴얼 페이지"></a></div>
+                <h3>ARABICA COFFEE</h3>
+            </div>
+            <div>
+                <div class="image"><a target="_blank" href="https://surimshim.github.io/w0310/70_pf/dothome/hana"><img src="images/hanatour.jpg" alt="하나투어 리뉴얼 페이지"></a></div>
+                <h3>하나투어</h3>
+            </div>
+            <div>
+                <div class="image"><a target="_blank" href="https://surimshim.github.io/w0310/70_pf/dothome/daewoo"><img src="images/daewoo.jpg" alt="대우건설 리뉴얼 페이지"></a></div>
+                <h3>대우건설</h3>
+            </div>
+            <div>
+                <div class="image"><a target="_blank" href="https://surimshim.github.io/w0310/70_pf/dothome/nongshim"><img src="images/nongshim.jpg" alt="농심 리뉴얼 페이지"></a></div>
+                <h3>농심</h3>
+            </div>
+            <div>
+                <div class="image"><a target="_blank" href="https://surimshim.github.io/w0310/70_pf/dothome/hyundai"><img src="images/hyundai.jpg" alt="현대자동차 리뉴얼 페이지"></a></div>
+                <h3>현대자동차</h3>
+            </div>
+            <div>
+                <div class="image"><a target="_blank" href="https://surimshim.github.io/w0310/70_pf/dothome/sungshin"><img src="images/sungshin.jpg" alt="성신여자대학교 리뉴얼 페이지"></a></div>
+                <h3>성신여자대학교</h3>
+            </div>
+        </div>
+    </section>
+
     <!-- footer -->
     <footer id="footer">
-        <p><span>COPYRIGHT</span><span>&copy;</span> 2025 HANATOUR SERVICE INC. <span>ALL RIGHTS RESERVED</span></p>
+        <div class="div">
+            <h1 id="logo"><a href="#sec1">Surim's Portfolio</a></h1>
+            <div class="icon">
+                <a target="_blank" href="tel:010-8422-3347"><i class="fa-solid fa-phone"></i></a>
+                <a target="_blank" href="mailto:surim0115@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a target="_blank" href="https://github.com/surimshim/w0310"><i class="fa-brands fa-github"></i></a>
+                <a target="_blank" href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <p><span>COPYRIGHT</span><span>&copy;</span> 2025 Surim's Portfolio. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
