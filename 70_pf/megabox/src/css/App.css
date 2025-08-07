@@ -1,0 +1,83 @@
+/* reset */
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+/* typo system */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+  color: #fff;
+  background: #120D0E;
+}
+
+h2 {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  border-bottom: 2px solid #333;
+}
+
+.boxoffice {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.movie-card {
+  position: relative;
+  width: 215px;
+  height: 312px;
+}
+
+.movie-card img {
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.rank {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 300;
+  text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.likes-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 좋아요 버튼 */
+.likes {
+  width: 80px;
+  color: #fff;
+  border: 1px solid #4c4c4c;
+  border-radius: 5px;
+  margin-right: 6px;
+}
+
+/* 예매 버튼 */
+.likes-btn a {
+  background: #0af;
+  padding: 6px 12px;
+  width: calc(100% - 80px);
+  border-radius: 5px;
+}

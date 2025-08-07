@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과메서드</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <style>
+        * {
+            margin: 5px;
+        }
+
+        div { 
+            width: 100px;
+            height: 100px;
+            background: orange;
+            position: relative;
+        }
+
+        .m1 {
+            overflow: hidden;
+        }
+
+        .m1 span {
+            position: relative;
+            top: -50px;
+        }
+    </style>
+</head>
+<body>
+    <button>animate1</button>
+    <div class="m0"></div>
+
+    <button>animate2</button>
+    <div class="m1"><span>애니메이션</span></div>
+    
+    <button>animate3</button>
+    <div class="m2"></div>
+    
+    <button>animate4</button>
+    <div class="m3"></div>
+
+    <script>
+        /* 
+            효과 메서드
+                $(selector).animate({속성: 값}, speed, easing, callback)
+                clearQueue()
+                stop()
+
+        */
+
+        $(()=> {
+            $('button:eq(0)').click(function() {
+                // .m0가 오른쪽 500px 위치로 이동한다.
+                $('.m0').animate({left: 500}, 'fast');
+                $('.m0').animate({left: 0}, 'slow');
+            });
+
+            $('button:eq(1)').click(function() {
+                $('.m1 span').css({top: -50});
+                $('.m1').animate({left: 500}, 'fast').animate({left: 0}, 'slow', function() {
+                    $(this).find('span').animate({top: 30}, 'fast');
+                });
+            });
+
+            $('button:eq(2)').click(function() {
+                // 버튼 누를 때마다 left 200씩 증가
+                $('.m2').animate({left: '+=200'}, 'fast');
+            });
+
+            $('button:eq(3)').click(function() {
+                // $('.m3').animate({width: 'toggle'}, 'fast');
+                $('.m3').css({background: 'yellow'});
+            });
+        });
+
+    </script>
+</body>
+</html>

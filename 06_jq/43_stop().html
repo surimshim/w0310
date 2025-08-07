@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>stop()</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+        span {
+            display: block;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background: #ff6600;
+            position: relative;
+        }        
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+</head>
+<body>    
+    <button>play</button><button>stop()</button>
+    <div class="m1"></div>
+    <button>play</button><button>stop(true)</button>
+    <div class="m2"></div>
+    <button>play</button><button>stop(false, true)</button>
+    <div class="m3"></div>
+    <button>play</button><button>stop(true, true)</button>
+    <div class="m4"></div>
+
+    <script>
+        /* 
+            stop()
+            stop(clearQueue)
+            stop(clearQueue, jumpToEnd)
+                - clearQueue: false(기본값), true
+                    true이면 대기하고 있는 애니메이션을 대기큐(메모리)에서 제거
+                - jumpToEnd: false(기본값)
+                    true이면 다음 대기하고 있는 애니메이션으로 건너뜀
+        */
+        $(()=> {
+            function move(target) {
+                target = $(target);
+                target.animate({
+                    left : 200
+                }, 2000).animate({
+                    width : 200
+                }, 2000).animate({
+                    height : 200
+                });
+            }
+            $("button:eq(0)").click(function() {
+                move(".m1");
+                $(this).prop("disabled", true);
+            });
+            $("button:eq(1)").click(function() {
+                $(".m1").stop();
+            });
+            $("button:eq(2)").click(function() {
+                move(".m2");
+                $(this).prop("disabled", true);
+            });
+            $("button:eq(3)").click(function() {
+                $(".m2").stop(true);
+            });
+            $("button:eq(4)").click(function() {
+                 move(".m3");
+                $(this).prop("disabled", true);
+            });
+            $("button:eq(5)").click(function() {               
+               $(".m3").stop(false, true);
+            });
+            $("button:eq(6)").click(function() {
+                 move(".m4");
+                $(this).prop("disabled", true);
+            });
+            $("button:eq(7)").click(function() {               
+               $(".m4").stop(true, true);
+            });
+        })
+    </script>
+</body>
+</html>

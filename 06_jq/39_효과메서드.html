@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과메서드</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="m1">
+        <button type="button">show</button>
+        <button type="button">hide</button>
+        <button type="button">toggle</button>
+        <div class="box">내용1</div>
+    </div>
+    <div id="m2">
+        <button type="button">slideDown</button>
+        <button type="button">slideUp</button>
+        <button type="button">slideToggle</button>
+        <div class="box">내용2</div>
+    </div>
+    <div id="m3">
+        <button type="button">fadeIn</button>
+        <button type="button">fadeOut</button>
+        <button type="button">fadeToggle</button>
+        <button type="button">fadeTo</button>
+        <div class="box">내용3</div>
+    </div>
+    <script>
+        /* 
+            효과 메서드
+                show()
+                    보이기 -> display:none;
+                hide()
+                    숨기기 -> display:none; vs opacity:0;
+                toggle()
+
+                slideDown()
+                    서서히 보이기(위에서 아래) -> opacity:1; (translateY(y), top)
+                slideUp()
+                    서서히 숨기기(아래에서 위) -> opacity:0; (translateY(0), top)
+                slideToggle()
+                
+                fadeIn()
+                    서서히 보이기 -> opacity:1;
+                fadeOut()
+                    서서히 숨기기 -> opacity:0;
+                fadeToggle(값)
+                    0~1 사이 값
+
+            형식:
+                $(selector).effectMethod([speed], easing, callback);
+                $(선택자).효과메서드([시간], 가속도, 함수);
+                    speed: 'slow(600)', 'fast(200)', 시간(ms) -> 기본값: 400
+                    easing: swing, linear
+
+
+        */
+
+        $(()=> {
+            // show/hide
+            $('#m1 button:eq(0)').click(function() {
+                $('#m1 .box').show();
+            })
+            $('#m1 button:eq(1)').click(function() {
+                $('#m1 .box').hide();
+            })
+            $('#m1 button:eq(2)').click(function() {
+                $('#m1 .box').toggle('slow', 'swing');
+            })
+            
+            // slide
+            $('#m2 button:eq(0)').click(function() {
+                $('#m2 .box').slideDown();
+            })
+            $('#m2 button:eq(1)').click(function() {
+                $('#m2 .box').slideUp();
+            })
+            $('#m2 button:eq(2)').click(function() {
+                $('#m2 .box').slideToggle('slow', 'swing');
+            })
+            
+            // fade
+            $('#m3 button:eq(0)').click(function() {
+                $('#m3 .box').fadeIn('ease');
+            })
+            $('#m3 button:eq(1)').click(function() {
+                $('#m3 .box').fadeOut('ease');
+            })
+            $('#m3 button:eq(2)').click(function() {
+                $('#m3 .box').fadeToggle('slow', 'swing');
+            })
+            $('#m3 button:eq(3)').click(function() {
+                $('#m3 .box').fadeTo(400, 1, 'easeInOutExpo');
+            })
+
+            $('#m3 button:eq(0)').click(function() {
+                $('#m3 .box').fadeIn(200, function() {
+                    $(this).text('jQuery');
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
