@@ -1,0 +1,232 @@
+/* reset */
+body, h1, h2, h3, p, ul, li, span{
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  letter-spacing: -.5px;
+}
+
+li {
+  list-style: none;
+}
+
+/* typo system */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  text-align: center;
+}
+
+body {
+  width: 1200px;
+  margin: 0 auto;
+  letter-spacing: -.5px;
+}
+
+.title ul {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.title li {
+  font-size: 16px;
+  font-weight: normal;
+  margin-right: 20px;
+}
+
+.title a{
+  color: #888;
+}
+
+.title a.active {
+  display: inline-block;
+  padding: 8px 15px;
+  font-weight: 700;
+  color: #fff;
+  background: #000;
+  border-radius: 30px;
+}
+
+.menu a {
+  display: inline-block;
+  margin: 20px 20px 20px 0;
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+}
+
+.menu a.active {
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+
+.moviechart {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.movie-card {
+  position: relative;
+  width: 270px;
+  height: 390px;
+}
+
+.poster {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.poster img {
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.4s ease; /* 부드러운 확대 효과 */
+}
+
+.poster::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.poster:hover img {
+  transform: scale(1.05);
+}
+
+.poster:hover::after {
+  opacity: 0;
+}
+
+.rank {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 64px;
+  font-style: italic;
+  font-weight: 700;
+  color: #fff;
+}
+
+.heart {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  color: rgba(0,0,0,0.2);
+  transition: color 0.3s ease;
+}
+
+.heart.liked {
+  color: #ff5b5b;
+}
+
+.movie-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.movie-title h3 {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.movie-title span {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-left: 6px;
+  border-radius: 4px;
+}
+
+.movie-title .age-12 {
+  background: #E9B630;
+}
+
+.movie-title .age-15 {
+  background: #DD7430;
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #888;
+}
+
+.desc span {
+    display: inline-block;
+}
+
+.desc span:first-child {
+    position: relative;
+    padding-right: 10px; /* 선과 텍스트 간격 */
+}
+
+.desc span:first-child::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 12px;
+    background-color: #e9e9e9;
+    transform: translateY(-50%);
+}
+
+.book-btn {
+  display: inline-block;
+  width: 100px;
+  font-size: 14px;
+  padding: 7px 0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin: 16px;
+  transition: .3s
+}
+
+.book-btn:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
