@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made by 공유</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- header -->
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#sec1">HOME</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sec2">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sec3">PORTFOLIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sec4">CONTACT</a>
+                    </li>
+                </ul>
+                <!-- <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="button">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+    <!-- section1: First Parallax Image with Logo Text -->
+    <div id="sec1" class="container-fluid">
+        <div class="row justify-content-center align-items-center h-100">
+            <h1 class="text-center"><span class="bg-dark text-white fs-4 ls10 py-3 px-5">MY WEBSITE LOGO</span></h1>
+        </div>
+    </div>
+
+    <!-- section2: about me -->
+    <div id="sec2" class="container-fluid pt-5">
+        <div class="text-center my-5">
+            <h3 class="mb-3">ABOUT ME</h3>
+            <em>코드를 짜며, 나도 성장한다.</em>
+        </div>
+        <!-- .sec의 width:920px; -->
+        <div class="container sec">
+
+            <!-- basic profile -->
+            <p>무대 밖에서는 조용히 배우고 성장하는 시간이 더 소중하게 느껴집니다.
+                틈날 때마다 풍경과 일상을 사진으로 기록하며, 저만의 감각을 다듬어가고 있어요.
+                이런 시각적인 관심은 자연스럽게 UI/UX에 대한 흥미로 이어졌고,
+                더 많은 분들과 더 나은 경험을 나누고 싶다는 마음으로 웹 프론트엔드 개발 공부를 시작하게 되었습니다.
+
+                지금은 HTML, CSS, JavaScript를 비롯해 React 등 다양한 프론트엔드 기술을 하나씩 익히며
+                디자인과 기능이 조화를 이루는 웹을 만들기 위해 노력하고 있습니다.
+                이 웹사이트는 저의 사진과 개발 과정을 함께 담은 공간으로,
+                무대 위의 저와는 또 다른, 조금 더 진솔한 저를 만날 수 있는 곳이기도 해요.
+                천천히, 꾸준히 채워가 보겠습니다.</p>
+            <div class="row">
+                <div class="col text-center">
+                    <b><i class="fa-solid fa-user-tie me-2"></i> 공유</b>
+                    <div id="my_pic"><img src="images/avatar_hat.jpg" alt="내 사진" class="w-100"></div>
+                </div>
+                <p class="col">안녕하세요! 제 웹사이트에 방문해 주셔서 진심으로 감사합니다.
+                    저는 배우로 활동하며, 다양한 역할 속에서 끊임없이 저 자신을 탐색하고 표현하는 일을 하고 있습니다.
+                    무대 위에서의 찰나의 순간들도 소중하지만, 그만큼 일상에서의 조용한 시간도 저에게는 매우 특별한 의미를 갖고 있어요. 그래서 저는 연기 외에도 다양한 방식으로 스스로를 표현하고
+                    싶었고, 그중 하나가 바로 사진과 웹이라는 새로운 영역이었습니다. 앞으로 이곳에는 제가 도전하는 다양한 프로젝트, 사진 작업, 그리고 느낀 점들을 차곡차곡 쌓아갈 예정입니다. 아직
+                    많이 부족하지만, 꾸준히 성장해 나가는 모습을 함께 지켜봐 주시면 감사하겠습니다.
+                    방문해 주셔서 다시 한 번 감사드리며, 자주 들러 주세요. :)</p>
+            </div>
+
+            <!-- skill progressbar -->
+            <p class="text-center mt-5 mb-2">내가 잘하는 것들:</p>
+            <div id="skill" class="mb-5 pb-3">
+                <p class="mt-3 mb-1"><i class="fa-solid fa-clapperboard"></i> Planning for web design</p>
+                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar text-bg-secondary w-75 fs-5">75%</div>
+                </div>
+                <p class="mt-3 mb-1"><i class="fa-regular fa-image"></i> Photoshop + <i
+                        class="fa-brands fa-square-figma"></i> Figma</p>
+                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar text-bg-secondary fs-5" style="width: 95%">95%</div>
+                </div>
+                <p class="mt-3 mb-1"><i class="fa-brands fa-html5"></i> HTML + <i class="fa-brands fa-css3-alt"></i> CSS
+                </p>
+                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar text-bg-secondary fs-5" style="width: 90%">90%</div>
+                </div>
+                <p class="mt-3 mb-1"><i class="fa-solid fa-code"></i> JavaScript + <i class="fa-brands fa-react"></i>
+                    React</p>
+                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar text-bg-secondary fs-5" style="width: 80%">80%</div>
+                </div>
+            </div>
+        </div><!-- //skill end -->
+
+        <!-- Achievements counter -->
+        <div class="row text-bg-secondary p-5 text-center">
+            <div class="col"><span class="d-block fs-4">4+</span>Personal Projects Completed</div>
+            <div class="col"><span class="d-block fs-4">1+</span>Team Collaborations</div>
+            <div class="col"><span class="d-block fs-4">15+</span>UI Design for Web Pages</div>
+            <div class="col"><span class="d-block fs-4">3+</span>National Technical Qualification</div>
+        </div>
+    </div><!-- //#sec2.end -->
+
+    <!-- section3: portfolio -->
+    <div id="sec3" class="container-fluid text-center px-0 pb-5">
+        <div class="parallax_bg d-flex justify-content-center align-items-center">
+            <h2 class="text-white ls10 fs-1">PORTFOLIO</h2>
+        </div>
+        <div class="container sec pt-5">
+            <div class="text-center my-5">
+                <h3 class="mb-3">MY WORK</h3>
+                <p><em>최근 작업 중 일부를 소개합니다.</em><em>이미지를 클릭하면 크게 볼 수 있어요.</em></p>
+            </div>
+            <div class="row">
+                <div class="col-3 p-2"><img class="border border-secondary-subtle" src="images/p1.jpg" alt="stream"></div>
+                <div class="col-3 p-2"><img class="border border-secondary-subtle" src="images/p2.jpg" alt="SRT"></div>
+                <div class="col-3 p-2"><img class="border border-secondary-subtle" src="images/p3.jpg" alt="Hyundai"></div>
+                <div class="col-3 p-2"><img class="border border-secondary-subtle" src="images/p4.jpg" alt="Hanyang"></div>
+                <div class="col-3 p-2"><img class="border border-secondary-subtle" src="images/p5.jpg" alt="Hanatour"></div>
+                <div class="col-3 p-2"><img class="border border-secondary-subtle" src="images/p6.jpg" alt="Daewoo"></div>
+                <div class="col-3 p-2"><img class="border border-secondary-subtle" src="images/p7.jpg" alt="Tomntoms"></div>
+                <div class="col-3 p-2"><img class="border border-secondary-subtle" src="images/p8.jpg" alt="Nongshim"></div>
+            </div>
+            <div class="text-center my-5"><button type="button" class="btn btn-danger px-5">더보기</button></div>
+        </div>
+    </div>
+    <!-- section4: contact us -->
+    <div id="sec4" class="container-fluid px-0 pb-5">
+        <div class="parallax_bg d-flex justify-content-center align-items-center">
+            <h2 class="text-white ls10 fs-1">CONTACT</h2>
+        </div>
+        <div class="container sec py-5 mb-5">
+            <div class="text-center my-5">
+                <h3 class="mb-3">WHERE I WORK</h3>
+                <p><em>귀사(貴社)의 피드백을 기다리고 있습니다!</em></p>
+            </div>
+            <div class="row pb-5">
+                <div class="col-4">
+                    <img src="images/map.jpg" alt="작업장 위치" class="rounded">
+                </div>
+                <div class="col-8">
+                    <div>
+                        <i class="fa-solid fa-location-dot me-3"></i> 경기도, 대한민국<br>
+                        <i class="fa-solid fa-phone me-3"></i> Phone: +82 12345678<br>
+                        <i class="fa-solid fa-envelope me-3"></i> Email: mail@mail.com
+                    </div>
+                    <p><i class="fa-solid fa-mug-hot me-2"></i>한 잔 하러 들러주세요. 아니면 메모를 남겨주세요.</p>
+                    <form action="#">
+                        <input type="text" name="username" placeholder="이름을 입력하세요." class="w-100 mb-2 py-1">
+                        <input type="email" name="useremail" placeholder="메일을 입력하세요." class="w-100 mb-2 py-1">
+                        <textarea name="message" placeholder="메시지를 입력하세요." rows="5" class="w-100"></textarea>
+                        <button class="btn btn-dark px-3 mt-3"><i class="fa-solid fa-paper-plane me-3"></i>메시지 보내기</button>
+                    </form>
+                </div>
+            </div> <!-- //.row -->
+        </div> <!-- //.container -->
+    </div><!-- //#sec4 -->
+
+    <!-- footer -->
+    <footer class="container-fluid py-5 bg-secondary text-center">
+        <a href="#top" class="btn btn-light px-3 mt-3"><i class="fa-solid fa-arrow-up me-3"></i>위로가기</a>
+        <div class="my-3">
+            <a href="#" class="text-white fs-4"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fa-brands fa-snapchat"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-white fs-4"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p class="text-white">Copyright 2025 HGD. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
