@@ -23,6 +23,17 @@ footer a {
     font-family: 'Pretendard-Regular', Helvetica, sans-serif;
 }
 
+#mainNavbar {
+    transform:translateY(-100%);
+}
+
+.navbar-scrolled {
+    background-color: white !important;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform:translateY(0) !important;
+}
+
 /* Parallax Scrolling Image */
 #sec1 {
     height: 100vh;
@@ -31,6 +42,10 @@ footer a {
 #sec3 .parallax_bg {
     height: 400px;
     background: url(../images/parallax2.jpg) no-repeat 50% 50%/cover fixed;
+}
+#sec4 .parallax_bg {
+    height: 400px;
+    background: url(../images/parallax3.jpg) no-repeat 50% 50%/cover fixed;
 }
 
 /* section common */
@@ -44,4 +59,9 @@ footer a {
 }
 .progress {
     height:35px;
+}
+
+/* footer */
+footer:hover {
+    background: #111 !important;
 }

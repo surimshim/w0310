@@ -1,46 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>section2</title>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/w0310/70_pf/tylenol/css/header.css">
     <link rel="stylesheet" href="/w0310/70_pf/tylenol/css/section2.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/w0310/70_pf/tylenol/script/script.js"></script>
 </head>
+
 <body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/w0310/70_pf/tylenol/index.html">
+                    <img src="/w0310/70_pf/tylenol/images/header/logo.png" alt="타이레놀 로고">
+                </a>
+            </div>
+            <div class="menu-icon" id="menuToggle">
+                <img src="/w0310/70_pf/tylenol/images/header/ham_btn.png" alt="햄버거버튼">
+            </div>
+        </div>
+    </header>
+    <div class="overlay" id="overlay">
+        <nav class="side-nav">
+            <div class="nav-header">
+                <div class="logo1"><a href="#"><img src="/w0310/70_pf/tylenol/images/header/logo.png" alt="타이레놀 로고"></a>
+                </div>
+                <div class="close-btn" id="closeBtn"><img src="/w0310/70_pf/tylenol/images/header/ham_btn2.png"
+                        alt="햄버거버튼"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">제품소개</a>
+                    <ul class="sub-list">
+                        <li><a href="#">성인용 </a></li>
+                        <li><a href="#">어린이용 </a></li>
+                        <li><a href="#">제품 비교표 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">증상별가이드</a>
+                    <ul class="sub-list">
+                        <li><a href="#">두통 </a></li>
+                        <li><a href="#">감기 · 독감 </a></li>
+                        <li><a href="#">몸살 · 근육통 </a></li>
+                        <li><a href="#">우먼스케어 </a></li>
+                        <li><a href="#">열 · 귀앓이 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">연령별가이드</a>
+                    <ul class="sub-list">
+                        <li><a href="#">신생아 </a></li>
+                        <li><a href="#">어린이 </a></li>
+                        <li><a href="#">성인</a></li>
+                        <li><a href="#">60대 이상 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">고객지원</a>
+                    <ul class="sub-list">
+                        <li><a href="#">FAQ </a></li>
+                        <li><a href="#">문의하기 </a></li>
+                        <li><a href="#">회사정보</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="pill">
+                <img src="/w0310/70_pf/tylenol/images/header/pill.png" alt="알약이미지">
+            </div>
+        </nav>
+    </div><!-- //.header navigation -->
+
+
     <!-- section2 -->
-    <section>
-        <div class="bg"></div>
-        <div class="image">
+    <section id="section2">
+        <div id="bg"></div>
+        <div id="product">
             <img src="/w0310/70_pf/tylenol/images/section2/1.png" alt="타이레놀정">
         </div>
-        <div class="first">
+        <div id="first">
             <div>
                 <h3>15분만에 빠르게</h3>
                 <h2>타이레놀</h2>
                 <p>15분만에 빠르게 작용해<br>4시간 동안 진통 효과</p>
             </div>
-            <div>
-                <div>
-                    <p>#타이레놀</p>
-                </div>
-                <div>
-                    <p>#효과빠른</p>
-                </div>
-                <div>
-                    <p>#진통제</p>
+            <div class="tag">
+                <span>#타이레놀</span>
+                <span>#효과빠른</span>
+                <span>#진통제</span>
                 </div>
             </div>
         </div>
-        <div class="second">
+        <div id="second">
             <h2>WHY? 타이레놀</h2>
             <div>
                 <img src="" alt="">
             </div>
         </div>
-    </section>
+    </section><!-- //.section2 -->
 </body>
+
 </html>

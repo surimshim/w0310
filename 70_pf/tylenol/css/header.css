@@ -1,21 +1,14 @@
 @charset "utf-8";
-@import url('reset.css');
+@import url(./reset.css);
 
 .header {
     position: fixed;
-    /* 뷰포트에 고정 */
     top: 0;
-    /* 상단에 붙임 */
     left: 0;
-    /* 왼쪽에 붙임 */
     width: 100%;
-    /* 너비 100% */
     height: 100px;
-    /* 헤더 높이 고정 */
     background: transparent;
     z-index: 1000;
-    /* 오버레이(1001)보다 낮지만 섹션(1)보다는 높게 */
-
 }
 
 .header-container {
@@ -26,7 +19,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    line-height: 50px;
 
 }
 
@@ -54,7 +46,6 @@
     backdrop-filter: blur(6px);
     background-color: rgba(0, 0, 0, 0.25);
     z-index: 1001;
-    /* 헤더(1000)보다 높게 설정하여 헤더 위로 메뉴가 올라오도록 */
 }
 
 .side-nav {
@@ -72,7 +63,6 @@
     border-radius: 50px 0 0 50px;
     z-index: 1002;
     transition: right 0.5s ease;
-    /* transition 속성 추가 */
 }
 
 .side-nav.open {
@@ -132,7 +122,6 @@
     /* ★ 오류 수정: z-index를 0으로 설정하고 pointer-events 추가 */
     z-index: 0;
     pointer-events: none;
-    /* 클릭 이벤트 방지 */
     width: 150px;
     border-left: 3px solid var(--red);
     padding: 10px;
@@ -157,7 +146,6 @@
     z-index: 1;
     pointer-events: auto;
     /* 호버 시 클릭 이벤트 허용 */
-
 }
 
 .pill {
@@ -167,7 +155,6 @@
     /* 이 값은 .side-nav의 right 값에 따라 달라질 수 있음 */
     bottom: -20px;
     transform: translateX(-50%);
-
 }
 
 
@@ -175,44 +162,41 @@
 /* tablet */
 @media (min-width: 768px) {
 
-    .side-nav {
-        width: 600px;
-        height: 100%;
-        background: var(--white);
-        position: absolute;
-        right: -800px;
-        /* 또는 right: -100%; */
-        top: 0;
-        padding: 30px 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 50px 0 0 50px;
-        z-index: 1002;
-        transition: right 0.5s ease;
-        /* transition 속성 추가 */
+.side-nav {
+    width: 600px;
+    height: 100%;
+    background: var(--white);
+    position: absolute;
+    right: -800px;
+    /* 또는 right: -100%; */
+    top: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 50px 0 0 50px;
+    z-index: 1002;
+    transition: right 0.5s ease;
     }
-
 }
 
 /* desktop */
 @media (min-width: 1200px) {
 
-    .side-nav {
-        width: 800px;
-        height: 100%;
-        background: var(--white);
-        position: absolute;
-        right: -800px;
-        /* 또는 right: -100%; */
-        top: 0;
-        padding: 30px 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 50px 0 0 50px;
-        z-index: 1002;
-        transition: right 0.5s ease;
-        /* transition 속성 추가 */
+.side-nav {
+    width: 800px;
+    height: 100%;
+    background: var(--white);
+    position: absolute;
+    right: -800px;
+    /* 또는 right: -100%; */
+    top: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 50px 0 0 50px;
+    z-index: 1002;
+    transition: right 0.5s ease;
     }
 }

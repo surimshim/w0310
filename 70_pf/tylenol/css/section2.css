@@ -1,3 +1,74 @@
 @charset "utf-8";
 @import url('reset.css');
 
+#section2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#bg {
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    height: 100vh;
+    background-color: var(--red);
+}
+
+#product {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+}
+
+#first {
+    position: absolute;
+    top: 50%;
+    left: 160px;
+    transform: translateY(-50%);
+}
+
+#first h3 {
+    font-size: 60px;
+    line-height: normal;
+    font-weight: 700;
+}
+
+#first h2 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--red);
+    margin-bottom: 30px;
+}
+
+#first p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#first .tag {
+    display: flex;
+    text-align: center;
+}
+
+#first .tag span {
+    font-size: 14px;
+    line-height: 1;
+}
+
+#first .tag span {
+    display: inline-block;
+    padding: 9px 10px;
+    border: 1px solid #999;
+    border-radius: 20px;
+    margin-right: 8px;
+}
+
+#second {
+    display: none;
+}
