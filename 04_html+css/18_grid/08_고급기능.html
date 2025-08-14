@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid 개념</title>
+    <style>
+        .container {
+            display: grid;
+            /* 두 개의 열을 만들고, 각 열의 너비를 컨테이너의 사용 가능한 공간의 1/2씩 차지하도록 설정합니다. fr 단위는 유연한 단위로, 사용 가능한 공간을 비율로 분할하여 열의 크기를 결정합니다. start, mid, end는 열의 시작, 중간, 끝을 나타내는 그리드 라인 이름입니다. 이 라인 이름을 사용하여 그리드 아이템을 배치할 수 있습니다.  */
+            grid-template-columns: [start] 1fr [mid] 1fr [end];
+            gap: 10px;
+        }
+
+        .nested {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background: lightgray;
+        }
+
+        .item {
+            background: lightskyblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<div class="container">
+    <div class="item">1</div>
+    <div class="nested">
+        <div class="item">A</div>
+        <div class="item">B</div>
+    </div>
+    <div class="item">3</div>
+</div>
+
+</html>

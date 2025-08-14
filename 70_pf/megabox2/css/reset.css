@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* reset */
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, ul {
+    margin: 0;
+    font-family: 'NanumBarunGothic';
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}

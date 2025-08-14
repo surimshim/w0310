@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 공통 스타일 */
+        /* 플렉스 컨테이너 */
+        #container {
+            display: flex;
+            border: 2px solid #999;
+            height: 600px;
+            margin-bottom: 40px;
+        }
+
+        /* 플렉스 아이템 */
+        #container .item {
+            width: 400px;
+            background: lightseagreen;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        #container .item:nth-child(2) { background: orange; }
+
+        /* .item:nth-child(1) { flex-grow: 1; }
+        .item:nth-child(2) { flex-grow: 2; }
+        .item:nth-child(3) { flex-grow: 1; } */
+
+        .item {
+            flex-shrink: 1; /* 기본값 */
+        }
+        .item:nth-child(2) {
+            flex-shrink: 5;
+        }
+
+        .item:nth-child(1) { flex-basis: 100px; }
+        .item:nth-child(2) { flex-basis: 200px; }
+        .item:nth-child(3) { flex-basis: 100px; }
+
+
+        #container .item {
+            flex: 0 1 300px;
+        }
+        /* 또는 */
+        /* #container .item:nth-child(2) {
+            flex: 2;
+        } */
+
+        /* 
+            display: flex; -> 속성값
+
+            속성명
+                flex: grow shrink basis;
+                    flex: 0 1 auto;
+
+                flex-grow: 1; // 늘어남
+                flex-grow: 0; // 고정
+                flex-shrink: 1; // 줄어듬
+                flex-shrink: 0; // 고정
+                flex-basis: 숫자px;
+                    너비의 초기값
+        */
+
+        /* 
+            flex-direction: row; 
+            
+                주축 정렬 -> 가로
+                    justify-content
+                교차축 정렬 -> 세로
+                    align-items
+                    align-content
+                    align-self
+
+            flex-direction: column; 
+            
+                주축 정렬 -> 세로
+                    justify-content
+                교차축 정렬 -> 가로
+                    align-items
+                    align-content
+                    align-self
+        
+        */
+
+        #container {
+            align-items: center;
+        }
+
+        .item:nth-child(1) { 
+            align-self: flex-start; 
+        }
+        .item:nth-child(2) { align-self: center; }
+        .item:nth-child(3) { align-self: flex-end; }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+
+</html>
