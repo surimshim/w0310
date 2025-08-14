@@ -1,0 +1,17 @@
+.gnb {
+  padding: 10px;
+}
+
+.gnb_link {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:not(:last-of-type)::after {
+  content: '|';
+  margin-left: 8px;
+}
