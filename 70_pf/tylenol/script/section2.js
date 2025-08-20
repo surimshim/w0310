@@ -1,49 +1,53 @@
 $(document).ready(function () {
-    window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY;
-        const windowHeight = window.innerHeight;
+    let currentPage = 0; // 0=first, 1=second, 2=third
+    const pages = ["first", "second", "third"];
+    const bg = document.getElementById("bg");
+    const product = document.getElementById("product");
 
-        // 단계별 진행도 계산
-        let progress1 = Math.min(scrollY / windowHeight, 1); // 0~1
-        let progress2 = Math.min(Math.max((scrollY - windowHeight) / windowHeight, 0), 1); // 0~1
+    function showPage(index) {
+        console.log("현재 페이지:", index); // 디버깅
+        pages.forEach((id, i) => {
+            const el = document.getElementById(id);
+            if (el) {
+                el.classList.toggle("active", i === index);
+            }
+        });
 
-        const bg = document.getElementById("bg");
-        const product = document.getElementById("product");
-        const first = document.getElementById("first");
-        const second = document.getElementById("second");
-        const third = document.getElementById("third");
-
-        // ===================== #
-        // Step 1 애니메이션
-        // ===================== #
-        if (bg) {
-            let radius = progress1 * 50;
-            let scale = 1 - progress1 * 0.3;
-            bg.style.borderRadius = `${radius}px`;
-            bg.style.transform = `scale(${scale})`;
-            bg.style.opacity = 1 - progress2; // 2단계에서 완전히 사라짐
+        if (index === 0) {
+            bg.style.borderRadius = "0px";
+            bg.style.transform = "scale(1)";
+            bg.style.opacity = "1";
+            product.style.transform = "translate(-50%, -50%)";
+            product.style.boxShadow = "none";
         }
-
-        if (product) {
-            let moveY = progress1 * 50;
-            product.style.transform = `translate(-50%, calc(-50% + ${moveY}px))`;
+        else if (index === 1) {
+            bg.style.borderRadius = "260px";
+            bg.style.transform = "scale(0.5)";
+            bg.style.opacity = "1";
+            product.style.transform = "translate(-8%, -8%)";
+            product.style.boxShadow = "10px 5px 5px rgba(0, 0, 0, 0.5);";
         }
-
-        if (first) {
-            first.style.opacity = 1 - progress1;
+        else if (index === 2) {
+            bg.style.opacity = "0";
+            product.style.transform = "translate(-10%, -50%)";
         }
+    }
 
-        if (second) {
-            second.style.display = "block";
-            second.style.opacity = progress1 * (1 - progress2); // 1단계에서 나타났다가 2단계에서 사라짐
-        }
+    // 휠 이벤트로 페이지 전환
+    let isScrolling = false;
 
-        // ===================== #
-        // Step 2 애니메이션
-        // ===================== #
-        if (third) {
-            third.style.display = "block";
-            third.style.opacity = progress2; // 2단계에서 나타남
+    window.addEventListener("wheel", (e) => {
+        if (isScrolling) return; // 애니메이션 중에는 무시
+        isScrolling = true;
+
+        if (e.deltaY > 0) {
+            if (currentPage < 2) currentPage++;
+        } else {
+            if (currentPage > 0) currentPage--;
         }
-    });
+        showPage(currentPage);
+
+        // 0.8초 뒤 다시 휠 입력 허용 (CSS transition 시간과 맞춤)
+        setTimeout(() => { isScrolling = false; }, 800);
+    }, { passive: true });
 })
