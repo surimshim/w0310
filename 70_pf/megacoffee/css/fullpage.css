@@ -47,20 +47,20 @@
 }
 
 .fp-slidesNav ul li a span {
-  background: blue;
+  background: red;
 }
 
 /* 슬라이드 좌우 버튼 위치 */
 .fp-controlArrow.fp-prev {
   left: 140px;
-  background: black;
+  background: red;
   transition: 0.3s;
   border-color: transparent;
 }
 
 .fp-controlArrow.fp-next {
   right: 140px;
-  background: black;
+  background: red;
   transition: 0.3s;
   border-color: transparent;
 }

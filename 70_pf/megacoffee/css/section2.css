@@ -1,92 +1,105 @@
 @charset "utf-8";
-@import url(reset.css);
-@import url(common.css);
+@import url("reset.css");
+@import url("common.css");
 
-.inner {
+/* sec2 area */
+#sec2 {
     position: relative;
+    padding: 80px;
+}
+.inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#sec2 h2 {
     text-align: center;
 }
 
-.inner>h2 {
-    font-size: 30px;
-    font-weight: 500;
-}
-
-.inner>p {
+#sec2 p {
+    text-align: center;
     color: var(--gray2);
-    margin: 24px 0 70px;
+    margin: 36px 0 60px 0;
 }
 
 /* tabs */
-/* tab button */
 #tabs {
     position: relative;
-    width: 1200px;
+    width: 1128px;
     margin: 0 auto;
 }
 
-/* tab contents */
+/* tab menu button */
 #tabs_btn {
     position: absolute;
-    top: 0;
-    left: 700px;
+    left: 643px;
+    top: 0px;
 }
 
-#tabs_btn li:not(:last-child)::after {
+/* li 중에서 마지막 li 제외한 li의 종료 태그 앞에 */
+#tabs_btn li:not(li:last-child)::after {
     content: '|';
     margin: 0 8px;
     color: var(--gray2);
 }
 #tabs_btn li {
     display: inline-block;
-    font-size: 14px;
 }
-
 #tabs_btn a {
     color: var(--gray2);
 }
+#tabs_btn li:first-child a {
+    color: var(--main);
+}
 
+
+/* tab contents */
+/* top 1 */
 #tabs>div>div:first-of-type div {
     width: 580px;
     height: 433px;
-    border: 1px solid #ccc;
+    border: 1px solid #CCC;
 }
 
+#tabs>div>div:first-of-type div::after {
+    content: '1위';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background: var(--main);
+}
+
+/* top1 title */
 #tabs>div>div:first-of-type h3 {
     position: absolute;
-    top: 40px;
-    left: 700px;
-    font-size: 24px;
+    left: 643px;
+    top: 48px;
+    font-size: 3.6rem;
+    font-weight: 500;
 }
 
-#tabs>div>div:nth-of-type(2) {
+/* top 2와 3 */
+#tabs>div>div:first-of-type~div {
     position: absolute;
-    top: 230px;
-    left: 700px;
-    text-align: left;
-    font-size: 15px;
+    left: 645px;
+    top: 210px;
 }
 
-#tabs>div>div:nth-of-type(2) div {
+#tabs>div>div:first-of-type~div div {
     width: 225px;
     height: 170px;
-    padding: 0 27px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
+    padding: 0px 27px 0px 26px;
+    margin-bottom: 14px;
+    border: 1px solid #CCC;
 }
 
+/* top 3 */
 #tabs>div>div:nth-of-type(3) {
-    position: absolute;
-    top: 230px;
-    right: 0;
-    text-align: left;
-    font-size: 15px;
-}
-
-#tabs>div>div:nth-of-type(3) div {
-    width: 225px;
-    height: 170px;
-    padding: 0 27px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
+    left: 903px !important;
 }

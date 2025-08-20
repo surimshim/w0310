@@ -1,18 +1,49 @@
 @charset "utf-8";
+
 /* color system */
 :root {
     font-size: 10px;
+    /* 변수 선언은 :root에 정의한다. */
     --gray1: #111;
     --gray2: #333;
-    --gray3: #666;
+    --gray3: #555;
     --gray4: #ccc;
-    --main: rgb(255,222,0);
     --white: #fff;
+    --main: #FFDB00;
+    --second: #0F2244;
 }
-/* typo system */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
-body {
-    font: 16px/1.5 "Noto Sans KR", sans-serif;
+::selection {
+    background: var(--main);
     color: var(--gray1);
 }
+
+/* typo system */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+body {
+    font: 1.6rem/1.5 "Noto Sans KR", sans-serif;
+    /* 변수 사용! */
+    color: var(--gray1);
+}
+h2 {
+    font-size: 4.5rem;
+    font-weight: 200;
+}
+h3 {
+    font-weight: 200;
+}
+
+/* sections area */
+/* .sec {
+    position: relative;
+    height:100vh;
+    padding: 80px;
+} */
+/* .inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */

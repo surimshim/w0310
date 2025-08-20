@@ -22,14 +22,14 @@ $(document).ready(function () {
         }
         else if (index === 1) {
             bg.style.borderRadius = "260px";
-            bg.style.transform = "scale(0.5)";
+            bg.style.transform = "scale(0.4, 0.5)";
             bg.style.opacity = "1";
-            product.style.transform = "translate(-8%, -8%)";
-            product.style.boxShadow = "10px 5px 5px rgba(0, 0, 0, 0.5);";
+            product.style.transform = "translate(-5%, -5%)";
+            product.style.boxShadow = "30px 30px 30px rgba(0, 0, 0, 0.5);";
         }
         else if (index === 2) {
             bg.style.opacity = "0";
-            product.style.transform = "translate(-10%, -50%)";
+            product.style.transform = "translate(50%, -60%)";
         }
     }
 

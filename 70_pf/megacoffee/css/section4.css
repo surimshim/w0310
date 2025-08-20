@@ -1,0 +1,32 @@
+@charset "utf-8";
+@import url("reset.css");
+@import url("common.css");
+
+/* section4 area */
+#sec4 {
+    background: var(--main);
+    color: var(--gray1);
+    text-align: center;
+    line-height: 1.8;
+    padding: 80px;
+}
+
+#sec4 div:first-of-type {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+#sec4 span {
+    font-size: 4rem;
+}
+
+#vid {
+    width: 800px;
+    height: 450px;
+    margin: 50px auto;
+}
+
+#sec4 h3 {
+    font-size: 4rem;
+    font-weight: 700;
+}

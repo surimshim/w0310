@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 플레이어</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <style>
+        /* reset */
+        body {
+            margin: 0;
+        }
+        button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* old 브라우저의 경우 object-fit이 적용되지 않는다. */
+        /* 16:9의 경우 56.25%, 4:3의 경우 75% */
+        /* .media {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+        } */
+
+        
+        /* 비디오 플레이어 유형2 */
+        #vid_wrap {
+            position: relative;
+            width: 790px;
+            height: 455px;
+        }
+        #vid_wrap .btn_group {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #vid_wrap i {
+            font-size: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 버튼 그룹1 -->
+    <button type="button" id="videoPlay">비디오 재생</button>
+    <button type="button" id="videoPause">비디오 일시정지</button>
+    <button type="button" id="videoLoad">비디오 정지</button>
+
+
+    <hr>
+
+    <!-- 비디오 플레이어 유형1 -->
+    <video id="video1">
+        <source src="assets/video.mp4" type="video/mp4" />
+        <p>현재 웹 브라우저는 비디오를 지원하지 않습니다.</p>
+    </video>
+
+
+    <!-- 비디오 플레이어 유형2 -->
+    <div id="vid_wrap">
+        <video id="video2">
+            <source src="assets/video.mp4" type="video/mp4" />
+            <p>현재 웹 브라우저는 비디오를 지원하지 않습니다.</p>
+        </video>
+        <!-- 버튼 그룹2 -->
+        <div class="btn_group">
+            <button type="button" id="videoPlay2"><i class="fa-regular fa-circle-play"></i></button>
+            <button type="button" id="videoPause2"><i class="fa-regular fa-circle-pause"></i></button>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        var video1 = $("video").get(0);
+        var video2 = $("video").get(1);
+        var audio1 = $("#audio1").get(0);
+
+        $("#audioPlay").click(function () {
+            audio1.play();
+        });
+        $("#audioPause").click(function () {
+            audio1.pause();
+        });
+        $("#audioLoad").click(function () {
+            audio1.load();
+        });
+
+        $("#videoPlay").click(function () {
+            video1.play();
+        });
+        $("#videoPause").click(function () {
+            video1.pause();
+        });
+        $("#videoLoad").click(function () {
+            video1.load();
+        });
+
+        $("#videoPlay2").click(function () {
+            video2.play();
+        });
+        $("#videoPause2").click(function () {
+            video2.pause();
+        });
+        $("#videoLoad2").click(function () {
+            video2.load();
+        });
+
+    </script>
+</body>
+
+</html>

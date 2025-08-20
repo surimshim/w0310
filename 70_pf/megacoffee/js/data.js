@@ -1,4 +1,6 @@
-const data = [
+// 데이터
+
+export const data = [
     {
         img: 'images/10020.jpg',
         txt: '왕메가헛개리카노'
@@ -9,8 +11,6 @@ const data = [
     },
     {
         img: 'images/10025.jpg',
-        txt: '엠지씨네 와앙 메가칩'
+        txt: '엠지씨네 와왕 메가칩'
     }
 ];
-
-export default data;
