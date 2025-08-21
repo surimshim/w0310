@@ -1,65 +1,15 @@
-/* reset */
-body, h1, h2, h3, p, ul, li, span{
-  margin: 0;
-  padding: 0;
-}
+@charset "utf-8";
+@import url('reset.css');
+@import url('common.css');
 
-img {
-  width: 100%;
-  height: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: #000;
-  letter-spacing: -.5px;
-}
-
-li {
-  list-style: none;
-}
-
-/* typo system */
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  text-align: center;
-}
-
-body {
-  width: 1200px;
-  margin: 0 auto;
-  letter-spacing: -.5px;
-}
-
-.title ul {
+.menu {
   display: flex;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.title li {
-  font-size: 16px;
-  font-weight: normal;
-  margin-right: 20px;
-}
-
-.title a{
-  color: #888;
-}
-
-.title a.active {
-  display: inline-block;
-  padding: 8px 15px;
-  font-weight: 700;
-  color: #fff;
-  background: #000;
-  border-radius: 30px;
+  justify-content: center;
 }
 
 .menu a {
   display: inline-block;
-  margin: 20px 20px 20px 0;
+  margin: 20px 20px 30px 0;
   padding-bottom: 8px;
   font-size: 16px;
   font-weight: 500;

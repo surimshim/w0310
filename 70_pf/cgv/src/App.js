@@ -1,139 +1,46 @@
-import { useState } from 'react'
-import './css/App.css'
-import "@fortawesome/fontawesome-free/css/all.min.css"; // Font Awesome
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// 구조 분해 할당
-function MovieCard({ rank, image, alt, title, rate, age, audience, isLiked, onLike }) {
-    return (
-        <div className="movie-card">
-            {/* 이미지 */}
-            <a href="#" className="poster" onClick={(e) => {
-                e.preventDefault();
-            }}><img src={image} alt={alt}></img></a>
-
-            {/* 영화순위 */}
-            <div className="rank">{rank}</div>
-
-            <a href="#"
-                className={`heart ${isLiked ? "liked" : ""}`}
-                onClick={(e) => {
-                    e.preventDefault();
-                    onLike();
-                }}
-            >
-                <i className="fa-solid fa-heart"></i>
-            </a>
-
-            {/* 제목 */}
-            <div className="movie-title">
-                <h3>{title}</h3>
-                <span className={`age-${age}`}>{age}</span>
-            </div>
-
-            {/* 예매율, 관객 수 */}
-            <div className="desc">
-                <span>예매율 {rate}</span>
-                <span>{audience}</span>
-            </div>
-
-            {/* 예매하기 버튼 */}
-            <a href="#" className="book-btn"
-                onClick={(e) => { e.preventDefault(); }}>예매하기</a>
-
-        </div>
-    )
-}
+import Header from './pages/Header';
+import MainPage from './pages/MainPage';
+import Movie from './pages/Movie';
+import Ticket from './pages/Ticket';
+import Theater from './pages/Theater';
+import Event from './pages/Event';
+import Shop from './pages/Shop';
+import Location from './pages/Location';
+import Notice from './pages/Notice';
+import Faqs from './pages/Faqs';
+import Search from './pages/Search';
+import Login from './pages/Login';
+import Join from './pages/Join';
+import Cart from './pages/Cart';
+import Footer from './pages/Footer';
 
 function App() {
-    const [likedMovies, setLikedMovies] = useState([]);
-
-    const toggleLike = (rank) => {
-        setLikedMovies((prev) =>
-            prev.includes(rank)
-                ? prev.filter((id) => id !== rank)
-                : [...prev, rank]
-        );
-    };
-
-    const movies = [
-        {
-            rank: 1,
-            image: "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89833/89833_320.jpg",
-            title: "극장판 귀멸의 칼날: 무한성편",
-            rate: "51%",
-            age: 15,
-            audience: "2025.08.22 개봉"
-        },
-        {
-            rank: 2,
-            image: "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89706/89706_320.jpg",
-            title: "F1 더 무비",
-            rate: "10.1%",
-            age: 12,
-            audience: "누적 364.3만"
-        },
-        {
-            rank: 3,
-            image: "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89676/89676_320.jpg",
-            title: "좀비딸",
-            rate: "10.3%",
-            age: 12,
-            audience: "누적 335.1만"
-        },
-        {
-            rank: 4,
-            image: "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89826/89826_320.jpg",
-            title: "악마가 이사왔다",
-            rate: "51%",
-            age: 12,
-            audience: "2025.08.13 개봉"
-        }
-    ];
-
     return (
-        <div>
-            <h2 className='title'>
-                <ul>
-                    <li>
-                        <a href="#" className='active' onClick={(e) => { e.preventDefault(); }}><i className="fa-solid fa-film"></i> 영화</a>
-                    </li>
-                    <li><a href="#">이벤트/혜택</a></li>
-                    <li><a href="#">액티비티</a></li>
-                </ul>
-            </h2>
+        <BrowserRouter>
+            <div className='App'>
+                <Header />
 
-            <ul className='menu'>
-                <li>
-                    <a href="#" className='active' >무비차트</a>
-                    <a href="#">현재상영작</a>
-                    <a href="#">상영예정</a>
-                </li>
-            </ul>
+                <Routes>
+                    <Route path="/" element={<MainPage />} />
+                    <Route path="/Movie" element={<Movie />} />
+                    <Route path="/Ticket" element={<Ticket />} />
+                    <Route path="/Theater" element={<Theater />} />
+                    <Route path="/Event" element={<Event />} />
+                    <Route path="/Shop" element={<Shop />} />
+                    <Route path="/Location" element={<Location />} />
+                    <Route path="/Notice" element={<Notice />} />
+                    <Route path="/Faqs" element={<Faqs />} />
+                    <Route path="/Search" element={<Search />} />
+                    <Route path="/Login" element={<Login />} />
+                    <Route path="/Join" element={<Join />} />
+                    <Route path="/Cart" element={<Cart />} />
+                </Routes>
 
-            <div className="moviechart">
-                {/* 리스트 렌더링
-                    {배열.map((element) => {return 값;})}
-                    {배열.map((element) => 값;)}
-                */}
-
-                {movies.map((movie) => {
-                    return (
-                        <MovieCard
-                            key={movie.rank}
-                            rank={movie.rank}
-                            image={movie.image}
-                            alt={movie.title}
-                            title={movie.title}
-                            rate={movie.rate}
-                            age={movie.age}
-                            audience={movie.audience}
-                            isLiked={likedMovies.includes(movie.rank)}
-                            onLike={() => toggleLike(movie.rank)}
-                        />
-                    );
-                })}
+                <Footer />
             </div>
-        </div>
+        </BrowserRouter>
     );
 }
 
