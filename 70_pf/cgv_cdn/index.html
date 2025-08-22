@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGV</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/Header.css">
+    <link rel="stylesheet" href="css/MainPage.css">
+    <link rel="stylesheet" href="css/Footer.css">
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- React CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/6.30.1/react-router-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- React Code -->
+    <script type="text/babel">
+        const { useState } = React;
+        // const { BrowserRouter, Routes, Route, Link } = ReactRouterDOM;
+
+        // App.js
+        function App() {
+            return (
+                <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+                    <Header />
+                    <MainPage />
+                    <Footer />
+                </div>
+            );
+        }
+
+        function Header() {
+            return (
+                <header id='header'>
+                    <nav className="gnb">
+                        <h1>
+                            <a href="#"><img src="images/logo.png" alt="로고"></img></a>
+                        </h1>
+                            <ul className='Main'>
+                                <li><a href="#">영화</a></li>
+                                <li><a href="#">예매</a></li>
+                                <li><a href="#">극장</a></li>
+                                <li><a href="#">이벤트/혜택</a></li>
+                                <li><a href="#">매점</a></li>
+                            </ul>
+                    </nav>
+
+                    <ul className='SideMenu'>
+                        <li><a href=""><i className="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li className='Login'><a href=""><i className="fa-solid fa-circle-user"></i>로그인</a></li>
+                        <li className='Join'><a href="">회원가입</a></li>
+                    </ul>
+                </header>
+            );
+        }
+
+        function MovieCard({ rank, image, alt, title, rate, age, audience, isLiked, onLike }) {
+            return (
+                <div className="movie-card">
+                    {/* 이미지 */}
+                    <a href="#" className="poster" onClick={(e) => {
+                        e.preventDefault();
+                    }}><img src={image} alt={alt}></img></a>
+
+                    {/* 영화순위 */}
+                    <div className="rank">{rank}</div>
+
+                    <a href="#"
+                        className={`heart ${isLiked ? "liked" : ""}`}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            onLike();
+                        }}
+                    >
+                        <i className="fa-solid fa-heart"></i>
+                    </a>
+
+                    {/* 제목 */}
+                    <div className="movie-title">
+                        <h3>{title}</h3>
+                        <span className={`age-${age}`}>{age}</span>
+                    </div>
+
+                    {/* 예매율, 관객 수 */}
+                    <div className="desc">
+                        <span>예매율 {rate}</span>
+                        <span>{audience}</span>
+                    </div>
+
+                    {/* 예매하기 버튼 */}
+                    <a href="#" className="book-btn"
+                        onClick={(e) => { e.preventDefault(); }}>예매하기</a>
+
+                </div>
+            )
+        }
+
+        function MainPage() {
+            const [likedMovies, setLikedMovies] = useState([]);
+
+            const toggleLike = (rank) => {
+                setLikedMovies((prev) =>
+                    prev.includes(rank)
+                        ? prev.filter((id) => id !== rank)
+                        : [...prev, rank]
+                );
+            };
+
+            const movies = [
+                {
+                    rank: 1,
+                    image: "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89833/89833_320.jpg",
+                    title: "극장판 귀멸의 칼날: 무한성편",
+                    rate: "51%",
+                    age: 15,
+                    audience: "2025.08.22 개봉"
+                },
+                {
+                    rank: 2,
+                    image: "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89706/89706_320.jpg",
+                    title: "F1 더 무비",
+                    rate: "10.1%",
+                    age: 12,
+                    audience: "누적 364.3만"
+                },
+                {
+                    rank: 3,
+                    image: "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89676/89676_320.jpg",
+                    title: "좀비딸",
+                    rate: "10.3%",
+                    age: 12,
+                    audience: "누적 335.1만"
+                },
+                {
+                    rank: 4,
+                    image: "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89826/89826_320.jpg",
+                    title: "악마가 이사왔다",
+                    rate: "51%",
+                    age: 12,
+                    audience: "2025.08.13 개봉"
+                }
+            ];
+
+            return (
+                <div>
+                    <ul className='menu'>
+                        <li><a href="#" className='active' >무비차트</a></li>
+                        <li><a href="#">현재상영작</a></li>
+                        <li><a href="#">상영예정</a></li>
+                    </ul>
+
+                    <div className="moviechart">
+                        {movies.map((movie) => {
+                            return (
+                                <MovieCard
+                                    key={movie.rank}
+                                    rank={movie.rank}
+                                    image={movie.image}
+                                    alt={movie.title}
+                                    title={movie.title}
+                                    rate={movie.rate}
+                                    age={movie.age}
+                                    audience={movie.audience}
+                                    isLiked={likedMovies.includes(movie.rank)}
+                                    onLike={() => toggleLike(movie.rank)}
+                                />
+                            );
+                        })}
+                    </div>
+                </div>
+            );
+        }
+
+        function Footer() {
+            return (
+                <footer id='footer'>
+                    <div className='top'>
+                        <div>
+                            <ul>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">개인정보처리방침</a></li>
+                                <li><a href="#">위치기반서비스 이용약관</a></li>
+                                <li><a href="#">법적고지</a></li>
+                                <li><a href="#">채용정보</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <select name="fs" id="fs">
+                                <option value="">계열사 바로가기</option>
+                                <option value="1">CJ 주식회사</option>
+                                <option value="2">CJ 제일제당</option>
+                                <option value="3">CJ 푸드빌</option>
+                                <option value="4">CJ 프레시웨이</option>
+                                <option value="5">CJ CGV</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div className='bottom'>
+                        <div className='blogo'><a href="#"><img src="images/blogo.png" alt='하단 로고'></img></a></div>
+                        <div>
+                            <p>
+                                (04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동) 고객센터 : 1544-1122 호스팅사업자 : CJ올리브네트웍스
+                            </p>
+                            <p>
+                                대표이사 : 정종민 대표이메일 : cjcgvmaster@cj.net 통신판매업신고번호 : 2017-서울용산-0662 사업자등록번호 : 104-81-45690
+                            </p>
+                            <p>
+                                COPYRIGHT © CJ CGV Inc. All rights reserved.
+                            </p>
+                        </div>
+                        <div className='sns'>
+                            <a href="#"><i className="fa-brands fa-youtube"></i></a>
+                            <a href="#"><i className="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i className="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i className="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </footer>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>
